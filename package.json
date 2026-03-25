@@ -8,7 +8,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/app.js"
+    "start": "node server/app.js"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
