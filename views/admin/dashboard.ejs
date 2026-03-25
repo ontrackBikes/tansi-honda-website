@@ -1,0 +1,27 @@
+<%- include("../partials/header") %>
+
+<h2>Admin Dashboard</h2>
+
+<a href="/admin/add">Add Model</a>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+
+  <% models.forEach(m => { %>
+    <tr>
+      <td><%= m.name %></td>
+      <td><%= m.price %></td>
+      <td><%= m.isActive ? "Active" : "Inactive" %></td>
+      <td>
+        <a href="/admin/edit/<%= m._id %>">Edit</a>
+      </td>
+    </tr>
+  <% }) %>
+</table>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,84 @@
+<%- include("../partials/header") %>
+
+<div class="row">
+
+  <!-- Image Section -->
+  <div class="col-md-6">
+    <img 
+      src="<%= model.image || '/images/default-bike.jpg' %>" 
+      class="img-fluid rounded shadow-sm"
+      style="width: 100%; object-fit: cover;"
+    >
+  </div>
+
+  <!-- Details Section -->
+  <div class="col-md-6">
+
+    <h2><%= model.name %></h2>
+
+    <h4 class="text-primary mb-3"><%= model.price %></h4>
+
+    <p><%= model.description || "No description available." %></p>
+
+    <!-- Features -->
+    <h5 class="mt-4">Key Features</h5>
+    <ul>
+      <% if (model.features && model.features.length) { %>
+        <% model.features.forEach(f => { %>
+          <li><%= f %></li>
+        <% }) %>
+      <% } else { %>
+        <li>No features listed</li>
+      <% } %>
+    </ul>
+
+    <!-- CTA -->
+    <div class="mt-4">
+
+      <!-- Option 1: Simple Button -->
+      <button class="btn btn-success me-2" onclick="openEnquiry()">
+        Enquire Now
+      </button>
+
+      <!-- Option 2: WhatsApp (optional) -->
+      <a 
+        href="https://wa.me/919XXXXXXXXX?text=I'm interested in <%= model.name %>" 
+        class="btn btn-outline-success"
+        target="_blank"
+      >
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Enquiry Modal -->
+<div class="modal fade" id="enquiryModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Enquire about <%= model.name %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Replace with Zoho Form Embed -->
+        <p>Lead form goes here (Zoho)</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function openEnquiry() {
+    var modal = new bootstrap.Modal(document.getElementById('enquiryModal'));
+    modal.show();
+  }
+</script>
+
+<%- include("../partials/footer") %>

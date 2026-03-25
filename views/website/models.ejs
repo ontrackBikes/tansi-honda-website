@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+
+<h2 class="mb-4">Our Models</h2>
+
+<div class="row">
+
+  <% if (models.length === 0) { %>
+    <p>No models available</p>
+  <% } %>
+
+  <% models.forEach(model => { %>
+    <div class="col-md-4 mb-4">
+      
+      <div class="card h-100 shadow-sm">
+        
+        <img 
+          src="<%= model.image || '/images/default-bike.jpg' %>" 
+          class="card-img-top" 
+          style="height: 200px; object-fit: cover;"
+        >
+
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title"><%= model.name %></h5>
+          <p class="card-text text-muted"><%= model.price %></p>
+
+          <a href="/models/<%= model._id %>" class="btn btn-primary mt-auto">
+            View Details
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  <% }) %>
+
+</div>
+
+<%- include("../partials/footer") %>
