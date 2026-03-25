@@ -1,37 +1,116 @@
 <%- include("../partials/header") %>
 
-<h2>Add New Model</h2>
+<h2 class="mb-4">Add New Model</h2>
+
+<a href="/admin" class="btn btn-link mb-3">← Back to Dashboard</a>
 
 <form action="/admin/add" method="POST">
-  
-  <div>
-    <label>Model Name</label><br/>
-    <input type="text" name="name" required />
+
+  <div class="row">
+
+    <!-- LEFT SIDE -->
+    <div class="col-md-6">
+
+      <div class="mb-3">
+        <label class="form-label">Model Name</label>
+        <input type="text" name="name" class="form-control" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="text" name="price" class="form-control" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea name="description" rows="4" class="form-control"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Features (comma separated)</label>
+        <input 
+          type="text" 
+          name="features" 
+          class="form-control" 
+          placeholder="Mileage, ABS, Digital Meter" 
+        />
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-md-6">
+
+      <div class="mb-3">
+        <label class="form-label">Upload Image</label>
+        <input type="file" id="imageInput" class="form-control" />
+      </div>
+
+      <!-- Hidden field to store uploaded URL -->
+      <input type="hidden" name="image" id="imageUrl" />
+
+      <!-- Preview -->
+      <div class="text-center mt-3">
+        <img 
+          id="previewImage" 
+          src="/images/default-bike.jpg" 
+          class="img-fluid rounded shadow-sm"
+          style="max-height: 250px; object-fit: cover;"
+        >
+      </div>
+
+      <!-- Upload status -->
+      <p id="uploadStatus" class="text-success mt-2"></p>
+
+    </div>
+
   </div>
 
-  <div>
-    <label>Price</label><br/>
-    <input type="text" name="price" required />
-  </div>
+  <button type="submit" class="btn btn-primary mt-3">
+    Add Model
+  </button>
 
-  <div>
-    <label>Image URL</label><br/>
-    <input type="text" name="image" placeholder="/images/activa.jpg" />
-  </div>
-
-  <div>
-    <label>Description</label><br/>
-    <textarea name="description" rows="4"></textarea>
-  </div>
-
-  <div>
-    <label>Features (comma separated)</label><br/>
-    <input type="text" name="features" placeholder="Mileage, ABS, Digital Meter" />
-  </div>
-
-  <br/>
-
-  <button type="submit">Add Model</button>
 </form>
+
+<!-- Upload Script -->
+<script>
+  const imageInput = document.getElementById("imageInput");
+  const preview = document.getElementById("previewImage");
+  const imageUrlInput = document.getElementById("imageUrl");
+  const statusText = document.getElementById("uploadStatus");
+
+  imageInput.addEventListener("change", async () => {
+    const file = imageInput.files[0];
+    if (!file) return;
+
+    // preview before upload
+    preview.src = URL.createObjectURL(file);
+    statusText.innerText = "Uploading...";
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    try {
+      const res = await fetch("/admin/upload-image", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+
+      if (data.url) {
+        imageUrlInput.value = data.url;
+        preview.src = data.url;
+        statusText.innerText = "✅ Uploaded successfully";
+      } else {
+        statusText.innerText = "❌ Upload failed";
+      }
+
+    } catch (err) {
+      console.error(err);
+      statusText.innerText = "❌ Upload error";
+    }
+  });
+</script>
 
 <%- include("../partials/footer") %>

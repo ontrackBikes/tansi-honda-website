@@ -1,0 +1,136 @@
+<%- include("../partials/header") %>
+
+<h2 class="mb-4">Edit Model</h2>
+
+<a href="/admin" class="btn btn-link mb-3">← Back to Dashboard</a>
+
+<form action="/admin/edit/<%= model._id %>" method="POST">
+
+  <div class="row">
+
+    <!-- LEFT SIDE -->
+    <div class="col-md-6">
+
+      <div class="mb-3">
+        <label class="form-label">Model Name</label>
+        <input 
+          type="text" 
+          name="name" 
+          class="form-control" 
+          value="<%= model.name %>" 
+          required 
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input 
+          type="text" 
+          name="price" 
+          class="form-control" 
+          value="<%= model.price %>" 
+          required 
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea name="description" rows="4" class="form-control"><%= model.description %></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Features (comma separated)</label>
+        <input 
+          type="text" 
+          name="features" 
+          class="form-control"
+          value="<%= model.features ? model.features.join(', ') : '' %>"
+        />
+      </div>
+
+      <div class="form-check mb-3">
+        <input 
+          class="form-check-input" 
+          type="checkbox" 
+          name="isActive" 
+          <%= model.isActive ? "checked" : "" %>
+        >
+        <label class="form-check-label">Active</label>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-md-6">
+
+      <div class="mb-3">
+        <label class="form-label">Replace Image</label>
+        <input type="file" id="imageInput" class="form-control" />
+      </div>
+
+      <!-- Hidden field -->
+      <input type="hidden" name="image" id="imageUrl" value="<%= model.image %>" />
+
+      <!-- Preview -->
+      <div class="text-center mt-3">
+        <img 
+          id="previewImage" 
+          src="<%= model.image || '/images/default-bike.jpg' %>" 
+          class="img-fluid rounded shadow-sm"
+          style="max-height: 250px; object-fit: cover;"
+        >
+      </div>
+
+      <p id="uploadStatus" class="text-success mt-2"></p>
+
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-3">
+    Update Model
+  </button>
+
+</form>
+
+<!-- Upload Script -->
+<script>
+  const imageInput = document.getElementById("imageInput");
+  const preview = document.getElementById("previewImage");
+  const imageUrlInput = document.getElementById("imageUrl");
+  const statusText = document.getElementById("uploadStatus");
+
+  imageInput.addEventListener("change", async () => {
+    const file = imageInput.files[0];
+    if (!file) return;
+
+    preview.src = URL.createObjectURL(file);
+    statusText.innerText = "Uploading...";
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    try {
+      const res = await fetch("/admin/upload-image", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+
+      if (data.url) {
+        imageUrlInput.value = data.url;
+        preview.src = data.url;
+        statusText.innerText = "✅ Uploaded successfully";
+      } else {
+        statusText.innerText = "❌ Upload failed";
+      }
+
+    } catch (err) {
+      console.error(err);
+      statusText.innerText = "❌ Upload error";
+    }
+  });
+</script>
+
+<%- include("../partials/footer") %>

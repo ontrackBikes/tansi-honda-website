@@ -4,12 +4,12 @@
 
 <div>
   <% models.forEach(model => { %>
-    <div>
-      <img src="<%= model.image %>" width="200"/>
-      <h3><%= model.name %></h3>
-      <p><%= model.price %></p>
-      <a href="/models/<%= model._id %>">View</a>
-    </div>
+  <div>
+    <img src="<%= model.image %>" width="200" />
+    <h3><%= model.name %></h3>
+    <p><%= model.price %></p>
+    <a href="/models/<%= model._id %>">View</a>
+  </div>
   <% }) %>
 </div>
 
