@@ -1,84 +1,188 @@
 <%- include("../partials/header") %>
 
-<div class="row">
+<div class="container vehicle-detail py-4">
 
-  <!-- Image Section -->
-  <div class="col-md-6">
-    <img 
-      src="<%= model.image || '/images/default-bike.jpg' %>" 
-      class="img-fluid rounded shadow-sm"
-      style="width: 100%; object-fit: cover;"
-    >
+  <!-- Header -->
+  <div class="row align-items-center justify-content-between g-3 mb-3">
+    <div class="col-md-6">
+      <h1 class="vehicle-title mb-0"><%= model.name %></h1>
+    </div>
+
+    <div class="col-md-6 text-md-end">
+      <div class="dropdown">
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          id="modelDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-motorcycle me-2"></i> Select Model
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="modelDropdown" id="modelListDropdown">
+          <!-- Populate dynamically -->
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <!-- Details Section -->
-  <div class="col-md-6">
+  <!-- Action Buttons -->
+  <div class="d-flex flex-wrap gap-2 mb-4">
+    <button class="btn btn-light rounded-pill fw-semibold" id="brochureBtn">
+      <i class="fas fa-file-pdf me-1"></i> Brochure
+    </button>
 
-    <h2><%= model.name %></h2>
+    <button class="btn btn-light rounded-pill fw-semibold" id="sendFriendBtn">
+      <i class="fas fa-envelope me-1"></i> Send
+    </button>
 
-    <h4 class="text-primary mb-3"><%= model.price %></h4>
+    <button class="btn btn-danger rounded-pill fw-bold" id="getQuoteBtn">
+      <i class="fas fa-tag me-1"></i> Get Quote
+    </button>
+  </div>
 
-    <p><%= model.description || "No description available." %></p>
+  <!-- Main Section -->
+  <div class="row g-4">
 
-    <!-- Features -->
-    <h5 class="mt-4">Key Features</h5>
-    <ul>
-      <% if (model.features && model.features.length) { %>
-        <% model.features.forEach(f => { %>
-          <li><%= f %></li>
-        <% }) %>
-      <% } else { %>
-        <li>No features listed</li>
-      <% } %>
-    </ul>
+    <!-- Image -->
+    <div class="col-lg-6">
+      <div class="main-vehicle-img text-center">
+        <img 
+          src="<%= model.image || '/images/default-bike.jpg' %>" 
+          alt="<%= model.name %>" 
+          class="img-fluid"
+          loading="lazy"
+        >
+      </div>
+    </div>
 
-    <!-- CTA -->
-    <div class="mt-4">
+    <!-- Details -->
+    <div class="col-lg-6">
 
-      <!-- Option 1: Simple Button -->
-      <button class="btn btn-success me-2" onclick="openEnquiry()">
-        Enquire Now
-      </button>
+      <h2 class="fw-bold"><%= model.name %></h2>
 
-      <!-- Option 2: WhatsApp (optional) -->
-      <a 
-        href="https://wa.me/919XXXXXXXXX?text=I'm interested in <%= model.name %>" 
-        class="btn btn-outline-success"
-        target="_blank"
-      >
-        WhatsApp
-      </a>
+      <h4 class="text-danger mb-3 fw-semibold">
+        <%= model.price || "Price on request" %>
+      </h4>
 
+      <p class="text-muted">
+        <%= model.description || "No description available." %>
+      </p>
+
+      <!-- Features -->
+      <h5 class="mt-4 fw-bold">Key Features</h5>
+      <ul class="ps-3">
+        <% if (model.features && model.features.length) { %>
+          <% model.features.forEach(f => { %>
+            <li><%= f %></li>
+          <% }) %>
+        <% } else { %>
+          <li>No features listed</li>
+        <% } %>
+      </ul>
+
+      <!-- CTA -->
+      <div class="mt-4 d-flex flex-wrap gap-2">
+        <button class="btn btn-success" onclick="openEnquiry()">
+          Enquire Now
+        </button>
+
+        <a 
+          href="https://wa.me/919XXXXXXXXX?text=I'm interested in <%= model.name %>" 
+          class="btn btn-outline-success"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs mt-5" id="vehicleTab" role="tablist">
+    <li class="nav-item">
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#colours">Colours</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#gallery">Gallery</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#specs">Specifications</button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+
+    <div class="tab-pane fade show active" id="colours">
+      <div id="colorSwatches" class="d-flex flex-wrap gap-3"></div>
+      <small class="text-muted">
+        Colours may vary depending on model.
+      </small>
+    </div>
+
+    <div class="tab-pane fade" id="gallery">
+      <div id="galleryGrid" class="row g-3"></div>
+    </div>
+
+    <div class="tab-pane fade" id="specs">
+      <div id="trimSelector" class="mb-3"></div>
+      <div id="specsContent" class="specs-section"></div>
     </div>
 
   </div>
 
 </div>
 
-<!-- Enquiry Modal -->
-<div class="modal fade" id="enquiryModal" tabindex="-1">
-  <div class="modal-dialog">
+<!-- Modal -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
       <div class="modal-header">
         <h5 class="modal-title">Enquire about <%= model.name %></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <div class="modal-body">
-        <!-- Replace with Zoho Form Embed -->
-        <p>Lead form goes here (Zoho)</p>
+        <p>Zoho form integration goes here</p>
       </div>
 
     </div>
   </div>
 </div>
 
+<style>
+.vehicle-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+}
+
+.main-vehicle-img {
+  background: #f8fafc;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.main-vehicle-img img {
+  max-height: 320px;
+  object-fit: contain;
+}
+
+.specs-section {
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 20px;
+}
+</style>
+
 <script>
-  function openEnquiry() {
-    var modal = new bootstrap.Modal(document.getElementById('enquiryModal'));
-    modal.show();
-  }
+function openEnquiry() {
+  const modal = new bootstrap.Modal(document.getElementById('enquiryModal'));
+  modal.show();
+}
 </script>
 
 <%- include("../partials/footer") %>
