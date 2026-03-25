@@ -6,6 +6,10 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+const cookieParser = require("cookie-parser");
+
+app.use(cookieParser());
+
 // DB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
@@ -25,6 +29,7 @@ app.set("views", path.join(__dirname, "../views"));
 // Routes
 app.use("/", require("./routes/public.routes"));
 app.use("/admin", require("./routes/admin.routes"));
+
 
 // Server
 const PORT = process.env.PORT || 3000;

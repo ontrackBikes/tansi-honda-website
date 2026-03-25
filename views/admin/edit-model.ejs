@@ -2,135 +2,100 @@
 
 <h2 class="mb-4">Edit Model</h2>
 
-<a href="/admin" class="btn btn-link mb-3">← Back to Dashboard</a>
+<a href="/admin" class="btn btn-link mb-3">← Back</a>
 
 <form action="/admin/edit/<%= model._id %>" method="POST">
 
-  <div class="row">
+<div class="row">
 
-    <!-- LEFT SIDE -->
-    <div class="col-md-6">
+<div class="col-md-6">
 
-      <div class="mb-3">
-        <label class="form-label">Model Name</label>
-        <input 
-          type="text" 
-          name="name" 
-          class="form-control" 
-          value="<%= model.name %>" 
-          required 
-        />
-      </div>
+<div class="mb-3">
+<label>Model Name</label>
+<input name="name" class="form-control" value="<%= model.name %>">
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Price</label>
-        <input 
-          type="text" 
-          name="price" 
-          class="form-control" 
-          value="<%= model.price %>" 
-          required 
-        />
-      </div>
+<div class="mb-3">
+<label>Category</label>
+<select name="category" class="form-select">
+<option <%= model.category==='Bike'?'selected':'' %>>Bike</option>
+<option <%= model.category==='Scooter'?'selected':'' %>>Scooter</option>
+<option <%= model.category==='Touring'?'selected':'' %>>Touring</option>
+</select>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Description</label>
-        <textarea name="description" rows="4" class="form-control"><%= model.description %></textarea>
-      </div>
+<div class="mb-3">
+<label>Description</label>
+<textarea name="description" class="form-control"><%= model.description %></textarea>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Features (comma separated)</label>
-        <input 
-          type="text" 
-          name="features" 
-          class="form-control"
-          value="<%= model.features ? model.features.join(', ') : '' %>"
-        />
-      </div>
+<div class="mb-3">
+<label>Features</label>
+<input name="features" class="form-control"
+value="<%= model.features?.join(', ') %>">
+</div>
 
-      <div class="form-check mb-3">
-        <input 
-          class="form-check-input" 
-          type="checkbox" 
-          name="isActive" 
-          <%= model.isActive ? "checked" : "" %>
-        >
-        <label class="form-check-label">Active</label>
-      </div>
+<h5 class="mt-4">Specifications</h5>
 
-    </div>
+<div class="row">
+<input name="engine" class="form-control mb-2" value="<%= model.specs?.engine %>" placeholder="Engine">
+<input name="mileage" class="form-control mb-2" value="<%= model.specs?.mileage %>" placeholder="Mileage">
+<input name="power" class="form-control mb-2" value="<%= model.specs?.power %>" placeholder="Power">
+<input name="torque" class="form-control mb-2" value="<%= model.specs?.torque %>" placeholder="Torque">
+<input name="fuel_type" class="form-control mb-2" value="<%= model.specs?.fuel_type %>" placeholder="Fuel Type">
+<input name="transmission" class="form-control mb-2" value="<%= model.specs?.transmission %>" placeholder="Transmission">
+</div>
 
-    <!-- RIGHT SIDE -->
-    <div class="col-md-6">
+<div class="form-check mt-2">
+<input type="checkbox" name="isActive"
+<%= model.isActive?'checked':'' %>>
+<label>Active</label>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Replace Image</label>
-        <input type="file" id="imageInput" class="form-control" />
-      </div>
+</div>
 
-      <!-- Hidden field -->
-      <input type="hidden" name="image" id="imageUrl" value="<%= model.image %>" />
+<div class="col-md-6">
 
-      <!-- Preview -->
-      <div class="text-center mt-3">
-        <img 
-          id="previewImage" 
-          src="<%= model.image || '/images/default-bike.jpg' %>" 
-          class="img-fluid rounded shadow-sm"
-          style="max-height: 250px; object-fit: cover;"
-        >
-      </div>
+<input type="file" id="imageInput" class="form-control mb-3">
 
-      <p id="uploadStatus" class="text-success mt-2"></p>
+<input type="hidden" name="image" id="imageUrl" value="<%= model.image %>">
 
-    </div>
+<img id="previewImage"
+src="<%= model.image %>"
+class="img-fluid rounded">
 
-  </div>
+<p id="uploadStatus"></p>
 
-  <button type="submit" class="btn btn-primary mt-3">
-    Update Model
-  </button>
+</div>
+
+</div>
+
+<button class="btn btn-primary mt-3">Update</button>
 
 </form>
 
-<!-- Upload Script -->
 <script>
-  const imageInput = document.getElementById("imageInput");
-  const preview = document.getElementById("previewImage");
-  const imageUrlInput = document.getElementById("imageUrl");
-  const statusText = document.getElementById("uploadStatus");
+const imageInput = document.getElementById("imageInput");
+const preview = document.getElementById("previewImage");
+const imageUrlInput = document.getElementById("imageUrl");
 
-  imageInput.addEventListener("change", async () => {
-    const file = imageInput.files[0];
-    if (!file) return;
+imageInput.addEventListener("change", async () => {
+const file = imageInput.files[0];
+const formData = new FormData();
+formData.append("image", file);
 
-    preview.src = URL.createObjectURL(file);
-    statusText.innerText = "Uploading...";
+const res = await fetch("/admin/upload-image", {
+method: "POST",
+body: formData
+});
 
-    const formData = new FormData();
-    formData.append("image", file);
+const data = await res.json();
 
-    try {
-      const res = await fetch("/admin/upload-image", {
-        method: "POST",
-        body: formData
-      });
-
-      const data = await res.json();
-
-      if (data.url) {
-        imageUrlInput.value = data.url;
-        preview.src = data.url;
-        statusText.innerText = "✅ Uploaded successfully";
-      } else {
-        statusText.innerText = "❌ Upload failed";
-      }
-
-    } catch (err) {
-      console.error(err);
-      statusText.innerText = "❌ Upload error";
-    }
-  });
+if (data.url) {
+imageUrlInput.value = data.url;
+preview.src = data.url;
+}
+});
 </script>
 
 <%- include("../partials/footer") %>

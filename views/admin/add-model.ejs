@@ -8,7 +8,7 @@
 
   <div class="row">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT -->
     <div class="col-md-6">
 
       <div class="mb-3">
@@ -17,28 +17,52 @@
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Price</label>
-        <input type="text" name="price" class="form-control" required />
+        <label class="form-label">Category</label>
+        <select name="category" class="form-select">
+          <option value="Bike">Bike</option>
+          <option value="Scooter">Scooter</option>
+          <option value="Touring">Touring</option>
+        </select>
       </div>
 
       <div class="mb-3">
         <label class="form-label">Description</label>
-        <textarea name="description" rows="4" class="form-control"></textarea>
+        <textarea name="description" rows="3" class="form-control"></textarea>
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Features (comma separated)</label>
-        <input 
-          type="text" 
-          name="features" 
-          class="form-control" 
-          placeholder="Mileage, ABS, Digital Meter" 
-        />
+        <label class="form-label">Features</label>
+        <input type="text" name="features" class="form-control"
+          placeholder="ABS, LED, Digital Meter" />
+      </div>
+
+      <!-- 🔧 SPECS -->
+      <h5 class="mt-4">Specifications</h5>
+
+      <div class="row">
+        <div class="col-6 mb-2">
+          <input name="engine" class="form-control" placeholder="Engine (e.g. 124cc)">
+        </div>
+        <div class="col-6 mb-2">
+          <input name="mileage" class="form-control" placeholder="Mileage">
+        </div>
+        <div class="col-6 mb-2">
+          <input name="power" class="form-control" placeholder="Power">
+        </div>
+        <div class="col-6 mb-2">
+          <input name="torque" class="form-control" placeholder="Torque">
+        </div>
+        <div class="col-6 mb-2">
+          <input name="fuel_type" class="form-control" placeholder="Fuel Type">
+        </div>
+        <div class="col-6 mb-2">
+          <input name="transmission" class="form-control" placeholder="Transmission">
+        </div>
       </div>
 
     </div>
 
-    <!-- RIGHT SIDE -->
+    <!-- RIGHT -->
     <div class="col-md-6">
 
       <div class="mb-3">
@@ -46,33 +70,25 @@
         <input type="file" id="imageInput" class="form-control" />
       </div>
 
-      <!-- Hidden field to store uploaded URL -->
       <input type="hidden" name="image" id="imageUrl" />
 
-      <!-- Preview -->
       <div class="text-center mt-3">
-        <img 
-          id="previewImage" 
-          src="/images/default-bike.jpg" 
+        <img id="previewImage"
+          src="/images/default-bike.jpg"
           class="img-fluid rounded shadow-sm"
-          style="max-height: 250px; object-fit: cover;"
-        >
+          style="max-height: 250px;">
       </div>
 
-      <!-- Upload status -->
       <p id="uploadStatus" class="text-success mt-2"></p>
 
     </div>
 
   </div>
 
-  <button type="submit" class="btn btn-primary mt-3">
-    Add Model
-  </button>
+  <button class="btn btn-primary mt-3">Add Model</button>
 
 </form>
 
-<!-- Upload Script -->
 <script>
   const imageInput = document.getElementById("imageInput");
   const preview = document.getElementById("previewImage");
@@ -83,32 +99,25 @@
     const file = imageInput.files[0];
     if (!file) return;
 
-    // preview before upload
     preview.src = URL.createObjectURL(file);
     statusText.innerText = "Uploading...";
 
     const formData = new FormData();
     formData.append("image", file);
 
-    try {
-      const res = await fetch("/admin/upload-image", {
-        method: "POST",
-        body: formData
-      });
+    const res = await fetch("/admin/upload-image", {
+      method: "POST",
+      body: formData
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      if (data.url) {
-        imageUrlInput.value = data.url;
-        preview.src = data.url;
-        statusText.innerText = "✅ Uploaded successfully";
-      } else {
-        statusText.innerText = "❌ Upload failed";
-      }
-
-    } catch (err) {
-      console.error(err);
-      statusText.innerText = "❌ Upload error";
+    if (data.url) {
+      imageUrlInput.value = data.url;
+      preview.src = data.url;
+      statusText.innerText = "✅ Uploaded";
+    } else {
+      statusText.innerText = "❌ Failed";
     }
   });
 </script>
