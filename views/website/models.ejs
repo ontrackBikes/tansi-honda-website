@@ -46,14 +46,14 @@
     <% } else { %>
 
       <% models.forEach(model => { %>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 model-card-item">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 model-card-item">
           
           <a href="/models/<%= model._id %>" class="text-decoration-none">
            <div class="model-card h-100">
 
             <!-- IMAGE -->
             <img
-              src="<%= model.image || '/images/default-bike.jpg' %>"
+              src="<%= model.coverImage || '/images/default-bike.jpg' %>"
               class="catalog-img"
               alt="<%= model.name %>"
               loading="lazy"

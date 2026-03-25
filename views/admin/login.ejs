@@ -1,35 +1,87 @@
 <%- include("../partials/header") %>
 
-<div class="row justify-content-center">
-  <div class="col-md-4">
-
-    <div class="card shadow-sm mt-5">
-      <div class="card-body">
-
-        <h4 class="mb-3 text-center">Admin Login</h4>
-
-        <form method="POST" action="/admin/login">
-
-          <div class="mb-3">
-            <label>Email</label>
-            <input type="email" name="email" class="form-control" required />
-          </div>
-
-          <div class="mb-3">
-            <label>Password</label>
-            <input type="password" name="password" class="form-control" required />
-          </div>
-
-          <button class="btn btn-primary w-100">
-            Login
-          </button>
-
-        </form>
-
-      </div>
+<div
+  class="container d-flex align-items-center justify-content-center min-vh-100"
+>
+  <div
+    class="card border-0 shadow-sm p-4 p-md-8"
+    style="max-width: 400px; width: 100%; border-radius: 16px"
+  >
+    <div class="text-center mb-4">
+      <h3 class="fw-bold mb-1">Admin Login</h3>
+      <p class="text-muted small">Enter your credentials below</p>
     </div>
 
+    <form method="POST" action="/admin/login">
+      <div class="mb-3">
+        <label class="form-label small fw-semibold text-muted"
+          >Email Address</label
+        >
+        <input
+          type="email"
+          name="email"
+          class="form-control custom-input"
+          placeholder="admin@example.com"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label small fw-semibold text-muted">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control custom-input"
+          placeholder="••••••••"
+          required
+        />
+      </div>
+
+      <button class="btn btn-danger w-100 py-2 fw-bold shadow-sm login-btn">
+        Login
+      </button>
+    </form>
   </div>
 </div>
+
+<style>
+  body {
+    background-color: #f8f9fa; /* Light grey background to make the white card pop */
+  }
+
+  .card {
+    background: #ffffff;
+  }
+
+  .custom-input {
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .custom-input:focus {
+    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.1);
+    border-color: #e60012; /* Your Red */
+    background-color: #fff;
+  }
+
+  .btn-danger {
+    background-color: #e60012;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  .btn-danger:hover {
+    background-color: #c40010;
+  }
+
+  /* Optional: a very subtle hover effect for the card */
+  .card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+  }
+</style>
 
 <%- include("../partials/footer") %>
