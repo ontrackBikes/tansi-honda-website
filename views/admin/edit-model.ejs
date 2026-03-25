@@ -1,13 +1,13 @@
 <%- include("../partials/header") %>
 
 <h2 class="mb-4">Edit Model</h2>
-
 <a href="/admin" class="btn btn-link mb-3">← Back</a>
 
 <form action="/admin/edit/<%= model._id %>" method="POST">
 
 <div class="row">
 
+<!-- LEFT -->
 <div class="col-md-6">
 
 <div class="mb-3">
@@ -17,10 +17,18 @@
 
 <div class="mb-3">
 <label>Category</label>
-<select name="category" class="form-select">
-<option <%= model.category==='Bike'?'selected':'' %>>Bike</option>
-<option <%= model.category==='Scooter'?'selected':'' %>>Scooter</option>
-<option <%= model.category==='Touring'?'selected':'' %>>Touring</option>
+<select name="category" id="category" class="form-select">
+<option value="Motorcycle" <%= model.category==='Motorcycle'?'selected':'' %>>Motorcycle</option>
+<option value="Scooter" <%= model.category==='Scooter'?'selected':'' %>>Scooter</option>
+<option value="EV" <%= model.category==='EV'?'selected':'' %>>EV</option>
+</select>
+</div>
+
+<div class="mb-3" id="subCategoryBox">
+<label>Sub Category</label>
+<select name="subCategory" class="form-select">
+<option value="RedWing" <%= model.subCategory==='RedWing'?'selected':'' %>>RedWing</option>
+<option value="BigWing" <%= model.subCategory==='BigWing'?'selected':'' %>>BigWing</option>
 </select>
 </div>
 
@@ -30,23 +38,23 @@
 </div>
 
 <div class="mb-3">
-<label>Features</label>
-<input name="features" class="form-control"
-value="<%= model.features?.join(', ') %>">
+<label>Brochure</label>
+<input name="brochure" class="form-control" value="<%= model.brochure %>">
 </div>
 
-<h5 class="mt-4">Specifications</h5>
+<!-- 🎨 COLOR (single for now) -->
+<h5>Color</h5>
+<input name="color_name" class="form-control mb-1"
+value="<%= model.colors?.[0]?.name || '' %>" placeholder="Color Name">
 
-<div class="row">
-<input name="engine" class="form-control mb-2" value="<%= model.specs?.engine %>" placeholder="Engine">
-<input name="mileage" class="form-control mb-2" value="<%= model.specs?.mileage %>" placeholder="Mileage">
-<input name="power" class="form-control mb-2" value="<%= model.specs?.power %>" placeholder="Power">
-<input name="torque" class="form-control mb-2" value="<%= model.specs?.torque %>" placeholder="Torque">
-<input name="fuel_type" class="form-control mb-2" value="<%= model.specs?.fuel_type %>" placeholder="Fuel Type">
-<input name="transmission" class="form-control mb-2" value="<%= model.specs?.transmission %>" placeholder="Transmission">
-</div>
+<input name="color_code" class="form-control mb-1"
+value="<%= model.colors?.[0]?.code || '' %>" placeholder="#000000">
 
-<div class="form-check mt-2">
+<input name="color_image" class="form-control mb-2"
+value="<%= model.colors?.[0]?.image || '' %>" placeholder="Image URL">
+
+<!-- ACTIVE -->
+<div class="form-check mt-3">
 <input type="checkbox" name="isActive"
 <%= model.isActive?'checked':'' %>>
 <label>Active</label>
@@ -54,14 +62,16 @@ value="<%= model.features?.join(', ') %>">
 
 </div>
 
+<!-- RIGHT -->
 <div class="col-md-6">
 
 <input type="file" id="imageInput" class="form-control mb-3">
 
-<input type="hidden" name="image" id="imageUrl" value="<%= model.image %>">
+<input type="hidden" name="coverImage" id="imageUrl"
+value="<%= model.coverImage %>">
 
 <img id="previewImage"
-src="<%= model.image %>"
+src="<%= model.coverImage || '/images/default-bike.jpg' %>"
 class="img-fluid rounded">
 
 <p id="uploadStatus"></p>
@@ -70,31 +80,97 @@ class="img-fluid rounded">
 
 </div>
 
+<hr>
+
+<!-- 🔥 VARIANT -->
+<% const v = model.variants?.[0] || {}; %>
+<% const s = v.specs || {}; %>
+
+<h4>Variant</h4>
+
+<input name="variant_name" class="form-control mb-2"
+value="<%= v.name || '' %>" placeholder="Variant Name">
+
+<input name="sku" class="form-control mb-3"
+value="<%= v.sku || '' %>" placeholder="SKU">
+
+<!-- BODY -->
+<h5>Body</h5>
+<input name="length" class="form-control mb-1" value="<%= s.body?.length %>" placeholder="Length">
+<input name="width" class="form-control mb-1" value="<%= s.body?.width %>" placeholder="Width">
+<input name="height" class="form-control mb-1" value="<%= s.body?.height %>" placeholder="Height">
+<input name="wheelbase" class="form-control mb-1" value="<%= s.body?.wheelbase %>" placeholder="Wheelbase">
+<input name="ground_clearance" class="form-control mb-1" value="<%= s.body?.ground_clearance %>" placeholder="Ground Clearance">
+<input name="kerb_weight" class="form-control mb-1" value="<%= s.body?.kerb_weight %>" placeholder="Kerb Weight">
+<input name="seat_height" class="form-control mb-1" value="<%= s.body?.seat_height %>" placeholder="Seat Height">
+<input name="fuel_tank" class="form-control mb-2" value="<%= s.body?.fuel_tank %>" placeholder="Fuel Tank">
+
+<!-- ENGINE -->
+<h5>Engine</h5>
+<input name="engine_type" class="form-control mb-1" value="<%= s.engine?.type %>" placeholder="Type">
+<input name="displacement" class="form-control mb-1" value="<%= s.engine?.displacement %>" placeholder="Displacement">
+<input name="power" class="form-control mb-1" value="<%= s.engine?.power %>" placeholder="Power">
+<input name="torque" class="form-control mb-1" value="<%= s.engine?.torque %>" placeholder="Torque">
+<input name="fuel_system" class="form-control mb-1" value="<%= s.engine?.fuel_system %>" placeholder="Fuel System">
+<input name="bore_stroke" class="form-control mb-1" value="<%= s.engine?.bore_stroke %>" placeholder="Bore Stroke">
+<input name="compression_ratio" class="form-control mb-1" value="<%= s.engine?.compression_ratio %>" placeholder="Compression Ratio">
+<input name="starting" class="form-control mb-2" value="<%= s.engine?.starting %>" placeholder="Starting">
+
+<!-- TRANSMISSION -->
+<h5>Transmission</h5>
+<input name="clutch" class="form-control mb-1" value="<%= s.transmission?.clutch %>" placeholder="Clutch">
+<input name="gears" class="form-control mb-2" value="<%= s.transmission?.gears %>" placeholder="Gears">
+
+<!-- TYRES -->
+<h5>Tyres & Brakes</h5>
+<input name="front_tyre" class="form-control mb-1" value="<%= s.tyres?.front %>">
+<input name="rear_tyre" class="form-control mb-1" value="<%= s.tyres?.rear %>">
+<input name="front_brake" class="form-control mb-1" value="<%= s.tyres?.front_brake %>">
+<input name="rear_brake" class="form-control mb-2" value="<%= s.tyres?.rear_brake %>">
+
+<!-- SUSPENSION -->
+<h5>Suspension</h5>
+<input name="frame" class="form-control mb-1" value="<%= s.suspension?.frame %>">
+<input name="front_suspension" class="form-control mb-1" value="<%= s.suspension?.front %>">
+<input name="rear_suspension" class="form-control mb-2" value="<%= s.suspension?.rear %>">
+
+<!-- ELECTRICAL -->
+<h5>Electrical</h5>
+<input name="battery" class="form-control mb-1" value="<%= s.electricals?.battery %>">
+<input name="headlamp" class="form-control mb-2" value="<%= s.electricals?.headlamp %>">
+
 <button class="btn btn-primary mt-3">Update</button>
 
 </form>
 
 <script>
-const imageInput = document.getElementById("imageInput");
-const preview = document.getElementById("previewImage");
-const imageUrlInput = document.getElementById("imageUrl");
+// category logic
+const category = document.getElementById("category");
+const subBox = document.getElementById("subCategoryBox");
 
-imageInput.addEventListener("change", async () => {
-const file = imageInput.files[0];
-const formData = new FormData();
-formData.append("image", file);
-
-const res = await fetch("/admin/upload-image", {
-method: "POST",
-body: formData
-});
-
-const data = await res.json();
-
-if (data.url) {
-imageUrlInput.value = data.url;
-preview.src = data.url;
+function toggleSub() {
+  subBox.style.display = category.value === "Motorcycle" ? "block" : "none";
 }
+toggleSub();
+category.addEventListener("change", toggleSub);
+
+// image upload
+const input = document.getElementById("imageInput");
+const preview = document.getElementById("previewImage");
+const hidden = document.getElementById("imageUrl");
+
+input.addEventListener("change", async () => {
+  const file = input.files[0];
+  const formData = new FormData();
+  formData.append("image", file);
+
+  const res = await fetch("/admin/upload-image", { method: "POST", body: formData });
+  const data = await res.json();
+
+  if (data.url) {
+    hidden.value = data.url;
+    preview.src = data.url;
+  }
 });
 </script>
 

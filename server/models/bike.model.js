@@ -1,58 +1,138 @@
 const mongoose = require("mongoose");
 
 const bikeSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
+
+  // 🔹 BASIC INFO
+  name: { type: String, required: true, trim: true },
+  slug: { type: String, unique: true, lowercase: true, trim: true },
+
+  category: { 
+    type: String, 
+    enum: ["EV", "Scooter", "Motorcycle"], 
+    required: true 
   },
 
-  slug: {
-    type: String,
-    unique: true
+  subCategory: { 
+    type: String, 
+    enum: ["RedWing", "BigWing", null],
+    default: null
   },
 
-  category: {
-    type: String, // Scooter / Bike / Touring
-  },
+  description: { type: String, default: "" },
 
-  price: {
-    type: String // optional (you said not needed now)
-  },
 
-  image: {
-    type: String
-  },
+  coverImage: { type: String, default: "" },
 
-  images: [
+  brochure: { type: String, default: "" },
+
+  isActive: { type: Boolean, default: true },
+
+  // 🎨 COLORS
+  colors: [
     {
-      type: String // for future gallery support
+      name: { type: String, trim: true },
+      code: { type: String, trim: true },
+      image: { type: String }
     }
   ],
 
-  description: {
-    type: String
+  // 🧩 FEATURES
+  features: {
+    safety: [
+      {
+        title: String,
+        image: String,
+        description: String
+      }
+    ],
+    comfort: [
+      {
+        title: String,
+        image: String,
+        description: String
+      }
+    ],
+    design: [
+      {
+        title: String,
+        image: String,
+        description: String
+      }
+    ],
+    technology: [
+      {
+        title: String,
+        image: String,
+        description: String
+      }
+    ]
   },
 
-  features: [
+  // 🔥 VARIANTS
+  variants: [
     {
-      type: String
+      name: { type: String, trim: true },
+      sku: { type: String, trim: true },
+
+      specs: {
+
+        // 🧱 BODY
+        body: {
+          length: String,
+          width: String,
+          height: String,
+          wheelbase: String,
+          ground_clearance: String,
+          kerb_weight: String,
+          seat_length: String,
+          seat_height: String,
+          fuel_tank: String
+        },
+
+        // ⚙️ ENGINE
+        engine: {
+          type: {
+            type: String,
+          },
+          displacement: String,
+          power: String,
+          torque: String,
+          fuel_system: String,
+          bore_stroke: String,
+          compression_ratio: String,
+          starting: String
+        },
+
+        // ⚙️ TRANSMISSION
+        transmission: {
+          clutch: String,
+          gears: String
+        },
+
+        // 🛞 TYRES & BRAKES
+        tyres: {
+          front: String,
+          rear: String,
+          front_brake: String,
+          rear_brake: String
+        },
+
+        // 🏍️ SUSPENSION
+        suspension: {
+          frame: String,
+          front: String,
+          rear: String
+        },
+
+        // 🔋 ELECTRICALS
+        electricals: {
+          battery: String,
+          headlamp: String
+        }
+
+      }
     }
-  ],
-
-  // 🔧 Specifications
-  specs: {
-    engine: String,
-    mileage: String,
-    power: String,
-    torque: String,
-    fuel_type: String,
-    transmission: String
-  },
-
-  isActive: {
-    type: Boolean,
-    default: true
-  }
+  ]
 
 }, { timestamps: true });
 

@@ -1,125 +1,166 @@
 <%- include("../partials/header") %>
 
 <h2 class="mb-4">Add New Model</h2>
-
-<a href="/admin" class="btn btn-link mb-3">← Back to Dashboard</a>
+<a href="/admin" class="btn btn-link mb-3">← Back</a>
 
 <form action="/admin/add" method="POST">
 
-  <div class="row">
+<div class="row">
 
-    <!-- LEFT -->
-    <div class="col-md-6">
+<!-- LEFT -->
+<div class="col-md-6">
 
-      <div class="mb-3">
-        <label class="form-label">Model Name</label>
-        <input type="text" name="name" class="form-control" required />
-      </div>
+<div class="mb-3">
+<label>Model Name</label>
+<input name="name" class="form-control" required>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Category</label>
-        <select name="category" class="form-select">
-          <option value="Bike">Bike</option>
-          <option value="Scooter">Scooter</option>
-          <option value="Touring">Touring</option>
-        </select>
-      </div>
+<div class="mb-3">
+<label>Category</label>
+<select name="category" id="category" class="form-select">
+<option value="Motorcycle">Motorcycle</option>
+<option value="Scooter">Scooter</option>
+<option value="EV">EV</option>
+</select>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Description</label>
-        <textarea name="description" rows="3" class="form-control"></textarea>
-      </div>
+<div class="mb-3" id="subCategoryBox">
+<label>Sub Category</label>
+<select name="subCategory" class="form-select">
+<option value="RedWing">RedWing</option>
+<option value="BigWing">BigWing</option>
+</select>
+</div>
 
-      <div class="mb-3">
-        <label class="form-label">Features</label>
-        <input type="text" name="features" class="form-control"
-          placeholder="ABS, LED, Digital Meter" />
-      </div>
+<div class="mb-3">
+<label>Description</label>
+<textarea name="description" class="form-control"></textarea>
+</div>
 
-      <!-- 🔧 SPECS -->
-      <h5 class="mt-4">Specifications</h5>
+<div class="mb-3">
+<label>Brochure URL</label>
+<input name="brochure" class="form-control">
+</div>
 
-      <div class="row">
-        <div class="col-6 mb-2">
-          <input name="engine" class="form-control" placeholder="Engine (e.g. 124cc)">
-        </div>
-        <div class="col-6 mb-2">
-          <input name="mileage" class="form-control" placeholder="Mileage">
-        </div>
-        <div class="col-6 mb-2">
-          <input name="power" class="form-control" placeholder="Power">
-        </div>
-        <div class="col-6 mb-2">
-          <input name="torque" class="form-control" placeholder="Torque">
-        </div>
-        <div class="col-6 mb-2">
-          <input name="fuel_type" class="form-control" placeholder="Fuel Type">
-        </div>
-        <div class="col-6 mb-2">
-          <input name="transmission" class="form-control" placeholder="Transmission">
-        </div>
-      </div>
+<!-- 🎨 COLORS -->
+<h5>Colors</h5>
+<div class="mb-3">
+<input name="color_name" class="form-control mb-1" placeholder="Color Name">
+<input name="color_code" class="form-control mb-1" placeholder="#000000">
+<input name="color_image" class="form-control" placeholder="/images/...">
+</div>
 
-    </div>
+</div>
 
-    <!-- RIGHT -->
-    <div class="col-md-6">
+<!-- RIGHT -->
+<div class="col-md-6">
 
-      <div class="mb-3">
-        <label class="form-label">Upload Image</label>
-        <input type="file" id="imageInput" class="form-control" />
-      </div>
+<div class="mb-3">
+<label>Upload Default Image</label>
+<input type="file" id="imageInput" class="form-control">
+</div>
 
-      <input type="hidden" name="image" id="imageUrl" />
+<input type="hidden" name="coverImage" id="imageUrl">
 
-      <div class="text-center mt-3">
-        <img id="previewImage"
-          src="/images/default-bike.jpg"
-          class="img-fluid rounded shadow-sm"
-          style="max-height: 250px;">
-      </div>
+<img id="previewImage" class="img-fluid rounded mt-2"
+src="/images/default-bike.jpg">
 
-      <p id="uploadStatus" class="text-success mt-2"></p>
+<p id="uploadStatus"></p>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
-  <button class="btn btn-primary mt-3">Add Model</button>
+<hr>
+
+<!-- 🔥 VARIANT -->
+<h4>Variant</h4>
+
+<div class="mb-3">
+<input name="variant_name" class="form-control mb-2" placeholder="Variant Name (Standard)">
+<input name="sku" class="form-control" placeholder="SKU">
+</div>
+
+<!-- 🔧 BODY -->
+<h5>Body Dimensions</h5>
+<div class="row">
+<input name="length" class="form-control col m-1" placeholder="Length">
+<input name="width" class="form-control col m-1" placeholder="Width">
+<input name="height" class="form-control col m-1" placeholder="Height">
+<input name="wheelbase" class="form-control col m-1" placeholder="Wheelbase">
+<input name="ground_clearance" class="form-control col m-1" placeholder="Ground Clearance">
+<input name="kerb_weight" class="form-control col m-1" placeholder="Kerb Weight">
+<input name="seat_height" class="form-control col m-1" placeholder="Seat Height">
+<input name="fuel_tank" class="form-control col m-1" placeholder="Fuel Tank">
+</div>
+
+<!-- ⚙️ ENGINE -->
+<h5 class="mt-3">Engine</h5>
+<div class="row">
+<input name="engine_type" class="form-control col m-1" placeholder="Type">
+<input name="displacement" class="form-control col m-1" placeholder="Displacement">
+<input name="power" class="form-control col m-1" placeholder="Power">
+<input name="torque" class="form-control col m-1" placeholder="Torque">
+<input name="fuel_system" class="form-control col m-1" placeholder="Fuel System">
+<input name="bore_stroke" class="form-control col m-1" placeholder="Bore x Stroke">
+<input name="compression_ratio" class="form-control col m-1" placeholder="Compression Ratio">
+<input name="starting" class="form-control col m-1" placeholder="Starting">
+</div>
+
+<!-- ⚙️ TRANSMISSION -->
+<h5 class="mt-3">Transmission</h5>
+<input name="clutch" class="form-control mb-2" placeholder="Clutch">
+<input name="gears" class="form-control" placeholder="Gears">
+
+<!-- 🛞 TYRES -->
+<h5 class="mt-3">Tyres & Brakes</h5>
+<input name="front_tyre" class="form-control mb-2" placeholder="Front Tyre">
+<input name="rear_tyre" class="form-control mb-2" placeholder="Rear Tyre">
+<input name="front_brake" class="form-control mb-2" placeholder="Front Brake">
+<input name="rear_brake" class="form-control" placeholder="Rear Brake">
+
+<!-- 🏍️ SUSPENSION -->
+<h5 class="mt-3">Suspension</h5>
+<input name="frame" class="form-control mb-2" placeholder="Frame">
+<input name="front_suspension" class="form-control mb-2" placeholder="Front Suspension">
+<input name="rear_suspension" class="form-control" placeholder="Rear Suspension">
+
+<!-- 🔋 ELECTRICAL -->
+<h5 class="mt-3">Electricals</h5>
+<input name="battery" class="form-control mb-2" placeholder="Battery">
+<input name="headlamp" class="form-control" placeholder="Headlamp">
+
+<button class="btn btn-primary mt-4">Add Model</button>
 
 </form>
 
 <script>
-  const imageInput = document.getElementById("imageInput");
-  const preview = document.getElementById("previewImage");
-  const imageUrlInput = document.getElementById("imageUrl");
-  const statusText = document.getElementById("uploadStatus");
+// hide subcategory if not motorcycle
+const category = document.getElementById("category");
+const subBox = document.getElementById("subCategoryBox");
 
-  imageInput.addEventListener("change", async () => {
-    const file = imageInput.files[0];
-    if (!file) return;
+category.addEventListener("change", () => {
+  subBox.style.display = category.value === "Motorcycle" ? "block" : "none";
+});
 
-    preview.src = URL.createObjectURL(file);
-    statusText.innerText = "Uploading...";
+// upload
+const input = document.getElementById("imageInput");
+const preview = document.getElementById("previewImage");
+const hidden = document.getElementById("imageUrl");
 
-    const formData = new FormData();
-    formData.append("image", file);
+input.addEventListener("change", async () => {
+  const file = input.files[0];
+  const formData = new FormData();
+  formData.append("image", file);
 
-    const res = await fetch("/admin/upload-image", {
-      method: "POST",
-      body: formData
-    });
+  const res = await fetch("/admin/upload-image", { method: "POST", body: formData });
+  const data = await res.json();
 
-    const data = await res.json();
-
-    if (data.url) {
-      imageUrlInput.value = data.url;
-      preview.src = data.url;
-      statusText.innerText = "✅ Uploaded";
-    } else {
-      statusText.innerText = "❌ Failed";
-    }
-  });
+  if (data.url) {
+    hidden.value = data.url;
+    preview.src = data.url;
+  }
+});
 </script>
 
 <%- include("../partials/footer") %>
