@@ -1,14 +1,12 @@
 const mongoose = require("mongoose");
 
 const bikeSchema = new mongoose.Schema({
-
-  // 🔹 BASIC INFO
   name: { type: String, required: true, trim: true },
   slug: { type: String, unique: true, lowercase: true, trim: true },
 
   category: { 
     type: String, 
-    enum: ["EV", "Scooter", "Motorcycle"], 
+    enum: ["motorcycle", "scooter", "e2w"], 
     required: true 
   },
 
@@ -19,15 +17,10 @@ const bikeSchema = new mongoose.Schema({
   },
 
   description: { type: String, default: "" },
-
-
   coverImage: { type: String, default: "" },
-
   brochure: { type: String, default: "" },
-
   isActive: { type: Boolean, default: true },
 
-  // 🎨 COLORS
   colors: [
     {
       name: { type: String, trim: true },
@@ -36,47 +29,18 @@ const bikeSchema = new mongoose.Schema({
     }
   ],
 
-  // 🧩 FEATURES
   features: {
-    safety: [
-      {
-        title: String,
-        image: String,
-        description: String
-      }
-    ],
-    comfort: [
-      {
-        title: String,
-        image: String,
-        description: String
-      }
-    ],
-    design: [
-      {
-        title: String,
-        image: String,
-        description: String
-      }
-    ],
-    technology: [
-      {
-        title: String,
-        image: String,
-        description: String
-      }
-    ]
+    safety: [{ title: String, image: String, description: String }],
+    comfort: [{ title: String, image: String, description: String }],
+    design: [{ title: String, image: String, description: String }],
+    technology: [{ title: String, image: String, description: String }]
   },
 
-  // 🔥 VARIANTS
   variants: [
     {
       name: { type: String, trim: true },
       sku: { type: String, trim: true },
-
       specs: {
-
-        // 🧱 BODY
         body: {
           length: String,
           width: String,
@@ -88,12 +52,8 @@ const bikeSchema = new mongoose.Schema({
           seat_height: String,
           fuel_tank: String
         },
-
-        // ⚙️ ENGINE
         engine: {
-          type: {
-            type: String,
-          },
+          type: { type: String },
           displacement: String,
           power: String,
           torque: String,
@@ -102,38 +62,13 @@ const bikeSchema = new mongoose.Schema({
           compression_ratio: String,
           starting: String
         },
-
-        // ⚙️ TRANSMISSION
-        transmission: {
-          clutch: String,
-          gears: String
-        },
-
-        // 🛞 TYRES & BRAKES
-        tyres: {
-          front: String,
-          rear: String,
-          front_brake: String,
-          rear_brake: String
-        },
-
-        // 🏍️ SUSPENSION
-        suspension: {
-          frame: String,
-          front: String,
-          rear: String
-        },
-
-        // 🔋 ELECTRICALS
-        electricals: {
-          battery: String,
-          headlamp: String
-        }
-
+        transmission: { clutch: String, gears: String },
+        tyres: { front: String, rear: String, front_brake: String, rear_brake: String },
+        suspension: { frame: String, front: String, rear: String },
+        electricals: { battery: String, headlamp: String }
       }
     }
   ]
-
 }, { timestamps: true });
 
 module.exports = mongoose.model("Bike", bikeSchema);

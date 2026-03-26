@@ -1,0 +1,72 @@
+<%- include("../partials/header") %>
+
+<section class="spareparts-hero text-center py-5 bg-light">
+  <div class="container">
+    <h1>Honda Genuine Spare Parts Query</h1>
+    <p>Request Honda genuine spare parts for your two-wheeler. <small class="text-danger">* indicates required fields</small></p>
+  </div>
+</section>
+
+<div class="container my-5">
+  <form id="sparePartsForm" action="/submit-spare-parts-query" method="POST">
+    <h4 class="mb-4">Customer Information</h4>
+
+    <div class="row g-3">
+
+      <!-- Customer Name -->
+      <div class="col-md-6">
+        <label class="form-label">Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required pattern="^[a-zA-Z\s]+$" title="Only letters and spaces allowed">
+      </div>
+
+      <!-- Mobile Number -->
+      <div class="col-md-6">
+        <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
+        <input type="tel" class="form-control" name="mobile" placeholder="10-digit number" pattern="^[1-9][0-9]{9}$" required>
+      </div>
+
+      <!-- Email Id -->
+      <div class="col-md-6">
+        <label class="form-label">Email Id <span class="text-danger">*</span></label>
+        <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-6">
+        <label class="form-label">Location <span class="text-danger">*</span></label>
+        <select class="form-select" name="location" required>
+          <option value="">Select Location</option>
+          <option value="Bangalore Central">Bangalore Central</option>
+          <option value="Bangalore East">Bangalore East</option>
+          <option value="Bangalore West">Bangalore West</option>
+        </select>
+      </div>
+
+      <!-- Spares Required -->
+      <div class="col-12">
+        <label class="form-label">Spares Required <span class="text-danger">*</span></label>
+        <textarea class="form-control" name="sparesRequired" rows="3" placeholder="List of spare parts you need" required></textarea>
+      </div>
+
+      <!-- Customer Location for Delivery -->
+      <div class="col-12">
+        <label class="form-label">Customer Location</label>
+        <input type="text" class="form-control" name="customerLocation" placeholder="Address for spare parts delivery">
+      </div>
+
+      <!-- Remarks -->
+      <div class="col-12">
+        <label class="form-label">Remarks</label>
+        <textarea class="form-control" name="remarks" rows="3" placeholder="Additional information or comments"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="col-12 text-center mt-3">
+        <button type="submit" class="btn btn-danger btn-lg">Submit Query</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<%- include("../partials/footer") %>

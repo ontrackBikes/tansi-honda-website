@@ -43,7 +43,7 @@ app.use("/admin", require("./routes/admin.routes"));
 
 // 404
 app.use((req, res) => {
-  res.status(404).render("404");
+  res.status(404).render("website/404");
 });
 
 // Server

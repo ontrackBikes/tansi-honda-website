@@ -1,219 +1,120 @@
 <%- include("../partials/header") %>
 
-<!-- HERO -->
-<section class="catalog-hero">
-  <div class="container text-center">
-    <h1>Explore the Complete Honda Lineup</h1>
-    <p>
-      From sporty scooters to legendary Gold Wing · Discover your perfect ride at Tansi Honda, Bangalore
-    </p>
+<!-- HERO SECTION -->
+<section class="catalog-hero text-center py-5 bg-light">
+  <div class="container">
+    <h1 class="display-4 fw-bold text-dark">Explore the Complete Honda Lineup</h1>
+    <p class="lead text-muted mt-3">From sporty scooters to legendary Gold Wing · Discover your perfect ride at Tansi Honda, Bangalore</p>
   </div>
 </section>
 
 <!-- MAIN CONTENT -->
 <div class="container my-5">
 
+  <!-- CATEGORY FILTER -->
+  <div class="text-center mb-4">
+    <a href="/motorcycle" class="btn btn-sm me-2 <%= currentCategory==='motorcycle' ? 'btn-dark' : 'btn-outline-dark' %>">Motorcycles</a>
+    <a href="/scooter" class="btn btn-sm me-2 <%= currentCategory==='scooter' ? 'btn-dark' : 'btn-outline-dark' %>">Scooters</a>
+    <a href="/e2w" class="btn btn-sm <%= currentCategory==='e2w' ? 'btn-dark' : 'btn-outline-dark' %>">EV</a>
+  </div>
+
   <!-- SEARCH BAR -->
   <div class="row justify-content-center mb-5">
     <div class="col-md-6 col-lg-5">
-      <div class="filter-bar d-flex align-items-center gap-2">
-        <i class="fas fa-search filter-icon"></i>
-
-        <input
-          type="text"
-          id="searchInput"
-          class="filter-input"
-          placeholder="Search by model name (e.g., Activa, CB350, Dio)"
-          autocomplete="off"
-        />
-
-        <button id="clearSearch" class="btn btn-sm btn-link text-danger">
-          ✖
-        </button>
+      <div class="input-group shadow-sm rounded-pill overflow-hidden">
+        <span class="input-group-text bg-white border-0"><i class="fas fa-search text-danger"></i></span>
+        <input type="text" id="searchInput" class="form-control border-0" placeholder="Search models..." autocomplete="off">
+        <button id="clearSearch" class="btn btn-outline-danger">✖</button>
       </div>
-
       <p class="text-muted mt-2 text-center small" id="resultCount"></p>
     </div>
   </div>
 
-  <!-- GRID -->
+  <!-- MODELS GRID -->
   <div class="row g-4" id="modelsContainer">
-
-    <% if (!models || models.length === 0) { %>
+    <% if (!models.length) { %>
       <div class="col-12 text-center py-5">
         <h5 class="text-muted">🚫 No models available</h5>
       </div>
     <% } else { %>
-
       <% models.forEach(model => { %>
-        <div class="col-6 col-sm-6 col-md-4 col-lg-3 model-card-item">
-          
-          <a href="/models/<%= model._id %>" class="text-decoration-none">
-           <div class="model-card h-100">
-
-            <!-- IMAGE -->
-            <img
-              src="<%= model.coverImage || '/images/default-bike.jpg' %>"
-              class="catalog-img"
-              alt="<%= model.name %>"
-              loading="lazy"
-            />
-
-            <!-- INFO -->
-            <div class="model-info">
-              <h3 class="text-danger"><%= model.name %></h3>
-
-              <!-- <p>₹ <%= model.price %></p> -->
-
-              <!-- <a href="/models/<%= model._id %>" class="model-link">
-                View Details <i class="fas fa-arrow-right"></i>
-              </a> -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <a href="/<%= model.category %>/<%= model.slug %>" class="text-decoration-none">
+            <div class="card h-100 border-0 shadow-sm hover-shadow rounded-4 overflow-hidden">
+              <img src="<%= model.coverImage || '/images/default-bike.jpg' %>" class="card-img-top" alt="<%= model.name %>" style="height:200px; object-fit:cover;">
+              <div class="card-body text-center py-3">
+                <h5 class="card-title text-danger fw-bold mb-0"><%= model.name %></h5>
+                <p class="text-muted small mb-0 text-capitalize"><%= model.category %></p>
+              </div>
             </div>
-
-           </div>
           </a>
-
         </div>
       <% }) %>
-
     <% } %>
-
   </div>
+
 </div>
 
 <!-- STYLES -->
 <style>
 .catalog-hero {
-  background: linear-gradient(105deg, #fef9f5 0%, #ffffff 100%);
-  padding: 60px 0 40px;
+  background: linear-gradient(135deg,#fef9f5 0%,#ffffff 100%);
 }
 
-.catalog-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  color: #1e1e2f;
-}
-
-.catalog-hero p {
-  font-size: 1.1rem;
-  color: #4a5568;
-  max-width: 700px;
-  margin: 16px auto 0;
-}
-
-/* FILTER BAR */
-.filter-bar {
-  background: #fff;
-  border-radius: 50px;
-  padding: 10px 18px;
-  border: 1px solid #eef2f6;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-}
-
-.filter-input {
-  border: none;
-  outline: none;
-  width: 100%;
-  background: transparent;
-}
-
-.filter-icon {
-  color: #e60012;
-}
-
-/* CARD */
-.model-card {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
+.hover-shadow:hover {
+  transform: translateY(-5px);
   transition: 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
 }
 
-.model-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+.input-group input::placeholder {
+  color: #adb5bd;
+  font-style: italic;
 }
 
-.catalog-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  background: #f3f4f6;
+.card-title {
+  font-size: 1.1rem;
 }
 
-/* INFO */
-.model-info {
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+.card-body p {
+  font-size: 0.85rem;
 }
 
-.model-info h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.model-info p {
-  color: #4b5563;
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-}
-
-.model-link {
-  margin-top: auto;
-  color: #e60012;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.model-link:hover {
-  color: #b91c1c;
-  gap: 10px;
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-weight: 500;
 }
 </style>
 
-<!-- SCRIPT -->
+<!-- SEARCH SCRIPT -->
 <script>
-  const searchInput = document.getElementById("searchInput");
-  const clearBtn = document.getElementById("clearSearch");
-  const cards = document.querySelectorAll(".model-card-item");
-  const resultCount = document.getElementById("resultCount");
+const searchInput = document.getElementById("searchInput");
+const clearBtn = document.getElementById("clearSearch");
+const cards = document.querySelectorAll(".card.h-100");
+const resultCount = document.getElementById("resultCount");
 
-  function updateResultsCount() {
-    const visibleCards = [...cards].filter(card => card.style.display !== "none");
-    resultCount.textContent = `${visibleCards.length} result(s) found`;
-  }
+function updateResultsCount() {
+  const visibleCards = [...cards].filter(card => card.closest('a').style.display !== "none");
+  resultCount.textContent = `${visibleCards.length} result(s) found`;
+}
 
-  searchInput.addEventListener("keyup", function () {
-    const value = this.value.toLowerCase();
-
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(value) ? "" : "none";
-    });
-
-    updateResultsCount();
+searchInput.addEventListener("keyup", () => {
+  const val = searchInput.value.toLowerCase();
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.closest('a').style.display = text.includes(val) ? "" : "none";
   });
-
-  clearBtn.addEventListener("click", () => {
-    searchInput.value = "";
-
-    cards.forEach(card => {
-      card.style.display = "";
-    });
-
-    resultCount.textContent = "";
-  });
-
-  // initial count
   updateResultsCount();
+});
+
+clearBtn.addEventListener("click", () => {
+  searchInput.value = "";
+  cards.forEach(card => card.closest('a').style.display = "");
+  resultCount.textContent = "";
+});
+
+updateResultsCount();
 </script>
 
 <%- include("../partials/footer") %>

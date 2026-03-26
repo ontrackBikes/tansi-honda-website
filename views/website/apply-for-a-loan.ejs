@@ -1,0 +1,142 @@
+<%- include("../partials/header") %>
+
+<section class="loan-hero text-center py-5 bg-light">
+  <div class="container">
+    <h1 class="display-4 fw-bold text-dark">Apply for a Loan</h1>
+    <p class="lead text-muted mt-2">Fill out the form below and our finance team will get back to you</p>
+  </div>
+</section>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+
+      <div class="card shadow-sm rounded-4 p-4">
+        <h4 class="fw-bold mb-4">Loan Application Form</h4>
+        <p class="text-muted small mb-4">Fields marked with <span class="text-danger">*</span> are required</p>
+
+        <form id="loanForm" action="/submit-loan" method="POST" novalidate>
+
+          <!-- NAME -->
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required pattern="^[a-zA-Z\s]+$">
+            <div class="form-text text-muted small">It doesn't accept special characters or symbols.</div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">E-Mail <span class="text-danger">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+
+          <!-- MOBILE NUMBER -->
+          <div class="mb-3">
+            <label for="mobile" class="form-label fw-semibold">Mobile Number <span class="text-danger">*</span></label>
+            <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Enter 10-digit mobile number" required pattern="^[0-9]{10}$">
+          </div>
+
+          <!-- LOCATION -->
+          <div class="mb-3">
+            <label for="location" class="form-label fw-semibold">Location <span class="text-danger">*</span></label>
+            <select id="location" name="location" class="form-select" required>
+              <option value="" disabled selected>Select your city</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- VEHICLE SELECTION -->
+          <div class="mb-3">
+            <label for="vehicle" class="form-label fw-semibold">Select Vehicle <span class="text-danger">*</span></label>
+            <select id="vehicle" name="vehicle" class="form-select" required>
+              <option value="" disabled selected>Select your vehicle</option>
+              <% models.forEach(model => { %>
+                <option value="<%= model.name %>"><%= model.name %> - <%= model.category %></option>
+              <% }) %>
+            </select>
+          </div>
+
+          <!-- DOWN PAYMENT -->
+          <div class="mb-3">
+            <label for="downPayment" class="form-label fw-semibold">Vehicle Down Payment <span class="text-danger">*</span></label>
+            <select id="downPayment" name="downPayment" class="form-select" required>
+              <option value="" disabled selected>Select down payment</option>
+              <option value="10%">10%</option>
+              <option value="20%">20%</option>
+              <option value="30%">30%</option>
+              <option value="40%">40%</option>
+              <option value="50%">50%</option>
+            </select>
+          </div>
+
+          <!-- PREFERRED EMI / TENURE -->
+          <div class="mb-4">
+            <label for="tenure" class="form-label fw-semibold">Preferred Loan Tenure <span class="text-danger">*</span></label>
+            <select id="tenure" name="tenure" class="form-select" required>
+              <option value="" disabled selected>Select tenure</option>
+              <option value="12">12 months</option>
+              <option value="24">24 months</option>
+              <option value="36">36 months</option>
+              <option value="48">48 months</option>
+              <option value="60">60 months</option>
+            </select>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="btn btn-danger w-100 fw-bold py-2">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STYLES -->
+<style>
+.loan-hero {
+  background: linear-gradient(120deg, #fef9f5 0%, #ffffff 100%);
+}
+
+.card h4 {
+  color: #1e1e2f;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+input:invalid, select:invalid {
+  border-color: #dc3545;
+}
+
+input:valid, select:valid {
+  border-color: #198754;
+}
+</style>
+
+<script>
+// Basic form validation
+document.getElementById("loanForm").addEventListener("submit", function(e){
+  const name = document.getElementById("name");
+  const mobile = document.getElementById("mobile");
+
+  if (!name.value.match(/^[a-zA-Z\s]+$/)) {
+    e.preventDefault();
+    alert("Name should not contain special characters or numbers.");
+    name.focus();
+    return false;
+  }
+
+  if (!mobile.value.match(/^[0-9]{10}$/)) {
+    e.preventDefault();
+    alert("Enter a valid 10-digit mobile number.");
+    mobile.focus();
+    return false;
+  }
+});
+</script>
+
+<%- include("../partials/footer") %>

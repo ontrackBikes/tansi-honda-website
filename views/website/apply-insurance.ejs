@@ -1,0 +1,186 @@
+<%- include("../partials/header") %>
+
+<section class="insurance-hero text-center py-5 bg-light">
+  <div class="container">
+    <h1>Apply Insurance</h1>
+    <p>Fill out the form below to apply for vehicle insurance. <small class="text-danger">* indicates required fields</small></p>
+  </div>
+</section>
+
+<div class="container my-5">
+  <form id="insuranceForm" action="/submit-insurance" method="POST">
+    <h4 class="mb-4">Vehicle Information</h4>
+
+    <div class="row g-3">
+
+      <!-- Insurance Type -->
+      <div class="col-md-6">
+        <label class="form-label">Insurance Type <span class="text-danger">*</span></label>
+        <select class="form-select" name="insuranceType" required>
+          <option value="">Select Type</option>
+          <option value="New">New</option>
+          <option value="Renewal">Renewal</option>
+        </select>
+      </div>
+
+      <!-- Make -->
+      <div class="col-md-6">
+        <label class="form-label">Make <span class="text-danger">*</span></label>
+        <select class="form-select" name="make" required>
+          <option value="">Select Make</option>
+          <option value="Honda">Honda</option>
+        </select>
+      </div>
+
+      <!-- Model -->
+      <div class="col-md-6">
+        <label class="form-label">Model <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="model" placeholder="Model Name" required>
+      </div>
+
+      <!-- Registration Number -->
+      <div class="col-md-6">
+        <label class="form-label">Registration Number <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="registrationNumber" placeholder="Enter Registration Number" required>
+      </div>
+
+      <!-- Year of Manufacture -->
+      <div class="col-md-3">
+        <label class="form-label">Year <span class="text-danger">*</span></label>
+        <input type="number" class="form-control" name="manufactureYear" placeholder="YYYY" min="1900" max="2099" required>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Month <span class="text-danger">*</span></label>
+        <select class="form-select" name="manufactureMonth" required>
+          <option value="">Select Month</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+
+      <!-- Ownership Type -->
+      <div class="col-md-6">
+        <label class="form-label">Type of Vehicle Ownership <span class="text-danger">*</span></label>
+        <select class="form-select" name="ownershipType" required>
+          <option value="">Select Ownership Type</option>
+          <option value="Self-Owned">Self-Owned</option>
+          <option value="Leased">Leased</option>
+        </select>
+      </div>
+
+      <!-- Insurance Company -->
+      <div class="col-md-6">
+        <label class="form-label">Insurance Company <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="insuranceCompany" placeholder="Insurance Company" required>
+      </div>
+
+      <!-- Insurance Policy Type -->
+      <div class="col-md-6">
+        <label class="form-label">Insurance Policy Type <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="policyType" placeholder="Policy Type" required>
+      </div>
+
+      <!-- Insurance Expiry Date -->
+      <div class="col-md-6">
+        <label class="form-label">Insurance Expiry Date <span class="text-danger">*</span></label>
+        <input type="date" class="form-control" name="expiryDate" required>
+      </div>
+
+      <!-- Vehicle Requirement -->
+      <div class="col-md-6">
+        <label class="form-label">Vehicle Requirement <span class="text-danger">*</span></label>
+        <select class="form-select" name="vehicleRequirement" required>
+          <option value="">Select Vehicle Requirement</option>
+          <option value="Replacement Vehicle">Replacement Vehicle</option>
+          <option value="No Replacement Vehicle">No Replacement Vehicle</option>
+        </select>
+      </div>
+
+      <!-- Current Premium -->
+      <div class="col-md-6">
+        <label class="form-label">Current Premium</label>
+        <input type="number" class="form-control" name="currentPremium" placeholder="Enter Current Premium">
+      </div>
+
+      <!-- Insured Value -->
+      <div class="col-md-6">
+        <label class="form-label">Insured Value</label>
+        <input type="number" class="form-control" name="insuredValue" placeholder="Enter Insured Value">
+      </div>
+
+    </div>
+
+    <h4 class="mt-5 mb-4">Contact Information</h4>
+
+    <div class="row g-3">
+      <!-- First Name -->
+      <div class="col-md-6">
+        <label class="form-label">First Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="firstName" placeholder="First Name" required pattern="^[a-zA-Z\s]+$" title="Only letters and spaces allowed">
+      </div>
+
+      <!-- Last Name -->
+      <div class="col-md-6">
+        <label class="form-label">Last Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="lastName" placeholder="Last Name" required pattern="^[a-zA-Z\s]+$" title="Only letters and spaces allowed">
+      </div>
+
+      <!-- City -->
+      <div class="col-md-6">
+        <label class="form-label">City <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="city" placeholder="City" required>
+      </div>
+
+      <!-- Postal Code -->
+      <div class="col-md-6">
+        <label class="form-label">Postal Code</label>
+        <input type="text" class="form-control" name="postalCode" placeholder="Postal Code">
+      </div>
+
+      <!-- E-Mail -->
+      <div class="col-md-6">
+        <label class="form-label">E-Mail <span class="text-danger">*</span></label>
+        <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-6">
+        <label class="form-label">Location <span class="text-danger">*</span></label>
+        <select class="form-select" name="location" required>
+          <option value="">Select Location</option>
+          <option value="Bangalore Central">Bangalore Central</option>
+          <option value="Bangalore East">Bangalore East</option>
+          <option value="Bangalore West">Bangalore West</option>
+        </select>
+      </div>
+
+      <!-- Telephone -->
+      <div class="col-md-6">
+        <label class="form-label">Telephone <span class="text-danger">*</span></label>
+        <input type="tel" class="form-control" name="telephone" placeholder="Do not include '91' or '0'" pattern="^[1-9][0-9]{9}$" required>
+      </div>
+
+      <!-- Comments -->
+      <div class="col-12">
+        <label class="form-label">Your Comments</label>
+        <textarea class="form-control" name="comments" rows="3" placeholder="Any additional details..."></textarea>
+      </div>
+
+      <div class="col-12 text-center mt-3">
+        <button type="submit" class="btn btn-danger btn-lg">Submit Application</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<%- include("../partials/footer") %>
