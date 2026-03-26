@@ -115,7 +115,7 @@
           </ul>
         </div>
 
-        <div class="row align-items-center">
+        <div class="row align-items-top">
 
           <!-- IMAGE (LOAD ONLY ONCE) -->
           <div class="col-md-6 text-center">
@@ -132,7 +132,7 @@
                   <% Object.entries(value).forEach(([specKey, specValue])=> { %>
                     <div class="d-flex justify-content-between py-2 border-bottom-light">
                       <span class="text-muted">
-                        <%= specKey.replace(/_/g, ' ' ) %>:
+                        <%= specKey.replace(/_/g, ' ' ).replace(/\b\w/g, c=> c.toUpperCase()) %>
                       </span>
                       <span class="fw-bold text-end ms-3">
                         <%= specValue %>

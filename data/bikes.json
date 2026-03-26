@@ -8,7 +8,8 @@
 
     "description": "A reliable and efficient commuter motorcycle designed for everyday usage with excellent mileage and comfort.",
 
-    "coverImage": "/images/assets/shine100_angularleft.png",
+   
+    "coverImage": "/images/bike/honda-shine-100/cover.png",
 
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
 
@@ -54,25 +55,66 @@
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
           "description": "Prevents engine start when side stand is down."
         }
+        ,
+        {
+          "title": "Side Stand Engine Inhibitor",
+          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
+          "description": "Prevents engine start when side stand is down."
+        },
+        {
+          "title": "Side Stand Engine Inhibitor",
+          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
+          "description": "Prevents engine start when side stand is down."
+        }
       ],
       "comfort": [
         {
           "title": "Comfort Seat",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.webp",
+          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
+          "description": "Long and comfortable seating for daily rides."
+        },
+        {
+          "title": "Universal USB Charger",
+          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
+          "description": "Long and comfortable seating for daily rides."
+        },
+        {
+          "title": "Moto shock rear larger",
+          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
           "description": "Long and comfortable seating for daily rides."
         }
       ],
       "design": [
         {
           "title": "Stylish Graphics",
-          "image": "/images/bike/honda-shine-100/design/stylish-graphics.webp",
+          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
+          "description": "Modern and attractive design styling."
+        },
+        {
+          "title": "Stylish Graphics",
+          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
+          "description": "Modern and attractive design styling."
+        },
+        {
+          "title": "Stylish Graphics",
+          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
           "description": "Modern and attractive design styling."
         }
       ],
       "technology": [
         {
           "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.webp",
+          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
+          "description": "Fuel-efficient fuel injection system."
+        },
+        {
+          "title": "PGM-FI Engine",
+          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
+          "description": "Fuel-efficient fuel injection system."
+        },
+        {
+          "title": "PGM-FI Engine",
+          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
           "description": "Fuel-efficient fuel injection system."
         }
       ]
