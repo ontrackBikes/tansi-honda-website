@@ -39,6 +39,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
       /* ---------- RESET & GLOBAL ALIGNMENT ---------- */
       * {
@@ -289,6 +291,95 @@
       .main-header {
         width: 100%;
       }
+
+      .button-custom {
+        background: #e60012;
+        border: 1px solid #e60012;
+        padding: 5px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.2s;
+        text-decoration: none;
+        color: #f7f3f3;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.9rem;
+      }
+
+      /* Dropdown Base Styles */
+      .dropdown-parent {
+        position: relative;
+      }
+
+      .sub-menu,
+      .nested-menu {
+        list-style: none;
+        position: absolute;
+        background: #ffffff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        /* border-top: 3px solid #e60012; */
+        padding: 10px 0;
+        min-width: 200px;
+        display: none; /* Hidden by default */
+        z-index: 1010;
+      }
+
+      .sub-menu {
+        top: 100%;
+        left: 0;
+      }
+
+      /* Nested (Level 2) positioning */
+      .nested-menu {
+        top: -3px; /* Align with top of parent li */
+        left: 100%;
+      }
+
+      /* Show menus on hover */
+      .dropdown-parent:hover > .sub-menu {
+        display: block;
+      }
+
+      .has-children:hover > .nested-menu {
+        display: block;
+      }
+
+      /* Dropdown Item Styling */
+      .sub-menu li a,
+      .nested-menu li a {
+        padding: 10px 20px !important;
+        font-size: 0.85rem !important;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        color: #2d3748 !important;
+        border: none !important;
+        width: 100%;
+      }
+
+      .sub-menu li a:hover,
+      .nested-menu li a:hover {
+        background: #fff5f5 !important;
+        color: #e60012 !important;
+      }
+
+      /* Responsive fix: On mobile, dropdowns can be tricky. 
+   This simple tweak stack them. */
+      @media (max-width: 1024px) {
+        .sub-menu,
+        .nested-menu {
+          position: static;
+          box-shadow: none;
+          border: none;
+          padding-left: 20px;
+          display: none;
+        }
+        .nav-links.show .dropdown-parent:hover .sub-menu,
+        .nav-links.show .has-children:hover .nested-menu {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
@@ -313,6 +404,14 @@
           <span style="color: #aaa">|</span>
           <a href="#">Contact Us</a>
         </div>
+        <div class="top-bar-item">
+          <a
+            href="#"
+            class="button-custom"
+            style="background: #e60012; color: #fff"
+            >Service Appointment</a
+          >
+        </div>
       </div>
     </div>
 
@@ -333,13 +432,155 @@
             <li><a href="/models">Models</a></li>
             <li><a href="#">Motor Cycles</a></li>
             <li><a href="#">Scooters</a></li>
-            <li><a href="#">EV</a></li>
-            <li><a href="#">Brochures</a></li>
-            <li><a href="#">Red Wing</a></li>
-            <li><a href="#">BigWing</a></li>
-            <li><a href="#">EV Services</a></li>
+
+            <li class="nav-item dropdown-parent">
+              <a href="#"
+                >EV
+                <i
+                  class="fas fa-chevron-down ms-1"
+                  style="font-size: 0.7rem"
+                ></i
+              ></a>
+              <ul class="sub-menu">
+                <li class="has-children">
+                  <a href="#"
+                    >Activa e <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li class="has-children">
+                  <a href="#"
+                    >QC1 <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown-parent">
+              <a href="#"
+                >Services
+                <i
+                  class="fas fa-chevron-down ms-1"
+                  style="font-size: 0.7rem"
+                ></i
+              ></a>
+              <ul class="sub-menu">
+                <li class="has-children">
+                  <a href="#"
+                    >Book a Service
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li class="has-children">
+                  <a href="#"
+                    >Finance <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li class="has-children">
+                  <a href="#"
+                    >Insurance
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+
+                <li class="has-children">
+                  <a href="#"
+                    >Spare Parts Query
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown-parent">
+              <a href="#"
+                >Brochures
+                <i
+                  class="fas fa-chevron-down ms-1"
+                  style="font-size: 0.7rem"
+                ></i
+              ></a>
+              <ul class="sub-menu">
+                <li class="has-children">
+                  <a href="#"
+                    >EV Brochures
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                  <ul class="nested-menu">
+                    <li><a href="#">Activa e</a></li>
+                    <li><a href="#">QC1</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#"
+                    >RedWing Brochures
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                  <ul class="nested-menu">
+                    <li><a href="#">Activa 6G</a></li>
+                    <li><a href="#">Shine 125</a></li>
+                    <li><a href="#">SP 125</a></li>
+                    <li><a href="#">Dio</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#"
+                    >BigWing Brochures
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                  <ul class="nested-menu">
+                    <li><a href="#">CB350</a></li>
+                    <li><a href="#">H'ness CB350</a></li>
+                    <li><a href="#">NX500</a></li>
+                    <li><a href="#">Transalp</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown-parent">
+              <a href="#"
+                >Own a Honda
+                <i
+                  class="fas fa-chevron-down ms-1"
+                  style="font-size: 0.7rem"
+                ></i
+              ></a>
+              <ul class="sub-menu">
+                <li class="has-children">
+                  <a href="#"
+                    >Schedule a Test Ride
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li class="has-children">
+                  <a href="#"
+                    >Finance <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+                <li class="has-children">
+                  <a href="#"
+                    >Exchange Old 2 Wheeler
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+
+                <li class="has-children">
+                  <a href="#"
+                    >Buy a Honda from Home
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+
+                <li class="has-children">
+                  <a href="#"
+                    >Quick Quote
+                    <i class="fas fa-chevron-right float-end mt-1"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+
             <li><a href="#">Special Offers</a></li>
-            <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
       </div>
