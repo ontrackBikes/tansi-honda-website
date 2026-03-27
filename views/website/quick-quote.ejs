@@ -1,0 +1,195 @@
+<%- include("../partials/header") %>
+
+<section class="text-center py-5 bg-light">
+  <!-- Title -->
+  <div class="quote-header">
+    <h2>Get Quote for Your Favourite Honda</h2>
+    <p>Fill in your details and we’ll get back to you quickly</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- LEFT FORM -->
+    <div class="col-lg-8">
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body p-4">
+          <!-- CUSTOMER INFO -->
+          <h6 class="fw-bold mb-3 text-danger">Customer Information</h6>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Location *</label>
+              <select class="form-select">
+                <option>Select</option>
+                <option>Hoodi</option>
+                <option>Whitefield</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">City</label>
+              <input class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">First Name *</label>
+              <input class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Last Name *</label>
+              <input class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Email *</label>
+              <input type="email" class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Phone *</label>
+              <input class="form-control" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Postal Code</label>
+              <input class="form-control" />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label small fw-semibold"
+                >Customer Location *</label
+              >
+              <input class="form-control" />
+            </div>
+          </div>
+
+          <!-- VEHICLE INFO -->
+          <h6 class="fw-bold mt-4 mb-3 text-danger">Vehicle Information</h6>
+
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label small fw-semibold">Make *</label>
+              <select class="form-select">
+                <option>Honda</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label small fw-semibold">Model *</label>
+              <select class="form-select" id="modelSelect">
+                <option>Select Model</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label small fw-semibold">Trim</label>
+              <select class="form-select">
+                <option>Select</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label small fw-semibold">Comments</label>
+              <textarea class="form-control" rows="4"></textarea>
+            </div>
+
+            <div class="col-12">
+              <button class="btn btn-danger px-5 py-2 rounded-pill">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-lg-4">
+      <!-- QUICK ACTIONS -->
+      <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 text-center">
+        <i class="bi bi-lightning-charge fs-1 text-danger mb-2"></i>
+        <h5 class="fw-bold">Quick Actions</h5>
+        <a href="/apply-for-a-loan" class="btn btn-outline-danger w-100 mb-2"
+          >Apply Loan</a
+        >
+        <a href="/apply-insurance" class="btn btn-outline-danger w-100 mb-2"
+          >Insurance</a
+        >
+        <a href="/book-service" class="btn btn-outline-danger w-100"
+          >Book Service</a
+        >
+      </div>
+
+      <!-- LOCATION -->
+      <div class="card border-0 shadow-sm rounded-4 p-3">
+        <h6 class="fw-bold text-danger">📍 Hoodi</h6>
+        <p class="small text-muted mb-2">
+          Hoodi Village, ITPL Main Road, Mahadevapura, Bangalore – 560048
+        </p>
+
+        <p class="small mb-1"><strong>Phone:</strong> 7259030091</p>
+        <p class="small mb-1"><strong>Hours:</strong> 07:30 AM – 06:30 PM</p>
+
+        <hr />
+
+        <h6 class="fw-bold text-danger">📍 Whitefield</h6>
+        <p class="small text-muted">
+          Ramagondanahalli, Varthur Road, Bangalore – 560066
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Section */
+  .quote-section {
+    margin: 80px auto;
+  }
+
+  .quote-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .quote-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .quote-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const models = {
+    Scooters: ["Activa110", "Activa125", "Dio110", "Dio125"],
+    Bikes: ["Shine100", "SP125", "Unicorn"],
+    Premium: ["CB350", "CB350RS", "CB300R"],
+    BigBikes: ["CB650R", "CBR650R", "Gold Wing Tour"],
+  };
+
+  const select = document.getElementById("modelSelect");
+
+  Object.keys(models).forEach((cat) => {
+    const group = document.createElement("optgroup");
+    group.label = cat;
+
+    models[cat].forEach((m) => {
+      const opt = document.createElement("option");
+      opt.value = m;
+      opt.textContent = m;
+      group.appendChild(opt);
+    });
+
+    select.appendChild(group);
+  });
+</script>
+
+<%- include("../partials/footer") %>

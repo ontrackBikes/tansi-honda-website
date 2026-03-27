@@ -42,6 +42,10 @@ router.get("/directions", async (req, res) => {
   res.render("website/directions");
 });
 
+router.get("/quick-quote", async (req, res) => {
+  res.render("website/quick-quote");
+});
+
 // Category page
 router.get("/:category", async (req, res) => {
   const { category } = req.params;
