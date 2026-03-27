@@ -30,6 +30,10 @@ router.get("/apply-for-a-loan", async (req, res) => {
   res.render("website/apply-for-a-loan", { models });
 });
 
+router.get("/about-us", async (req, res) => {
+  res.render("website/about-us");
+});
+
 // Category page
 router.get("/:category", async (req, res) => {
   const { category } = req.params;
