@@ -34,6 +34,10 @@ router.get("/about-us", async (req, res) => {
   res.render("website/about-us");
 });
 
+router.get("/contact-us", async (req, res) => {
+  res.render("website/contact-us");
+});
+
 // Category page
 router.get("/:category", async (req, res) => {
   const { category } = req.params;
