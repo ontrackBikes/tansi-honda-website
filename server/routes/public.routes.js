@@ -34,6 +34,10 @@ router.get("/about-us", async (req, res) => {
   res.render("website/about-us");
 });
 
+router.get("/contact-us", async (req, res) => {
+  res.render("website/contact-us");
+});
+
 router.get("/directions", async (req, res) => {
   res.render("website/directions");
 });
