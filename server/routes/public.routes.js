@@ -38,6 +38,10 @@ router.get("/contact-us", async (req, res) => {
   res.render("website/contact-us");
 });
 
+router.get("/special-offer", async (req, res) => {
+  res.render("website/special-offer");
+});
+
 router.get("/directions", async (req, res) => {
   res.render("website/directions");
 });
