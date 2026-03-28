@@ -42,6 +42,10 @@ router.get("/special-offer", async (req, res) => {
   res.render("website/special-offer");
 });
 
+router.get("/tansi-honda-assistance", async (req, res) => {
+  res.render("website/tansi-honda-assistance");
+});
+
 router.get("/directions", async (req, res) => {
   res.render("website/directions");
 });

@@ -1,0 +1,183 @@
+<%- include("../partials/header") %>
+
+<section class="insurance-hero text-center py-5 bg-light">
+  <div class="container">
+    <h1 class="fw-bold">Tansi Honda Assistance</h1>
+    <p>
+      Sales · Service · Spare Parts · Insurance Renewal · Queries – all under
+      one roof.
+    </p>
+  </div>
+</section>
+
+<div class="container py-4">
+  <!-- Main Assistance Form -->
+  <div class="row g-4">
+    <div class="col-lg-7 mx-auto">
+      <div class="card border-0 shadow-sm rounded-4 p-4">
+        <h3 class="fw-bold mb-4 text-center">Get in touch with our experts</h3>
+        <form
+          id="assistanceForm"
+          onsubmit="
+            event.preventDefault();
+            alert(
+              '✅ Your request has been submitted. Our team will reach you shortly.',
+            );
+            this.reset();
+          "
+        >
+          <!-- I am * (First & Last) -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="First name"
+                  required
+                />
+                <label for="firstName"
+                  >First name <span class="text-danger">*</span></label
+                >
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Last name"
+                  required
+                />
+                <label for="lastName"
+                  >Last name <span class="text-danger">*</span></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact me on * -->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="contact"
+              placeholder="Phone / Email"
+              required
+            />
+            <label for="contact"
+              >Contact me on (Phone / Email)
+              <span class="text-danger">*</span></label
+            >
+          </div>
+
+          <!-- Need assistance with * (dropdown) -->
+          <div class="form-floating mb-3">
+            <select class="form-select" id="assistanceType" required>
+              <option value="" selected disabled>Select one</option>
+              <option>TEST RIDE / PRODUCT enquiry</option>
+              <option>BUY a Honda two-wheeler</option>
+              <option>EXCHANGE / SELL old two-wheeler</option>
+              <option>SERVICE ENQUIRY</option>
+              <option>SPARE PARTS / ACCESSORIES</option>
+              <option>INSURANCE RENEWAL</option>
+              <option>FEEDBACK</option>
+              <option>HSRP order</option>
+              <option>Other query</option>
+            </select>
+            <label for="assistanceType"
+              >Need assistance with <span class="text-danger">*</span></label
+            >
+          </div>
+
+          <!-- Preferred Location * -->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              placeholder="City / Area"
+              required
+            />
+            <label for="location"
+              >Preferred Location <span class="text-danger">*</span></label
+            >
+          </div>
+
+          <!-- Remarks -->
+          <div class="form-floating mb-4">
+            <textarea
+              class="form-control"
+              id="remarks"
+              style="height: 100px"
+              placeholder="Tell us more..."
+            ></textarea>
+            <label for="remarks">Remarks (optional)</label>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary-custom w-100 py-3 rounded-pill fw-semibold"
+          >
+            <i class="bi bi-envelope-paper me-2"></i> Submit Request
+          </button>
+        </form>
+        <p class="text-muted small text-center mt-3">
+          We respect your privacy. Your data will only be used to assist you.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Support Info -->
+  <div class="row g-4 mt-4">
+    <div class="col-md-4">
+      <div class="tollfree-card p-4 shadow-sm h-100">
+        <i class="bi bi-telephone-inbound fs-2 text-brand-red"></i>
+        <h5 class="fw-bold mt-2">Toll‑Free Support</h5>
+        <p class="text-muted">24/7 assistance for all queries.</p>
+        <a
+          href="tel:18005329444"
+          class="fw-bold text-decoration-none text-brand-red"
+          >1800 532 9444</a
+        >
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="tollfree-card p-4 shadow-sm h-100">
+        <i class="bi bi-chat-dots fs-2 text-brand-red"></i>
+        <h5 class="fw-bold mt-2">WhatsApp Assistance</h5>
+        <p class="text-muted">Send a message for quick support.</p>
+        <a
+          href="https://wa.me/917259030091"
+          class="fw-bold text-decoration-none text-brand-red"
+          >+91 72590 30091</a
+        >
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="tollfree-card p-4 shadow-sm h-100">
+        <i class="bi bi-envelope fs-2 text-brand-red"></i>
+        <h5 class="fw-bold mt-2">Email Support</h5>
+        <p class="text-muted">Write to us for detailed queries.</p>
+        <a
+          href="mailto:assist@tansihonda.com"
+          class="fw-bold text-decoration-none text-brand-red"
+          >assist@tansihonda.com</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <hr class="mt-5" />
+  <div class="text-center text-muted small py-3">
+    <i class="bi bi-motorcycle text-brand-red me-1"></i> Tansi Honda — The Power
+    of Dreams. <br />
+    © 2025 | Single window assistance for all your needs.
+  </div>
+</div>
+
+<%- include("../partials/footer") %>
