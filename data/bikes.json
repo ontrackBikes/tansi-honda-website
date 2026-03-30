@@ -738,5 +738,161 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda Activa 110",
+    "slug": "honda-activa-110",
+
+    "category": "scooter",
+    "subCategory": "RedWing",
+
+    "description": "The Honda Activa 110 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 110cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
+
+    "coverImage": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9",
+
+    "brochure": "https://haikuhonda.com/wp-content/uploads/2025/05/Activa-110-OBD2BBrochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Decent Blue Metallic",
+        "code": "#1B2E4B",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+      },
+      {
+        "name": "Pearl Siren Blue",
+        "code": "#2C5A94",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+      },
+      {
+        "name": "Black",
+        "code": "#000000",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+      },
+      {
+        "name": "Pearl Precious White",
+        "code": "#FFFFFF",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+      },
+      {
+        "name": "Rebel Red Metallic",
+        "code": "#8B0000",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+      },
+      {
+        "name": "Mat Axis Grey Metallic",
+        "code": "#4A4A4A",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Side Stand Engine Cut Off",
+          "description": "Prevents the engine from starting when the side stand is engaged.",
+          "image": "/images/features/side-stand.jpg"
+        },
+        {
+          "title": "Combi Brake System (CBS)",
+          "description": "Ensures a shorter braking distance with more stability by distributing brake force.",
+          "image": "/images/features/cbs.jpg"
+        }
+      ],
+
+      "comfort": [
+        {
+          "title": "Telescopic Front Suspension",
+          "description": "Offers a smoother ride by absorbing bumps and vibrations more effectively.",
+          "image": "/images/features/suspension.jpg"
+        },
+        {
+          "title": "External Fuel Fill",
+          "description": "Double lid external fuel fill allows you to refuel without getting off the scooter.",
+          "image": "/images/features/fuel-fill.jpg"
+        }
+      ],
+
+      "design": [
+        {
+          "title": "LED Headlamp",
+          "description": "Signature LED headlamp and position lamp provide better visibility and premium look.",
+          "image": "/images/features/led-lamp.jpg"
+        },
+        {
+          "title": "Premium Chrome Strokes",
+          "description": "Stylish chrome detailing on side panels adds a touch of elegance.",
+          "image": "/images/features/chrome.jpg"
+        }
+      ],
+
+      "technology": [
+        {
+          "title": "Honda Smart Key",
+          "description": "Answer Back, Smart Unlock, and Keyless Start with H-Smart technology.",
+          "image": "/images/features/smart-key.jpg"
+        },
+        {
+          "title": "ACG Silent Start",
+          "description": "Experience smooth and silent starts without gear meshing noise.",
+          "image": "/images/features/acg.jpg"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Standard",
+        "sku": "ACT110-STD",
+
+        "specs": {
+          "body": {
+            "length": "1833 mm",
+            "width": "677 mm",
+            "height": "1165 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "162 mm",
+            "seat_length": "692 mm",
+            "seat_height": "764 mm",
+            "kerb_weight": "106 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "109.51 cc",
+            "max_power": "5.88 kW @ 8000 rpm",
+            "max_torque": "9.05 Nm @ 5500 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore_stroke": "47.10 mm X 63.1 mm",
+            "compression_ratio": "10.0 : 1",
+            "starting": "Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Automatic (V-Matic)"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J (Tubeless)",
+            "rear": "90/100-10 53J (Tubeless)",
+            "front_brake": "Drum - 130 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Under Bone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Unit Swing"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah (MF)",
+            "headlamp": "Halogen"
+          }
+        }
+      }
+    ]
   }
 ]
