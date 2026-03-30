@@ -1,0 +1,162 @@
+<%- include("../partials/header") %>
+
+<!-- HERO -->
+<section class="text-center py-5 bg-light border-bottom">
+  <div class="container">
+    <h2 class="fw-bold">Own Your Favourite Honda 2W</h2>
+    <p class="text-muted">Book from home · Get finance · Fast delivery</p>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- LEFT FORM -->
+    <div class="col-lg-8">
+      <div class="card border-0 rounded-4">
+        <div class="card-body p-4">
+          <!-- CUSTOMER INFO -->
+          <h6 class="fw-bold mb-3 text-danger">
+            <i class="fas fa-user me-2"></i>Customer Information
+          </h6>
+
+          <div class="row g-3">
+            <!-- Name -->
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Name *</label>
+              <div class="input-group">
+                <input class="form-control" required />
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold"
+                >Mobile Number *</label
+              >
+              <div class="input-group">
+                <input class="form-control" required />
+                <span class="input-group-text">
+                  <i class="fas fa-phone"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Email Id *</label>
+              <div class="input-group">
+                <input type="email" class="form-control" required />
+                <span class="input-group-text">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Location *</label>
+              <select class="form-select" required>
+                <option>Select</option>
+                <option>Hoodi</option>
+                <option>Whitefield</option>
+                <option>Marathahalli</option>
+              </select>
+            </div>
+
+            <!-- Model -->
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Select Model *</label>
+              <select class="form-select" id="modelSelect">
+                <option>Loading models...</option>
+              </select>
+            </div>
+
+            <!-- Cash or Finance -->
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold"
+                >Cash or Finance</label
+              >
+              <select class="form-select">
+                <option>Y/N</option>
+                <option>Cash</option>
+                <option>Finance</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+          <div class="col-12 text-end mt-4">
+            <button class="btn btn-danger px-5 py-2 rounded-pill shadow">
+              Submit Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-lg-4">
+      <!-- BENEFITS -->
+      <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
+        <h6 class="fw-bold text-danger">Why Buy From Home?</h6>
+        <ul class="small text-muted mt-3 ps-3">
+          <li>Doorstep booking & support</li>
+          <li>Easy EMI & finance options</li>
+          <li>Fast approval & delivery</li>
+          <li>Trusted Honda dealership</li>
+        </ul>
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 text-center">
+        <h5 class="fw-bold">Quick Actions</h5>
+        <a href="/apply-for-a-loan" class="btn btn-outline-danger w-100 mb-2"
+          >Apply Loan</a
+        >
+        <a href="/apply-insurance" class="btn btn-outline-danger w-100 mb-2"
+          >Insurance</a
+        >
+        <a href="/book-service" class="btn btn-outline-danger w-100"
+          >Book Service</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- API SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modelSelect = document.getElementById("modelSelect");
+
+    const models = {
+      Scooters: ["Activa110", "Activa125", "Dio110", "Dio125"],
+      Bikes: ["Shine100", "SP125", "Unicorn"],
+      Premium: ["CB350", "CB350RS", "CB300R"],
+      BigBikes: ["CB650R", "CBR650R", "Gold Wing Tour"],
+    };
+
+    // Clear existing
+    modelSelect.innerHTML = `<option value="">Select Model</option>`;
+
+    // Add grouped options
+    Object.keys(models).forEach((category) => {
+      const group = document.createElement("optgroup");
+      group.label = category;
+
+      models[category].forEach((model) => {
+        const option = document.createElement("option");
+        option.value = model;
+        option.textContent = model;
+        group.appendChild(option);
+      });
+
+      modelSelect.appendChild(group);
+    });
+  });
+</script>
+
+<%- include("../partials/footer") %>

@@ -54,6 +54,10 @@ router.get("/quick-quote", async (req, res) => {
   res.render("website/quick-quote");
 });
 
+router.get("/buy-honda-from-home", async (req, res) => {
+  res.render("website/buy-honda-from-home");
+});
+
 // Category page
 router.get("/:category", async (req, res) => {
   const { category } = req.params;
