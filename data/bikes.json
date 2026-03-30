@@ -418,7 +418,7 @@
       {
         "name": "PEARL SIREN BLUE WITH SPORTS RED",
         "code": "#FF0000",
-        "image":"https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithsportsred.png"
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithsportsred.png"
       }
     ],
 
@@ -1128,7 +1128,7 @@
       {
         "name": "PEARL SIREN BLUE WITH SPORTS RED",
         "code": "#FF0000",
-        "image":"https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithsportsred.png"
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithsportsred.png"
       }
     ],
 
@@ -1268,6 +1268,228 @@
           "performance": {
             "mileage": "55 kmpl (Owner Reported)",
             "range": "660 km"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda Shine 100 DX",
+    "slug": "honda-shine-100-dx",
+
+    "category": "motorcycle",
+    "subCategory": "RedWing",
+
+    "description": "A simple, reliable, and fuel-efficient commuter motorcycle designed for everyday riding, offering smooth performance, comfortable ergonomics, and Honda’s trusted durability for hassle-free daily travel.",
+
+    "coverImage": "/images/bike/honda-shine-100-dx/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-100-dx/Brochure/Shine100-DX.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Imperial Red Metallic",
+        "code": "#841A20",
+        "image": "/images/bike/honda-shine-100-dx/1.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#141414",
+        "image": "/images/bike/honda-shine-100-dx/2.png"
+      },
+      {
+        "name": "Athletic Blue Metallic",
+        "code": "#004596",
+        "image": "/images/bike/honda-shine-100-dx/3.png"
+      },
+      {
+        "name": "Geny Gray Metallic",
+        "code": "#4E4E4E",
+        "image": "/images/bike/honda-shine-100-dx/4.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Reliable Tubeless Tyres",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-100-dx%2FSafety%2FSafety_Tubeless-Tyre-352_360-copy-3.jpg%3Fh%3D750%26iar%3D0%26w%3D733&w=1920&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "For better traction"
+        },
+        {
+          "title": "CBS with Equalizer",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-100-dx%2FSafety%2FSafety_352_360-CBS.jpg%3Fh%3D750%26iar%3D0%26w%3D733&w=1920&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Efficient braking and improved stability."
+        },
+
+        {
+          "title": "Elegant and strong grab rail",
+          "image": "http://honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-100-dx%2FSafety%2FSafety_Grab-Rail-352_360-copy-2.jpg%3Fh%3D750%26iar%3D0%26w%3D733&w=1920&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "For pillion safety and enhanced practicality"
+        },
+        {
+          "title": "Side Stand Indicator With engine cutoff",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-100-dx%2FSafety%2FSafety_Side-Stand-352_360-copy.jpg%3Fh%3D750%26iar%3D0%26w%3D733&w=1920&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "No ignition when the stand is engaged"
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Superb Suspension Dynamics",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Comfort/Comfort_1120_623-Suspension.jpg?h=1298&iar=0&w=2333",
+          "description": "A Perfect 5-step adjustable suspension setup makes riding on every road a breeze."
+        },
+        {
+          "title": "Long and Comfortable Seat",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Comfort/Comfort_1120_623-Seat.jpg?h=1298&iar=0&w=2333",
+          "description": "Long journeys made easy with longer and more comfortable seating with awesome ergonomics."
+        },
+        {
+          "title": "Easy ground touch with optimised seat height",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Comfort/Comfort.jpg?h=2596&iar=0&w=4667",
+          "description": "Riders can easily be flat-footed with an optimum seat height that enhances comfort."
+        }
+      ],
+      "design": [
+        {
+          "title": "Wide Petrol Tank",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Design/Design_555_555-Wide-Petrol-Tank-style-home.jpg?h=1156&iar=0&w=1156",
+          "description": "Gives you the right presence you deserve"
+        },
+        {
+          "title": "Striking Graphics",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Design/Design_555_555-Striking-Graphics-style-home.jpg?h=1156&iar=0&w=1156",
+          "description": "Dynamic graphics give a magnificent look"
+        },
+        {
+          "title": "Aerodynamic Front Cowl",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Design/Design_555_555-chrome-style-home.jpg?h=1156&iar=0&w=1156",
+          "description": "The stylish front cowl and powerful headlight give the bike an attractive appearance"
+        }
+      ],
+      "technology": [
+        {
+          "title": "Digital Meter",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Technology/Technology_588_678-Meter-Tech-Cover.jpg?h=2829&iar=0&w=2454",
+          "description": "Data-driven ride"
+        },
+        {
+          "title": "100 cc Efficient Honda Vertical Engine",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-100dx/Technology/Technology_1120_623-Engine-Inside-Page-copy.jpg?h=2596&iar=0&w=4667",
+          "description": "Top mileage in category"
+        },
+        {
+          "title": "eSP Technology",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-100-dx/Technology/Technology_1120_623-ESP-Inside-Page.jpg?h=1731&iar=0&w=3111",
+          "description": "Reduced friction and improved fuel efficiency"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Standard",
+        "sku": "SH100-STD",
+
+        "specs": {
+          "body": {
+            "length": "1955 mm",
+            "width": "754 mm",
+            "height": "1050 mm",
+            "wheelbase": "1245 mm",
+            "ground_clearance": "168 mm",
+            "kerb_weight": "103 kg",
+            "seat_length": "677 mm",
+            "seat_height": "786 mm",
+            "fuel_tank": "10.0 L"
+          },
+
+          "engine": {
+            "type": "4-Stroke SI Engine",
+            "displacement": "98.98 cc",
+            "power": "5.43 kW @ 7500 rpm",
+            "torque": "8.05 Nm @ 5000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "47.0 x 57.049 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "4"
+          },
+
+          "tyres": {
+            "front": "2.75 - 17 M/C 41P, Tubeless",
+            "rear": "3.00 - 17 M/C 50P, Tubeless",
+            "front_brake": "Drum 130 mm",
+            "rear_brake": "Drum 110 mm"
+          },
+
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Twin (5-Steps Adjustable)"
+          },
+
+          "electricals": {
+            "battery": "12V, 3.0 Ah",
+            "headlamp": "Halogen Bulb, DC"
+          }
+        }
+      },
+      {
+        "name": "Deluxe",
+        "sku": "SH100-DLX",
+
+        "specs": {
+          "body": {
+            "length": "1955 mm",
+            "width": "754 mm",
+            "height": "1050 mm",
+            "wheelbase": "1245 mm",
+            "ground_clearance": "168 mm",
+            "kerb_weight": "99 kg",
+            "seat_length": "676 mm",
+            "seat_height": "786 mm",
+            "fuel_tank": "9 L"
+          },
+
+          "engine": {
+            "type": "4-Stroke SI Engine",
+            "displacement": "98.98 cc",
+            "power": "5.43 kW @ 7500 rpm",
+            "torque": "8.05 Nm @ 5000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "47.0 x 57.049 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "4"
+          },
+
+          "tyres": {
+            "front": "2.75 - 17 41P, Tube Type",
+            "rear": "3.00 - 17 50P, Tube Type",
+            "front_brake": "Drum 130 mm",
+            "rear_brake": "Drum 110 mm"
+          },
+
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Twin"
+          },
+
+          "electricals": {
+            "battery": "12V, 3.0 Ah",
+            "headlamp": "Bulb Type"
           }
         }
       }
