@@ -919,5 +919,169 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda Activa QC1",
+    "slug": "honda-activa-qc1",
+
+    "category": "e2w",
+    "subCategory": "",
+
+    "description": "A smart and eco-friendly electric scooter built for daily commuting, offering smooth performance, zero emissions, and low running costs.",
+
+    "coverImage": "/images/bike/honda-qc1/1.png",
+
+    "brochure": "https://s3-ap-southeast-1.amazonaws.com/assetsin.izmocars.com/userfiles/488/Activa_e_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Shallow Blue",
+        "code": "#6F98BC",
+        "image": "/images/bike/honda-qc1/1.png"
+      },
+      {
+        "name": "Pearl Misty White",
+        "code": "#D5D5D7",
+        "image": "/images/bike/honda-qc1/2.png"
+      },
+      {
+        "name": "Pearl Serenity Blue",
+        "code": "#82B0BF",
+        "image": "/images/bike/honda-qc1/3.png"
+      },
+      {
+        "name": "Matt Foggy Silver Metallic",
+        "code": "#434343",
+        "image": "/images/bike/honda-qc1/4.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#1E1E1E",
+        "image": "/images/bike/honda-qc1/5.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Side-stand engine cut-off",
+          "image": "https://imgd.aeplcdn.com/1056x594/n/cw/ec/193093/qc1-rear-alloy-wheel.jpeg?isig=0&q=80&wm=3",
+          "description": "The scooter won’t start if the side stand is down, helping prevent accidental movement."
+        },
+        {
+          "title": "LED headlight & indicators",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--b6d2f13b-5a17-45b1-bacb-08697c6dabff/desktop-led-headlight.jpg?preferwebp=true&width=1600&quality=85",
+          "description": "Bright LED lighting improves visibility at night and makes the rider more visible to others."
+        },
+        {
+          "title": "IP67-rated battery protection",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--9fbf3e9a-be55-4681-958f-544aca79eb8f/bettry-and-cell-640-x-426.png?preferwebp=true&width=1600&quality=85",
+          "description": "The battery is resistant to water and dust, ensuring safe operation even in rain or dusty conditions."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Spacious Floor",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--7b188e6f-c551-4774-a823-f21386424f4e/spacious-floor-and-wheelbase-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Ample room for comfort and stability."
+        },
+        {
+          "title": "Seat Height, Ground Clearance and Wheelbase",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--faa85af6-a22f-4953-8c4a-48662b21675d/seat-height-and-ground-clearance-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Easy and comfortable ride for all."
+        },
+        {
+          "title": "LCD Display",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--ef40d999-40fd-4be9-bfcf-0942fa2b5c54/lcd-display-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Everything you need, right at one glance in vibrant details through 12.70 cm (5 inch) LCD digital display."
+        }
+      ],
+      "design": [
+        {
+          "title": "LED Headlight",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--b6d2f13b-5a17-45b1-bacb-08697c6dabff/desktop-led-headlight.jpg?preferwebp=true&width=1600&quality=85",
+          "description": "See far, drive safe - even on the darkest roads."
+        },
+        {
+          "title": "LED Tail Lamp & Clear Winkers",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--b633bceb-bf31-45e2-9eb9-763c9c40cf89/led-tail-lamp--clear-winkers-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Stylish lighting that makes sure you're seen wherever you go."
+        },
+        {
+          "title": "Front Black Alloy Wheel",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--84b7ce53-5800-4b20-b926-439bf6655b53/front-black-alloy-wheel-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Built for agility, designed for style."
+        },
+        {
+          "title": "Sleek Rear Looks",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--4ef87f6e-64d5-4f47-b612-328a31958a96/qc-1---rear-look--desktop-600-x-399.png?preferwebp=true&width=1600&quality=85",
+          "description": "Complimenting the overall smooth & futuristic design."
+        },
+        {
+          "title": "Sturdy Grabrail",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--6b0f9401-8566-4fa5-bb6b-b02efef6ca44/sturdy-grabrail-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Hold tight, ride safe - with a grabrail designed for your comfort and security."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "",
+        "sku": "",
+
+        "specs": {
+          "performance": {
+            "range": "80 km (IDC)",
+            "top_speed": "50 km/h",
+            "acceleration": "9.4 sec (0-40 km/h)",
+            "gradeability": "7 Degree"
+          },
+
+          "body": {
+            "length": "1826 mm",
+            "width": "701 mm",
+            "height": "1129 mm",
+            "wheelbase": "1275 mm",
+            "ground_clearance": "169 mm",
+            "seat_height": "704 mm",
+            "kerb_weight": "89.5 kg",
+            "boot_space": "26 L",
+            "glove_box_capacity": "1.45 L"
+          },
+
+          "motor": {
+            "motor_type": "BLDC",
+            "maximum_power": "1.8 kW",
+            "maximum_torque": "77 Nm"
+          },
+
+          "chassis": {
+            "frame_type": "Under Bone",
+            "wheel_type": "Front Alloy",
+            "front_tyre_size": "90/90-12",
+            "rear_tyre_size": "90/100-10",
+            "front_brake": "Drum - 130 mm",
+            "rear_brake": "Drum - 110 mm",
+            "front_suspension": "Telescopic",
+            "rear_suspension": "5 Step Adjustable Hydraulic"
+          },
+
+          "battery_and_charging": {
+            "battery_system": "Fixed",
+            "battery_type": "Lithium-ion",
+            "battery_capacity": "1.5 kWh",
+            "battery_water_dust_resistance": "IP67",
+            "charger_type": "Off board Charger",
+            "charger_power": "330 W",
+            "charging_time_0_80": "4 hrs 30 min",
+            "charging_time_0_100": "6 hrs 50 min",
+            "can_auto_cut_technology": "Enabled"
+          }
+        }
+      }
+    ]
   }
 ]
