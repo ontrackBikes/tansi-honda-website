@@ -11,9 +11,10 @@ const app = express();
 app.use(cookieParser());
 
 // DB
-mongoose.connect(process.env.MONGO_URI)
+mongoose
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
-  .catch(err => {
+  .catch((err) => {
     console.error("Mongo Error:", err);
     process.exit(1);
   });
@@ -38,8 +39,8 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../views"));
 
 // Routes
-app.use("/", require("./routes/public.routes"));
 app.use("/admin", require("./routes/admin.routes"));
+app.use("/", require("./routes/public.routes"));
 
 // 404
 app.use((req, res) => {

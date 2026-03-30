@@ -64,7 +64,7 @@
         <thead class="bg-light">
           <tr>
             <th class="ps-4 border-0 text-muted small text-uppercase py-3">Product</th>
-            <th class="border-0 text-muted small text-uppercase py-3">Price</th>
+           
             <th class="border-0 text-muted small text-uppercase py-3 text-center">Status</th>
             <th class="pe-4 border-0 text-muted small text-uppercase py-3 text-end">Actions</th>
           </tr>
@@ -89,7 +89,7 @@
                   <span class="fw-bold text-dark"><%= m.name %></span>
                 </div>
               </td>
-              <td class="fw-semibold">₹<%= m.price %></td>
+             
               <td class="text-center">
                 <% if (m.isActive) { %>
                   <span class="badge rounded-pill bg-light-success text-success px-3">Active</span>
@@ -97,8 +97,9 @@
                   <span class="badge rounded-pill bg-light-secondary text-secondary px-3">Inactive</span>
                 <% } %>
               </td>
+
               <td class="pe-4 text-end">
-               <div class="d-flex align-items-center">
+               <div class="d-flex align-items-end justify-content-end gap-2">
                  <a href="/admin/edit/<%= m._id %>" class="btn btn-sm btn-outline-warning border-0 me-1 action-btn">
                   <i class="bi bi-pencil-square"></i>
                 </a>

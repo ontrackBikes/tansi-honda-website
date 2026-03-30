@@ -8,7 +8,6 @@
 
     "description": "A reliable and efficient commuter motorcycle designed for everyday usage with excellent mileage and comfort.",
 
-   
     "coverImage": "/images/bike/honda-shine-100/cover.png",
 
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
@@ -54,8 +53,7 @@
           "title": "Side Stand Engine Inhibitor",
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
           "description": "Prevents engine start when side stand is down."
-        }
-        ,
+        },
         {
           "title": "Side Stand Engine Inhibitor",
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
@@ -236,7 +234,6 @@
 
     "description": "A reliable and efficient commuter motorcycle designed for everyday usage with excellent mileage and comfort.",
 
-   
     "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacbr650r/25hondacbr650r_animations/_color/_570x380/honda_25cbr650r_grandprixred.png",
 
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
@@ -267,8 +264,7 @@
           "title": "Side Stand Engine Inhibitor",
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
           "description": "Prevents engine start when side stand is down."
-        }
-        ,
+        },
         {
           "title": "Side Stand Engine Inhibitor",
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
@@ -397,7 +393,6 @@
 
     "description": "A reliable and efficient commuter motorcycle designed for everyday usage with excellent mileage and comfort.",
 
-   
     "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondahornet750/25hondahornet750_animations/_color/_570x380/honda_25hornet750_black.png",
 
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
@@ -428,8 +423,7 @@
           "title": "Side Stand Engine Inhibitor",
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
           "description": "Prevents engine start when side stand is down."
-        }
-        ,
+        },
         {
           "title": "Side Stand Engine Inhibitor",
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
@@ -510,6 +504,194 @@
             "seat_length": "676 mm",
             "seat_height": "786 mm",
             "fuel_tank": "9 L"
+          },
+
+          "engine": {
+            "type": "4-Stroke SI Engine",
+            "displacement": "98.98 cc",
+            "power": "5.43 kW @ 7500 rpm",
+            "torque": "8.05 Nm @ 5000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "47.0 x 57.049 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "4"
+          },
+
+          "tyres": {
+            "front": "2.75 - 17 41P, Tube Type",
+            "rear": "3.00 - 17 50P, Tube Type",
+            "front_brake": "Drum 130 mm",
+            "rear_brake": "Drum 110 mm"
+          },
+
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Twin"
+          },
+
+          "electricals": {
+            "battery": "12V, 3.0 Ah",
+            "headlamp": "Bulb Type"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda Activa EV",
+    "slug": "honda-activa-ev",
+
+    "category": "scooter",
+    "subCategory": "",
+
+    "description": "A smart and eco-friendly electric scooter built for daily commuting, offering smooth performance, zero emissions, and low running costs.",
+
+    "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_pearlshallowblue.png",
+
+    "brochure": "https://s3-ap-southeast-1.amazonaws.com/assetsin.izmocars.com/userfiles/488/Activa_e_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Shallow Blue",
+        "code": "#ABCAD3",
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_pearlshallowblue.png"
+      },
+      {
+        "name": "Matt Foggy Silver Metallic",
+        "code": "#828282",
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_mattfoggysilvermetallic.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#141414",
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_pearligneousblack.png"
+      },
+      {
+        "name": "Pearl Misty White",
+        "code": "#ECF0F3",
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_pearlmistywhite.png"
+      },
+      {
+        "name": "Pearl Serenity Blue",
+        "code": "#557D9E",
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_pearlserenityblue.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "CBS Braking System",
+          "image": "/images/bike/honda-shine-100/safety/cbs-braking-system.webp",
+          "description": "Improved braking stability and safety."
+        },
+        {
+          "title": "Side Stand Engine Inhibitor",
+          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
+          "description": "Prevents engine start when side stand is down."
+        },
+        {
+          "title": "Side Stand Engine Inhibitor",
+          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
+          "description": "Prevents engine start when side stand is down."
+        },
+        {
+          "title": "Side Stand Engine Inhibitor",
+          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
+          "description": "Prevents engine start when side stand is down."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Comfort Seat",
+          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
+          "description": "Long and comfortable seating for daily rides."
+        },
+        {
+          "title": "Universal USB Charger",
+          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
+          "description": "Long and comfortable seating for daily rides."
+        },
+        {
+          "title": "Moto shock rear larger",
+          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
+          "description": "Long and comfortable seating for daily rides."
+        }
+      ],
+      "design": [
+        {
+          "title": "Sophistication redefined",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--1cc7bbb9-899b-4bb6-b5d8-aa5035508ae2/sophistication-redefined-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "A design that captivates at every glance."
+        },
+        {
+          "title": "Streamlined Elegance",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--fae33404-cd29-40c8-a8bd-55e8b7f0d616/streamlined-elegance-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Clean edges and refined design for a polished finish along with body colour mirrors."
+        },
+        {
+          "title": "Stylish LED DRLs",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--dfd87bd9-531c-4ff0-b05f-1c09a1165e73/stylish-led-lighting-640x426--1-.png?preferwebp=true&width=1600&quality=85",
+          "description": "Enhancing style while ensuring safety in low visibility."
+        },
+        {
+          "title": "Diamond-cut Alloys",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--87731700-8ee6-4b4c-a1c6-a41ffbf794c9/diamond-cut-alloys-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Premium style meets a smoother, more refined ride (for both rear and front)."
+        },
+        {
+          "title": "Stylish Front Fender and Cowls",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--3d04fe99-6f59-4d3c-abbc-a9e87149dce9/desktop-front-fender.jpg?preferwebp=true&width=1600&quality=85",
+          "description": "Aerodynamically designed eliminating pressure build up and contributes to nimble handling."
+        },
+        {
+          "title": "Reverse with Ease",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--e92a2567-4ceb-4f80-834a-d4ba49a52a60/desktop-reverse-with-ease.jpg?preferwebp=true&width=1600&quality=85",
+          "description": "Reverse with ease. Enables smooth backward movement for effortless parking and maneuvering in tight spaces."
+        },
+        {
+          "title": "Smart Rear Design",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--f9a6ec03-24d8-4a20-98ae-82f3cdaafc90/smart-rear-design-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Energy-efficient LEDs paired with a strong and sturdy grab-rail."
+        }
+      ],
+      "technology": [
+        {
+          "title": "PGM-FI Engine",
+          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
+          "description": "Fuel-efficient fuel injection system."
+        },
+        {
+          "title": "PGM-FI Engine",
+          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
+          "description": "Fuel-efficient fuel injection system."
+        },
+        {
+          "title": "PGM-FI Engine",
+          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
+          "description": "Fuel-efficient fuel injection system."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Standard",
+        "sku": "SH100-STD",
+
+        "specs": {
+          "performance": {
+            "range": "102 km (IDC)",
+            "acceleration": "80 km/h",
+            "top_speed": "7.3 sec"
           },
 
           "engine": {
