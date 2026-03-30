@@ -45,75 +45,75 @@
     "features": {
       "safety": [
         {
-          "title": "CBS Braking System",
+          "title": "Efficient CBS Braking",
           "image": "/images/bike/honda-shine-100/safety/cbs-braking-system.webp",
           "description": "Improved braking stability and safety."
         },
         {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
+          "title": "Durable Diamond Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FShine-100%2FSafety%2FSafety-Durable-Diamond-Frame-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Suited for different road conditions."
         },
         {
           "title": "Side Stand Engine Inhibitor",
           "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
+          "description": "No ignition when the side stand is down."
         },
         {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
+          "title": "Strong Grab Rail",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FShine-100%2FSafety%2FSafety-Strong-Grab-Rail-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Enhances elegance and convenience."
         }
       ],
       "comfort": [
         {
-          "title": "Comfort Seat",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
+          "title": "Easy Ground Touch and Optimum Seat Height",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/Comfort/Convenience-Easy-Ground-Touch-and-Optimum-Seat-Height-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "Ensures comfortable riding."
         },
         {
-          "title": "Universal USB Charger",
+          "title": "Longer and Comfortable Seat",
           "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
+          "description": "Keeps both rider and pillion comfortable."
         },
         {
-          "title": "Moto shock rear larger",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
+          "title": "Small Turning Radius",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Shine-100/Shine-100/Desktop/Convenience/Convenience-Small-Turning-Radius-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Navigate narrow corners easily."
         }
       ],
       "design": [
         {
-          "title": "Stylish Graphics",
-          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
-          "description": "Modern and attractive design styling."
+          "title": "Appealing Front Cowl",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Shine-100/Shine-100/Desktop/Design/Design-Appealing-Front-Cowl-555x555.png?h=555&iar=0&w=555",
+          "description": "Adds to the style quotient."
+        },
+        {
+          "title": "Stylish Alloy Wheels",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Shine-100/Shine-100/Desktop/Design/Design-Stylish-Alloy-Wheels-555x555.png?h=555&iar=0&w=555",
+          "description": "Sophistication ensured."
         },
         {
           "title": "Stylish Graphics",
           "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
-          "description": "Modern and attractive design styling."
-        },
-        {
-          "title": "Stylish Graphics",
-          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
-          "description": "Modern and attractive design styling."
+          "description": "Ride boldly."
         }
       ],
       "technology": [
         {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
+          "title": "eSP Technology",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/Technology/shine100-technology-esp-technology588x678.jpg?h=678&iar=0&w=588",
+          "description": "Reduced Friction and Improved Mileage."
         },
         {
-          "title": "PGM-FI Engine",
+          "title": "PGM-FI Fuel Injection",
           "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
+          "description": "Powerful and efficient engine."
         },
         {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
+          "title": "100 cc BS-VI OBD2B Compliant Engine",
+          "image": "https://cdn.bikedekho.com/upload/standoutfeatures/67d7f332acc62.jpg",
+          "description": "Consistent power and more mileage."
         }
       ]
     },
