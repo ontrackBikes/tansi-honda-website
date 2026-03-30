@@ -790,53 +790,78 @@
     "features": {
       "safety": [
         {
-          "title": "Side Stand Engine Cut Off",
-          "description": "Prevents the engine from starting when the side stand is engaged.",
-          "image": "/images/features/side-stand.jpg"
+          "title": "Telescopic Front Suspension",
+          "description": "Absorbs road shocks for a smoother ride.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2FSafety-Telescopic-Front-Suspension-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
         },
         {
-          "title": "Combi Brake System (CBS)",
-          "description": "Ensures a shorter braking distance with more stability by distributing brake force.",
-          "image": "/images/features/cbs.jpg"
+          "title": "Side Stand Engine Cut Off",
+          "description": "Prevents accidental starts for added safety.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2FSafety-Side-Stand-Engine-Cut-Off-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        },
+        {
+          "title": "Front and Rear Alloy Wheels",
+          "description": "Improved stability, greater durability.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2Fsafety-front-and-rear-alloy-wheels-352x360-sec.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        },
+        {
+          "title": "Idling Stop System",
+          "description": "Reduces fuel consumption and emissions by automatically stopping the engine when the scooter is idle.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FConvenience%2Fsafety-idling-stop-system-352x360-sec.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        },
+        {
+          "title": "Fuel-Efficient Tubeless Tyres",
+          "description": "Enhanced grip, better mileage, and safer rides with Honda's advanced technology.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2FActiva-110-Tubless-Tyre---352x360px.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
         }
       ],
 
       "comfort": [
         {
-          "title": "Telescopic Front Suspension",
-          "description": "Offers a smoother ride by absorbing bumps and vibrations more effectively.",
-          "image": "/images/features/suspension.jpg"
+          "title": "Open Glove Box with 15W USB-C Port",
+          "description": "Charge devices on the go while keeping essentials handy.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/Comfort/Convenience-Open-Glove-Box-with-15W-USB-C-Port-1120x623.png?h=623&iar=0&w=1120"
         },
         {
-          "title": "External Fuel Fill",
-          "description": "Double lid external fuel fill allows you to refuel without getting off the scooter.",
-          "image": "/images/features/fuel-fill.jpg"
+          "title": "Double Lid External Fuel Fill",
+          "description": "Refuel without leaving your seat.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/Convenience/Convenience-Double-Lid-External-Fuel-Fill-1120x623.png?h=623&iar=0&w=1120"
         }
       ],
 
       "design": [
         {
-          "title": "LED Headlamp",
-          "description": "Signature LED headlamp and position lamp provide better visibility and premium look.",
-          "image": "/images/features/led-lamp.jpg"
+          "title": "Premium Chrome Stroke on Side Panel",
+          "description": "Elevates style with a refined, premium touch.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/style/main.png?h=555&iar=0&w=555"
         },
         {
-          "title": "Premium Chrome Strokes",
-          "description": "Stylish chrome detailing on side panels adds a touch of elegance.",
-          "image": "/images/features/chrome.jpg"
+          "title": "LED Headlamp and Signature LED Position Lamp",
+          "description": "Brighter, long-lasting LEDs for improved visibility.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/style/lamp-small.png?h=555&iar=0&w=555"
+        },
+        {
+          "title": "Multi-Function Switch Unit",
+          "description": "Easy access to key controls for effortless riding.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/style/Activa-110-Multi-Switch_555x555px.png?h=555&iar=0&w=555"
         }
       ],
 
       "technology": [
         {
-          "title": "Honda Smart Key",
-          "description": "Answer Back, Smart Unlock, and Keyless Start with H-Smart technology.",
-          "image": "/images/features/smart-key.jpg"
+          "title": "Smart Key with H-Smart Technology",
+          "description": "Keyless convenience for enhanced security and ease of access.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/Technology/technology-smart-key-with-h-smart-technology588x678-sec.jpg?h=678&iar=0&w=588"
         },
         {
-          "title": "ACG Silent Start",
-          "description": "Experience smooth and silent starts without gear meshing noise.",
-          "image": "/images/features/acg.jpg"
+          "title": "TFT Screen Display",
+          "description": "High-resolution digital display for real-time information.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/Technology/Activa-110-Meter_1120x623px.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Honda Road Sync",
+          "description": "Smartphone connectivity for calls, navigation, and music.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/Technology/Technology-Honda-Road-Sync-1120x623.png?h=623&iar=0&w=1120"
         }
       ]
     },
