@@ -589,41 +589,36 @@
     "features": {
       "safety": [
         {
-          "title": "CBS Braking System",
-          "image": "/images/bike/honda-shine-100/safety/cbs-braking-system.webp",
-          "description": "Improved braking stability and safety."
+          "title": "Disc Brakes with CBS",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--c0285d15-67c9-4abd-92da-9ae398bdf34a/activa---disc---desktop---640-x-426--1-.png?preferwebp=true&width=1600&quality=85",
+          "description": "Disc brake provides control and confidence during quick stops."
         },
         {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
+          "title": "Integrated Frame and Power Unit",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--63ad5827-dec5-4c49-b81b-36747ecf93ef/integrated-frame-and-power-unit-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Exclusively designed for swappable battery to enhance structure, stability, and rigidity of vehicle."
         },
         {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
-        },
-        {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
+          "title": "Modes",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--3a4fbb0b-3526-47cf-bdcc-ed886602f75d/3-modes-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Choose from three riding modes - Eco, Drive, and Sport - to suit your riding style and needs."
         }
       ],
       "comfort": [
         {
-          "title": "Comfort Seat",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
+          "title": "Permanant Magnet Synchronous Motor",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--0013e01b-3bc3-42e9-a7ac-381cdf677a09/permanant-magnet-synchronous-motor-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "6 kW powerful motor that hits 80 km/h efficiently. >> Smooth & Quick acceleration for effortless rides."
         },
         {
-          "title": "Universal USB Charger",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
+          "title": "3-Step Adjustable Monoshock Suspension",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--75f8db3d-259a-4e98-ab37-15eb8d328167/3-step-adjustable-monoshock-suspension-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "For smooth, confident rides."
         },
         {
-          "title": "Moto shock rear larger",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
+          "title": "In-vehicle Infotainment",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--e849c2e8-b9d3-4990-a0aa-fb9392038319/in-vehicle-infotainment-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "17.7 cm (7 inch) full touch display with Bluetooth connectivity and smartphone integration for a connected riding experience."
         }
       ],
       "design": [
@@ -665,19 +660,19 @@
       ],
       "technology": [
         {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
+          "title": "Activa e: Honda RoadSync Duo® App",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--f739a26b-fdf4-461a-8042-a386974cc01c/activa-e--honda-roadsync-duo-app-600x338.png?preferwebp=true&width=1600&quality=85",
+          "description": "The Honda RoadSync Duo® app offers a range of features including navigation, live tracking, call and music control, and more, providing a connected riding experience."
         },
         {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
+          "title": "Smart Key – Unlock in Style",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--5ee3c3e2-9493-42b0-b7e4-d00d165b58a4/smart-key--unlock-in-style-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Powered by H-Smart technology, the Honda Smart Key offers keyless convenience with advanced features for a seamless riding experience."
         },
         {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
+          "title": "Dual Utility Pockets with USB-C Charging",
+          "image": "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--1ffee973-50a2-4204-b7c8-2ef66cc400f2/dual-pockets-with-15w-usb-c-port-640x426.png?preferwebp=true&width=1600&quality=85",
+          "description": "Convenient dual storage pockets along with a 15W USB-C charging port to keep your devices powered on the go."
         }
       ]
     },
@@ -694,38 +689,51 @@
             "top_speed": "7.3 sec"
           },
 
-          "engine": {
-            "type": "4-Stroke SI Engine",
-            "displacement": "98.98 cc",
-            "power": "5.43 kW @ 7500 rpm",
-            "torque": "8.05 Nm @ 5000 rpm",
-            "fuel_system": "PGM-FI",
-            "bore_stroke": "47.0 x 57.049 mm",
+          "body": {
+            "Length": "1854 mm",
+            "Width": "700 mm",
+            "Height": "1125 mm",
+            "wheelbase": "1310 mm",
+            "ground_clearance": "171 mm",
+            "kerb_wight": "119 Kg",
             "compression_ratio": "10.0:1",
-            "starting": "Self/Kick"
+            "glove_box_capacity": "0.5 L"
           },
 
-          "transmission": {
-            "clutch": "Multiplate Wet Clutch",
-            "gears": "4"
+          "motor": {
+            "motor_type": "Permanent Magnet Synchronous Motor (PMSM)",
+            "maximum_power": "6 kW",
+            "maximum_torque": "22 Nm"
           },
 
-          "tyres": {
-            "front": "2.75 - 17 41P, Tube Type",
-            "rear": "3.00 - 17 50P, Tube Type",
-            "front_brake": "Drum 130 mm",
-            "rear_brake": "Drum 110 mm"
+          "chassis": {
+            "frame_type": "Under Bone",
+            "wheel_type": "Diamond Cut Alloy",
+            "front_tyre_size": "90/90-12",
+            "rear_tyre_size": "110/80-12",
+            "tyre_type": "Tubeless",
+            "braking_system": "Combined Braking System (CBS)",
+            "front_brake": "Disc - 160mm",
+            "rear_brake": "Drum - 130mm",
+            "front_suspension": "Telescopic",
+            "rear_suspension": "3 Step Adjustable Spring Loaded Hydraulic"
           },
 
-          "suspension": {
-            "frame": "Diamond Type",
-            "front": "Telescopic",
-            "rear": "Twin"
+          "battery_and_charging": {
+            "battery_system": "Swappable",
+            "battery_type": "Lithium-ion",
+            "battery_capacity": "1.5 kWh x 2",
+            "battery_water_and_dust_resistance": "IP67"
           },
 
-          "electricals": {
-            "battery": "12V, 3.0 Ah",
-            "headlamp": "Bulb Type"
+          "connectivity_features": {
+            "display": "17.7 cm (7 inch) full touch display",
+            "bluetooth_connectivity": "Yes",
+            "smartphone_integration": "Yes",
+            "connectivity_app": "Honda RoadSync Duo®",
+            "navigation": "Yes",
+            "live_tracking": "Yes",
+            "call_and_music_control": "Yes"
           }
         }
       }
