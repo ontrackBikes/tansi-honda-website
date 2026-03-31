@@ -2747,5 +2747,225 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda CB300F",
+    "slug": "honda-cb300f",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "Sharp streetfighter design paired with a powerful engine delivers thrilling performance and smooth acceleration.",
+
+    "coverImage": "/images/bike/honda-cb300f/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB300F/Brochure/CB300F_Brochure_23.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "SPORTS RED",
+        "code": "#CA1517",
+        "image": "/images/bike/honda-cb300f/1.png"
+      },
+      {
+        "name": "MAT AXIS GREY METALLIC",
+        "code": "#6B6B6B",
+        "image": "/images/bike/honda-cb300f/2.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Wide Tubeless Tyres",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FSafety%2FSafety-Dual-Channel-ABS-with-Petal-Disc-Brakes-352x360.jpg%3Fh%3D540%26iar%3D0%26w%3D528&w=1080&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Ensures excellent grip and stability for enhanced control."
+        },
+        {
+          "title": "Hazard Indicator",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FSafety%2FSafety-Hazard-Indicator-352x360.jpg%3Fh%3D540%26iar%3D0%26w%3D528&w=1080&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Improve your visibility in low light or emergencies."
+        },
+        {
+          "title": "Wide Tubeless Tyres",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB300F%2FDesktop%2FSafety%2FSafety%2FSafety-Wide-Tubeless-Tyres-352x360.png%3Fh%3D540%26iar%3D0%26w%3D528&w=1080&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Ensures excellent grip and stability for enhanced control."
+        },
+
+        {
+          "title": "LED All-Around",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FSafety%2FSafety-LED-All-Around-352x360.jpg%3Fh%3D540%26iar%3D0%26w%3D528&w=1080&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "All Around LED lights give better road visibility and have a longer life."
+        },
+        {
+          "title": "Rear Mono Shock Suspension",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FSafety%2FSafety-Rear-Mono-Shock-Suspension-352x360.jpg%3Fh%3D540%26iar%3D0%26w%3D528&w=1080&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Maintains the centre of gravity for better stability and manoeuvrability."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Upright Riding Position",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Bigwing/CB-300F/Comfort/Convenience-Upright-Riding-Position-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "The ergonomically designed upright riding position ensures a natural posture, reducing strain on the wrists, shoulders, and back. This allows for maximum comfort, even on long highway rides or daily commutes."
+        },
+        {
+          "title": "Golden USD Front Forks",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB300F/Desktop/Convenience/Convenience-Golden-USD-Front-Forks-1120x623.png?h=623&iar=0&w=1120",
+          "description": "The Upside-Down (USD) front forks provide enhanced shock absorption, ensuring a smooth and controlled ride on uneven roads. With increased strength and stability, these forks offer superior handling for better comfort and confidence on every ride."
+        },
+        {
+          "title": "USB-C Phone Charger",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Bigwing/CB-300F/Comfort/Convenience-USC-C-Phone-Charger-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "Command gear changes with minimal effort. Your advanced clutch system makes every shift butter-smooth while preventing rear wheel hop during aggressive downshifts, giving you total control over your ride's character."
+        },
+        {
+          "title": "Split Seat",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB300F/Desktop/Convenience/Convenience-Split-Seat-1120x623.png?h=623&iar=0&w=1120",
+          "description": "The well-cushioned split seat provides exceptional comfort for both the rider and pillion, offering better support and reduced fatigue, making every ride enjoyable and effortless."
+        },
+        {
+          "title": "Key on Tank",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB300F/Desktop/Convenience/Convenience-Key-on-Tank-1120x623.png?h=623&iar=0&w=1120",
+          "description": "The fuel tank-mounted key slot enhances convenience and accessibility, keeping the ignition always within reach, ensuring quick and easy operation."
+        }
+      ],
+      "design": [
+        {
+          "title": "Dual Channel ABS",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FDesign%2Fdesign-dual-channel-abs1-1120x623.jpg%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The Dual Channel ABS (Anti-lock Braking System) ensures precise braking control by preventing wheel lock-ups, allowing riders to maintain stability and directional control on wet, dry, and uneven roads. This system enhances confidence and safety in all riding conditions."
+        },
+        {
+          "title": "Fully Digital Meter",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FDesign%2FDesign-Fully-Digital-Meter-1120x623.jpg%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The advanced fully digital meter provides real-time riding stats, including speed, fuel level, gear position, trip details, and service alerts, ensuring that riders can access vital information at a quick glance for a more seamless ride experience."
+        },
+        {
+          "title": "Honda Selectable Torque Control (HSTC)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB300F%2FDesktop%2FDesign%2FDesign-Honda-Selectable-Torque-Control-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The Honda Selectable Torque Control (HSTC) system enhances rider confidence by preventing rear-wheel slip, adjusting power delivery for optimal traction between the tyre and surface, ensuring better grip and control on all terrains."
+        },
+        {
+          "title": "Assist Slipper Clutch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FDesign%2FDesign-Assist-Slipper-Clutch-1120x623.jpg%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Designed for effortless gear shifts, the Assist Slipper Clutch reduces clutch lever effort, ensuring smoother downshifts and controlled engine braking, allowing riders to glide through corners and navigate city traffic with ease."
+        }
+      ],
+      "technology": [
+        {
+          "title": "4 Valve, 300 cc Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FTechnology%2FTechnology-4-Valve-300cc-Engine-1120x623.jpg%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Experience thrilling power and quick acceleration with the 4-valve 300cc engine, designed to deliver 18 kW @ 7500 rpm and 25.6 Nm torque @ 5500 rpm. This ensures seamless performance whether you're cruising in the city or hitting the highway."
+        },
+        {
+          "title": "6 Speed Transmission",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FTechnology%2FTechnology-6-Speed-Transmission-1120x623.jpg%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The 6-speed gearbox provides precise gear ratios, ensuring smooth acceleration and better fuel efficiency, making every ride effortless and controlled."
+        },
+        {
+          "title": "Oil-Cooled Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FBigwing%2FCB-300F%2FTechnology%2FTechnology-Oil-Cooled-1120x623.jpg%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The oil-cooled system maintains optimal engine temperature, preventing overheating even during long rides or high-speed cruising, ensuring consistent performance and durability."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "CB300F DLX PRO",
+        "sku": "CB300F-DLX-PRO",
+        "specs": {
+          "body": {
+            "length": "2084 mm",
+            "width": "765 mm",
+            "height": "1075 mm",
+            "wheelbase": "1390 mm",
+            "ground_clearance": "177 mm",
+            "kerb_weight": "153 kg",
+            "seat_height": "789 mm",
+            "fuel_tank": "14.1 L"
+          },
+          "engine": {
+            "type": "4 Stroke, SI, Oil-Cooled Engine ",
+            "displacement": "293.52 cc",
+            "power": "18.3 kW @ 7500 rpm",
+            "torque": "25.6 Nm @ 5500 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "77.0 x 63.0 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch ",
+            "gears": "6 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "110/70-17 (Tubeless)",
+            "rear": "150/60-17 (Tubeless)",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Disc - 220 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic (USD) ",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED"
+          }
+        }
+      },
+      {
+        "name": "CB300F FLEX FUEL",
+        "sku": "CB300F-FLEX-FUEL",
+        "specs": {
+          "body": {
+            "length": "2084 mm",
+            "width": "765 mm",
+            "height": "1075 mm",
+            "wheelbase": "1390 mm",
+            "ground_clearance": "177 mm",
+            "kerb_weight": "153 kg",
+            "seat_height": "789 mm",
+            "fuel_tank": "14.1 L"
+          },
+          "engine": {
+            "type": "4 Stroke, SI, Oil-Cooled Engine ",
+            "displacement": "293.52 cc",
+            "power": "18.3 kW @ 7500 rpm",
+            "torque": "25.9 Nm @ 5500 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "77.0 x 63.0 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "6 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "110/70R-17M/C 54H ",
+            "rear": "150/60R-17M/C 66H ",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Disc - 220 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Upside Down (USD) Fork",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12V, 5.0 Ah",
+            "headlamp": "LED"
+          }
+        }
+      }
+    ]
   }
 ]
