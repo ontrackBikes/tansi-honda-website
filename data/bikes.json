@@ -2394,5 +2394,172 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda NX200",
+    "slug": "honda-nx200",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "Its upright riding posture and durable build ensure comfort and confidence on varied road conditions. A perfect blend of style, practicality, and efficiency for everyday and long-distance riding.",
+
+    "coverImage": "/images/bike/honda-nx200/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx200BigWing/calculator/Nx200-Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Radiant Red Metallic",
+        "code": "#ED001F",
+        "image": "/images/bike/honda-nx200/1.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#181819",
+        "image": "/images/bike/honda-nx200/2.png"
+      },
+      {
+        "name": "Athletic Blue Metallic",
+        "code": "#006EB5",
+        "image": "/images/bike/honda-nx200/3.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "3+7 Years Warranty Package",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Fsafety%2F3-7-years-warranty-package.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Protection beyond the roads."
+        },
+        {
+          "title": "Engine Stop Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200BigWing%2Fsafety%2Fsafety-engine-stop-switch-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "There is no need to turn the key on and off at traffic lights."
+        },
+        {
+          "title": "Hazard Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Fsafety%2Fhazard-switch.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "It keeps you safe by making people notice you on the road."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Dual Channel ABS",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx200/convenience/dual-channel-abs-big.png?h=623&iar=0&w=1120",
+          "description": "Easy manoeuvrability and precise braking."
+        },
+        {
+          "title": "Golden Upside-Down (USD) Front Forks",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx200/convenience/golden-upside-down-big.png?h=560&iar=0&w=996",
+          "description": "Dazzle onlookers as you take your NX200 for a spin."
+        },
+
+        {
+          "title": "USB C Charging",
+          "image": "http://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx200/convenience/usb-c-charging-big.png?h=623&iar=0&w=1120",
+          "description": "Keep your devices charged, always."
+        }
+      ],
+      "design": [
+        {
+          "title": "Upswept Exhaust",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FRedwings%2FNX200%2FDesign%2Fupswept-exhaust-big.jpg%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The exhaust of NX200 is designed to add to the lean mean machine look."
+        },
+        {
+          "title": "Tall Wind Visor",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Fdesign%2Ftall-wind-visor-big.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The Tall Wind Visor ensures optimal aerodynamics and adds to the urban-explorer design."
+        },
+        {
+          "title": "LED Winkers",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Fdesign%2Fled-winkers-big.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The winkers are ergonomically incorporated on the knuckle covers to ensure safety and functionality without compromising on your style quotient."
+        },
+        {
+          "title": "All-LED Lighting",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Fdesign%2Fall-led-lighting.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The winkers are ergonomically incorporated on the knuckle covers to ensure safety and functionality without compromising on your style quotient."
+        },
+        {
+          "title": "Diamond-Type Steel Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Fdesign%2Fdiamond-type-steel-frame.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The seeker of thrill needs a befitting skeleton and the Diamond Type Steel Frame of the NX200 provides just that."
+        }
+      ],
+      "technology": [
+        {
+          "title": "TFT Display",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Ftechnology%2Ftft-display.png%3Fh%3D678%26iar%3D0%26w%3D588&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Perfectly positioned to constantly show you all the information you need."
+        },
+        {
+          "title": "Honda RoadSync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftechnology%2Fhonda-roadsync.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Enables hands-free operation and displays information."
+        },
+        {
+          "title": "Assist/Slipper Clutch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200BigWing%2Ftechnology-assist-slipper-clutch-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Enables quick shifting and prevents rear wheel hopping."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "NX200",
+        "sku": "NX200",
+        "specs": {
+          "body": {
+            "length": "2035 mm",
+            "width": "843 mm",
+            "height": "1248 mm",
+            "wheelbase": "1355 mm",
+            "ground_clearance": "167 mm",
+            "kerb_weight": "148 kg",
+            "seat_height": "810 mm",
+            "seat_length": "613 mm",
+            "fuel_tank": "12 L"
+          },
+          "engine": {
+            "type": "4 Stroke, SI Engine",
+            "displacement": "184.4 cc",
+            "power": "12.5 kW @ 8500 rpm",
+            "torque": "15.7 Nm @ 6000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "61.000 X 63.096",
+            "compression_ratio": "9.5:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5"
+          },
+          "tyres": {
+            "braking_system": "2 Channel ABS",
+            "front": "110/70-17 M/C 54S",
+            "rear": "140/70-17 M/C 66S",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Disc - 220 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Upside Down Front Fork (USD)",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
   }
 ]
