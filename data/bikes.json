@@ -2561,5 +2561,191 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda Hornet 2.0",
+    "slug": "honda-hornet-2.0",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "Aggressive streetfighter styling combined with a refined engine delivers a sporty yet smooth riding experience.",
+
+    "coverImage": "/images/bike/honda-hornet-2.0/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Horent-20/Brochure/Hornet_20_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Athletic Blue Metallic",
+        "code": "#0160B0",
+        "image": "/images/bike/honda-hornet-2.0/1.png"
+      },
+      {
+        "name": "Matte Axis Grey Metallic",
+        "code": "#2C2827",
+        "image": "/images/bike/honda-hornet-2.0/2.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#5B5B5B",
+        "image": "/images/bike/honda-hornet-2.0/3.png"
+      },
+      {
+        "name": "Radiant Red Metallic",
+        "code": "#BE0E1D",
+        "image": "/images/bike/honda-hornet-2.0/4.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Wide Front/Rear Tyres",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FSafety%2FSafety-Wide-Front-Rear-Tyres-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Provide superior grip and handling."
+        },
+        {
+          "title": "Hazard Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FSafety%2FSafety-Hazard-Switch-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Flashing indicator lights for emergency stops and low visibility conditions."
+        },
+        {
+          "title": "Engine Stop Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FSafety%2FSafety-Engine-Stop-Switch-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Turn off the engine at brief stops more conveniently."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Golden Upside Down (USD) Front Forks",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Horent-20/Desktop/Convenience/Convenience-Golden-Upside-Down-1120x623.png?h=623&iar=0&w=1120",
+          "description": "First in sub-200 cc segment, an advanced suspension system that gives premium-segment look and superior manoeuvrability."
+        },
+        {
+          "title": "Stress-Free Riding Posture",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Horent-20/Desktop/Convenience/Convenience-Stress-Free-Riding-Posture-1120x623.png?h=623&iar=0&w=1120",
+          "description": "A committed riding posture that offers stress-free and comfortable experience on the road as well as the highway."
+        },
+
+        {
+          "title": "Superior Aerodynamics",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Horent-20/Desktop/Convenience/Convenience-Superior-Aerodynamics-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Aerodynamically designed shrouds and air passages that help the rider with minimum air drag and superior handling."
+        }
+      ],
+      "design": [
+        {
+          "title": "All New Graphics",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FDesign%2FDesign-All-New-Graphics-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The cutting-edge graphics that make it look meaner and express what is underneath."
+        },
+        {
+          "title": "LED Headlamps",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FDesign%2FDesign-LED-Headlamp-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "LED Headlamp that brings its street fighter spirit into sharp focus along with well-designed position lamps."
+        },
+        {
+          "title": "Short Sporty Muffler",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FDesign%2FDesign-Short-Sporty-Muffler-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Short muffler with advanced surface treatment that adds to the sporty and premium profile."
+        },
+        {
+          "title": "Sporty Alloy Wheels",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FDesign%2FDesign-Sporty-Alloy-Wheels-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "High-strength Alloy Wheels with coloured strips that accentuate the sporty appearance."
+        },
+        {
+          "title": "Sporty Split Seat",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FDesign%2FDesign-Sporty-Split-Seat-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Sporty stance and uncompromised comfort for both the rider & the pillion with the split seat setup."
+        }
+      ],
+      "technology": [
+        {
+          "title": "Assist/Slipper Clutch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FTechnology%2FTechnology-Assist-Slipper-Clutch-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Feel the easy thrill with quick upshifts and downshifts of advanced Assist/Slipper Clutch when zipping through the traffic or a tough trail."
+        },
+        {
+          "title": "Honda RoadSync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FTechnology%2FTechnology-Honda-RoadSync-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "An app for the rider to stay connected with their world while on a ride. Navigate the map, make calls, play music, check weather updates or listen and auto-reply to text messages without interrupting the ride."
+        },
+        {
+          "title": "TFT Meter",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FTechnology%2FTechnology-TFT-Meter-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Whether cruising or bolting through, get your figures effortlessly at just a glance from any angle and at 3 modes - light, dark and auto."
+        },
+        {
+          "title": "Honda Selectable Torque Control",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FTechnology%2FTechnology-Honda-Selectable-Torque-Control-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Torque Control manages rear wheel spin by adjusting engine power especially on slippery surface. it also ensures safety and gives confidence to the rider."
+        },
+        {
+          "title": "Torque-Full New OBD – IIB Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FTechnology%2FTechnology-Torque-Full-New-OBDIIB-Engine-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Heart of the beast – the BS VI engine – is packed with fierce power that produces strong torque in all speed ranges."
+        },
+        {
+          "title": "PGM-FI Fuel Injection",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHorent-20%2FDesktop%2FTechnology%2FTechnology-PGM-FI-Fuel-Injection-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Expertise of decades that achieves the rare combination of superior fuel efficiency with uncompromised performance."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Hornet 2.0",
+        "sku": "HORNET-2.0",
+        "specs": {
+          "body": {
+            "length": "2034 mm",
+            "width": "783 mm",
+            "height": "1064 mm",
+            "wheelbase": "1356 mm",
+            "ground_clearance": "168 mm",
+            "kerb_weight": "142 kg",
+            "seat_height": "790 mm",
+            "fuel_tank": "12 L"
+          },
+          "engine": {
+            "type": "4-stroke, SI Engine (BS-VI Compliant)",
+            "displacement": "184.4 cc",
+            "power": "12.5 kW @ 8500 rpm",
+            "torque": "15.7 Nm @ 6000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "61.0 x 63.1 mm",
+            "compression_ratio": "9.5:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5-speed gearbox"
+          },
+          "tyres": {
+            "braking_system": "Front ABS (Anti-lock Braking System)",
+            "front": "110/70 - 17 M/C 54S (Tubeless)",
+            "rear": "140/70 - 17 M/C 66S (Tubeless)",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Disc - 220 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Upside Down (USD) Fork",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
   }
 ]
