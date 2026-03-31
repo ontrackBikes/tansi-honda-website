@@ -1895,5 +1895,149 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda Shine 125 Limited Edition",
+    "slug": "honda-shine-125-limited-edition",
+
+    "category": "motorcycle",
+    "subCategory": "RedWing",
+
+    "description": "A premium and stylish commuter motorcycle designed for daily rides, featuring refined graphics and smooth engine performance.",
+
+    "coverImage": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-125-limited-edition%2FGet-to-Know-Your-Side%2FGet-to-Know-Your-Side-584x450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/pdf/shine-125-limited-edition.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Siren Blue",
+        "code": "#142846",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-125-limited-edition%2FGet-to-Know-Your-Side%2FGet-to-Know-Your-Side-584x450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Side Stand Indicator with Engine Cutoff",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-125-limited-edition%2FSafety%2FSide-Stand-352x360.jpg%3Fh%3D1020%26iar%3D0%26w%3D998&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Prevents ignition when the stand is engaged."
+        },
+        {
+          "title": "CBS with Equalizer",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-125-limited-edition%2FSafety%2FCBS352x360.jpg%3Fh%3D1020%26iar%3D0%26w%3D998&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Effective braking and improved stability."
+        },
+        {
+          "title": "Integrated Headlamp Beam & Passing Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FRedwings%2FShine-125-Limited-Edition%2FSafety%2FHeadlamp-Beam-352x360.jpg%3Fh%3D1020%26iar%3D0%26w%3D998&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Single switch for all headlamp functions."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "New 15W USB-C Port",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/Comfort/USB-C-Port-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "Charge your devices anywhere, anytime."
+        },
+        {
+          "title": "5-Speed Transmission",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/Comfort/5-Speed-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "Fine-tune the ride to your comfort."
+        },
+
+        {
+          "title": "Integrated Headlamp Beam & Passing Switch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-125-limited-edition/comfort/Passing-Switch-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "Single switch to ensure ease."
+        }
+      ],
+      "design": [
+        {
+          "title": "New Stylish Shine Graphics",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-125-limited-edition/Design/Shine-Graphics-555x555.jpg?h=555&iar=0&w=555",
+          "description": "Stylish graphics, dynamic style."
+        },
+        {
+          "title": "Pyrite Brown Alloy Wheels",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-125-limited-edition/Design/Alloy-Wheels-555x555.jpg?h=555&iar=0&w=555",
+          "description": "Polished Pyrite Brown metallic alloy wheels."
+        },
+        {
+          "title": "Stylish Front Chrome Visor",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-125-limited-edition/Design/Chrome-Visor-555x555.jpg?h=555&iar=0&w=555",
+          "description": "Brings a bold character."
+        }
+      ],
+      "technology": [
+        {
+          "title": "Fully Digital Meter",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/Technology/Fully-Digital-Meter-588x678.jpg?h=678&iar=0&w=588",
+          "description": "Monitor performance easily."
+        },
+        {
+          "title": "Idling Stop System",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/Technology/Idling-Stop-System-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "Stops engine during brief stops."
+        },
+        {
+          "title": "125cc BS VI compliant engine",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/Technology/Engine-1120x623.jpg?h=623&iar=0&w=1120",
+          "description": "Reduced emissions and improved performance."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "",
+        "sku": "",
+        "specs": {
+          "body": {
+            "length": "2046 mm",
+            "width": "741 mm",
+            "height": "1116 mm",
+            "wheelbase": "1285 mm",
+            "ground_clearance": "162 mm",
+            "kerb_weight": "113 kg",
+            "seat_length": "651 mm",
+            "seat_height": "791 mm",
+            "fuel_tank": "10.5 L"
+          },
+          "engine": {
+            "type": "4 Stroke, SI Engine",
+            "displacement": "123.94 cc",
+            "power": "7.9 kW @ 7500 rpm",
+            "torque": "11 Nm @ 6000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_x_stroke": "50.00 X 63.121",
+            "compression_ratio": "10.0:1",
+            "starting": "Self/Kick"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5 Speed"
+          },
+          "tyres": {
+            "front": "80/100-18 M/C 47P",
+            "rear": "90/90-18 M/C 51P",
+            "front_brake": "Disc - 240 mm",
+            "rear_brake": "Rer - a130 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Hydraulic Type"
+          },
+          "electricals": {
+            "battery": "12V & 5Ah",
+            "headlamp": "Halogen Bulb, DC"
+          }
+        }
+      }
+    ]
   }
 ]
