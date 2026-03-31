@@ -3215,5 +3215,254 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda CB350C",
+    "slug": "honda-cb350c",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "Classic retro bobber styling combined with a refined engine delivers a smooth and relaxed riding experience.",
+
+    "coverImage": "/images/bike/honda-cb350c/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350C/pdf/CB350C_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Mat Axis Grey Metallic",
+        "code": "#515151",
+        "image": "/images/bike/honda-cb350c/1.png"
+      },
+      {
+        "name": "Pearl Deep Ground Grey",
+        "code": "#9B9B9B",
+        "image": "/images/bike/honda-cb350c/2.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#191919",
+        "image": "/images/bike/honda-cb350c/3.png"
+      },
+      {
+        "name": "DLX Pro Mat Axis Grey Mettalic",
+        "code": "#414141",
+        "image": "/images/bike/honda-cb350c/4.png"
+      },
+      {
+        "name": "DLX Pro Pearl Deep Ground Grey",
+        "code": "#9B9B9B",
+        "image": "/images/bike/honda-cb350c/5.png"
+      },
+      {
+        "name": "DLX Pro Pearl Igneous Black",
+        "code": "#1B1B1B",
+        "image": "/images/bike/honda-cb350c/6.png"
+      },
+      {
+        "name": "DLX Rebel Red Metallic",
+        "code": "#4F181C",
+        "image": "/images/bike/honda-cb350c/7.webp"
+      },
+      {
+        "name": "DLX Mat Axis Grey Metallic",
+        "code": "#3E3E3E",
+        "image": "/images/bike/honda-cb350c/8.webp"
+      },
+      {
+        "name": "DLX Mat Dune Brown",
+        "code": "#938867",
+        "image": "/images/bike/honda-cb350c/9.webp"
+      },
+      {
+        "name": "DLX Pearl Deep Ground Grey",
+        "code": "#969696",
+        "image": "/images/bike/honda-cb350c/10.webp"
+      },
+      {
+        "name": "DLX Pearl Igneous Black",
+        "code": "#232323",
+        "image": "/images/bike/honda-cb350c/11.webp"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Side Stand with Engine Inhibitor ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FDesktop%2FSafety%2FSafety-Side-Stand-with-Engine-Inhibitor--352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Prevents accidental ride-offs by cutting off the engine when the stand is down."
+        },
+        {
+          "title": "(ESS) Emergency Stop Signal ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FDesktop%2FSafety%2FSafety-Emergency-Stop-Signal-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Alerts other drivers during sudden braking, improving road safety."
+        },
+        {
+          "title": "Durable Tyres with Wide Tread Patterns ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FDesktop%2FSafety%2FSafety-Durable-Tyres-with-Wide-Tread-Patterns-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Provides excellent grip and traction for better stability on all surfaces."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Split Seat",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350/Desktop/Convenience/Convenience-Split-Seat--1120x623.png?h=623&iar=0&w=1120",
+          "description": "Ensures superior comfort for both rider and pillion on long journeys."
+        },
+        {
+          "title": "Assist & Slipper Clutch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350/Desktop/Convenience/Convenience-Assist--Slipper-Clutch-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Reduces clutch effort and prevents rear-wheel lock-up during aggressive downshifts."
+        },
+        {
+          "title": "Half-Duplex Cradle Frame ",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350/Desktop/Convenience/Convenience-Half-Duplex-Cradle-Frame-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Provides stability and durability for confident riding across various terrains."
+        }
+      ],
+      "design": [
+        {
+          "title": "Front Suspension Cover & Long Muffler",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FMobile%2FDesign%2FDesign-Front-Suspension-Cover--1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Enhances style while improving durability and exhaust refinement."
+        },
+        {
+          "title": "Full LED Headlamp and Tail Lamp with Fire Ring Type LED Winkers",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FMobile%2FDesign%2FDesign-Full-LED-Headlamp-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "High-efficiency LED lighting for superior visibility."
+        },
+        {
+          "title": "Low-End Torque Optimisation",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FMobile%2FDesign%2FDesign-Low-End-Torque--1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Ensures smooth performance during urban commutes and highway cruising."
+        },
+        {
+          "title": "Robust Tank Aesthetic",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FMobile%2FDesign%2FDesign-Robust-Tank-Aesthetic--1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Bold. Muscular. Commanding. The fuel tank design screams attitude, exuding raw power while adding to the bike’s striking presence."
+        },
+        {
+          "title": "15-litre Fuel Tank",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FMobile%2FDesign%2FDesign-15-litre-Fuel-Tank-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "More miles, fewer stops. The large 15-litre fuel tank ensures you go the distance without worrying about constant refuelling."
+        }
+      ],
+      "technology": [
+        {
+          "title": "Honda Selectable Torque Control (HSTC)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FMobile%2FTechnology%2FTechnology-Honda-Selectable-Torque-Control-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Ensures optimal grip and stability on slippery terrains by adjusting rear-wheel torque."
+        },
+        {
+          "title": "Honda Roadsync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350%2FMobile%2FTechnology%2FTechnology-Honda-Smartphone-Voice-Control-System-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Seamlessly connect your smartphone for navigation, calls, and music control."
+        },
+        {
+          "title": "PGM-FI Technology",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftechnology%2Ffi-technology.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Advanced fuel injection ensures smoother acceleration, better mileage, and reduced emissions."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "CB350C DLX",
+        "sku": "CB350C-DLX",
+        "specs": {
+          "body": {
+            "length": "2207 mm",
+            "width": "788 mm",
+            "height": "1110 mm",
+            "wheelbase": "1441 mm",
+            "ground_clearance": "166 mm",
+            "kerb_weight": "186 kg",
+            "seat_height": "800 mm",
+            "fuel_tank": "15.2 L"
+          },
+          "engine": {
+            "type": "4-Stroke, Air-Cooled, SI Engine (BS-VI compliant) ",
+            "displacement": "348.36 cc",
+            "power": "15.5 kW @ 5500 rpm",
+            "torque": "29.5 N-m @ 3000 rpm ",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "70.0 mm x 90.5 mm",
+            "compression_ratio": "9.5:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual-Channel ABS",
+            "front": "100/90 R19 M/C 57H",
+            "rear": "130/70 R18 M/C 63H ",
+            "front_brake": "Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "type": "Diamond Type",
+            "front": "Telescopic Forks",
+            "rear": "Twin Hydraulic Shocks"
+          },
+          "electricals": {
+            "battery": "12 V, 6.0 Ah",
+            "headlamp": "LED"
+          }
+        }
+      },
+      {
+        "name": "CB350C DLX PRO",
+        "sku": "CB350C-DLX-PRO",
+        "specs": {
+          "body": {
+            "length": "2207 mm",
+            "width": "788 mm",
+            "height": "1110 mm",
+            "wheelbase": "1441 mm",
+            "ground_clearance": "166 mm",
+            "kerb_weight": "186 kg",
+            "seat_height": "800 mm",
+            "fuel_tank": "15.2 L"
+          },
+          "engine": {
+            "type": "4-Stroke, Air-Cooled, SI Engine (BS-VI compliant) ",
+            "displacement": "348.36 cc",
+            "power": "15.5 kW @ 5500 rpm",
+            "torque": "29.5 N-m @ 3000 rpm ",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "70.0 mm x 90.5 mm",
+            "compression_ratio": "9.5:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual-Channel ABS",
+            "front": "100/90 R19 M/C 57H",
+            "rear": "130/70 R18 M/C 63H ",
+            "front_brake": "Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "type": "Diamond Type",
+            "front": "Telescopic Forks",
+            "rear": "Twin Hydraulic Shocks"
+          },
+          "electricals": {
+            "battery": "12 V, 6.0 Ah",
+            "headlamp": "LED"
+          }
+        }
+      }
+    ]
   }
 ]
