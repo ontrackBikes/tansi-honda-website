@@ -4603,5 +4603,166 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda Dio 125 X-Edition",
+    "slug": "honda-dio-125-x-edition",
+
+    "category": "scooter",
+    "subCategory": "",
+
+    "description": "The Honda Dio 125 X-Edition is a special edition of the popular Dio 125 scooter, designed to offer a unique and stylish riding experience. It features a powerful 125cc engine, advanced features, and a distinctive design that sets it apart from the standard model. With its bold aesthetics and enhanced performance, the Dio 125 X-Edition is perfect for riders looking for a scooter that combines style and substance.",
+
+    "coverImage": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2FGet-to-know-your-ride%2FHonda-Dio-125-_-Special-Edition-_-360Dgr_1-_-584-x-450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/pdf/3_Dio-Xedition-brochure-2-01.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl siren blue and Pearl deep ground gray",
+        "code": "#797979",
+        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2FGet-to-know-your-ride%2FHonda-Dio-125-_-Special-Edition-_-360Dgr_1-_-584-x-450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Side Stand Engine Cut-Off",
+          "description": "It automatically shuts off the engine for added safety when the side stand is engaged.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2Fsafety%2FHonda-Dio-125-_-Special-Edition-_-Side-Stand-Engine-Cut-Off-_-352-x-360px.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        },
+        {
+          "title": "Telescopic Front Suspension",
+          "description": "Say goodbye to bumpy rides.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2Fsafety%2FHonda-Dio-125-_-Special-Edition-_-Telescopic-Front-Suspension-_-352-x-360px.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        },
+        {
+          "title": "Front Disc Brake",
+          "description": "High-performance disc brakes fitted in sleek alloy wheels.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2Fsafety%2FHonda-Dio-125-_-Special-Edition-_-Front-Disc-Brake-_-352-x-360px.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        }
+      ],
+
+      "comfort": [
+        {
+          "title": "Double Lid External Fuel Fill",
+          "description": "Refuel without getting off.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/Comfort/Honda-Dio-125-_-Special-Edition-_-Double-Lid-External-Fuel-Fill-_-1120-x-623px.jpg?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Passing Switch",
+          "description": "Pass like a boss with an easy-to-use passing switch.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/Comfort/Honda-Dio-125-_-Special-Edition-_-Passing-Switch-_-1120-x-623px.jpg?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Open Glove Box with USB Type-C Charging Port",
+          "description": "Convenient storage for smaller items",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/Comfort/Honda-Dio-125-_-Special-Edition-_-Open-Glove-Box-with-USB-Type-C-Charging-Port-_-1120-x-623px.jpg?h=623&iar=0&w=1120"
+        }
+      ],
+
+      "design": [
+        {
+          "title": "Stylish and Dynamic Graphics",
+          "description": "Bold, youthful graphics bring motion and attitude to the Dio 125 X-Edition.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Dio-125-x-edition/Design/Honda-Dio-125-_-Special-Edition-_-Stylish-and-Dynamic-Graphics-_-555-x-555px.jpg?h=555&iar=0&w=555"
+        },
+        {
+          "title": "Dual Colour Body",
+          "description": "The dual-tone body treatment enhances the look",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Dio-125-x-edition/Design/Honda-Dio-125-_-Special-Edition-_-Dual-Colour-Body-_-555-x-555px.jpg?h=555&iar=0&w=555"
+        },
+        {
+          "title": "Exclusive X-Edition decals",
+          "description": "Exclusive X-Edition decals reinforce the scooter's distinct identity",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Dio-125-x-edition/Design/Honda-Dio-125-_-Special-Edition-_-Exclusive-X-Edition-decals-_-555-x-555px.jpg?h=555&iar=0&w=555"
+        }
+      ],
+
+      "technology": [
+        {
+          "title": "TFT Screen Display",
+          "description": "The advanced TFT meter delivers crisp visuals and clear ride information at a glance",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Dio-125-x-edition/Technology/Honda-Dio-125-_-Special-Edition-_-Feature-_-TFT-Screen-Display-_-588-x-678px.jpg?h=678&iar=0&w=588"
+        },
+        {
+          "title": "Advanced Idling Stop System",
+          "description": "Automatically turns off the engine at low speed, saving fuel.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/Technology/Honda-Dio-125-_-Special-Edition-_-Feature-_-Advanced-Idling-Stop-System-_-1120-x-623px.jpg?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "PGM-FI Technology",
+          "description": "Delivers the right amount of fuel for smooth and efficient performance.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Dio-125-x-edition/Technology/inside-image/Honda-Dio-125-_-Special-Edition-_-Feature-_-PGM-FI-Technology-_-1120-x-623px.jpg?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Powerful 125cc Engine",
+          "description": "Top-tier power and acceleration to make rides exciting",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/Technology/Honda-Dio-125-_-Special-Edition-_-Feature-_-Powerful-125cc-Engine-_-1120-x-623px.jpg?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Silent Start with ACG",
+          "description": "The ACG Starter provides a smooth, silent start every time, and reduces engine maintenance",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/Technology/Honda-Dio-125-_-Special-Edition-_-Feature-_-Silent-Start-with-ACG---_-1120-x-623px.jpg?h=623&iar=0&w=1120"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "",
+        "sku": "",
+
+        "specs": {
+          "body": {
+            "length": "1830 mm",
+            "width": "707 mm",
+            "height": "1172 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "171 mm",
+            "seat_length": "708 mm",
+            "kerb_weight": "105 kg (X Edition)",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "123.92 cc",
+            "max_power": "6.11 kW @6500 rpm",
+            "max_torque": "10.5 Nm @5000 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore": "50.0 mm",
+            "compression_ratio": "10.0 : 1",
+            "air_filter_type": "Viscous Paper Filter"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J (Tubeless)",
+            "rear": "90/100-10 53J (Tubeless)",
+            "front_brake": "Drum - 190 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Underbone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Spring Loaded Hydraulic"
+          },
+
+          "electricals": {
+            "system_voltage": "12 V",
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED"
+          }
+        }
+      }
+    ]
   }
 ]
