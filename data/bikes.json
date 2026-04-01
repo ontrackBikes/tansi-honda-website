@@ -3622,5 +3622,301 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda CB350 H'ness",
+    "slug": "honda-cb350-hness",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "The Honda CB350 H'ness combines timeless retro styling with modern engineering, delivering a refined and smooth riding experience. Its strong low-end torque, comfortable ergonomics, and premium build quality make it ideal for both city commutes and long highway rides.",
+
+    "coverImage": "/images/bike/honda-cb350-hness/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350-Hness/cb350-hness-Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "DLX Pro Chrome Decent Blue Metallic",
+        "code": "#216ABB",
+        "image": "/images/bike/honda-cb350-hness/1.png"
+      },
+      {
+        "name": "DLX Pearl Igneous Black",
+        "code": "#1E1E1E",
+        "image": "/images/bike/honda-cb350-hness/2.png"
+      },
+      {
+        "name": "DLX Pro Precious Red Metallic",
+        "code": "#471A1E",
+        "image": "/images/bike/honda-cb350-hness/3.png"
+      },
+      {
+        "name": "DLX Pro Pearl Deep Ground Gray",
+        "code": "#979797",
+        "image": "/images/bike/honda-cb350-hness/4.png"
+      },
+      {
+        "name": "DLX Pro Pearl Igneous Black",
+        "code": "#1E1E1E",
+        "image": "/images/bike/honda-cb350-hness/5.png"
+      },
+      {
+        "name": "DLX Grey",
+        "code": "#9B9B9C",
+        "image": "/images/bike/honda-cb350-hness/6.png"
+      },
+      {
+        "name": "DLX Pro Chrome Pearl Deep Ground Gray",
+        "code": "#A6A6A7",
+        "image": "/images/bike/honda-cb350-hness/7.png"
+      },
+      {
+        "name": "DLX Pro Chrome Pearl Igneous Black",
+        "code": "#202020",
+        "image": "/images/bike/honda-cb350-hness/8.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Dual Channel ABS",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FSafety%2FSafety-Dual-Channel-ABS-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Always in control."
+        },
+        {
+          "title": "ESS (Emergency Stop Signal)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FSafety%2FSafety-Emergency-Stop-Signal-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Let there be no brake to your safety."
+        },
+        {
+          "title": "Hazard Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FSafety%2FSafety-Hazard-Switch-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Safety in every flash."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Assist Slipper Clutch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350-Hness/Desktop/Convenience/Convenience-ASSIST-Slipper-Clutch-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Ensures smooth clutch operation."
+        },
+        {
+          "title": "Side Stand with Engine Inhibitor",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350-Hness/Desktop/Convenience/Convenience-Side-Stand-with-Engine-Inhibitor-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Stand out, ride out."
+        },
+        {
+          "title": "E20 Compliant",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350-Hness/Desktop/Convenience/Convenience-E20-Compliant-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Supports cleaner and more sustainable mobility."
+        }
+      ],
+      "design": [
+        {
+          "title": "New-age Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FDesign%2FDesign-New-age-Headlight-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Techy new look that brightens up your every ride."
+        },
+        {
+          "title": "Roaring Exhaust Note",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FDesign%2FDesign-Roaring-Exhaust-Note-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "CB350 H’ness emits a crisp throb that results in a rich and thumpy exhaust note."
+        },
+        {
+          "title": "Smoked Taillight Lamp",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FDesign%2FDesign-Smoked-Taillight-Lamp-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Leave a trail of thrill with a full LED tail lamp and winkers."
+        },
+        {
+          "title": "Split Seat",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FDesign%2FDesign-Split-Seat-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Split seat adds classic style without compromising on the comfort of both riders."
+        }
+      ],
+      "technology": [
+        {
+          "title": "Powerful 350cc Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FTechnology%2FTechnology-Powerful-350cc-Engine-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Soul of a classic, heart of innovation."
+        },
+        {
+          "title": "Honda Selectable Torque Control (HSTC)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2FDesktop%2FTechnology%2FTechnology-Honda-Selectable-Torque-Control-HSTC-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Invisible guardian of your journey."
+        },
+        {
+          "title": "Honda RoadSync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-Hness%2Ftechnology%2Ftechnology-honda-roadsync-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "Stay connected with the roads."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "DLX",
+        "sku": "DLX",
+        "specs": {
+          "body": {
+            "length": "2163 mm",
+            "width": "789 mm",
+            "height": "1107 mm",
+            "wheelbase": "1441 mm",
+            "ground_clearance": "166 mm",
+            "kerb_weight": "181 kg",
+            "seat_height": "800 mm",
+            "fuel_tank": "15 L"
+          },
+          "engine": {
+            "type": "4-Stroke SI Engine",
+            "displacement": "348.36 cc",
+            "cooling": "Air",
+            "power": "15.5 kW @ 5500",
+            "torque": "30 Nm @ 3000",
+            "lubrication": "Wet Sump",
+            "bore_stroke": "70.0 mm x 90.5 mm",
+            "transmission": "5-Speed Manual",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual-Channel ABS",
+            "tyre_type": "Tubeless",
+            "wheel_type": "Alloy",
+            "front": "100/90 R19 M/C 57H",
+            "rear": "130/70 R18 M/C 63H",
+            "front_brake": "Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm",
+            "front_calliper": "Twin Piston",
+            "rear_calliper": "Single Piston"
+          },
+          "suspension": {
+            "type": "Diamond Type",
+            "front": "Telescopic Forks",
+            "rear": "Twin Hydraulic Shocks"
+          },
+          "electricals": {
+            "battery": "12 V, 6.0 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      },
+      {
+        "name": "DLX PRO",
+        "sku": "DLX-PRO",
+        "specs": {
+          "body": {
+            "length": "2163 mm",
+            "width": "789 mm",
+            "height": "1107 mm",
+            "wheelbase": "1441 mm",
+            "ground_clearance": "166 mm",
+            "kerb_weight": "181 kg",
+            "seat_height": "800 mm",
+            "fuel_tank": "15 L"
+          },
+          "engine": {
+            "type": "4-Stroke SI Engine",
+            "displacement": "348.36 cc",
+            "cooling": "Air",
+            "power": "15.5 kW @ 5500",
+            "torque": "30 Nm @ 3000",
+            "lubrication": "Wet Sump",
+            "bore_stroke": "70.0 mm x 90.5 mm",
+            "transmission": "5-Speed Manual",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual-Channel ABS",
+            "tyre_type": "Tubeless",
+            "wheel_type": "Alloy",
+            "front": "100/90 R19 M/C 57H",
+            "rear": "130/70 R18 M/C 63H",
+            "front_brake": "Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm",
+            "front_calliper": "Twin Piston",
+            "rear_calliper": "Single Piston"
+          },
+          "suspension": {
+            "type": "Diamond Type",
+            "front": "Telescopic Forks",
+            "rear": "Twin Hydraulic Shocks"
+          },
+          "electricals": {
+            "battery": "12 V, 6.0 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      },
+      {
+        "name": "DLX PRO CHROME",
+        "sku": "DLX-PRO-CHROME",
+        "specs": {
+          "body": {
+            "length": "2163 mm",
+            "width": "789 mm",
+            "height": "1107 mm",
+            "wheelbase": "1441 mm",
+            "ground_clearance": "166 mm",
+            "kerb_weight": "181 kg",
+            "seat_height": "800 mm",
+            "fuel_tank": "15 L"
+          },
+          "engine": {
+            "type": "4-Stroke SI Engine",
+            "displacement": "348.36 cc",
+            "cooling": "Air",
+            "power": "15.5 kW @ 5500",
+            "torque": "30 Nm @ 3000",
+            "lubrication": "Wet Sump",
+            "bore_stroke": "70.0 mm x 90.5 mm",
+            "transmission": "5-Speed Manual",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual-Channel ABS",
+            "tyre_type": "Tubeless",
+            "wheel_type": "Alloy",
+            "front": "100/90 R19 M/C 57H",
+            "rear": "130/70 R18 M/C 63H",
+            "front_brake": "Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm",
+            "front_calliper": "Twin Piston",
+            "rear_calliper": "Single Piston"
+          },
+          "suspension": {
+            "type": "Diamond Type",
+            "front": "Telescopic Forks",
+            "rear": "Twin Hydraulic Shocks"
+          },
+          "electricals": {
+            "battery": "12 V, 6.0 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
   }
 ]
