@@ -1,660 +1,747 @@
 <%- include("../partials/header") %>
 
-<div class="container vehicle-detail py-5">
-  <div class="row align-items-center g-3 mb-4">
-    <div class="col-md-7">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-2">
-          <li class="breadcrumb-item small text-uppercase fw-bold text-danger">
-            <%= model.category %>
-          </li>
-          <li class="breadcrumb-item small text-uppercase fw-bold text-muted">
-            <%= model.subCategory %>
-          </li>
-        </ol>
-      </nav>
-      <h1 class="vehicle-title text-dark">
-        <%= model.name %>
-      </h1>
-    </div>
+  <div class="container vehicle-detail py-5">
+    <div class="row align-items-center g-3 mb-4">
+      <div class="col-md-7">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item small text-uppercase fw-bold text-danger">
+              <%= model.category %>
+            </li>
+            <li class="breadcrumb-item small text-uppercase fw-bold text-muted">
+              <%= model.subCategory %>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="vehicle-title text-dark">
+          <%= model.name %>
+        </h1>
+      </div>
 
-    <!-- <div>
+      <!-- <div>
         <%= model.variants[0].specs %>
       </div> -->
 
-    <div class="col-md-5 text-md-end">
-      <% if (model.brochure) { %>
-      <a href="<%= model.brochure %>" target="_blank" class="btn btn-outline-dark rounded-pill px-4 fw-bold">
-        <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Brochure
-      </a>
-      <% } %>
-      <a class="btn btn-danger rounded-pill px-4 fw-bold ms-2" href="/quick-quote">
-        <i class="bi bi-chat-dots-fill"></i> Get Quote
-      </a>
-    </div>
-  </div>
-
-  <div class="row g-5">
-
-    <div class="col-lg-6">
-      <div class="main-vehicle-img">
-        <img id="activeVehicleImage" src="<%= model.coverImage || '/images/default-bike.jpg' %>" alt="<%= model.name %>" class="img-fluid transition-img">
-      </div>
-
-      <% if (model.colors && model.colors.length> 0) { %>
-      <div class="mt-4 text-center">
-        <p class="small fw-bold text-muted text-uppercase mb-3">Available Colors</p>
-        <div class="d-flex justify-content-center gap-3">
-          <% model.colors.forEach((color, index)=> { %>
-          <div class="color-circle shadow-sm <%= index === 0 ? 'active-color' : '' %>" style="background-color: <%= color.code %>;" title="<%= color.name %>" onclick="changeVehicleColor('<%= color.image %>', this)"></div>
-          <% }) %>
-        </div>
-        <p id="colorNameDisplay" class="small mt-2 fw-bold text-dark">
-          <%= model.colors[0].name %>
-        </p>
-      </div>
-      <% } %>
-    </div>
-
-    <div class="col-lg-6">
-      <div class="ps-lg-4">
-        <!-- <div class="badge bg-danger mb-3">New Launch</div> -->
-        <h4 class="fw-bold">Model Overview</h4>
-        <p class="text-muted leading-relaxed">
-          <%= model.description %>
-        </p>
-
-        <div class="row mt-4 g-3">
-          <div class="col-6">
-            <div class="p-3 border rounded-4 text-center h-100">
-              <span class="fs-3">🛡️</span>
-              <p class="small fw-bold mb-0 mt-1">Safety First</p>
-              <span class="text-muted extra-small">Advanced Braking</span>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="p-3 border rounded-4 text-center h-100">
-              <span class="fs-3">⛽</span>
-              <p class="small fw-bold mb-0 mt-1">Efficiency</p>
-              <span class="text-muted extra-small">Best-in-class mileage</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-5 d-grid gap-2">
-          <button class="btn btn-dark btn-lg rounded-4 fw-bold py-3" onclick="openEnquiry()">
-            BOOK A TEST RIDE
-          </button>
-          <a href="https://wa.me/919XXXXXXXXX?text=I'm interested in <%= model.name %>" target="_blank" class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3">
-            Chat on WhatsApp
+      <div class="col-md-5 text-md-end">
+        <% if (model.brochure) { %>
+          <a href="<%= model.brochure %>" target="_blank" class="btn btn-outline-dark rounded-pill px-4 fw-bold">
+            <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Brochure
           </a>
+          <% } %>
+            <a class="btn btn-danger rounded-pill px-4 fw-bold ms-2" href="/quick-quote">
+              <i class="bi bi-chat-dots-fill"></i> Get Quote
+            </a>
+      </div>
+    </div>
+
+    <div class="row g-5">
+
+      <div class="col-lg-6">
+        <div class="main-vehicle-img">
+          <img id="activeVehicleImage" src="<%= model.coverImage || '/images/default-bike.jpg' %>"
+            alt="<%= model.name %>" class="img-fluid transition-img">
+        </div>
+
+        <% if (model.colors && model.colors.length> 0) { %>
+          <div class="mt-4 text-center">
+            <p class="small fw-bold text-muted text-uppercase mb-3">Available Colors</p>
+            <div class="d-flex justify-content-center gap-3">
+              <% model.colors.forEach((color, index)=> { %>
+                <div class="color-circle shadow-sm <%= index === 0 ? 'active-color' : '' %>"
+                  style="background-color: <%= color.code %>;" title="<%= color.name %>"
+                  onclick="changeVehicleColor('<%= color.image %>', this)"></div>
+                <% }) %>
+            </div>
+            <p id="colorNameDisplay" class="small mt-2 fw-bold text-dark">
+              <%= model.colors[0].name %>
+            </p>
+          </div>
+          <% } %>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="ps-lg-4">
+          <!-- <div class="badge bg-danger mb-3">New Launch</div> -->
+          <h4 class="fw-bold">Model Overview</h4>
+          <p class="text-muted leading-relaxed">
+            <%= model.description %>
+          </p>
+
+          <div class="row mt-4 g-3">
+            <div class="col-6">
+              <div class="p-3 border rounded-4 text-center h-100">
+                <span class="fs-3">🛡️</span>
+                <p class="small fw-bold mb-0 mt-1">Safety First</p>
+                <span class="text-muted extra-small">Advanced Braking</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 border rounded-4 text-center h-100">
+                <span class="fs-3">⛽</span>
+                <p class="small fw-bold mb-0 mt-1">Efficiency</p>
+                <span class="text-muted extra-small">Best-in-class mileage</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 d-grid gap-2">
+            <button class="btn btn-dark btn-lg rounded-4 fw-bold py-3" onclick="openEnquiry()">
+              BOOK A TEST RIDE
+            </button>
+            <a href="https://wa.me/919XXXXXXXXX?text=I'm interested in <%= model.name %>" target="_blank"
+              class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3">
+              Chat on WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="py-5">
+    <div class="py-5">
 
-    <div class="container py-5">
-      <h2 class="text-center fw-bold mb-5 section-title">TECHNICAL SPECIFICATIONS</h2>
+      <div class="container py-5">
+        <h2 class="text-center fw-bold mb-5 section-title">TECHNICAL SPECIFICATIONS</h2>
 
-      <% // 1. Production-level Safety: Ensure variants exist and filter for 'show: true' const
-          specData=model.variants && model.variants[0] ? model.variants[0].specs : {}; const
-          visibleSpecs=Object.entries(specData).filter(([_, group])=> group.show === true);
+        <% const hasVariants=model.variants && model.variants.length> 1;
 
-          // Helper function to format keys (e.g., ground_clearance -> Ground Clearance)
-          const formatLabel = (str) => str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          // Check if at least one variant has visible specs
+          const hasVisibleSpecs = model.variants && model.variants.some(variant =>
+          Object.values(variant.specs || {}).some(group => group.show === true)
+          );
           %>
 
-      <div class="tabs-wrapper">
-        <ul class="nav nav-pills justify-content-center mb-5" id="specTabs" role="tablist">
-          <% visibleSpecs.forEach(([key, group], index)=> { %>
-          <li class="nav-item ms-2" role="presentation">
-            <button class="nav-link <%= index === 0 ? 'active' : '' %>" id="tab-btn-<%= index %>" data-bs-toggle="pill" data-bs-target="#tab-pane-<%= index %>" type="button" role="tab" aria-controls="tab-pane-<%= index %>" aria-selected="<%= index === 0 %>">
-              <%= formatLabel(key) %>
-            </button>
-          </li>
-          <% }) %>
-        </ul>
-      </div>
-
-      <div class="row align-items-top">
-        <div class="col-md-6 text-center mb-4 mb-md-0">
-          <img src="<%= model.coverImage %>" class="img-fluid vehicle-img" alt="<%= model.name %>">
-        </div>
-
-        <div class="col-md-5 offset-md-1">
-          <div class="tab-content" id="specTabsContent">
-            <% visibleSpecs.forEach(([key, group], index)=> { %>
-            <div class="tab-pane fade <%= index === 0 ? 'show active' : '' %>" id="tab-pane-<%= index %>" role="tabpanel" aria-labelledby="tab-btn-<%= index %>">
-
-              <% if (group.items && group.items.length> 0) { %>
-              <% group.items.forEach((itemObj)=> {
-                        // Extract the dynamic key (e.g., "length") and its value
-                        const itemKey = Object.keys(itemObj)[0];
-                        const itemValue = itemObj[itemKey];
-                        %>
-              <div class="d-flex justify-content-between py-2 border-bottom">
-                <span class="text-muted small">
-                  <%= formatLabel(itemKey) %>
-                </span>
-                <span class="fw-bold text-end ms-3">
-                  <%= itemValue || '-' %>
-                </span>
-              </div>
-              <% }) %>
-              <% } else { %>
-              <div class="py-4 text-center text-muted italic">
-                No detailed specifications available for <%= formatLabel(key) %>.
-              </div>
-              <% } %>
-
+          <% if (hasVariants && hasVisibleSpecs) { %>
+            <div class="text-center mb-4">
+              <select id="variantSelect" class="form-select rounded-pill border-red w-auto mx-auto">
+                <% model.variants.forEach((variant, index)=> { %>
+                  <option value="<%= index %>">
+                    <%= variant.name %>
+                  </option>
+                  <% }) %>
+              </select>
             </div>
-            <% }) %>
-          </div>
-        </div>
+            <% } %>
+
+              <% // 1. Production-level Safety: Ensure variants exist and filter for 'show: true' const const
+                selectedVariantIndex=0; // default const specData=model.variants[selectedVariantIndex].specs;
+                specData=model.variants && model.variants[0] ? model.variants[0].specs : {}; const
+                visibleSpecs=Object.entries(specData).filter(([_, group])=> group.show === true);
+
+                // Helper function to format keys (e.g., ground_clearance -> Ground Clearance)
+                const formatLabel = (str) => str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                %>
+
+                <div class="tabs-wrapper">
+                  <ul class="nav nav-pills justify-content-center mb-5" id="specTabs" role="tablist">
+                    <% visibleSpecs.forEach(([key, group], index)=> { %>
+                      <li class="nav-item ms-2" role="presentation">
+                        <button class="nav-link <%= index === 0 ? 'active' : '' %>" id="tab-btn-<%= index %>"
+                          data-bs-toggle="pill" data-bs-target="#tab-pane-<%= index %>" type="button" role="tab"
+                          aria-controls="tab-pane-<%= index %>" aria-selected="<%= index === 0 %>">
+                          <%= formatLabel(key) %>
+                        </button>
+                      </li>
+                      <% }) %>
+                  </ul>
+                </div>
+
+                <div class="row align-items-top">
+                  <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="<%= model.coverImage %>" class="img-fluid vehicle-img" alt="<%= model.name %>">
+                  </div>
+
+                  <div class="col-md-5 offset-md-1">
+                    <div class="tab-content" id="specTabsContent">
+                      <% visibleSpecs.forEach(([key, group], index)=> { %>
+                        <div class="tab-pane fade <%= index === 0 ? 'show active' : '' %>" id="tab-pane-<%= index %>"
+                          role="tabpanel" aria-labelledby="tab-btn-<%= index %>">
+
+                          <% if (group.items && group.items.length> 0) { %>
+                            <% group.items.forEach((itemObj)=> {
+                              // Extract the dynamic key (e.g., "length") and its value
+                              const itemKey = Object.keys(itemObj)[0];
+                              const itemValue = itemObj[itemKey];
+                              %>
+                              <div class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="text-muted small">
+                                  <%= formatLabel(itemKey) %>
+                                </span>
+                                <span class="fw-bold text-end ms-3">
+                                  <%= itemValue || '-' %>
+                                </span>
+                              </div>
+                              <% }) %>
+                                <% } else { %>
+                                  <div class="py-4 text-center text-muted italic">
+                                    No detailed specifications available for <%= formatLabel(key) %>.
+                                  </div>
+                                  <% } %>
+
+                        </div>
+                        <% }) %>
+                    </div>
+                  </div>
+                </div>
       </div>
-    </div>
 
-    <div class="mt-5 pt-5">
-      <h2 class="text-center fw-extrabold mb-5" style="letter-spacing: -1px;">ADVANCED FEATURES</h2>
+      <div class="mt-5 pt-5">
+        <h2 class="text-center fw-extrabold mb-5" style="letter-spacing: -1px;">ADVANCED FEATURES</h2>
 
-      <% const shouldShow=function(feature) { return feature && feature.show===true && Array.isArray(feature.items) &&
+        <% const shouldShow=function(feature) { return feature && feature.show===true && Array.isArray(feature.items) &&
           feature.items.length> 0;
           };
           %>
 
-      <% if (shouldShow(model.features.comfort)) { %>
-      <section class="feature-group mb-5">
-        <div class="d-flex align-items-center mb-4">
-          <h3 class="fw-bold mb-0">Comfort</h3>
-        </div>
-        <div class="row g-4">
-          <% model.features.comfort.items.forEach(item=> { %>
-          <div class="col-md-4">
-            <div class="comfort-card">
-              <img src="<%= item.image %>" alt="<%= item.title %>" class="comfort-card-img">
-              <div class="comfort-card-overlay">
-                <h3 class="comfort-card-title">
-                  <%= item.title %>
-                </h3>
-                <p class="comfort-card-desc">
-                  <%= item.description %>
-                </p>
+          <% if (shouldShow(model.features.comfort)) { %>
+            <section class="feature-group mb-5">
+              <div class="d-flex align-items-center mb-4">
+                <h3 class="fw-bold mb-0">Comfort</h3>
               </div>
-            </div>
-          </div>
-          <% }) %>
-        </div>
-      </section>
-      <% } %>
+              <div class="row g-4">
+                <% model.features.comfort.items.forEach(item=> { %>
+                  <div class="col-md-4">
+                    <div class="comfort-card">
+                      <img src="<%= item.image %>" alt="<%= item.title %>" class="comfort-card-img">
+                      <div class="comfort-card-overlay">
+                        <h3 class="comfort-card-title">
+                          <%= item.title %>
+                        </h3>
+                        <p class="comfort-card-desc">
+                          <%= item.description %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <% }) %>
+              </div>
+            </section>
+            <% } %>
 
-      <% if (shouldShow(model.features.safety)) { %>
-      <section class="feature-group mb-5 main-vehicle-img px-5 py-5 rounded-4">
-        <div class="d-flex align-items-center mb-4">
-          <h3 class="fw-bold mb-0">Safety</h3>
-        </div>
-        <div class="row g-4">
-          <% model.features.safety.items.forEach(item=> { %>
-          <div class="col-md-4">
-            <div class="safety-card h-100 shadow-sm border-0">
-              <div class="safety-card-img-wrapper">
-                <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid rounded-top">
-              </div>
-              <div class="px-4 py-3">
-                <h5 class="fw-bold">
-                  <%= item.title %>
-                </h5>
-                <p class="text-muted small mb-0">
-                  <%= item.description %>
-                </p>
-              </div>
-            </div>
-          </div>
-          <% }) %>
-        </div>
-      </section>
-      <% } %>
+              <% if (shouldShow(model.features.safety)) { %>
+                <section class="feature-group mb-5 main-vehicle-img px-5 py-5 rounded-4">
+                  <div class="d-flex align-items-center mb-4">
+                    <h3 class="fw-bold mb-0">Safety</h3>
+                  </div>
+                  <div class="row g-4">
+                    <% model.features.safety.items.forEach(item=> { %>
+                      <div class="col-md-4">
+                        <div class="safety-card h-100 shadow-sm border-0">
+                          <div class="safety-card-img-wrapper">
+                            <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid rounded-top">
+                          </div>
+                          <div class="px-4 py-3">
+                            <h5 class="fw-bold">
+                              <%= item.title %>
+                            </h5>
+                            <p class="text-muted small mb-0">
+                              <%= item.description %>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <% }) %>
+                  </div>
+                </section>
+                <% } %>
 
-      <% if (shouldShow(model.features.design)) { %>
-      <section class="feature-group mb-5">
-        <div class="d-flex align-items-center mb-4">
-          <h3 class="fw-bold mb-0">Design</h3>
-        </div>
-        <div class="design-section">
-          <div class="row align-items-center">
-            <div class="col-md-7">
-              <div class="design-nav">
-                <% model.features.design.items.forEach((item, index)=> { %>
-                <div class="design-nav-item <%= index === 0 ? 'active' : '' %>" onclick="updateDesignImage(this, '<%= item.image %>')">
-                  <div class="dot-wrapper">
-                    <div class="dot"></div>
-                    <% if (index !==model.features.design.items.length - 1) { %>
-                    <div class="line"></div>
+                  <% if (shouldShow(model.features.design)) { %>
+                    <section class="feature-group mb-5">
+                      <div class="d-flex align-items-center mb-4">
+                        <h3 class="fw-bold mb-0">Design</h3>
+                      </div>
+                      <div class="design-section">
+                        <div class="row align-items-center">
+                          <div class="col-md-7">
+                            <div class="design-nav">
+                              <% model.features.design.items.forEach((item, index)=> { %>
+                                <div class="design-nav-item <%= index === 0 ? 'active' : '' %>"
+                                  onclick="updateDesignImage(this, '<%= item.image %>')">
+                                  <div class="dot-wrapper">
+                                    <div class="dot"></div>
+                                    <% if (index !==model.features.design.items.length - 1) { %>
+                                      <div class="line"></div>
+                                      <% } %>
+                                  </div>
+                                  <div class="content">
+                                    <h5 class="design-title">
+                                      <%= item.title %>
+                                    </h5>
+                                    <p class="design-desc">
+                                      <%= item.description %>
+                                    </p>
+                                  </div>
+                                </div>
+                                <% }) %>
+                            </div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="design-image-container text-center">
+                              <img id="mainDesignImage" src="<%= model.features.design.items[0].image %>"
+                                alt="Design Feature" class="img-fluid rounded-4 shadow">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
                     <% } %>
-                  </div>
-                  <div class="content">
-                    <h5 class="design-title">
-                      <%= item.title %>
-                    </h5>
-                    <p class="design-desc">
-                      <%= item.description %>
-                    </p>
-                  </div>
-                </div>
-                <% }) %>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="design-image-container text-center">
-                <img id="mainDesignImage" src="<%= model.features.design.items[0].image %>" alt="Design Feature" class="img-fluid rounded-4 shadow">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <% } %>
 
-      <% if (shouldShow(model.features.technology)) { %>
-      <section class="feature-group mb-5">
-        <div class="d-flex align-items-center mb-4">
-          <h3 class="fw-bold mb-0">Technology</h3>
-        </div>
-        <div class="row g-4">
-          <% model.features.technology.items.forEach(item=> { %>
-          <div class="col-md-4">
-            <div class="technology-card h-100 shadow-sm border">
-              <div class="tech-card-img-top">
-                <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid">
-              </div>
-              <div class="tech-card-body p-3">
-                <h5 class="tech-title fw-bold">
-                  <%= item.title %>
-                </h5>
-                <p class="tech-desc  small">
-                  <%= item.description %>
-                </p>
-              </div>
-            </div>
-          </div>
-          <% }) %>
-        </div>
-      </section>
-      <% } %>
+                      <% if (shouldShow(model.features.technology)) { %>
+                        <section class="feature-group mb-5">
+                          <div class="d-flex align-items-center mb-4">
+                            <h3 class="fw-bold mb-0">Technology</h3>
+                          </div>
+                          <div class="row g-4">
+                            <% model.features.technology.items.forEach(item=> { %>
+                              <div class="col-md-4">
+                                <div class="technology-card h-100 shadow-sm border">
+                                  <div class="tech-card-img-top">
+                                    <img src="<%= item.image %>" alt="<%= item.title %>" class="img-fluid">
+                                  </div>
+                                  <div class="tech-card-body p-3">
+                                    <h5 class="tech-title fw-bold">
+                                      <%= item.title %>
+                                    </h5>
+                                    <p class="tech-desc  small">
+                                      <%= item.description %>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <% }) %>
+                          </div>
+                        </section>
+                        <% } %>
+      </div>
+
+
     </div>
-
-
   </div>
-</div>
 
-<style>
-  .vehicle-title {
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-  }
+  <style>
+    .vehicle-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
 
-  .main-vehicle-img {
-    background: radial-gradient(#fff, #f4f6f9);
-    border-radius: 40px;
-    padding: 40px;
-    position: relative;
-  }
+    .main-vehicle-img {
+      background: radial-gradient(#fff, #f4f6f9);
+      border-radius: 40px;
+      padding: 40px;
+      position: relative;
+    }
 
-  .transition-img {
-    transition: all 0.4s ease-in-out;
-  }
+    .transition-img {
+      transition: all 0.4s ease-in-out;
+    }
 
-  /* Color Circle Styling */
-  .color-circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 3px solid white;
-    outline: 1px solid #ddd;
-    transition: 0.2s;
-  }
+    /* Color Circle Styling */
+    .color-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 3px solid white;
+      outline: 1px solid #ddd;
+      transition: 0.2s;
+    }
 
-  .color-circle:hover {
-    transform: scale(1.2);
-  }
+    .color-circle:hover {
+      transform: scale(1.2);
+    }
 
-  .active-color {
-    outline: 2px solid #e60012;
-    transform: scale(1.1);
-  }
+    .active-color {
+      outline: 2px solid #e60012;
+      transform: scale(1.1);
+    }
 
-  .extra-small {
-    font-size: 0.7rem;
-  }
+    .extra-small {
+      font-size: 0.7rem;
+    }
 
-  .nav-pills .nav-link {
-    color: #666;
-    border-radius: 12px;
-  }
+    .nav-pills .nav-link {
+      color: #666;
+      border-radius: 12px;
+    }
 
-  .nav-pills .nav-link.active {
-    background-color: #e60012;
-    color: white;
-  }
+    .nav-pills .nav-link.active {
+      background-color: #e60012;
+      color: white;
+    }
 
-  .leading-relaxed {
-    line-height: 1.8;
-  }
+    .leading-relaxed {
+      line-height: 1.8;
+    }
 
 
-  /* Safety Card Style */
-  .safety-card {
-    background: #fff;
-    border-radius: 20px;
-    /* Large rounding for the modern look */
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    /* Soft, subtle shadow */
-    height: 100%;
-    border: 1px solid #f0f0f0;
-    transition: transform 0.3s ease;
-  }
+    /* Safety Card Style */
+    .safety-card {
+      background: #fff;
+      border-radius: 20px;
+      /* Large rounding for the modern look */
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      /* Soft, subtle shadow */
+      height: 100%;
+      border: 1px solid #f0f0f0;
+      transition: transform 0.3s ease;
+    }
 
-  /* safety card */
-  .safety-card-img-wrapper {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    /* safety card */
+    .safety-card-img-wrapper {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .safety-card-img-wrapper img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    /* Slight rounding on the image itself */
-  }
+    .safety-card-img-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      /* Slight rounding on the image itself */
+    }
 
-  .safety-card-body p {
-    line-height: 1.5;
-    color: #6c757d;
-  }
+    .safety-card-body p {
+      line-height: 1.5;
+      color: #6c757d;
+    }
 
-  /* Comfort Card Style */
-  .comfort-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
+    /* Comfort Card Style */
+    .comfort-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
 
-  }
+    }
 
-  .comfort-card-img {
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    object-fit: cover;
-    display: block;
-  }
+    .comfort-card-img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
 
-  /* 🔥 BLACK OVERLAY */
-  .comfort-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top,
-        rgba(0, 0, 0, 0.75),
-        /* strong at bottom */
-        rgba(0, 0, 0, 0.4),
-        /* mid fade */
-        rgba(0, 0, 0, 0.1)
-        /* light at top */
+    /* 🔥 BLACK OVERLAY */
+    .comfort-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.75),
+          /* strong at bottom */
+          rgba(0, 0, 0, 0.4),
+          /* mid fade */
+          rgba(0, 0, 0, 0.1)
+          /* light at top */
+        );
+      z-index: 1;
+    }
+
+    /* TEXT ABOVE OVERLAY */
+    .comfort-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 16px;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .comfort-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .comfort-card-desc {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* Design Card Style */
+    .design-section {
+      padding: 60px 0;
+    }
+
+    .design-nav-item {
+      display: flex;
+      gap: 20px;
+      cursor: pointer;
+      margin-bottom: 0;
+      padding-bottom: 20px;
+    }
+
+    /* Vertical Line Logic */
+    .dot-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid #000;
+      background: #fff;
+      transition: 0.3s;
+      position: relative;
+      z-index: 2;
+    }
+
+    .line {
+      width: 1px;
+      height: 100%;
+      background-color: #ccc;
+      flex-grow: 1;
+    }
+
+    /* Active State Colors */
+    .design-nav-item.active .dot {
+      background: #d32f2f;
+      /* Honda Red */
+      border-color: #d32f2f;
+      box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.2);
+    }
+
+    .design-nav-item.active .design-title {
+      color: #d32f2f;
+    }
+
+    .design-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+      transition: 0.3s;
+    }
+
+    .design-desc {
+      font-size: 0.9rem;
+      color: #888;
+      /* Description only shows or stays opaque when active */
+      opacity: 0.6;
+    }
+
+    .design-nav-item.active .design-desc {
+      opacity: 1;
+    }
+
+    .design-image-container img {
+      border-radius: 30px;
+      transition: opacity 0.4s ease-in-out;
+      width: 100%;
+    }
+
+    /* Technology Card Style */
+    .technology-card {
+      background: #1a1a1a;
+      /* Dark background for a tech look */
+      border-radius: 24px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #333;
+    }
+
+    .tech-card-img-top {
+      width: 100%;
+      height: 220px;
+      /* Fixed height for consistency */
+      overflow: hidden;
+      background-color: #fff;
+      /* Keeps the bike image clean */
+    }
+
+    .tech-card-img-top img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: scale 0.5s ease;
+    }
+
+    .tech-card-body {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tech-title {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tech-desc {
+      color: #b0b0b0;
+      /* Light grey for readability on dark background */
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Feature Section Styling */
+    .feature-group {
+      padding: 20px 0;
+    }
+
+    .fw-extrabold {
+      font-weight: 900;
+    }
+
+    /* Container and Title */
+    .section-title {
+      letter-spacing: -1px;
+      color: #333;
+    }
+
+    /* Container for the tabs to ensure centering */
+    .tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .nav-pills {
+      background-color: #f1f1f1;
+      /* Light grey background */
+      border-radius: 50px;
+      padding: 6px;
+      display: inline-flex;
+      width: max-content;
+      /* Critical: Shrinks to content width */
+      border: 1px solid #e0e0e0;
+    }
+
+    .nav-pills .nav-link {
+      border-radius: 50px;
+      color: #666;
+      font-weight: 500;
+      border: none;
+      background: transparent;
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* Active state: White background with Red text */
+    .nav-pills .nav-link.active {
+      background-color: #ffffff !important;
+      color: #d71921 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 50px;
+    }
+
+    /* Specification Rows */
+    .border-bottom-light {
+      border-bottom: 1px solid #eee;
+    }
+
+    .vehicle-img {
+      min-height: 400px;
+      object-fit: contain;
+    }
+
+    /* Text adjustments */
+    .text-muted {
+      font-size: 0.95rem;
+      color: #777 !important;
+    }
+  </style>
+
+  <script>
+    function changeVehicleColor(imgSrc, element) {
+      // Update main image
+      const mainImg = document.getElementById('activeVehicleImage');
+      mainImg.style.opacity = '0';
+      setTimeout(() => {
+        mainImg.src = imgSrc;
+        mainImg.style.opacity = '1';
+      }, 200);
+
+      // Update swatches
+      document.querySelectorAll('.color-circle').forEach(c => c.classList.remove('active-color'));
+      element.classList.add('active-color');
+
+      // Update color name text
+      document.getElementById('colorNameDisplay').innerText = element.title;
+    }
+
+    function updateDesignImage(element, imageUrl) {
+      // 1. Update the Image with a fade effect
+      const mainImg = document.getElementById('mainDesignImage');
+      mainImg.style.opacity = '0';
+
+      setTimeout(() => {
+        mainImg.src = imageUrl;
+        mainImg.style.opacity = '1';
+      }, 200);
+
+      // 2. Update Active Class in List
+      document.querySelectorAll('.design-nav-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      element.classList.add('active');
+    }
+
+    const variants = <%- JSON.stringify(model.variants) %>;
+
+    const formatLabel = (str) =>
+      str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+    document.getElementById("variantSelect").addEventListener("change", function () {
+      const index = this.value;
+      const specData = variants[index].specs;
+
+      const visibleSpecs = Object.entries(specData).filter(
+        ([_, group]) => group.show === true
       );
-    z-index: 1;
-  }
 
-  /* TEXT ABOVE OVERLAY */
-  .comfort-card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 16px;
-    z-index: 2;
-    color: #fff;
-  }
+      // Tabs
+      let tabsHTML = "";
+      let contentHTML = "";
 
-  .comfort-card-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
+      visibleSpecs.forEach(([key, group], i) => {
+        tabsHTML += `
+        <li class="nav-item ms-2">
+          <button class="nav-link ${i === 0 ? "active" : ""}" 
+            data-bs-toggle="pill" 
+            data-bs-target="#tab-${i}">
+            ${formatLabel(key)}
+          </button>
+        </li>
+      `;
 
-  .comfort-card-desc {
-    font-size: 0.9rem;
-    opacity: 0.9;
-  }
+        let itemsHTML = "";
 
-  /* Design Card Style */
-  .design-section {
-    padding: 60px 0;
-  }
+        if (group.items && group.items.length > 0) {
+          group.items.forEach(item => {
+            const itemKey = Object.keys(item)[0];
+            const itemValue = item[itemKey];
 
-  .design-nav-item {
-    display: flex;
-    gap: 20px;
-    cursor: pointer;
-    margin-bottom: 0;
-    padding-bottom: 20px;
-  }
+            itemsHTML += `
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span class="text-muted small">${formatLabel(itemKey)}</span>
+              <span class="fw-bold">${itemValue || "-"}</span>
+            </div>
+          `;
+          });
+        } else {
+          itemsHTML = `<div class="text-muted">No data available</div>`;
+        }
 
-  /* Vertical Line Logic */
-  .dot-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+        contentHTML += `
+        <div class="tab-pane fade ${i === 0 ? "show active" : ""}" id="tab-${i}">
+          ${itemsHTML}
+        </div>
+      `;
+      });
 
-  .dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    background: #fff;
-    transition: 0.3s;
-    position: relative;
-    z-index: 2;
-  }
-
-  .line {
-    width: 1px;
-    height: 100%;
-    background-color: #ccc;
-    flex-grow: 1;
-  }
-
-  /* Active State Colors */
-  .design-nav-item.active .dot {
-    background: #d32f2f;
-    /* Honda Red */
-    border-color: #d32f2f;
-    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.2);
-  }
-
-  .design-nav-item.active .design-title {
-    color: #d32f2f;
-  }
-
-  .design-title {
-    font-weight: 700;
-    margin-bottom: 4px;
-    transition: 0.3s;
-  }
-
-  .design-desc {
-    font-size: 0.9rem;
-    color: #888;
-    /* Description only shows or stays opaque when active */
-    opacity: 0.6;
-  }
-
-  .design-nav-item.active .design-desc {
-    opacity: 1;
-  }
-
-  .design-image-container img {
-    border-radius: 30px;
-    transition: opacity 0.4s ease-in-out;
-    width: 100%;
-  }
-
-  /* Technology Card Style */
-  .technology-card {
-    background: #1a1a1a;
-    /* Dark background for a tech look */
-    border-radius: 24px;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #333;
-  }
-
-  .tech-card-img-top {
-    width: 100%;
-    height: 220px;
-    /* Fixed height for consistency */
-    overflow: hidden;
-    background-color: #fff;
-    /* Keeps the bike image clean */
-  }
-
-  .tech-card-img-top img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: scale 0.5s ease;
-  }
-
-  .tech-card-body {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .tech-title {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .tech-desc {
-    color: #b0b0b0;
-    /* Light grey for readability on dark background */
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 0;
-  }
-
-  /* Feature Section Styling */
-  .feature-group {
-    padding: 20px 0;
-  }
-
-  .fw-extrabold {
-    font-weight: 900;
-  }
-
-  /* Container and Title */
-  .section-title {
-    letter-spacing: -1px;
-    color: #333;
-  }
-
-  /* Container for the tabs to ensure centering */
-  .tabs-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .nav-pills {
-    background-color: #f1f1f1;
-    /* Light grey background */
-    border-radius: 50px;
-    padding: 6px;
-    display: inline-flex;
-    width: max-content;
-    /* Critical: Shrinks to content width */
-    border: 1px solid #e0e0e0;
-  }
-
-  .nav-pills .nav-link {
-    border-radius: 50px;
-    color: #666;
-    font-weight: 500;
-    border: none;
-    background: transparent;
-    transition: all 0.2s ease-in-out;
-  }
-
-  /* Active state: White background with Red text */
-  .nav-pills .nav-link.active {
-    background-color: #ffffff !important;
-    color: #d71921 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-  }
-
-  /* Specification Rows */
-  .border-bottom-light {
-    border-bottom: 1px solid #eee;
-  }
-
-  .vehicle-img {
-    min-height: 400px;
-    object-fit: contain;
-  }
-
-  /* Text adjustments */
-  .text-muted {
-    font-size: 0.95rem;
-    color: #777 !important;
-  }
-</style>
-
-<script>
-  function changeVehicleColor(imgSrc, element) {
-    // Update main image
-    const mainImg = document.getElementById('activeVehicleImage');
-    mainImg.style.opacity = '0';
-    setTimeout(() => {
-      mainImg.src = imgSrc;
-      mainImg.style.opacity = '1';
-    }, 200);
-
-    // Update swatches
-    document.querySelectorAll('.color-circle').forEach(c => c.classList.remove('active-color'));
-    element.classList.add('active-color');
-
-    // Update color name text
-    document.getElementById('colorNameDisplay').innerText = element.title;
-  }
-
-  function updateDesignImage(element, imageUrl) {
-    // 1. Update the Image with a fade effect
-    const mainImg = document.getElementById('mainDesignImage');
-    mainImg.style.opacity = '0';
-
-    setTimeout(() => {
-      mainImg.src = imageUrl;
-      mainImg.style.opacity = '1';
-    }, 200);
-
-    // 2. Update Active Class in List
-    document.querySelectorAll('.design-nav-item').forEach(item => {
-      item.classList.remove('active');
+      document.getElementById("specTabs").innerHTML = tabsHTML;
+      document.getElementById("specTabsContent").innerHTML = contentHTML;
     });
-    element.classList.add('active');
-  }
-</script>
+  </script>
 
-<%- include("../partials/footer") %>
+  <%- include("../partials/footer") %>
