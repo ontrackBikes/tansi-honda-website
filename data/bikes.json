@@ -3919,7 +3919,7 @@
       }
     ]
   },
-   {
+  {
     "name": "Honda CB350RS",
     "slug": "honda-cb350rs",
 
@@ -4083,7 +4083,7 @@
           }
         }
       },
-       {
+      {
         "name": "CB350RS DLX PRO",
         "sku": "CB350RS-DLX-PRO",
         "specs": {
@@ -4145,6 +4145,238 @@
             "bluetooth": "Optional",
             "navigation": "Optional",
             "Service reminder": "Yes"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda Activa 125",
+    "slug": "honda-activa-125",
+
+    "category": "scooter",
+    "subCategory": "",
+
+    "description": "The Honda Activa 125 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 125cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
+
+    "coverImage": "/images/scooter/honda-activa-125/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125/pdf/activa125.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Rebel Red Metallic",
+        "code": "#431216",
+        "image": "/images/scooter/honda-activa-125/1.png"
+      },
+      {
+        "name": "Mat Axis Gray Metallic",
+        "code": "#535353",
+        "image": "/images/scooter/honda-activa-125/2.png"
+      },
+      {
+        "name": "Pearl Deep Ground Gray",
+        "code": "#69746B",
+        "image": "/images/scooter/honda-activa-125/3.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#242424",
+        "image": "/images/scooter/honda-activa-125/4.png"
+      },
+      {
+        "name": "Pearl Precious White",
+        "code": "#C5C4C5",
+        "image": "/images/scooter/honda-activa-125/5.png"
+      },
+      {
+        "name": "Pearl Siren Blue",
+        "code": "#1C1E2B",
+        "image": "/images/scooter/honda-activa-125/6.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Telescopic Front Suspension",
+          "description": "Absorbs road shocks for a smoother ride.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2FSafety-Telescopic-Front-Suspension-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        },
+        {
+          "title": "Side Stand Engine Cut Off",
+          "description": "Prevents accidental starts for added safety.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2FSafety-Side-Stand-Engine-Cut-Off-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        },
+        {
+          "title": "Front and Rear Alloy Wheels",
+          "description": "Improved stability, greater durability.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2Fsafety-front-and-rear-alloy-wheels-352x360-sec.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        },
+        {
+          "title": "Idling Stop System",
+          "description": "Reduces fuel consumption and emissions by automatically stopping the engine when the scooter is idle.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FConvenience%2Fsafety-idling-stop-system-352x360-sec.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        },
+        {
+          "title": "Fuel-Efficient Tubeless Tyres",
+          "description": "Enhanced grip, better mileage, and safer rides with Honda's advanced technology.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2FActiva-110-Tubless-Tyre---352x360px.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
+        }
+      ],
+
+      "comfort": [
+        {
+          "title": "Open Glove Box with 15W USB-C Port",
+          "description": "Charge devices on the go while keeping essentials handy.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/Comfort/Convenience-Open-Glove-Box-with-15W-USB-C-Port-1120x623.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Double Lid External Fuel Fill",
+          "description": "Refuel without leaving your seat.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/Convenience/Convenience-Double-Lid-External-Fuel-Fill-1120x623.png?h=623&iar=0&w=1120"
+        }
+      ],
+
+      "design": [
+        {
+          "title": "Premium Chrome Stroke on Side Panel",
+          "description": "Elevates style with a refined, premium touch.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/style/main.png?h=555&iar=0&w=555"
+        },
+        {
+          "title": "LED Headlamp and Signature LED Position Lamp",
+          "description": "Brighter, long-lasting LEDs for improved visibility.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/style/lamp-small.png?h=555&iar=0&w=555"
+        },
+        {
+          "title": "Multi-Function Switch Unit",
+          "description": "Easy access to key controls for effortless riding.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/style/Activa-110-Multi-Switch_555x555px.png?h=555&iar=0&w=555"
+        }
+      ],
+
+      "technology": [
+        {
+          "title": "Smart Key with H-Smart Technology",
+          "description": "Keyless convenience for enhanced security and ease of access.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/Technology/technology-smart-key-with-h-smart-technology588x678-sec.jpg?h=678&iar=0&w=588"
+        },
+        {
+          "title": "TFT Screen Display",
+          "description": "High-resolution digital display for real-time information.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/Technology/Activa-110-Meter_1120x623px.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Honda Road Sync",
+          "description": "Smartphone connectivity for calls, navigation, and music.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/Technology/Technology-Honda-Road-Sync-1120x623.png?h=623&iar=0&w=1120"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "DLX",
+        "sku": "DLX",
+
+        "specs": {
+          "body": {
+            "length": "1850 mm",
+            "width": "707 mm",
+            "height": "1160 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "162 mm",
+            "seat_length": "712 mm",
+            "seat_height": "765 mm",
+            "kerb_weight": "107 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "123.92 cc",
+            "max_power": "6.20 kW @ 6500 rpm",
+            "max_torque": "10.5 Nm @ 5000 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore_stroke": "50.0 mm X 63.1 mm",
+            "compression_ratio": "10.0 : 1",
+            "starting": "Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J",
+            "rear": "90/100-10 53J",
+            "front_brake": "Drum - 190 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Under Bone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Spring Loaded Hydraulic"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED DC"
+          }
+        }
+      },
+      {
+        "name": "H-SMART",
+        "sku": "H-SMART",
+
+        "specs": {
+          "body": {
+            "length": "1850 mm",
+            "width": "707 mm",
+            "height": "1160 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "162 mm",
+            "seat_length": "712 mm",
+            "seat_height": "765 mm",
+            "kerb_weight": "106 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "123.92 cc",
+            "max_power": "6.20 kW @ 6500 rpm",
+            "max_torque": "10.5 Nm @ 5000 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore_stroke": "50.0 mm X 63.1 mm",
+            "compression_ratio": "10.0 : 1",
+            "starting": "Self"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J",
+            "rear": "90/100-10 53J",
+            "front_brake": "Drum - 190 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Under Bone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Spring Loaded Hydraulic"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED DC"
           }
         }
       }
