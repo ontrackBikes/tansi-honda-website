@@ -4764,5 +4764,239 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda Dio 110",
+    "slug": "honda-dio-110",
+
+    "category": "scooter",
+    "subCategory": "",
+
+    "description": "The Honda Dio 110 stands out as a sporty and stylish scooter designed for young riders seeking performance and everyday convenience. Powered by a fuel-efficient 110cc engine with Honda’s advanced technology, it offers smooth acceleration and agile handling. With its bold design, lightweight build, and practical features, the Dio 110 delivers a fun and comfortable riding experience for city commutes.",
+
+    "coverImage": "/images/scooter/honda-dio-110/4.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/Brochure/dio110.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Rebel Red Metallic",
+        "code": "#E1132A",
+        "image": "/images/scooter/honda-dio-110/1.png"
+      },
+      {
+        "name": "Mat Axis Gray Metallic",
+        "code": "#3C3C3C",
+        "image": "/images/scooter/honda-dio-110/2.png"
+      },
+      {
+        "name": "Mat Marvel Blue",
+        "code": "#026AAE",
+        "image": "/images/scooter/honda-dio-110/3.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#272727",
+        "image": "/images/scooter/honda-dio-110/4.png"
+      },
+      {
+        "name": "Pearl Igneous Black + Pearl Deep Ground Gray",
+        "code": "#CDCCCD",
+        "image": "/images/scooter/honda-dio-110/5.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Passing Switch",
+          "description": "Pass like a boss with an easy to use passing switch for high beam, low beam, and passing witha flick",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Fdio-110%2Fsafety%2Fpassing-switch.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        },
+        {
+          "title": "Side Stand Engine Cut Off",
+          "description": "It automatically shuts of the engine for added safety when the side stand is engaged",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Fdio-110%2Fsafety%2Fside-stand-engine-cut-off.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        },
+        {
+          "title": "Split Grabrail",
+          "description": "A bold, sleek grabrail thats grabs attention from the first glance onwards.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Fdio-110%2Fsafety%2FSafety-Split-Grabrail-352x360-1.png%3Fh%3D540%26iar%3D0%26w%3D528&w=1080&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        }
+      ],
+
+      "comfort": [
+        {
+          "title": "Open Glove Box with 15W USB-C Port",
+          "description": "A pocket that's amazingly spacious. So, whether it's your sipper or sunglasses, keep all your essentials close.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/convenience/front-pocket-big.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Double Lid External Fuel Fill",
+          "description": "Now no need to get up to get your Dio refilled with a double-lid external fuel fill.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/dio-110/Comfort/external-fuel-lid-big.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Retractable Pillion Footstep",
+          "description": "Convenient and easy to use, so that the comfort of those sitting behind is always at the forefront.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/convenience/retractable-pillion-footstep.png?h=623&iar=0&w=1120"
+        }
+      ],
+
+      "design": [
+        {
+          "title": "Stylish Muffler Protector",
+          "description": "A stylishly cool muffler protector to up the style game.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/design/stylish-muffler-protector-big.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Alloy Wheels",
+          "description": "These alloy wheels combine stylishness with unmatched comfort.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/design/alloy-wheels-big.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Position Lamp",
+          "description": "The distinctive LED lamp enhances the bold look while adding a touch of flair to your style.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/design/position-lamp-big.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Fierce LED Headlamp",
+          "description": "For trendsetters who own the night, the sleek LED lights provide a bright, clear view of the road ahead.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/dio-110/Design/fierce-led.png?h=623&iar=0&w=1120"
+        }
+      ],
+
+      "technology": [
+        {
+          "title": "TFT Meter",
+          "description": "Advanced and interactive, the TFT meter provides Live mileage and average fuel efficiency, and range (distance to empty), keeping you always informed.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/dio-110/Technology/tft-meter-big.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Idling Stop System",
+          "description": "Dio110's Idling Stop System automatically shuts down the engine during brief stops, reducing unnecessary fuel consumption, and easing rider fatigue.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/technology/idling-stop-system.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Silent Start with ACG",
+          "description": "The ACG Starter provides a smooth, silent start every time, and reduces engine maintenance.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/technology/silent-start.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "PGM-FI System",
+          "description": "Our sensor-based PGM-FI System constantly injects optimum fuel with air for efficient combustion, delivering consistent power output and improved mileage.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/technology/pgm-fi.png?h=623&iar=0&w=1120"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Standard",
+        "sku": "Standard",
+
+        "specs": {
+          "body": {
+            "length": "1808 mm",
+            "width": "677 mm",
+            "height": "1151 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "160 mm",
+            "seat_length": "650 mm",
+            "seat_height": "765 mm",
+            "kerb_weight": "107 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "109.51 cc",
+            "max_power": "5.85 kW @ 8000 rpm",
+            "max_torque": "9.03 Nm @ 5500 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore": "47.0mm",
+            "compression_ratio": "10.1 : 1",
+            "air filter type": "Viscous Paper Filter",
+            "starting": "Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J",
+            "rear": "90/100-10 53J",
+            "front_brake": "Drum - 130 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Under Bone",
+            "front": "Telescopic",
+            "rear": "Unit Swing"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "Halogen"
+          }
+        }
+      },
+      {
+        "name": "DLX",
+        "sku": "DLX",
+
+        "specs": {
+          "body": {
+            "length": "1808 mm",
+            "width": "677 mm",
+            "height": "1151 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "160 mm",
+            "seat_length": "650 mm",
+            "seat_height": "765 mm",
+            "kerb_weight": "Std. & Dlx: 106 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "109.51 cc",
+            "max_power": "5.85 kW @ 8000 rpm",
+            "max_torque": "9.03 Nm @ 5500 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore x stroke:": "47.000 X 63.121 mm",
+            "compression_ratio": "10.1 : 1",
+            "starting": "Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J",
+            "rear": "90/100-10 53J",
+            "front_brake": "Drum - 130 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Under Bone",
+            "front": "Telescopic",
+            "rear": "Unit Swing"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED"
+          }
+        }
+      }
+      
+    ]
   }
 ]
