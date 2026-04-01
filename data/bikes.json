@@ -3918,5 +3918,236 @@
         }
       }
     ]
+  },
+   {
+    "name": "Honda CB350RS",
+    "slug": "honda-cb350rs",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "The Honda CB350RS combines modern retro styling with dynamic performance, offering a bold and sporty road presence. Its refined and torquey engine delivers smooth acceleration, while agile handling and comfortable ergonomics ensure an enjoyable riding experience. Packed with advanced features and premium design elements, it is built for riders who seek both everyday practicality and spirited performance.",
+    "coverImage": "/images/bike/honda-cb350rs/4.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350-RS/Brochure/CB350_RS_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#0F0F0F",
+        "image": "/images/bike/honda-cb350rs/1.png"
+      },
+      {
+        "name": "Pearl deep Ground Gray",
+        "code": "#BDC1C1",
+        "image": "/images/bike/honda-cb350rs/2.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#0D0D0D",
+        "image": "/images/bike/honda-cb350rs/3.png"
+      },
+      {
+        "name": " Mat Axis Grey Metallic",
+        "code": "#4E4E4E",
+        "image": "/images/bike/honda-cb350rs/5.png"
+      },
+      {
+        "name": "Red",
+        "code": "#40181B",
+        "image": "/images/bike/honda-cb350rs/6.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Dual Channel ABS",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-RS%2FMobile%2FSafety%2FSafety-Dual-Channel-ABS-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g",
+          "description": "Move in control"
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Assist Slipper Clutch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CBR650R/Desktop/Convenience/Convenience-Assist-Slipper-Clutch--1120x623.png?h=623&iar=0&w=1120",
+          "description": "Shift your load. From brakes to gear shifting — the assist and slipper clutch function will make your ride smooth and tight."
+        },
+        {
+          "title": "Advanced Analogue Digital Metre",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CBR650R/Desktop/Convenience/Convenience-Advanced-Analogue-Digital-Metre-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Bolder font style for better readability."
+        }
+      ],
+      "design": [
+        {
+          "title": "New-age Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-RS%2FDesktop%2FDesign%2FDesign-New-age-Headlight-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g",
+          "description": "Techy new look that brightens up your every ride."
+        },
+        {
+          "title": "Roaring Exhaust Note",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-RS%2FDesktop%2FDesign%2FDesign-Roaring-Exhaust-Note-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g",
+          "description": "Roar the roads. The exhaust system carries a large tailpipe optimised with the muffler capacity, producing a bold, low-pitched sound. Also, the single chamber structure gives sharpness to the sound of the exhaust."
+        },
+        {
+          "title": "Smoked Black Sporty Fender",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350C-Anniversary-Edition%2FDesign%2F1-Special-Edition-Sticker-on-Tank-1120x623.png%3Fh%3D1298%26iar%3D0%26w%3D2334&w=2580&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
+          "description": "The “Special Edition” emblem on the tank is more than a sticker. "
+        }
+      ],
+      "technology": [
+        {
+          "title": "E20 Compliant",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-RS%2FMobile%2FTechnology%2FTechnology-E20-Compliant-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g",
+          "description": "Promoting cleaner and more sustainable mobility supporting greener future."
+        },
+        {
+          "title": "Honda Roadsync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx200%2Ftechnology%2Fhonda-roadsync.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g",
+          "description": "Stay connected with the roads. Control your motorcycle from the handlebars with Honda RoadSync via Honda Smartphone Voice Control system."
+        },
+        {
+          "title": "Powerful 350cc Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FCB350-RS%2FMobile%2FTechnology%2FTechnology-Powerful-350cc-Engine-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g",
+          "description": "A powerful soul. Enjoy the power and smooth acceleration at the same time with this mighty 350cc air-cooled, 4-stroke OHC single-cylinder engine from Honda"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "CB350RS DLX",
+        "sku": "CB350RS-DLX",
+        "specs": {
+          "body": {
+            "length": "2171 mm",
+            "width": "782 mm",
+            "height": "1097 mm",
+            "wheelbase": "1441 mm",
+            "ground_clearance": "168 mm",
+            "kerb_weight": "180 kg",
+            "seat_height": "800 mm",
+            "fuel_tank": "15 L"
+          },
+          "engine": {
+            "type": "4-Stroke SI Engine ",
+            "displacement": "348.36 cc",
+            "power": "15.5 kW @ 5500 rpm",
+            "torque": "30 N-m @ 3000 rpm ",
+            "cooling": "Air",
+            "bore_stroke": "70.0 mm x 90.5 mm",
+            "lubrication": "Wet Pump",
+            "no. of gears": "5"
+          },
+          "tyres": {
+            "front": "100/90 R19 M/C 57H",
+            "rear": "150/70 R17 M/C 63H ",
+            "tyre type": "Tubeless",
+            "whell type": "Alloy",
+            "front_brake": "Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm",
+            "calliper front": "Twin Piston",
+            "calliper rear": "Single Piston"
+          },
+          "suspension": {
+            "type": "Half Duplex Cradle",
+            "front": "Telescopic Forks",
+            "rear": "Twin Hydraulic Shocks",
+            "swing arm type": "dual Straight Conventinal"
+          },
+          "electricals": {
+            "battery": "12 V, 6.0 Ah",
+            "headlights": "LED",
+            "tail lamp": "LED",
+            "winkers": "LED"
+          },
+          "ride dynamics": {
+            "handlebar": "Riser",
+            "sitting posture": "Aggressive",
+            "Seat type": "Saddle Type Seat"
+          },
+          "features": {
+            "meter": "Digi Analog",
+            "hazard switch": "Yes",
+            "traction-Torque-control": "Yes",
+            "assist and slip clutch": " Yes",
+            "eco indicator": "Yes",
+            "gear indicator": "Yes",
+            "usb charger": "Optional",
+            "bluetooth": "Optional",
+            "navigation": "Optional",
+            "Service reminder": "Yes"
+          }
+        }
+      },
+       {
+        "name": "CB350RS DLX PRO",
+        "sku": "CB350RS-DLX-PRO",
+        "specs": {
+          "body": {
+            "length": "2171 mm",
+            "width": "782 mm",
+            "height": "1097 mm",
+            "wheelbase": "1441 mm",
+            "ground_clearance": "168 mm",
+            "kerb_weight": "180 kg",
+            "seat_height": "800 mm",
+            "fuel_tank": "15 L"
+          },
+          "engine": {
+            "type": "4-Stroke SI Engine ",
+            "displacement": "348.36 cc",
+            "power": "15.5 kW @ 5500 rpm",
+            "torque": "30 N-m @ 3000 rpm ",
+            "cooling": "Air",
+            "bore_stroke": "70.0 mm x 90.5 mm",
+            "lubrication": "Wet Pump",
+            "no. of gears": "5"
+          },
+          "tyres": {
+            "front": "100/90 R19 M/C 57H",
+            "rear": "150/70 R17 M/C 63H ",
+            "tyre type": "Tubeless",
+            "whell type": "Alloy",
+            "front_brake": "Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm",
+            "calliper front": "Twin Piston",
+            "calliper rear": "Single Piston"
+          },
+          "suspension": {
+            "type": "Half Duplex Cradle",
+            "front": "Telescopic",
+            "rear": "Twin-Hydraulic",
+            "swing arm type": "dual Straight Conventinal"
+          },
+          "electricals": {
+            "battery": "12 V, 6.0 Ah",
+            "headlights": "LED",
+            "tail lamp": "LED",
+            "winkers": "LED"
+          },
+          "ride dynamics": {
+            "handlebar": "Riser",
+            "sitting posture": "Aggressive",
+            "Seat type": "Saddle Type Seat"
+          },
+          "features": {
+            "meter": "Digi Analog",
+            "hazard switch": "Yes",
+            "traction-Torque-control": "Yes",
+            "assist and slip clutch": " Yes",
+            "eco indicator": "Yes",
+            "gear indicator": "Yes",
+            "usb charger": "Optional",
+            "bluetooth": "Optional",
+            "navigation": "Optional",
+            "Service reminder": "Yes"
+          }
+        }
+      }
+    ]
   }
 ]
