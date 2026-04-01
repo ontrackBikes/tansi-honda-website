@@ -4376,5 +4376,232 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda Dio 125",
+    "slug": "honda-dio-125",
+
+    "category": "scooter",
+    "subCategory": "",
+
+    "description": "The Honda Dio 125 continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 125cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
+
+    "coverImage": "/images/scooter/honda-dio-125/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio125/Brochure/dio125.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Deep Ground Gray (Emblem)",
+        "code": "#B4B4B4",
+        "image": "/images/scooter/honda-dio-125/1.png"
+      },
+      {
+        "name": "Mat Marvel Blue Metallic",
+        "code": "#0069AF",
+        "image": "/images/scooter/honda-dio-125/2.png"
+      },
+      {
+        "name": "Imperial Red",
+        "code": "#87151B",
+        "image": "/images/scooter/honda-dio-125/3.png"
+      },
+      {
+        "name": "Pearl Deep Ground Gray (Stripe)",
+        "code": "#979898",
+        "image": "/images/scooter/honda-dio-125/4.png"
+      },
+      {
+        "name": "Pearl Sports Yellow",
+        "code": "#D19501",
+        "image": "/images/scooter/honda-dio-125/5.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#0A0A0A",
+        "image": "/images/scooter/honda-dio-125/6.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Integrated Pass Switch",
+          "description": "To pass signals on a low or high beam while riding.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Fdio125%2Fsafety%2FDIO-125-New_352x360px-Passing-Swith.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        },
+        {
+          "title": "Side Stand Engine Cut Off",
+          "description": "Automatically turns off the engine when the side stand is engaged.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fdio-125%2FDesktop%2FSafety%2FSafety-Side-Stand-Engine-Cut-Off-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        },
+        {
+          "title": "Disc Brake",
+          "description": "High-performance disc brakes fitted in sleek alloy wheels",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Fdio125%2Fsafety%2Fhigh-performance-till-alloy-wheels.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
+        }
+      ],
+
+      "comfort": [
+        {
+          "title": "Double Lid External Fuel Fill",
+          "description": "Refuel without getting off.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125/Comfort/DIO-125-New_1120x623px-Double-Fuel-Lid.jpg?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Front Pocket",
+          "description": "Convenient storage for smaller items.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio125/comfort/DIO-125-Pocket-1120x623px.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Retractable Pillion Footstep",
+          "description": "Convenience for the rider, convenience for the passenger.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio125/comfort/DIO-125-New_1120x623px-Retractable-Foot-Step.png?h=623&iar=0&w=1120"
+        }
+      ],
+
+      "design": [
+        {
+          "title": "Fierce LED Headlamp",
+          "description": "Light up your path in style.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/dio-125/Desktop/Design/Design-Fierce-LED-Headlamp-555x555.png?h=555&iar=0&w=555"
+        },
+        {
+          "title": "Alloy Wheels",
+          "description": "Bold style, unmatched comfort.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/dio-125/Mobile/Design/Design-Alloy-Wheels-555x555.png?h=555&iar=0&w=555"
+        },
+        {
+          "title": "Split Grabrail",
+          "description": "Turn heads with style that leaves a lasting impression.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/dio-125/Mobile/Design/Design-Split-Grabrail-555x555.png?h=555&iar=0&w=555"
+        }
+      ],
+
+      "technology": [
+        {
+          "title": "Smart Key",
+          "description": "A host of smart features in the palm of your hand.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/dio-125/Mobile/Technology/Technology-Smart-Key-588x678.png?h=678&iar=0&w=588"
+        },
+        {
+          "title": "PGM-FI System",
+          "description": "Delivers the right amount of fuel for smooth and efficient performance.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/dio-125/Desktop/Technology/Technology-PGM-FI-System-1120x623.png?h=623&iar=0&w=1120"
+        },
+        {
+          "title": "Advanced Idling Stop System",
+          "description": "Automatically turns off the engine at low speed, saving fuel.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125/Technology/DIO-125-New_598x332px-Engine-Stop.png?h=332&iar=0&w=598"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "STD",
+        "sku": "STD",
+
+        "specs": {
+          "body": {
+            "length": "1830 mm",
+            "width": "707 mm",
+            "height": "1172 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "171 mm",
+            "seat_length": "708 mm",
+            "kerb_weight": "105 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "123.92 cc",
+            "max_power": "6.11 kW @6500 rpm",
+            "max_torque": "10.5 Nm @5000 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore_stroke": "50.0 mm X 63.1 mm",
+            "compression_ratio": "10.0 : 1",
+            "starting": "Self/Kick",
+            "air_filter_type": "Viscous Air Filter"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J (Tubeless)",
+            "rear": "90/100-10 53J (Tubeless)",
+            "front_brake": "Drum - 190 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Underbone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Spring Loaded Hydraulic"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED DC"
+          }
+        }
+      },
+      {
+        "name": "H-SMART",
+        "sku": "H-SMART",
+
+        "specs": {
+          "body": {
+            "length": "1830 mm",
+            "width": "707 mm",
+            "height": "1172 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "171 mm",
+            "seat_length": "708 mm",
+            "kerb_weight": "104 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "123.92 cc",
+            "max_power": "6.11 kW @6500 rpm",
+            "max_torque": "10.5 Nm @5000 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore_stroke": "50.0 mm X 63.1 mm",
+            "compression_ratio": "10.0 : 1",
+            "starting": "Self/Kick",
+            "air_filter_type": "Viscous Air Filter"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J (Tubeless)",
+            "rear": "90/100-10 53J (Tubeless)",
+            "front_brake": "Drum - 190 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Underbone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Spring Loaded Hydraulic"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED"
+          }
+        }
+      }
+    ]
   }
 ]
