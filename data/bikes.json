@@ -4782,28 +4782,28 @@
 
     "colors": [
       {
-        "name": "Rebel Red Metallic",
-        "code": "#E1132A",
+        "name": "Imperial Red Metallic​",
+        "code": "#E42133",
         "image": "/images/scooter/honda-dio-110/1.png"
       },
       {
         "name": "Mat Axis Gray Metallic",
-        "code": "#3C3C3C",
+        "code": "#383838",
         "image": "/images/scooter/honda-dio-110/2.png"
       },
       {
         "name": "Mat Marvel Blue",
-        "code": "#026AAE",
+        "code": "#0166AC",
         "image": "/images/scooter/honda-dio-110/3.png"
       },
       {
         "name": "Pearl Igneous Black",
-        "code": "#272727",
+        "code": "#252525",
         "image": "/images/scooter/honda-dio-110/4.png"
       },
       {
         "name": "Pearl Igneous Black + Pearl Deep Ground Gray",
-        "code": "#CDCCCD",
+        "code": "#D3D3D4",
         "image": "/images/scooter/honda-dio-110/5.png"
       }
     ],
@@ -4996,7 +4996,6 @@
           }
         }
       }
-      
     ]
   }
 ]
