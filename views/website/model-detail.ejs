@@ -686,12 +686,37 @@
       element.classList.add('active');
     }
 
-    const variants = <%- JSON.stringify(model.variants) %>;
+    const variants = <% - JSON.stringify(model.variants) %>;
 
     const formatLabel = (str) =>
       str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
-    document.getElementById("variantSelect").addEventListener("change", function () {
+    // ✅ Get variant from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedVariantName = urlParams.get("variant");
+
+    let selectedIndex = 0;
+
+    // ✅ Match variant name
+    if (selectedVariantName && variants.length > 0) {
+      const foundIndex = variants.findIndex(
+        v => v.name.toLowerCase() === selectedVariantName.toLowerCase()
+      );
+
+      if (foundIndex !== -1) {
+        selectedIndex = foundIndex;
+      }
+    }
+
+    const variantSelect = document.getElementById("variantSelect");
+
+    // ✅ Set dropdown value
+    if (variantSelect) {
+      variantSelect.value = selectedIndex;
+    }
+
+    // ✅ Change event
+    variantSelect.addEventListener("change", function () {
       const index = this.value;
       const specData = variants[index].specs;
 
@@ -699,20 +724,19 @@
         ([_, group]) => group.show === true
       );
 
-      // Tabs
       let tabsHTML = "";
       let contentHTML = "";
 
       visibleSpecs.forEach(([key, group], i) => {
         tabsHTML += `
-        <li class="nav-item ms-2">
-          <button class="nav-link ${i === 0 ? "active" : ""}" 
-            data-bs-toggle="pill" 
-            data-bs-target="#tab-${i}">
-            ${formatLabel(key)}
-          </button>
-        </li>
-      `;
+      <li class="nav-item ms-2">
+        <button class="nav-link ${i === 0 ? "active" : ""}" 
+          data-bs-toggle="pill" 
+          data-bs-target="#tab-${i}">
+          ${formatLabel(key)}
+        </button>
+      </li>
+    `;
 
         let itemsHTML = "";
 
@@ -722,26 +746,31 @@
             const itemValue = item[itemKey];
 
             itemsHTML += `
-            <div class="d-flex justify-content-between py-2 border-bottom">
-              <span class="text-muted small">${formatLabel(itemKey)}</span>
-              <span class="fw-bold">${itemValue || "-"}</span>
-            </div>
-          `;
+          <div class="d-flex justify-content-between py-2 border-bottom">
+            <span class="text-muted small">${formatLabel(itemKey)}</span>
+            <span class="fw-bold">${itemValue || "-"}</span>
+          </div>
+        `;
           });
         } else {
           itemsHTML = `<div class="text-muted">No data available</div>`;
         }
 
         contentHTML += `
-        <div class="tab-pane fade ${i === 0 ? "show active" : ""}" id="tab-${i}">
-          ${itemsHTML}
-        </div>
-      `;
+      <div class="tab-pane fade ${i === 0 ? "show active" : ""}" id="tab-${i}">
+        ${itemsHTML}
+      </div>
+    `;
       });
 
       document.getElementById("specTabs").innerHTML = tabsHTML;
       document.getElementById("specTabsContent").innerHTML = contentHTML;
     });
+
+    // ✅ Trigger on load
+    if (variantSelect) {
+      variantSelect.dispatchEvent(new Event("change"));
+    }
   </script>
 
   <%- include("../partials/footer") %>
