@@ -349,6 +349,93 @@
       display: block;
     }
 
+    .direction-section {
+      margin: 80px auto;
+    }
+
+    .location-switch {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .location-switch select {
+      padding: 10px 18px;
+      border-radius: 50px;
+      border: 1px solid #ddd;
+    }
+
+    .direction-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .location-card {
+      background: linear-gradient(135deg, #fff, #fafafa);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .address {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box {
+      background: #f9fafb;
+      padding: 16px;
+      border-radius: 16px;
+    }
+
+    .map-card {
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 350px;
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .hour-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid #f1f1f1;
+      transition: 0.2s;
+    }
+
+    .hour-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hour-card h4 {
+      color: #e60012;
+    }
+
+    @media (max-width: 768px) {
+      .direction-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 0 16px;
@@ -446,7 +533,7 @@
               <h5 class="text-muted">🚫 No models available</h5>
             </div>
             <% } else { %>
-              <% models.slice(0, 4).forEach(model => { %>
+              <% models.slice(0, 4).forEach(model=> { %>
 
                 <div class="col-6 col-md-4 col-lg-3">
                   <a href="/<%= model.category %>/<%= model.slug %>" class="text-decoration-none text-dark">
@@ -540,39 +627,155 @@
         </div>
       </div>
       <!-- Contact & Map -->
-      <div class="container">
-        <div class="contact-section">
-          <div class="contact-info">
-            <h3 class="fw-bold">📍 Reach Us</h3>
-            <p>
-              <strong>Tansi Honda (Authorised Dealer)</strong><br />#45,
-              Bannerghatta Main Road,<br />Bengaluru – 560029, Karnataka
-            </p>
-            <div class="contact-details">
-              <p>
-                <i class="fas fa-phone-alt" style="color: #e60012"></i> Sales:
-                7259030091
-              </p>
-              <p><i class="fas fa-wrench"></i> Service: 7259586972</p>
-              <p><i class="fas fa-tty"></i> Toll Free: 1800 532 9444</p>
-              <p><i class="fas fa-envelope"></i> care@tansihonda.com</p>
-            </div>
-            <div class="btn-group mt-4">
-              <a href="#" class="outline-btn"><i class="fas fa-directions"></i> Get Directions</a>
-              <a href="#" class="button-custom"><i class="fas fa-calendar-alt"></i> Schedule Test Ride</a>
-            </div>
-          </div>
-          <div class="map-container">
-            <div class="map-placeholder">
-              <iframe src="https://www.google.com/maps/d/embed?mid=1TsG7QBzueBxvpfVj2cX-JsI-e5c7nXc&ehbc=2E312F"
-                width="640" height="480"></iframe>
-            </div>
+
+
+
+      <section class="container direction-section">
+        <h2 class="section-title my-3">Visit Our Showrooms</h2>
+
+        <!-- Location Selector -->
+        <div class="location-switch">
+          <select id="locationSelect">
+            <option value="0">BigWing - Hoodi</option>
+            <option value="1">Marathahalli</option>
+            <option value="2">Seegehalli</option>
+            <option value="3">Gunjur</option>
+            <option value="4">Panathur</option>
+            <option value="5">Whitefield</option>
+            <option value="6">HRBR Layout</option>
+          </select>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="direction-grid">
+          <!-- LEFT -->
+          <div class="location-card" id="locationCard"></div>
+
+          <!-- RIGHT -->
+          <div class="map-card">
+            <iframe id="mapFrame"></iframe>
           </div>
         </div>
-      </div>
+
+
+      </section>
     </main>
 
     <%- include("../partials/footer.ejs") %>
 </body>
+
+<script>
+  const locations = [
+    {
+      name: "BigWing - Hoodi",
+      address:
+        "Hoodi Village, ITPL Main Road, Mahadevapura, Bangalore - 560048",
+      sales: "7259030091",
+      service: "7259586972",
+      insurance: "7259030091",
+      finance: "7259030091",
+      spares: "7259586973",
+      map: "https://www.google.com/maps/d/embed?mid=1TsG7QBzueBxvpfVj2cX-JsI-e5c7nXc&ehbc=2E312F",
+    },
+    {
+      name: "Marathahalli",
+      address: "Outer Ring Road Junction, Marathahalli, Bangalore - 560037",
+      sales: "7259030100",
+      service: "7619207143",
+      insurance: "7259030093",
+      finance: "7259030093",
+      spares: "7619207143",
+      map: "https://www.google.com/maps/d/embed?mid=1TsG7QBzueBxvpfVj2cX-JsI-e5c7nXc&ehbc=2E312F",
+    },
+    {
+      name: "Seegehalli",
+      address: "Opp Shell Petrol Bunk, Hoskote Road, Bangalore - 560067",
+      sales: "8971221818",
+      service: "7899512512",
+      insurance: "8971221818",
+      finance: "9741410101",
+      spares: "7899512512",
+      map: "https://www.google.com/maps/d/embed?mid=1TsG7QBzueBxvpfVj2cX-JsI-e5c7nXc&ehbc=2E312F",
+    },
+    {
+      name: "Gunjur",
+      address: "Gunjur Main Road, Bangalore - 560087",
+      sales: "9606450642",
+      service: "9606450641",
+      insurance: "9606450642",
+      finance: "9606450642",
+      spares: "9606450641",
+      map: "https://www.google.com/maps/d/embed?mid=1TsG7QBzueBxvpfVj2cX-JsI-e5c7nXc&ehbc=2E312F",
+    },
+    {
+      name: "Panathur",
+      address: "Panathur Main Road, Bangalore - 560103",
+      sales: "6364741741",
+      service: "6364741741",
+      insurance: "6364741741",
+      finance: "6364741741",
+      spares: "6364741741",
+      map: "https://www.google.com/maps/d/embed?mid=1TsG7QBzueBxvpfVj2cX-JsI-e5c7nXc&ehbc=2E312F",
+    },
+    {
+      name: "Whitefield",
+      address: "Ramagondanahalli, Whitefield - 560066",
+      sales: "9686573013",
+      service: "9686573010",
+      insurance: "9686573013",
+      finance: "9686573013",
+      spares: "9686573010",
+      map: "https://www.google.com/maps/d/embed?mid=1TsG7QBzueBxvpfVj2cX-JsI-e5c7nXc&ehbc=2E312F",
+    },
+    {
+      name: "HRBR Layout",
+      address: "HRBR Layout, Kalyan Nagar, Bangalore",
+      sales: "9343000000",
+      service: "9343000001",
+      insurance: "9343000000",
+      finance: "9343000000",
+      spares: "9343000001",
+      map: "https://www.google.com/maps?q=hrbr%20layout%20bangalore&output=embed",
+    },
+  ];
+
+  const card = document.getElementById("locationCard");
+  const map = document.getElementById("mapFrame");
+  const select = document.getElementById("locationSelect");
+
+  function renderLocation(index) {
+    const loc = locations[index];
+
+    card.innerHTML = `
+      <h3>${loc.name}</h3>
+      <p class="address">${loc.address}</p>
+
+      <div class="cta-row">
+        <a href="tel:${loc.sales}" class="button-custom">
+          <i class="fas fa-phone"></i> Call
+        </a>
+        <a href="https://wa.me/91${loc.sales}" class="outline-btn">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Sales:</strong> ${loc.sales}</p>
+        <p><strong>Service:</strong> ${loc.service}</p>
+        <p><strong>Insurance:</strong> ${loc.insurance}</p>
+        <p><strong>Finance:</strong> ${loc.finance}</p>
+        <p><strong>Spares:</strong> ${loc.spares}</p>
+      </div>
+    `;
+
+    map.src = loc.map;
+  }
+
+  select.addEventListener("change", (e) => {
+    renderLocation(e.target.value);
+  });
+
+  renderLocation(0);
+</script>
 
 </html>
