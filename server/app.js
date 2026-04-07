@@ -12,7 +12,12 @@ app.use(cookieParser());
 
 // DB
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+    auth: {
+      username: process.env.MONGODB_USERNAME,
+      password: process.env.MONGODB_PASSWORD,
+    },
+  })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => {
     console.error("Mongo Error:", err);
