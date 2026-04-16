@@ -38,7 +38,7 @@
 
       <div class="col-lg-6">
         <div class="main-vehicle-img">
-          <img id="activeVehicleImage" src="<%= model.coverImage || '/images/default-bike.jpg' %>"
+          <img id="activeVehicleImage" src="<%= model.colors[0].image || '/images/default-bike.jpg' %>"
             alt="<%= model.name %>" class="img-fluid transition-img">
         </div>
 
@@ -67,7 +67,10 @@
             <%= model.description %>
           </p>
 
-          <div class="row mt-4 g-3">
+          <h4 class="fw-bold">Ex-Showroom Price</h4>
+          <p class="text-success fw-bold">₹ 1,50,000*</p>
+
+          <!-- <div class="row mt-4 g-3">
             <div class="col-6">
               <div class="p-3 border rounded-4 text-center h-100">
                 <span class="fs-3">🛡️</span>
@@ -82,9 +85,9 @@
                 <span class="text-muted extra-small">Best-in-class mileage</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="mt-5 d-grid gap-2">
+          <div class="mt-4 d-grid gap-2">
             <button class="btn btn-dark btn-lg rounded-4 fw-bold py-3" onclick="openEnquiry()">
               BOOK A TEST RIDE
             </button>
@@ -686,7 +689,7 @@
       element.classList.add('active');
     }
 
-   const variants = <%- JSON.stringify(model.variants) %>;
+    const variants = <% - JSON.stringify(model.variants) %>;
 
     const formatLabel = (str) =>
       str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
