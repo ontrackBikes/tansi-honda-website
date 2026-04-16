@@ -1,0 +1,239 @@
+<%- include("../partials/header") %>
+
+    <div class="container py-4">
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <div>
+                <h2 class="fw-bold mb-1">Service Requests</h2>
+                <p class="text-muted small">Manage customer service bookings</p>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-light-primary text-primary me-3">
+                            <i class="bi bi-tools fs-4"></i>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0 fw-semibold">Total Requests</p>
+                            <h3 class="fw-bold mb-0">
+                                <%= services.length %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-light-warning text-warning me-3">
+                            <i class="bi bi-hourglass-split fs-4"></i>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0 fw-semibold">Pending</p>
+                            <h3 class="fw-bold mb-0">
+                                <%= services.filter(s=> s.status === 'pending').length %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-light-info text-info me-3">
+                            <i class="bi bi-check2-square fs-4"></i>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0 fw-semibold">Confirmed</p>
+                            <h3 class="fw-bold mb-0">
+                                <%= services.filter(s=> s.status === 'confirmed').length %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-light-success text-success me-3">
+                            <i class="bi bi-check-circle fs-4"></i>
+                        </div>
+                        <div>
+                            <p class="text-muted small mb-0 fw-semibold">Completed</p>
+                            <h3 class="fw-bold mb-0">
+                                <%= services.filter(s=> s.status === 'completed').length %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Card -->
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="card-header bg-white border-0 p-4">
+                <h5 class="fw-bold mb-0">All Service Requests</h5>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th class="ps-4 text-muted small text-uppercase py-3">Customer</th>
+                            <th class="text-muted small text-uppercase py-3">Model</th>
+                            <th class="text-muted small text-uppercase py-3">Location</th>
+                            <th class="text-muted small text-uppercase py-3">Date</th>
+                            <th class="text-center text-muted small text-uppercase py-3">Status</th>
+                            <th class="text-end pe-4 text-muted small text-uppercase py-3">Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% if (services.length===0) { %>
+                            <tr>
+                                <td colspan="6" class="text-center py-5 text-muted">
+                                    No service requests found
+                                </td>
+                            </tr>
+                            <% } %>
+
+                                <% services.forEach(s=> { %>
+                                    <tr class="table-row">
+
+                                        <!-- Customer -->
+                                        <td class="ps-4 py-3">
+                                            <div>
+                                                <p class="fw-bold mb-0">
+                                                    <%= s.name %>
+                                                </p>
+                                                <small class="text-muted">
+                                                    <%= s.mobile %>
+                                                </small>
+                                            </div>
+                                        </td>
+
+                                        <!-- Model -->
+                                        <td>
+                                            <%= s.model %>
+                                        </td>
+
+                                        <!-- Location -->
+                                        <td>
+                                            <%= s.serviceCentre %>
+                                        </td>
+
+                                        <!-- Date -->
+                                        <td>
+                                            <%= s.preferredDate ? s.preferredDate.toDateString() : '-' %>
+                                        </td>
+
+                                        <!-- Status -->
+                                        <td class="text-center">
+                                            <form method="POST" action="/admin/services/<%= s._id %>">
+                                                <select name="status"
+                                                    class="form-select form-select-sm rounded-pill px-3 status-dropdown"
+                                                    onchange="this.form.submit()">
+                                                    <option value="pending" <%=s.status==='pending' ?'selected':'' %>
+                                                        >Pending</option>
+                                                    <option value="confirmed" <%=s.status==='confirmed' ?'selected':''
+                                                        %>>Confirmed</option>
+                                                    <option value="completed" <%=s.status==='completed' ?'selected':''
+                                                        %>>Completed</option>
+                                                </select>
+                                            </form>
+                                        </td>
+
+                                        <!-- Actions -->
+                                        <td class="text-end pe-4">
+                                            <form method="POST" action="/admin/services/delete/<%= s._id %>"
+                                                class="d-inline">
+                                                <button class="btn btn-sm btn-outline-danger action-btn">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+
+                                    </tr>
+                                    <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Stats colors */
+        .bg-light-primary {
+            background-color: rgba(13, 110, 253, 0.1);
+        }
+
+        .bg-light-warning {
+            background-color: rgba(255, 193, 7, 0.15);
+        }
+
+        .bg-light-success {
+            background-color: rgba(25, 135, 84, 0.1);
+        }
+
+        .bg-light-info {
+            background-color: rgba(13, 202, 240, 0.1);
+        }
+
+        .stats-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .stats-card {
+            transition: transform 0.2s;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Table */
+        .table-row {
+            transition: background-color 0.2s;
+        }
+
+        .table-row:hover {
+            background-color: #fcfcfc;
+        }
+
+        /* Buttons */
+        .action-btn {
+            font-size: 1.1rem;
+            padding: 6px 10px;
+            border-radius: 8px;
+        }
+
+        .action-btn:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Dropdown */
+        .status-dropdown {
+            border: 1px solid #eee;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    </style>
+
+    <%- include("../partials/footer") %>

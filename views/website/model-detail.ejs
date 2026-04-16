@@ -689,7 +689,7 @@
       element.classList.add('active');
     }
 
-    const variants = <% - JSON.stringify(model.variants) %>;
+    const variants = <%- JSON.stringify(model.variants) %>;
 
     const formatLabel = (str) =>
       str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());

@@ -1,68 +1,171 @@
 <%- include("../partials/header") %>
 
-<section class="service-hero text-center py-5 bg-light">
-  <div class="container">
-    <h1>Service Appointment</h1>
-    <p>Schedule a Service Appointment by filling this form. Our team member will contact you soon.</p>
+<section class="container">
+  <div class="carousel-card shadow-sm">
+    <div
+      id="carouselExampleDark"
+      class="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d7d215cb-5eea-4f35-a0c9-c7073711f220_3840w.jpg"
+            class="d-block w-100"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide</h5>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/52087249-f159-4876-89d4-db2a67e5825b_3840w.jpg"
+            class="d-block w-100"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide</h5>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/caa0671c-47fc-4f38-a750-2c8514cd7760_3840w.jpg"
+            class="d-block w-100"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide</h5>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
   </div>
 </section>
 
-<div class="container my-5">
-  <h4 class="mb-4">Customer Information <small class="text-danger">* indicates required fields</small></h4>
+<div
+  class="container card h-100 border-1 shadow-sm hover-shadow rounded-4 overflow-hidden my-4"
+>
+  <h3 class="card-title fw-bold mb-1">Service Appointment</h3>
+  <p class="text-muted mb-0">Fill the form and we’ll get back to you</p>
 
-  <form id="serviceForm" action="/submit-service-request" method="POST">
+  <hr />
+
+  <form id="serviceForm" action="/create-appointment" method="POST">
     <div class="row g-3">
-
       <!-- Name -->
       <div class="col-md-6">
-        <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required pattern="^[a-zA-Z\s]+$" title="Only letters and spaces allowed">
+        <label for="name" class="form-label"
+          >Name<span class="text-danger">*</span></label
+        >
+        <input
+          id="name"
+          type="text"
+          name="name"
+          class="form-control"
+          placeholder="Your Name"
+          required
+          pattern="^[a-zA-Z\s]+$"
+          title="Only letters and spaces allowed"
+        />
       </div>
 
       <!-- Email -->
       <div class="col-md-6">
-        <label for="email" class="form-label">E-Mail <span class="text-danger">*</span></label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+        <label for="email" class="form-label"
+          >E-Mail<span class="text-danger">*</span></label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        />
       </div>
 
       <!-- Mobile -->
       <div class="col-md-6">
-        <label for="mobile" class="form-label">Mobile Number <span class="text-danger">*</span></label>
-        <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="10-digit Mobile Number" pattern="^\d{10}$" required>
+        <label for="mobile" class="form-label"
+          >Mobile Number <span class="text-danger">*</span></label
+        >
+        <input
+          type="tel"
+          class="form-control"
+          id="mobile"
+          name="mobile"
+          placeholder="10-digit Mobile Number"
+          pattern="^\d{10}$"
+          required
+        />
       </div>
 
       <!-- Model to be serviced -->
       <div class="col-md-6">
-        <label for="model" class="form-label">Model to be serviced <span class="text-danger">*</span></label>
-        <select class="form-select" id="model" name="model" required>
-          <option value="">Select Model</option>
-          <% models.forEach(model => { %>
-            <option value="<%= model.name %>"><%= model.name %></option>
-          <% }) %>
-        </select>
-      </div>
-
-      <!-- Type of Service -->
-      <div class="col-md-6">
-        <label for="serviceType" class="form-label">Type of Service <span class="text-danger">*</span></label>
-        <select class="form-select" id="serviceType" name="serviceType" required>
-          <option value="">Select Service Type</option>
-          <option value="Periodic Service">Periodic Service</option>
-          <option value="Repair">Repair</option>
-          <option value="General Checkup">General Checkup</option>
-        </select>
-      </div>
-
-      <!-- Preferred Date -->
-      <div class="col-md-6">
-        <label for="preferredDate" class="form-label">Preferred Date <span class="text-danger">*</span></label>
-        <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+        <label for="model" class="form-label"
+          >Model to be serviced <span class="text-danger">*</span></label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="model"
+          name="model"
+          placeholder="Model to be serviced"
+          required
+          pattern="^[a-zA-Z\s]+$"
+          title="Only letters and spaces allowed"
+        />
       </div>
 
       <!-- Service Centre Location -->
       <div class="col-md-6">
-        <label for="serviceCentre" class="form-label">Preferred Service Centre Location <span class="text-danger">*</span></label>
-        <select class="form-select" id="serviceCentre" name="serviceCentre" required>
+        <label for="serviceCentre" class="form-label"
+          >Preferred Service Centre Location
+          <span class="text-danger">*</span></label
+        >
+        <select
+          class="form-select"
+          id="serviceCentre"
+          name="serviceCentre"
+          required
+        >
           <option value="">Select Location</option>
           <option value="Bangalore Central">Bangalore Central</option>
           <option value="Bangalore East">Bangalore East</option>
@@ -70,51 +173,45 @@
         </select>
       </div>
 
-      <!-- Pick up & Drop -->
+      <!-- Preferred Date -->
       <div class="col-md-6">
-        <label for="pickupDrop" class="form-label">Do you need Pick up & Drop? <span class="text-danger">*</span></label>
-        <select class="form-select" id="pickupDrop" name="pickupDrop" required>
-          <option value="">Select</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-      </div>
-
-      <!-- Customer location for pick up & drop -->
-      <div class="col-md-6" id="pickupLocationDiv" style="display:none;">
-        <label for="pickupLocation" class="form-label">Customer location for Pick up & Drop</label>
-        <input type="text" class="form-control" id="pickupLocation" name="pickupLocation" placeholder="Enter address">
-      </div>
-
-      <!-- Remarks -->
-      <div class="col-12">
-        <label for="remarks" class="form-label">Remarks</label>
-        <textarea class="form-control" id="remarks" name="remarks" rows="3" placeholder="Any additional details..."></textarea>
+        <label for="preferredDate" class="form-label">Preferred Date </label>
+        <input
+          type="date"
+          class="form-control"
+          id="preferredDate"
+          name="preferredDate"
+        />
       </div>
 
       <!-- Submit -->
-      <div class="col-12 text-center mt-3">
-        <button type="submit" class="btn btn-danger btn-lg">Submit Request</button>
+      <div class="col-12 text-end mt-3">
+        <button type="submit" class="btn btn-danger btn-lg">
+          Book Appointment
+        </button>
       </div>
-
     </div>
   </form>
 </div>
 
+<style>
+  .carousel-card {
+    max-width: 100%; /* make it small */
+    margin: 30px auto; /* center */
+    border-radius: 20px; /* rounded corners */
+    overflow: hidden; /* clip image edges */
+  }
+
+  .carousel-card img {
+    height: 300px; /* control height */
+    /* object-fit: cover; */
+  }
+</style>
+
 <!-- SCRIPT -->
 <script>
-const pickupDrop = document.getElementById("pickupDrop");
-const pickupLocationDiv = document.getElementById("pickupLocationDiv");
-
-pickupDrop.addEventListener("change", () => {
-  if (pickupDrop.value === "Yes") {
-    pickupLocationDiv.style.display = "block";
-    document.getElementById("pickupLocation").required = true;
-  } else {
-    pickupLocationDiv.style.display = "none";
-    document.getElementById("pickupLocation").required = false;
-  }
-});
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("preferredDate").setAttribute("min", today);
 </script>
 
 <%- include("../partials/footer") %>

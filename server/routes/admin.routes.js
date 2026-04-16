@@ -4,7 +4,7 @@ const Bike = require("../models/bike.model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const auth = require("../middleware/auth");
-
+const Service = require("../models/service.model");
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -20,7 +20,7 @@ router.post("/login", async (req, res) => {
   }
 
   const token = jwt.sign({ email }, process.env.JWT_SECRET, {
-    expiresIn: "1d"
+    expiresIn: "1d",
   });
 
   res.cookie("token", token, { httpOnly: true });
@@ -33,16 +33,20 @@ router.get("/logout", (req, res) => {
   res.redirect("/admin/login");
 });
 
-
 router.get("/login", (req, res) => {
   res.render("admin/login");
 });
-
 
 // Dashboard
 router.get("/", auth, async (req, res) => {
   const models = await Bike.find();
   res.render("admin/dashboard", { models });
+});
+
+// Dashboard
+router.get("/models", auth, async (req, res) => {
+  const models = await Bike.find();
+  res.render("admin/models", { models });
 });
 
 // Add Model Page
@@ -66,7 +70,7 @@ router.post("/add", auth, async (req, res) => {
       power,
       torque,
       fuel_type,
-      transmission
+      transmission,
     } = req.body;
 
     const slug = name
@@ -81,21 +85,18 @@ router.post("/add", auth, async (req, res) => {
       price,
       image,
       description,
-      features: features
-        ? features.split(",").map(f => f.trim())
-        : [],
+      features: features ? features.split(",").map((f) => f.trim()) : [],
       specs: {
         engine,
         mileage,
         power,
         torque,
         fuel_type,
-        transmission
-      }
+        transmission,
+      },
     });
 
     res.redirect("/admin");
-
   } catch (err) {
     console.error(err);
     res.send("Error adding model");
@@ -124,7 +125,7 @@ router.post("/edit/:id", auth, async (req, res) => {
       torque,
       fuel_type,
       transmission,
-      isActive
+      isActive,
     } = req.body;
 
     const slug = name
@@ -139,28 +140,44 @@ router.post("/edit/:id", auth, async (req, res) => {
       price,
       image,
       description,
-      features: features
-        ? features.split(",").map(f => f.trim())
-        : [],
+      features: features ? features.split(",").map((f) => f.trim()) : [],
       specs: {
         engine,
         mileage,
         power,
         torque,
         fuel_type,
-        transmission
+        transmission,
       },
-      isActive: isActive === "on"
+      isActive: isActive === "on",
     });
 
     res.redirect("/admin");
-
   } catch (err) {
     console.error(err);
     res.send("Error updating model");
   }
 });
 
+// ADMIN VIEW - SERVICES
+router.get("/services", auth, async (req, res) => {
+  const services = await Service.find().sort({ createdAt: -1 });
+  res.render("admin/services", { services });
+});
+
+// UPDATE STATUS - SERVICES
+router.post("/services/:id", auth, async (req, res) => {
+  await Service.findByIdAndUpdate(req.params.id, {
+    status: req.body.status,
+  });
+  res.redirect("/admin/services");
+});
+
+// DELETE - SERVICES
+router.post("/services/delete/:id", auth, async (req, res) => {
+  await Service.findByIdAndDelete(req.params.id);
+  res.redirect("/admin/services");
+});
 
 const sharp = require("sharp");
 const path = require("path");
@@ -186,9 +203,8 @@ router.post("/upload-image", auth, upload.single("image"), async (req, res) => {
     // Return URL
     res.json({
       message: "Upload successful",
-      url: `/images/${filename}`
+      url: `/images/${filename}`,
     });
-
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Upload failed" });

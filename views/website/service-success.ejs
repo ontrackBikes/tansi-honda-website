@@ -1,0 +1,61 @@
+<%- include("../partials/header") %>
+
+<div
+  class="container d-flex justify-content-center align-items-center success-page"
+>
+  <div class="success-card text-center shadow-lg">
+    <div class="check-icon mb-3">✓</div>
+
+    <h2 class="fw-bold mb-2">Appointment Booked!</h2>
+    <p class="text-muted mb-4">
+      Your service request has been successfully submitted. Our team will
+      contact you shortly.
+    </p>
+
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="/" class="btn btn-outline-secondary px-4">Go Home</a>
+      <a href="/book-service" class="btn btn-danger px-4">Book Another</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .success-page {
+    height: 80vh;
+  }
+
+  /* Card */
+  .success-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  /* Check Icon */
+  .check-icon {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    background: #e6f9ec;
+    color: #28a745;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* Button */
+  .btn-danger {
+    background: #e60012;
+    border: none;
+  }
+  .btn-danger:hover {
+    background: #c40010;
+  }
+</style>
+
+<%- include("../partials/footer") %>
