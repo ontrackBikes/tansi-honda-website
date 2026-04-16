@@ -767,7 +767,7 @@
 
     "description": "A smart and eco-friendly electric scooter built for daily commuting, offering smooth performance, zero emissions, and low running costs.",
 
-    "coverImage": "/images/bike/honda-qc1/6.jpg",
+    "coverImage": "/images/bike/honda-qc1/1.jpg",
 
     "brochure": "https://s3-ap-southeast-1.amazonaws.com/assetsin.izmocars.com/userfiles/488/Activa_e_Brochure.pdf",
 
@@ -776,28 +776,28 @@
     "colors": [
       {
         "name": "Pearl Shallow Blue",
-        "code": "#6F98BC",
-        "image": "/images/bike/honda-qc1/1.png"
+        "code": "#85B1BF",
+        "image": "/images/bike/honda-qc1/2.png"
       },
       {
         "name": "Pearl Misty White",
         "code": "#D5D5D7",
-        "image": "/images/bike/honda-qc1/2.png"
-      },
-      {
-        "name": "Pearl Serenity Blue",
-        "code": "#82B0BF",
         "image": "/images/bike/honda-qc1/3.png"
       },
       {
-        "name": "Matt Foggy Silver Metallic",
-        "code": "#434343",
+        "name": "Pearl Igneous Black",
+        "code": "#82B0BF",
         "image": "/images/bike/honda-qc1/4.png"
       },
       {
-        "name": "Pearl Igneous Black",
-        "code": "#1E1E1E",
+        "name": "Pearl Serenity Blue",
+        "code": "#5DA0C8",
         "image": "/images/bike/honda-qc1/5.png"
+      },
+      {
+        "name": "Matt Foggy Silver Metallic",
+        "code": "#454544",
+        "image": "/images/bike/honda-qc1/6.png"
       }
     ],
 
