@@ -10,7 +10,6 @@ const serviceSchema = new mongoose.Schema(
 
     serviceCentre: {
       type: String,
-      enum: ["Bangalore Central", "Bangalore East", "Bangalore West"],
       required: true,
     },
 
