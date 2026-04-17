@@ -3255,6 +3255,145 @@
     ]
   },
   {
+    "name": "Honda Hornet 1000 SP",
+    "slug": "honda-hornet-100-sp",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "The Honda Hornet 1000 SP blends sharp performance, precise handling, and premium components, making it perfect for riders who crave both adrenaline and everyday usability.",
+
+    "coverImage": "/images/bike/honda-hornet-1000-sp/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-1000-SP/pdf/Hornet-1000SP_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#1F1F1F",
+        "image": "/images/bike/honda-hornet-1000-sp/1.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Dual 310 mm Front Discs ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FSafety%2FSafety-Dual-310-mm-Front-Discs-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Unshakable stopping power."
+        },
+        {
+          "title": "Honda Selectable Torque Control (HSTC) & Wheelie Control ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FSafety%2FSafety-Honda-Selectable-Torque-Control-HSTC--Wheelie-Control-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Maintaining balance without killing the thrill."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "SHOWA SFF-BP™ Forks",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-1000-SP/Desktop/Comfort/Comfort-SHOWA-SFF-BP-Forks-1120x623.png?h=623&iar=0&w=1120",
+          "description": "The SHOWA SFF-BP™ Forks provide sharp, sportbike-level precision in the front suspension."
+        },
+        {
+          "title": "Öhlins™ TTX Rear Shock",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-1000-SP/Desktop/Comfort/Comfort-hlins-TTX-Rear-Shock-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Remote reservoir Öhlins™ setup in the rear suspension keeps the bike planted, no matter how hard it's pushed."
+        }
+      ],
+      "design": [
+        {
+          "title": "Twin LED Projectors",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Twin-LED-Projectors-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Its sharp twin LED Projectors command the night while the sharp-edged lighting brings unmatched visibility."
+        },
+        {
+          "title": "Muscular Fuel Tank",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Muscular-Fuel-Tank-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The muscular fuel tank tapers with aggression, giving it a streetfighter stance at every glance."
+        },
+        {
+          "title": "Trellis Rear Subframe",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Trellis-Rear-Subframe-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Complements the aggressive streetfighter aesthetic."
+        },
+        {
+          "title": "Steel Twin-Spar Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Steel-Twin-Spar-Frame-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The steel twin-spar frame offers balance and control, giving you sharper handling needed to cut through turns."
+        }
+      ],
+      "technology": [
+        {
+          "title": "5-Inch TFT Screen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FTechnology%2FTech-5-Inch-TFT-Screen-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Smart command centre."
+        },
+        {
+          "title": "1000 cc Inline-Four",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FTechnology%2FTech-1000-cc-Inline-Four-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Untamed beast."
+        },
+        {
+          "title": "Honda RoadSync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FTechnology%2FTech-Honda-RoadSync-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Seamless ride tech."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Honda Hornet 1000 SP",
+        "sku": "Honda-Hornet-1000-SP",
+        "specs": {
+          "body": {
+            "length": "2140 mm",
+            "width": "790 mm",
+            "height": "1085 mm",
+            "wheelbase": "1455 mm",
+            "ground_clearance": "135 mm",
+            "kerb_weight": "212 kg",
+            "seat_height": "809 mm",
+            "fuel_tank": "17 L"
+          },
+          "engine": {
+            "type": "4-Stroke, 16-Valve, Inline-Four DOHC, Liquid-Cooled",
+            "displacement": "999 cc",
+            "power": "115.6 kW @ 11000 rpm",
+            "torque": "107 Nm @ 9000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "76 mm x 55.1 mm",
+            "compression_ratio": "11.7:1"
+          },
+          "transmission": {
+            "clutch": "Assist & Slipper Clutch",
+            "gears": "6-speed Gearbox"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "120/70ZR17 M/C",
+            "rear": "180/55ZR17 M/C",
+            "front_brake": "Dual Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "frame": "Steel Diamond Frame",
+            "front": "SHOWA SFF-BP USD Forks",
+            "rear": "Öhlins TTX Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 6.3 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
     "name": "Honda CB300F",
     "slug": "honda-cb300f",
 
