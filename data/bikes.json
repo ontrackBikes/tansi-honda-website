@@ -3255,6 +3255,160 @@
     ]
   },
   {
+    "name": "Honda GoldWing Tour",
+    "slug": "honda-goldwing-tour",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "The Honda Gold Wing Tour delivers unmatched comfort, advanced technology, and smooth performance, making it the ultimate touring motorcycle. With its powerful engine, luxurious features, and superior ride quality, it’s built for riders who seek long-distance journeys with premium comfort and effortless cruising.",
+
+    "coverImage": "/images/bike/honda-goldwing-tour/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing/Brochure/26516_Goldwing-Brochure_R1.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Bordeaux Red Metallic",
+        "code": "#4A2328",
+        "image": "/images/bike/honda-goldwing-tour/1.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Airbag System",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2FSafety-Airbag-System-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Impact protection."
+        },
+        {
+          "title": "6-Piston Brakes",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2Fsafety-6-piston-brakes-352x360-new.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Confident stopping. Brake Type(Front): Double Disc- 230mm with 6-Piston Callibers."
+        },
+        {
+          "title": "Tyre Pressure Monitoring System (TPMS)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2FSafety-Tyre-Pressure-Monitoring-System-TPMS-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Know on-the-go."
+        },
+        {
+          "title": "Honda Selectable Torque Control (HSTC) ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2FSafety-Honda-Selectable-Torque-Control-HSTC-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Smart traction management."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Pillion Comfort",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing-New/Desktop/Comfort/Comfort-Pillion-Comfort-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Luxury seating."
+        },
+        {
+          "title": "Walking Modes",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing-New/Desktop/Comfort/Comfort-Walking-Modes-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Easy parking."
+        },
+        {
+          "title": "Electronic Suspension",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing-New/Desktop/Comfort/Comfort-Electronic-Suspension-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Its aluminium twin-beam frame leads."
+        }
+      ],
+      "design": [
+        {
+          "title": "Jewel Eye Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Jewel-Eye-Headlight-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "With a distinct Jewel Eye low-beam light signature created by 10 polished optical lenses and a stereoscopic impression created by high beam, the Gold Wing Tour enhances your riding visibility."
+        },
+        {
+          "title": "Aluminium Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Aluminium-Frame-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Frame Type: Aluminium Double Downdraft."
+        },
+        {
+          "title": "Adjustable Windscreen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Adjustable-Windscreen-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "With an electronically adjustable windscreen that also memorizes your favourite positions and auto-adjusts, the Gold Wing Tour offers excellent wind protection."
+        },
+        {
+          "title": "Large Storage",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Large-Storage-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The luggage compartment opens at the push of a button or via the Smart Key, with a smooth action, powered by hydraulic dampers."
+        }
+      ],
+      "technology": [
+        {
+          "title": "7-Inch TFT Display",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FTechnology%2FTechnology-7-Inch-TFT-Display-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Expansive control interface."
+        },
+        {
+          "title": "1833 cc Boxer Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FTechnology%2FTechnology-1833-cc-Boxer-Engine-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Mechanical masterpiece."
+        },
+        {
+          "title": "7-Speed DCT",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FTechnology%2FTechnology-7-Speed-DCT--400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Intelligent transmission."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Honda GoldWing Tour",
+        "sku": "Honda-GoldWing-Tour",
+        "specs": {
+          "body": {
+            "length": "2615 mm",
+            "width": "905 mm",
+            "height": "1430 mm",
+            "wheelbase": "1695 mm",
+            "ground_clearance": "130 mm",
+            "kerb_weight": "393 kg",
+            "seat_height": "745 mm",
+            "fuel_tank": "21 L"
+          },
+          "engine": {
+            "type": "4-Stroke, 24-Valves, 6-Cylinder Boxer UNICAM, Liquid-Cooled",
+            "displacement": "1833 cc",
+            "power": "93 kW @ 5500 rpm",
+            "torque": "170 Nm @ 4500 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "73 mm x 73 mm",
+            "compression_ratio": "10.5 ± 0.2"
+          },
+          "transmission": {
+            "type": "Dual Clutch Transmission (DCT)",
+            "gears": "7-speed"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "130/70R18M/C 63H",
+            "rear": "200/55R16M/C 77H",
+            "front_brake": "Double Disc - 320 mm",
+            "rear_brake": "Disc - 316 mm"
+          },
+          "suspension": {
+            "frame": "Aluminium Twin Tube Frame",
+            "front": "Double Wishbone",
+            "rear": "Pro-Link with Electronic Spring Preload"
+          },
+          "electricals": {
+            "battery": "12 V, 21.1 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
     "name": "Honda Hornet 1000 SP",
     "slug": "honda-hornet-100-sp",
 
