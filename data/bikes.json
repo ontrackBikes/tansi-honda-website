@@ -2751,6 +2751,168 @@
     ]
   },
   {
+    "name": "Honda NX500",
+    "slug": "honda-nx500",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "Its upright adventure-style riding posture and rugged build ensure comfort and confidence across highways, city roads, and off-road trails. A perfect blend of performance, versatility, and touring capability, the Honda NX500 is built for both everyday rides and long-distance adventures.",
+
+    "coverImage": "/images/bike/honda-nx500/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/brochure1/NX500_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Horizon White",
+        "code": "#EBECEC",
+        "image": "/images/bike/honda-nx500/1.png"
+      },
+      {
+        "name": "Mat Gunpowder Black Metallic",
+        "code": "#2E2F2E",
+        "image": "/images/bike/honda-nx500/2.png"
+      },
+      {
+        "name": "Grand Prix Red",
+        "code": "#EA4645",
+        "image": "/images/bike/honda-nx500/3.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Powerful New Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FSafety%2FSafety-Powerful-New-Headlight-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Light that leads, safety that follows."
+        },
+        {
+          "title": "Dual-Channel ABS",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FSafety%2FSafety-Dual-Channel-ABS-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Smart braking meets total control."
+        },
+        {
+          "title": "Suspensions",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FSafety%2FSafety-Suspensions-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Where comfort meets capability."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Fully Connected Colour TFT Display",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/Convenience/Convenience-Fully-Connected-Colour-TFT-Display-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Digital intelligence meets ride control."
+        },
+        {
+          "title": "Massive Fuel Tank",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/Convenience/Convenience-Massive-Fuel-Tank-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Adventure-ready range."
+        },
+        {
+          "title": "Assist and Slipper Clutch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/Convenience/Convenience-Assist-and-Slipper-Clutch-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Eases gear shifting, prevents wheel locking."
+        }
+      ],
+      "design": [
+        {
+          "title": "4-Stroke Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-4-Stroke-Engine-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Command DOHC twin-cylinder sophistication at your fingertips."
+        },
+        {
+          "title": "Liquid-Cooled Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-Liquid-cooled-Engine-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Push harder knowing your engine stays composed."
+        },
+        {
+          "title": "Dual Front Disc Brakes",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-Dual-Front-Disc-Brakes-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Master every moment with premium braking power."
+        },
+        {
+          "title": "1447 mm Wheelbase",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-1447-mm-Wheelbase-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Flow through any situation with natural confidence."
+        },
+        {
+          "title": "6-speed gearbox",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-6-speed-gearbox-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Access your power exactly how you want it. "
+        }
+      ],
+      "technology": [
+        {
+          "title": "Honda Roadsync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FTechnology%2FTechnology-Honda-Roadsync-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Your digital riding companion."
+        },
+        {
+          "title": "PGM-FI Fuel Injection",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FTechnology%2FTechnology-PGM-FI-Fuel-Injection-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Intelligence meets instant response."
+        },
+        {
+          "title": "Twin-Cylinder Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FTechnology%2FTechnology-Twin-Cylinder-Engine--400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Thrilling and responsive acceleration."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "NX200",
+        "sku": "NX200",
+        "specs": {
+          "body": {
+            "length": "2165 mm",
+            "width": "829 mm",
+            "height": "1413 mm",
+            "wheelbase": "1447 mm",
+            "ground_clearance": "181 mm",
+            "kerb_weight": "196 kg",
+            "seat_height": "810 mm",
+            "seat_length": "613 mm",
+            "fuel_tank": "17.5 L"
+          },
+          "engine": {
+            "type": "Liquid-cooled, 4-Stroke, DOHC, Parallel Twin (BS-VI compliant)",
+            "displacement": "471 cc",
+            "power": "35 kW @ 8500 rpm",
+            "torque": "43 Nm @ 6500 rpm",
+            "fuel_system": "PGM-FI"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "6-speed Gearbox"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS with ESS",
+            "front": "110/80R 19M/C 59H",
+            "rear": "160/60R 17M/69H",
+            "front_brake": "Dual Disc - 296 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "frame": "Steel Diamond Type",
+            "front": "Showa 41 mm USD Forks",
+            "rear": "Pro-link Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 7.4 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
     "name": "Honda Hornet 2.0",
     "slug": "honda-hornet-2.0",
 
