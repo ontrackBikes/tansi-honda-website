@@ -2037,7 +2037,7 @@
         }
       },
       {
-        "name": "SP 125 DLX",
+        "name": "Single Disc",
         "sku": "SP125-DLX",
         "specs": {
           "body": {
@@ -2226,6 +2226,205 @@
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED, DC"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda SP 160",
+    "slug": "honda-sp-160",
+
+    "category": "motorcycle",
+    "subCategory": "RedWing",
+
+    "description": "A stylish and fuel-efficient commuter motorcycle, the Honda SP 160 is built for everyday performance and comfort. Powered by a smooth and refined engine, it delivers reliable mileage and responsive acceleration for city rides.",
+
+    "coverImage": "/images/bike/honda-sp-160/1.png",
+
+    "brochure": "http://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Brochure/1388515_SP-brochure-25_Final-_-for-web.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#303131",
+        "image": "/images/bike/honda-sp-160/2.png"
+      },
+      {
+        "name": "Pearl Deep Ground Gray",
+        "code": "#B8C0C5",
+        "image": "/images/bike/honda-sp-160/3.png"
+      },
+      {
+        "name": "Athletic Blue Metallic",
+        "code": "#004D8C",
+        "image": "/images/bike/honda-sp-160/4.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "High Ground Clearance",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fsp-160%2FSafety%2F01-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Secures your engine and protects the frame."
+        },
+        {
+          "title": "1 CH ABS",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fsp-160%2FSafety%2F02-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Providing greater control."
+        },
+        {
+          "title": "Hazard Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fsp-160%2FSafety%2F03-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Helpful in areas with poor visibility."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "New 15W USB-C Port",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/3/banner-new-15w-usb-c-port.jpg?h=623&iar=0&w=1120",
+          "description": "Stay connected and ride bold."
+        },
+        {
+          "title": "Rear Monoshock Suspension",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/3/rear-monoshock-suspension.jpg?h=623&iar=0&w=1120",
+          "description": "Offers superior riding comfort and excellent stability."
+        },
+        {
+          "title": "Engine Stop Switch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/3/engine-stop-switch.jpg?h=306&iar=0&w=544",
+          "description": "Offers superior riding comfort and excellent stability."
+        }
+      ],
+      "design": [
+        {
+          "title": "Petal Disc Brakes",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/2/banner-Petal-disc-brakes.jpg?h=623&iar=0&w=1120",
+          "description": "Gives superior control and heightened steering ability."
+        },
+        {
+          "title": "Sharp LED Headlamp​",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/2/bold-new-LED-lamp.jpg?h=306&iar=0&w=544",
+          "description": "Exudes a premium, sporty vibe."
+        },
+        {
+          "title": "Signature LED Tail Lamp",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/2/Signature-LED-tail-lamp.jpg?h=306&iar=0&w=544",
+          "description": "Leaves behind a trail of awe."
+        }
+      ],
+      "technology": [
+        {
+          "title": "TFT Meter​",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Technology/6-Desk-Column-Vertical-Card.jpg?h=678&iar=0&w=588",
+          "description": "Introducing Honda's brand-new, industry-leading TFT Meter."
+        },
+        {
+          "title": "Honda RoadSync",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Technology/6-Desk-Column-Horizontal-Card.jpg?h=327&iar=0&w=588",
+          "description": "Take calls, play music and more."
+        },
+        {
+          "title": "E20 Ready OBD2B Compliant, 160 cc Engine",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/1/E20-ready-OBD2B.jpg?h=306&iar=0&w=544",
+          "description": "The latest innovation in the engine is far ahead of its time."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Single Disc",
+        "sku": "Single-Disc",
+        "specs": {
+          "body": {
+            "length": "2061 mm",
+            "width": "786 mm",
+            "height": "1100 mm",
+            "wheelbase": "1347 mm",
+            "ground_clearance": "177 mm",
+            "kerb_weight": "138 kg",
+            "seat_length": "594 mm",
+            "seat_height": "796 mm",
+            "fuel_tank": "12 L"
+          },
+          "engine": {
+            "type": "4-Stroke, SI, BS-VI Engine",
+            "displacement": "162.71 cc",
+            "power": "9.7 kW @ 7500 rpm",
+            "torque": "14.8 Nm @ 5250 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "57.3 mm x 63.096 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5"
+          },
+          "tyres": {
+            "front": "80/100-17 M/C 46P, Tubeless",
+            "rear": "130/70-17 M/C 62P, Tubeless",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5 Ah",
+            "headlamp": "LED"
+          }
+        }
+      },
+      {
+        "name": "Double Disc",
+        "sku": "Double-Disc",
+        "specs": {
+          "body": {
+            "length": "2061 mm",
+            "width": "786 mm",
+            "height": "1100 mm",
+            "wheelbase": "1347 mm",
+            "ground_clearance": "177 mm",
+            "kerb_weight": "140 kg",
+            "seat_length": "594 mm",
+            "seat_height": "796 mm",
+            "fuel_tank": "12 L"
+          },
+          "engine": {
+            "type": "4-Stroke, SI, BS-VI Engine",
+            "displacement": "162.71 cc",
+            "power": "9.7 kW @ 7500 rpm",
+            "torque": "14.8 Nm @ 5250 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "57.3 mm x 63.096 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5"
+          },
+          "tyres": {
+            "front": "80/100-17 M/C 46P, Tubeless",
+            "rear": "130/70-17 M/C 62P, Tubeless",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Drum - 220 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5 Ah",
+            "headlamp": "LED"
           }
         }
       }
