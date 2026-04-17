@@ -2866,8 +2866,8 @@
 
     "variants": [
       {
-        "name": "NX200",
-        "sku": "NX200",
+        "name": "",
+        "sku": "",
         "specs": {
           "body": {
             "length": "2165 mm",
@@ -2907,6 +2907,162 @@
             "battery": "12 V, 7.4 Ah",
             "headlamp": "LED",
             "tail_lamp": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda XL750 Transalp",
+    "slug": "honda-xl750-transalp",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "A powerful and versatile machine, the Honda XL750 Transalp blends performance, durability, and long-distance touring capability—perfect for riders who seek adventure without limits.",
+
+    "coverImage": "/images/bike/honda-xl750-transalp/1.jpeg",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/Brochure/26522_Transalp-Brochure1.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Ross White",
+        "code": "#EDECEC",
+        "image": "/images/bike/honda-xl750-transalp/2.png"
+      },
+      {
+        "name": "Graphite Black",
+        "code": "#3A3A3A",
+        "image": "/images/bike/honda-xl750-transalp/3.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Emergency Stop Signal ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FSafety%2FSafety-Emergency-Stop-Signal-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Brake alert system."
+        },
+        {
+          "title": "ABS (Switchable Rear)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FSafety%2FSafetyABS-Switchable-Rear-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Off-road flexibility."
+        },
+        {
+          "title": "HSTC & Wheelie Control",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FSafety%2FSafetyHSTC--Wheelie-Control-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Intelligent traction."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "850 mm Seat Height",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/comfort/comfort-850-mm-seat-height-1120x623.png?h=623&iar=0&w=1120",
+          "description": "With a balanced 850 mm seat height and 210 kg kerb weight, it’s easy to handle."
+        },
+        {
+          "title": "Upgraded Suspension",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/comfort/comfort-upgraded-suspension-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Upgraded suspension makes rough terrain smooth."
+        },
+        {
+          "title": "Aluminium Swingarm",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/comfort/Comfort-Aluminium-Swingarm-1120x623.png?h=623&iar=0&w=1120",
+          "description": "The aluminium swingarm, paired with Pro-Link, keeps you steady and in control."
+        }
+      ],
+      "design": [
+        {
+          "title": "Dual-LED Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2FDesign-Dual-LED-Headlight-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Africa Twin inspired."
+        },
+        {
+          "title": "Steel Diamond Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2Fdesign-steel-diamond-frame-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Lightweight toughness."
+        },
+        {
+          "title": "Aerodynamic Fairing",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2Fdesign-aerodynamic-fairing-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Adventure-ready."
+        },
+        {
+          "title": "Durabio™ Windscreen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2FDesign-Durabio-Windscreen-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The Durabio™ windscreen pushes boundaries."
+        }
+      ],
+      "technology": [
+        {
+          "title": "5-inch TFT Screen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FTechnology%2Ftech-t5-inch-tft-screen-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Connected display."
+        },
+        {
+          "title": "5 Riding Modes",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FTechnology%2FHonda.jpg%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Adaptive performance."
+        },
+        {
+          "title": "755 cc Parallel-Twin",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FTechnology%2FTech-755-cc-Parallel-Twin-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "High-performance engine."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "",
+        "sku": "",
+        "specs": {
+          "body": {
+            "length": "2325 mm",
+            "width": "838 mm",
+            "height": "1455 mm",
+            "wheelbase": "1560 mm",
+            "ground_clearance": "210 mm",
+            "kerb_weight": "210 kg",
+            "seat_height": "850 mm",
+            "seat_length": "613 mm",
+            "fuel_tank": "16.9 L"
+          },
+          "engine": {
+            "type": "4-Stroke, 8-Valves Parallel-Twin UNICAM, Liquid-Cooled",
+            "displacement": "755 cc",
+            "power": "67.5 kW @ 9500 rpm",
+            "torque": "75 Nm @ 7250 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "87 mm x 63.5 mm",
+            "compression_ratio": "11.0 ± 0.2"
+          },
+          "transmission": {
+            "clutch": "Assist & Slipper Clutch",
+            "gears": "6-speed"
+          },
+          "tyres": {
+            "front_caliper": "2 Piston",
+            "rear_caliper": "1 Piston",
+            "front": "90/90-21 M/C 54H",
+            "rear": "150/70R18 M/C 70H",
+            "front_brake": "Double Disc - 310 mm",
+            "rear_brake": "Disc - 256 mm"
+          },
+          "suspension": {
+            "frame": "Steel Diamond Type",
+            "front": "SFF-CA USD™ Forks",
+            "rear": "Monoshock with Pro-Link Linkage"
+          },
+          "electricals": {
+            "battery": "12 V, 9.1 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
           }
         }
       }
