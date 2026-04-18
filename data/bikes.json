@@ -122,7 +122,10 @@
       {
         "name": "Standard",
         "sku": "SH100-STD",
-
+        "price": {
+          "exShowroom": 65000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -174,7 +177,10 @@
       {
         "name": "Deluxe",
         "sku": "SH100-DLX",
-
+        "price": {
+          "exShowroom": 68000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -332,10 +338,7 @@
         "name": "Standard",
         "sku": "HR750-STD",
 
-        "price": {
-          "ex_showroom_delhi": 922412,
-          "currency": "INR"
-        },
+        "price": { "exShowroom": 68000, "currency": "INR" },
 
         "specs": {
           "body": {
@@ -524,7 +527,7 @@
       {
         "name": "Standard",
         "sku": "SH100-STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "performance": {
             "range": "102 km (IDC)",
@@ -708,7 +711,7 @@
       {
         "name": "Standard",
         "sku": "ACT110-STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1833 mm",
@@ -869,7 +872,7 @@
       {
         "name": "",
         "sku": "",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "performance": {
             "range": "80 km (IDC)",
@@ -1039,10 +1042,7 @@
         "name": "Standard",
         "sku": "CB125H-STD",
 
-        "price": {
-          "ex_showroom_delhi": 114582,
-          "currency": "INR"
-        },
+        "price": { "exShowroom": 68000, "currency": "INR" },
 
         "specs": {
           "body": {
@@ -1220,7 +1220,7 @@
       {
         "name": "Standard",
         "sku": "SH100-STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -1272,7 +1272,7 @@
       {
         "name": "Deluxe",
         "sku": "SH100-DLX",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -1432,6 +1432,10 @@
       {
         "name": "Standard",
         "sku": "LIVO-STD",
+        "price": {
+          "exShowroom": 78000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -1476,6 +1480,10 @@
       {
         "name": "Deluxe",
         "sku": "LIVO-DLX",
+        "price": {
+          "exShowroom": 82000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -1644,6 +1652,7 @@
       {
         "name": "Drum",
         "sku": "SHINE125-DRUM",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -1688,6 +1697,7 @@
       {
         "name": "Disc",
         "sku": "SHINE125-DISC",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -1831,6 +1841,7 @@
       {
         "name": "",
         "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -1994,6 +2005,7 @@
       {
         "name": "SP 125 STD",
         "sku": "SP125-STD",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -2039,6 +2051,7 @@
       {
         "name": "Single Disc",
         "sku": "SP125-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -2186,6 +2199,7 @@
       {
         "name": "SP125 Anniversary Edition",
         "sku": "SP125-ANNIV",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2027 mm",
@@ -2339,6 +2353,7 @@
       {
         "name": "Single Disc",
         "sku": "Single-Disc",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2061 mm",
@@ -2385,6 +2400,7 @@
       {
         "name": "Double Disc",
         "sku": "Double-Disc",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2061 mm",
@@ -2538,6 +2554,7 @@
       {
         "name": "",
         "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2081 mm",
@@ -2702,6 +2719,7 @@
       {
         "name": "NX200",
         "sku": "NX200",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2035 mm",
@@ -2868,6 +2886,7 @@
       {
         "name": "",
         "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2165 mm",
@@ -3020,6 +3039,7 @@
       {
         "name": "",
         "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2325 mm",
@@ -3207,6 +3227,7 @@
       {
         "name": "Hornet 2.0",
         "sku": "HORNET-2.0",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2034 mm",
@@ -3362,6 +3383,7 @@
       {
         "name": "Honda GoldWing Tour",
         "sku": "Honda-GoldWing-Tour",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2615 mm",
@@ -3501,6 +3523,7 @@
       {
         "name": "Honda Hornet 1000 SP",
         "sku": "Honda-Hornet-1000-SP",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2140 mm",
@@ -3675,6 +3698,7 @@
       {
         "name": "CB300F DLX PRO",
         "sku": "CB300F-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2084 mm",
@@ -3721,6 +3745,7 @@
       {
         "name": "CB300F FLEX FUEL",
         "sku": "CB300F-FLEX-FUEL",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2084 mm",
@@ -3924,6 +3949,7 @@
       {
         "name": "CB350 DLX",
         "sku": "CB350-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -3970,6 +3996,7 @@
       {
         "name": "CB350 DLX PRO",
         "sku": "CB350-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4173,6 +4200,7 @@
       {
         "name": "CB350C DLX",
         "sku": "CB350C-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4219,6 +4247,7 @@
       {
         "name": "CB350C DLX PRO",
         "sku": "CB350C-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4377,6 +4406,7 @@
       {
         "name": "CB350C DLX PRO SPECIAL EDITION",
         "sku": "CB350C-DLX-PRO-SPECIAL-EDITION",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4560,6 +4590,7 @@
       {
         "name": "DLX",
         "sku": "DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -4613,6 +4644,7 @@
       {
         "name": "DLX PRO",
         "sku": "DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -4666,6 +4698,7 @@
       {
         "name": "DLX PRO CHROME",
         "sku": "DLX-PRO-CHROME",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -4820,6 +4853,7 @@
       {
         "name": "CB350RS DLX",
         "sku": "CB350RS-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2171 mm",
@@ -4885,6 +4919,7 @@
       {
         "name": "CB350RS DLX PRO",
         "sku": "CB350RS-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2171 mm",
@@ -5070,7 +5105,7 @@
       {
         "name": "DLX",
         "sku": "DLX",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1850 mm",
@@ -5121,7 +5156,7 @@
       {
         "name": "H-SMART",
         "sku": "H-SMART",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1850 mm",
@@ -5292,7 +5327,7 @@
       {
         "name": "STD",
         "sku": "STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -5343,7 +5378,7 @@
       {
         "name": "H-SMART",
         "sku": "H-SMART",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -5504,7 +5539,7 @@
       {
         "name": "",
         "sku": "",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -5680,7 +5715,7 @@
       {
         "name": "Standard",
         "sku": "Standard",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1808 mm",
@@ -5732,7 +5767,7 @@
       {
         "name": "DLX",
         "sku": "DLX",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1808 mm",

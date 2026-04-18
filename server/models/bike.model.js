@@ -5,7 +5,7 @@ const sectionSchema = new mongoose.Schema(
     show: { type: Boolean, default: false },
     items: { type: [mongoose.Schema.Types.Mixed], default: [] },
   },
-  { _id: false }
+  { _id: false },
 );
 
 const bikeSchema = new mongoose.Schema(
@@ -50,6 +50,17 @@ const bikeSchema = new mongoose.Schema(
         name: String,
         sku: String,
 
+        price: {
+          exShowroom: {
+            type: Number,
+            required: true,
+          },
+          currency: {
+            type: String,
+            default: "INR",
+          },
+        },
+
         specs: {
           performance: sectionSchema,
           body: sectionSchema,
@@ -66,7 +77,7 @@ const bikeSchema = new mongoose.Schema(
       },
     ],
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 module.exports = mongoose.model("Bike", bikeSchema);

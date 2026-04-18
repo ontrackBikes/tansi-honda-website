@@ -19,7 +19,7 @@
       </div>
 
       <!-- <div>
-        <%= model.variants[0].specs %>
+        <%= model.variants[0].price %>
       </div> -->
 
       <div class="col-md-5 text-md-end">
@@ -68,7 +68,7 @@
           </p>
 
           <h4 class="fw-bold">Ex-Showroom Price</h4>
-          <p class="text-success fw-bold">₹ 1,50,000*</p>
+          <p class="text-success fw-bold">₹ <span id="variantPrice"><%= model.variants[0].price.exShowroom %></span>*</p>
 
           <!-- <div class="row mt-4 g-3">
             <div class="col-6">
@@ -721,6 +721,12 @@
     // ✅ Change event
     variantSelect.addEventListener("change", function () {
       const index = this.value;
+
+      const priceSpan = document.getElementById("variantPrice");
+  if (priceSpan && variants[index].price) {
+    priceSpan.innerText = variants[index].price.exShowroom.toLocaleString('en-IN');
+  }
+
       const specData = variants[index].specs;
 
       const visibleSpecs = Object.entries(specData).filter(
