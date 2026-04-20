@@ -159,6 +159,43 @@ router.post("/edit/:id", auth, async (req, res) => {
   }
 });
 
+// update ex-showroom price
+router.post("/update-price/:bikeId/:variantId", auth, async (req, res) => {
+  try {
+    const { bikeId, variantId } = req.params;
+    const { exShowroom } = req.body;
+
+    if (!exShowroom) {
+      return res.status(400).json({ message: "Price is required" });
+    }
+
+    const bike = await Bike.findOneAndUpdate(
+      {
+        _id: bikeId,
+        "variants._id": variantId,
+      },
+      {
+        $set: {
+          "variants.$.price.exShowroom": exShowroom,
+        },
+      },
+      { new: true },
+    );
+
+    if (!bike) {
+      return res.status(404).json({ message: "Bike or Variant not found" });
+    }
+
+    res.json({
+      message: "Price updated successfully",
+      bike,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error updating price" });
+  }
+});
+
 // ADMIN VIEW - SERVICES
 router.get("/services", auth, async (req, res) => {
   const services = await Service.find().sort({ createdAt: -1 });
