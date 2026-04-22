@@ -1,39 +1,41 @@
 <%- include("../partials/header") %>
 
   <div class="container vehicle-detail py-5">
+    <!-- <div>
+        <%= model.variants[0].price %>
+      </div> -->
+    <div class="row align-items-center g-3 mb-4">
+      <div class="col-md-7">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item small text-uppercase fw-bold text-danger">
+              <%= model.category %>
+            </li>
+            <li class="breadcrumb-item small text-uppercase fw-bold text-muted">
+              <%= model.subCategory %>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="vehicle-title text-dark">
+          <%= model.name %>
+        </h1>
+      </div>
+
       <!-- <div>
         <%= model.variants[0].price %>
       </div> -->
-   <div class="row align-items-center g-3 mb-4">
-  <div class="col-md-7 text-center text-md-start">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb mb-2 justify-content-start ">
-        <li class="breadcrumb-item small text-uppercase fw-bold text-danger">
-          <%= model.category %>
-        </li>
-        <li class="breadcrumb-item small text-uppercase fw-bold text-muted">
-          <%= model.subCategory %>
-        </li>
-      </ol>
-    </nav>
-    <h1 class="vehicle-title text-dark mb-0">
-      <%= model.name %>
-    </h1>
-  </div>
 
-  <div class="col-md-5">
-    <div class="d-flex flex-column flex-sm-row justify-content-md-end gap-2">
-      <% if (model.brochure) { %>
-        <a href="<%= model.brochure %>" target="_blank" class="btn btn-outline-dark rounded-pill px-4 fw-bold">
-          <i class="bi bi-file-earmark-arrow-down-fill me-1"></i> Download Brochure
-        </a>
-      <% } %>
-      <a class="btn btn-danger rounded-pill px-4 fw-bold" href="/quick-quote">
-        <i class="bi bi-chat-dots-fill me-1"></i> Get Quote
-      </a>
+      <!-- <div class="col-md-5 text-md-end">
+        <% if (model.brochure) { %>
+          <a href="<%= model.brochure %>" target="_blank" class="btn btn-outline-dark rounded-pill px-4 fw-bold">
+            <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Brochure
+          </a>
+          <% } %>
+            <a class="btn btn-danger rounded-pill px-4 fw-bold ms-2" href="/quick-quote">
+              <i class="bi bi-chat-dots-fill"></i> Get Quote
+            </a>
+      </div> -->
     </div>
-  </div>
-</div>
 
     <div class="row g-5">
 
@@ -69,7 +71,9 @@
           </p>
 
           <h4 class="fw-bold">Ex-Showroom Price</h4>
-          <p class="text-success fw-bold">₹ <span id="variantPrice"><%= model.variants[0].price.exShowroom %></span>*</p>
+          <p class="text-success fw-bold">₹ <span id="variantPrice">
+              <%= model.variants[0].price.exShowroom %>
+            </span>*</p>
 
           <!-- <div class="row mt-4 g-3">
             <div class="col-6">
@@ -89,13 +93,20 @@
           </div> -->
 
           <div class="mt-4 d-grid gap-2">
-            <button class="btn btn-dark btn-lg rounded-4 fw-bold py-3" onclick="openEnquiry()">
-              BOOK A TEST RIDE
-            </button>
-            <a href="https://wa.me/919XXXXXXXXX?text=I'm interested in <%= model.name %>" target="_blank"
-              class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3">
-              Chat on WhatsApp
-            </a>
+
+            <% if (model.brochure) { %>
+              <a href="<%= model.brochure %>" target="_blank" class="btn btn-dark btn-lg rounded-4 fw-bold py-3">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                Download Brochure
+              </a>
+              <% } %>
+
+                <a href="https://wa.me/919XXXXXXXXX?text=I'm%20interested%20in%20<%= model.name %>" target="_blank"
+                  class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3">
+                  <i class="bi bi-whatsapp"></i>
+                  Chat on WhatsApp
+                </a>
+
           </div>
         </div>
       </div>
