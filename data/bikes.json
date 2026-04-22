@@ -122,7 +122,10 @@
       {
         "name": "Standard",
         "sku": "SH100-STD",
-
+        "price": {
+          "exShowroom": 65000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -174,166 +177,10 @@
       {
         "name": "Deluxe",
         "sku": "SH100-DLX",
-
-        "specs": {
-          "body": {
-            "length": "1955 mm",
-            "width": "754 mm",
-            "height": "1050 mm",
-            "wheelbase": "1245 mm",
-            "ground_clearance": "168 mm",
-            "kerb_weight": "99 kg",
-            "seat_length": "676 mm",
-            "seat_height": "786 mm",
-            "fuel_tank": "9 L"
-          },
-
-          "engine": {
-            "type": "4-Stroke SI Engine",
-            "displacement": "98.98 cc",
-            "power": "5.43 kW @ 7500 rpm",
-            "torque": "8.05 Nm @ 5000 rpm",
-            "fuel_system": "PGM-FI",
-            "bore_stroke": "47.0 x 57.049 mm",
-            "compression_ratio": "10.0:1",
-            "starting": "Self/Kick"
-          },
-
-          "transmission": {
-            "clutch": "Multiplate Wet Clutch",
-            "gears": "4"
-          },
-
-          "tyres": {
-            "front": "2.75 - 17 41P, Tube Type",
-            "rear": "3.00 - 17 50P, Tube Type",
-            "front_brake": "Drum 130 mm",
-            "rear_brake": "Drum 110 mm"
-          },
-
-          "suspension": {
-            "frame": "Diamond Type",
-            "front": "Telescopic",
-            "rear": "Twin"
-          },
-
-          "electricals": {
-            "battery": "12V, 3.0 Ah",
-            "headlamp": "Bulb Type"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "name": "Honda CBR650R",
-    "slug": "honda-cbr650r",
-
-    "category": "motorcycle",
-    "subCategory": "BigWing",
-
-    "description": "A reliable and efficient commuter motorcycle designed for everyday usage with excellent mileage and comfort.",
-
-    "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacbr650r/25hondacbr650r_animations/_color/_570x380/honda_25cbr650r_grandprixred.png",
-
-    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
-
-    "isActive": true,
-
-    "colors": [
-      {
-        "name": "GRAND PRIX RED",
-        "code": "#C00000",
-        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacbr650r/25hondacbr650r_animations/_color/_570x380/honda_25cbr650r_grandprixred.png"
-      },
-      {
-        "name": "MATTE GUNPOWDER BLACK METALLIC",
-        "code": "#0D47A1",
-        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacbr650r/25hondacbr650r_animations/_color/_570x380/honda_25cbr650r_mattegunpowderblackmetallic.png"
-      }
-    ],
-
-    "features": {
-      "safety": [
-        {
-          "title": "CBS Braking System",
-          "image": "/images/bike/honda-shine-100/safety/cbs-braking-system.webp",
-          "description": "Improved braking stability and safety."
+        "price": {
+          "exShowroom": 68000,
+          "currency": "INR"
         },
-        {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
-        },
-        {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
-        },
-        {
-          "title": "Side Stand Engine Inhibitor",
-          "image": "/images/bike/honda-shine-100/safety/side-stand-engine-inhibitor.webp",
-          "description": "Prevents engine start when side stand is down."
-        }
-      ],
-      "comfort": [
-        {
-          "title": "Comfort Seat",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
-        },
-        {
-          "title": "Universal USB Charger",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
-        },
-        {
-          "title": "Moto shock rear larger",
-          "image": "/images/bike/honda-shine-100/comfort/comfort-seat.png",
-          "description": "Long and comfortable seating for daily rides."
-        }
-      ],
-      "design": [
-        {
-          "title": "Stylish Graphics",
-          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
-          "description": "Modern and attractive design styling."
-        },
-        {
-          "title": "Stylish Graphics",
-          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
-          "description": "Modern and attractive design styling."
-        },
-        {
-          "title": "Stylish Graphics",
-          "image": "/images/bike/honda-shine-100/design/stylish-graphics.png",
-          "description": "Modern and attractive design styling."
-        }
-      ],
-      "technology": [
-        {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
-        },
-        {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
-        },
-        {
-          "title": "PGM-FI Engine",
-          "image": "/images/bike/honda-shine-100/technology/pgm-fi-engine.jpg",
-          "description": "Fuel-efficient fuel injection system."
-        }
-      ]
-    },
-
-    "variants": [
-      {
-        "name": "Standard",
-        "sku": "SH100-STD",
-
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -395,7 +242,7 @@
 
     "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondahornet750/25hondahornet750_animations/_color/_570x380/honda_25hornet750_black.png",
 
-    "brochure": "https://www.honda2wheelersindia.com/motorcycle/hornet-750",
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-750/Desktop/EMI-Calculator/hornet-750-brochure.pdf",
 
     "isActive": true,
 
@@ -491,10 +338,7 @@
         "name": "Standard",
         "sku": "HR750-STD",
 
-        "price": {
-          "ex_showroom_delhi": 922412,
-          "currency": "INR"
-        },
+        "price": { "exShowroom": 68000, "currency": "INR" },
 
         "specs": {
           "body": {
@@ -554,7 +398,7 @@
 
     "description": "A smart and eco-friendly electric scooter built for daily commuting, offering smooth performance, zero emissions, and low running costs.",
 
-    "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_pearlshallowblue.png",
+    "coverImage": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/menu/Scooter--EV/activa-e.jpg?h=240&iar=0&w=360",
 
     "brochure": "https://s3-ap-southeast-1.amazonaws.com/assetsin.izmocars.com/userfiles/488/Activa_e_Brochure.pdf",
 
@@ -683,7 +527,7 @@
       {
         "name": "Standard",
         "sku": "SH100-STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "performance": {
             "range": "102 km (IDC)",
@@ -750,7 +594,7 @@
 
     "description": "The Honda Activa 110 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 110cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
 
-    "coverImage": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9",
+    "coverImage": "/images/scooter/honda-activa-110/5.png",
 
     "brochure": "https://haikuhonda.com/wp-content/uploads/2025/05/Activa-110-OBD2BBrochure.pdf",
 
@@ -758,34 +602,29 @@
 
     "colors": [
       {
-        "name": "Decent Blue Metallic",
-        "code": "#1B2E4B",
-        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+        "name": "Mat Axis Gray Metallic",
+        "code": "#7F7E7E",
+        "image": "/images/scooter/honda-activa-110/1.png"
       },
       {
-        "name": "Pearl Siren Blue",
-        "code": "#2C5A94",
-        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
-      },
-      {
-        "name": "Black",
-        "code": "#000000",
-        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+        "name": "Pearl Igneous Black",
+        "code": "#252525",
+        "image": "/images/scooter/honda-activa-110/2.png"
       },
       {
         "name": "Pearl Precious White",
-        "code": "#FFFFFF",
-        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+        "code": "#DADBDA",
+        "image": "/images/scooter/honda-activa-110/3.png"
+      },
+      {
+        "name": "Pearl Siren Blue",
+        "code": "#232B44",
+        "image": "/images/scooter/honda-activa-110/4.png"
       },
       {
         "name": "Rebel Red Metallic",
-        "code": "#8B0000",
-        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
-      },
-      {
-        "name": "Mat Axis Grey Metallic",
-        "code": "#4A4A4A",
-        "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FGet-to-know-your-ride%2FGet-to-know-your-ride-584x450.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1200&q=75&dpl=dpl_FNEup87uZdSwVJdpSLXtr82NBMe9"
+        "code": "#9A3A44",
+        "image": "/images/scooter/honda-activa-110/6.png"
       }
     ],
 
@@ -872,7 +711,7 @@
       {
         "name": "Standard",
         "sku": "ACT110-STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1833 mm",
@@ -931,7 +770,7 @@
 
     "description": "A smart and eco-friendly electric scooter built for daily commuting, offering smooth performance, zero emissions, and low running costs.",
 
-    "coverImage": "/images/bike/honda-qc1/1.png",
+    "coverImage": "/images/bike/honda-qc1/1.jpg",
 
     "brochure": "https://s3-ap-southeast-1.amazonaws.com/assetsin.izmocars.com/userfiles/488/Activa_e_Brochure.pdf",
 
@@ -940,28 +779,28 @@
     "colors": [
       {
         "name": "Pearl Shallow Blue",
-        "code": "#6F98BC",
-        "image": "/images/bike/honda-qc1/1.png"
+        "code": "#85B1BF",
+        "image": "/images/bike/honda-qc1/2.png"
       },
       {
         "name": "Pearl Misty White",
         "code": "#D5D5D7",
-        "image": "/images/bike/honda-qc1/2.png"
-      },
-      {
-        "name": "Pearl Serenity Blue",
-        "code": "#82B0BF",
         "image": "/images/bike/honda-qc1/3.png"
       },
       {
-        "name": "Matt Foggy Silver Metallic",
-        "code": "#434343",
+        "name": "Pearl Igneous Black",
+        "code": "#1C1D1C",
         "image": "/images/bike/honda-qc1/4.png"
       },
       {
-        "name": "Pearl Igneous Black",
-        "code": "#1E1E1E",
+        "name": "Pearl Serenity Blue",
+        "code": "#5DA0C8",
         "image": "/images/bike/honda-qc1/5.png"
+      },
+      {
+        "name": "Matt Foggy Silver Metallic",
+        "code": "#929292",
+        "image": "/images/bike/honda-qc1/6.png"
       }
     ],
 
@@ -1033,7 +872,7 @@
       {
         "name": "",
         "sku": "",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "performance": {
             "range": "80 km (IDC)",
@@ -1095,7 +934,7 @@
 
     "description": "A premium 125cc streetfighter motorcycle with aggressive styling, advanced TFT connectivity, USD suspension, and refined Honda performance. Designed for young riders seeking sporty looks, comfort, and modern technology.",
 
-    "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearligneousblack.png",
+    "coverImage": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB-125/nav/CB125.jpg?h=240&iar=0&w=360",
 
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
 
@@ -1203,10 +1042,7 @@
         "name": "Standard",
         "sku": "CB125H-STD",
 
-        "price": {
-          "ex_showroom_delhi": 114582,
-          "currency": "INR"
-        },
+        "price": { "exShowroom": 68000, "currency": "INR" },
 
         "specs": {
           "body": {
@@ -1384,7 +1220,7 @@
       {
         "name": "Standard",
         "sku": "SH100-STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -1436,7 +1272,7 @@
       {
         "name": "Deluxe",
         "sku": "SH100-DLX",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -1496,7 +1332,7 @@
 
     "description": "A stylish and fuel-efficient commuter motorcycle designed for daily rides, offering smooth engine performance, comfortable seating, and reliable handling with Honda’s trusted build quality.",
 
-    "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondalivo/24hondalivo_animations/_color/_570x380/honda_24livo_pearlsirenbluea.png",
+    "coverImage": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/menu/RedWing/Livo.jpg?h=240&iar=0&w=360",
 
     "brochure": "https://drive.google.com/file/d/1XwVlLwMnvHNeZurj_B1HWLfEsltkwiqH/view",
 
@@ -1596,6 +1432,10 @@
       {
         "name": "Standard",
         "sku": "LIVO-STD",
+        "price": {
+          "exShowroom": 78000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -1640,6 +1480,10 @@
       {
         "name": "Deluxe",
         "sku": "LIVO-DLX",
+        "price": {
+          "exShowroom": 82000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -1808,6 +1652,7 @@
       {
         "name": "Drum",
         "sku": "SHINE125-DRUM",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -1852,6 +1697,7 @@
       {
         "name": "Disc",
         "sku": "SHINE125-DISC",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -1995,6 +1841,7 @@
       {
         "name": "",
         "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -2158,6 +2005,7 @@
       {
         "name": "SP 125 STD",
         "sku": "SP125-STD",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -2201,8 +2049,9 @@
         }
       },
       {
-        "name": "SP 125 DLX",
+        "name": "Single Disc",
         "sku": "SP125-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -2350,6 +2199,7 @@
       {
         "name": "SP125 Anniversary Edition",
         "sku": "SP125-ANNIV",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2027 mm",
@@ -2390,6 +2240,361 @@
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED, DC"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda SP 160",
+    "slug": "honda-sp-160",
+
+    "category": "motorcycle",
+    "subCategory": "RedWing",
+
+    "description": "A stylish and fuel-efficient commuter motorcycle, the Honda SP 160 is built for everyday performance and comfort. Powered by a smooth and refined engine, it delivers reliable mileage and responsive acceleration for city rides.",
+
+    "coverImage": "/images/bike/honda-sp-160/1.png",
+
+    "brochure": "http://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Brochure/1388515_SP-brochure-25_Final-_-for-web.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#303131",
+        "image": "/images/bike/honda-sp-160/2.png"
+      },
+      {
+        "name": "Pearl Deep Ground Gray",
+        "code": "#B8C0C5",
+        "image": "/images/bike/honda-sp-160/3.png"
+      },
+      {
+        "name": "Athletic Blue Metallic",
+        "code": "#004D8C",
+        "image": "/images/bike/honda-sp-160/4.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "High Ground Clearance",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fsp-160%2FSafety%2F01-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Secures your engine and protects the frame."
+        },
+        {
+          "title": "1 CH ABS",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fsp-160%2FSafety%2F02-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Providing greater control."
+        },
+        {
+          "title": "Hazard Switch",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fsp-160%2FSafety%2F03-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Helpful in areas with poor visibility."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "New 15W USB-C Port",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/3/banner-new-15w-usb-c-port.jpg?h=623&iar=0&w=1120",
+          "description": "Stay connected and ride bold."
+        },
+        {
+          "title": "Rear Monoshock Suspension",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/3/rear-monoshock-suspension.jpg?h=623&iar=0&w=1120",
+          "description": "Offers superior riding comfort and excellent stability."
+        },
+        {
+          "title": "Engine Stop Switch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/3/engine-stop-switch.jpg?h=306&iar=0&w=544",
+          "description": "Offers superior riding comfort and excellent stability."
+        }
+      ],
+      "design": [
+        {
+          "title": "Petal Disc Brakes",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/2/banner-Petal-disc-brakes.jpg?h=623&iar=0&w=1120",
+          "description": "Gives superior control and heightened steering ability."
+        },
+        {
+          "title": "Sharp LED Headlamp​",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/2/bold-new-LED-lamp.jpg?h=306&iar=0&w=544",
+          "description": "Exudes a premium, sporty vibe."
+        },
+        {
+          "title": "Signature LED Tail Lamp",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/2/Signature-LED-tail-lamp.jpg?h=306&iar=0&w=544",
+          "description": "Leaves behind a trail of awe."
+        }
+      ],
+      "technology": [
+        {
+          "title": "TFT Meter​",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Technology/6-Desk-Column-Vertical-Card.jpg?h=678&iar=0&w=588",
+          "description": "Introducing Honda's brand-new, industry-leading TFT Meter."
+        },
+        {
+          "title": "Honda RoadSync",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Technology/6-Desk-Column-Horizontal-Card.jpg?h=327&iar=0&w=588",
+          "description": "Take calls, play music and more."
+        },
+        {
+          "title": "E20 Ready OBD2B Compliant, 160 cc Engine",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/pop-up/1/E20-ready-OBD2B.jpg?h=306&iar=0&w=544",
+          "description": "The latest innovation in the engine is far ahead of its time."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Single Disc",
+        "sku": "Single-Disc",
+        "price": { "exShowroom": 68000, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "2061 mm",
+            "width": "786 mm",
+            "height": "1100 mm",
+            "wheelbase": "1347 mm",
+            "ground_clearance": "177 mm",
+            "kerb_weight": "138 kg",
+            "seat_length": "594 mm",
+            "seat_height": "796 mm",
+            "fuel_tank": "12 L"
+          },
+          "engine": {
+            "type": "4-Stroke, SI, BS-VI Engine",
+            "displacement": "162.71 cc",
+            "power": "9.7 kW @ 7500 rpm",
+            "torque": "14.8 Nm @ 5250 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "57.3 mm x 63.096 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5"
+          },
+          "tyres": {
+            "front": "80/100-17 M/C 46P, Tubeless",
+            "rear": "130/70-17 M/C 62P, Tubeless",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5 Ah",
+            "headlamp": "LED"
+          }
+        }
+      },
+      {
+        "name": "Double Disc",
+        "sku": "Double-Disc",
+        "price": { "exShowroom": 68000, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "2061 mm",
+            "width": "786 mm",
+            "height": "1100 mm",
+            "wheelbase": "1347 mm",
+            "ground_clearance": "177 mm",
+            "kerb_weight": "140 kg",
+            "seat_length": "594 mm",
+            "seat_height": "796 mm",
+            "fuel_tank": "12 L"
+          },
+          "engine": {
+            "type": "4-Stroke, SI, BS-VI Engine",
+            "displacement": "162.71 cc",
+            "power": "9.7 kW @ 7500 rpm",
+            "torque": "14.8 Nm @ 5250 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "57.3 mm x 63.096 mm",
+            "compression_ratio": "10.0:1",
+            "starting": "Self"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5"
+          },
+          "tyres": {
+            "front": "80/100-17 M/C 46P, Tubeless",
+            "rear": "130/70-17 M/C 62P, Tubeless",
+            "front_brake": "Disc - 276 mm",
+            "rear_brake": "Drum - 220 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5 Ah",
+            "headlamp": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda Unicorn",
+    "slug": "honda-unicorn",
+
+    "category": "motorcycle",
+    "subCategory": "RedWing",
+
+    "description": "A premium and reliable commuter motorcycle, the Honda Unicorn is designed for smooth performance and everyday comfort. Powered by a refined and efficient engine, it offers excellent mileage, low vibrations, and a stable ride quality.",
+
+    "coverImage": "/images/bike/honda-unicorn/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/Brochure/Unicorn_Brochure_updatedNew_25.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#242424",
+        "image": "/images/bike/honda-unicorn/1.png"
+      },
+      {
+        "name": "Matt Axis Grey Metallic",
+        "code": "#949495",
+        "image": "/images/bike/honda-unicorn/2.png"
+      },
+      {
+        "name": "Radiant Red Metallic",
+        "code": "#C90630",
+        "image": "/images/bike/honda-unicorn/3.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "High Ground Clearance",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FUnicorn%2FSafety%2Fhigh-ground-clearance352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Tackles rough roads effortlessly."
+        },
+        {
+          "title": "Side Stand Engine Cut Off",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FUnicorn%2FSafety%2F02-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Prevents ignition with stand engaged."
+        },
+        {
+          "title": "Anti-lock Braking System (ABS)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FUnicorn%2FSafety%2F03-safety.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Take total control of the road."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "New 15W USB-C Port",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/Convenience/01-3-4-Card.jpg?h=560&iar=0&w=996",
+          "description": "Provides convenient charging."
+        },
+        {
+          "title": "Long and Comfortable Seat",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/Convenience/02-3-4-Card.jpg?h=560&iar=0&w=996",
+          "description": "Stay comfortable while riding."
+        },
+        {
+          "title": "Monoshock Suspension",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/Convenience/03-3-4-Card.jpg?h=560&iar=0&w=996",
+          "description": "Maintains stability and comfort."
+        }
+      ],
+      "design": [
+        {
+          "title": "LCD Digital Panel",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/pop-ups/2/banner-fully-digital-panel.jpg?h=623&iar=0&w=1120",
+          "description": "New digital meter which displays all necessary information."
+        },
+        {
+          "title": "LED Headlamp",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/pop-ups/2/LED-headlamp.jpg?h=306&iar=0&w=544",
+          "description": "A sure shot style statement."
+        },
+        {
+          "title": "Premium Front Cowl",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/pop-ups/2/premium-front-cowl.jpg?h=306&iar=0&w=544",
+          "description": "Creates a bulking front stance."
+        }
+      ],
+      "technology": [
+        {
+          "title": "160 cc Engine (OBD2B Compliant)",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/Technology/6-Desk-Column-Vertical-Card.jpg?h=678&iar=0&w=588",
+          "description": "Superior riding experience with unmatchable smoothness."
+        },
+        {
+          "title": "Maintenance Free Battery",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/Technology/Technology-Mainteanance-Free-Battery-1120x623-(1).png?h=623&iar=0&w=1120",
+          "description": "Here's the peace of mind you are looking for."
+        },
+        {
+          "title": "PGM-FI",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/pop-ups/1/PGM-fi.jpg?h=306&iar=0&w=544",
+          "description": "Constantly ensures optimum fuel delivery to the engine."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "",
+        "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "2081 mm",
+            "width": "756 mm",
+            "height": "1103 mm",
+            "wheelbase": "1335 mm",
+            "ground_clearance": "187 mm",
+            "kerb_weight": "139 kg",
+            "seat_length": "715 mm",
+            "seat_height": "798 mm",
+            "fuel_tank": "13 L"
+          },
+          "engine": {
+            "type": "4 Stroke, SI, BS-VI Engine",
+            "displacement": "162.71 cc",
+            "power": "9.7 kW @ 7500 rpm",
+            "torque": "14.8 Nm @ 5250 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "57.3 mm x 63.096 mm",
+            "compression_ratio": "10:1",
+            "starting": "Self/Kick"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "5"
+          },
+          "tyres": {
+            "front": "80/100-18 M/C 47P, Tubeless",
+            "rear": "100/90-18 M/C 56P, Tubeless",
+            "front_brake": "Disc - 240 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+          "suspension": {
+            "frame": "Diamond Type",
+            "front": "Telescopic",
+            "rear": "Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 5 Ah",
+            "headlamp": "LED"
           }
         }
       }
@@ -2514,6 +2719,7 @@
       {
         "name": "NX200",
         "sku": "NX200",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2035 mm",
@@ -2554,6 +2760,326 @@
           },
           "electricals": {
             "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda NX500",
+    "slug": "honda-nx500",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "Its upright adventure-style riding posture and rugged build ensure comfort and confidence across highways, city roads, and off-road trails. A perfect blend of performance, versatility, and touring capability, the Honda NX500 is built for both everyday rides and long-distance adventures.",
+
+    "coverImage": "/images/bike/honda-nx500/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/brochure1/NX500_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Horizon White",
+        "code": "#EBECEC",
+        "image": "/images/bike/honda-nx500/1.png"
+      },
+      {
+        "name": "Mat Gunpowder Black Metallic",
+        "code": "#2E2F2E",
+        "image": "/images/bike/honda-nx500/2.png"
+      },
+      {
+        "name": "Grand Prix Red",
+        "code": "#EA4645",
+        "image": "/images/bike/honda-nx500/3.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Powerful New Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FSafety%2FSafety-Powerful-New-Headlight-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Light that leads, safety that follows."
+        },
+        {
+          "title": "Dual-Channel ABS",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FSafety%2FSafety-Dual-Channel-ABS-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Smart braking meets total control."
+        },
+        {
+          "title": "Suspensions",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FSafety%2FSafety-Suspensions-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Where comfort meets capability."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Fully Connected Colour TFT Display",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/Convenience/Convenience-Fully-Connected-Colour-TFT-Display-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Digital intelligence meets ride control."
+        },
+        {
+          "title": "Massive Fuel Tank",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/Convenience/Convenience-Massive-Fuel-Tank-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Adventure-ready range."
+        },
+        {
+          "title": "Assist and Slipper Clutch",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx500/Convenience/Convenience-Assist-and-Slipper-Clutch-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Eases gear shifting, prevents wheel locking."
+        }
+      ],
+      "design": [
+        {
+          "title": "4-Stroke Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-4-Stroke-Engine-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Command DOHC twin-cylinder sophistication at your fingertips."
+        },
+        {
+          "title": "Liquid-Cooled Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-Liquid-cooled-Engine-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Push harder knowing your engine stays composed."
+        },
+        {
+          "title": "Dual Front Disc Brakes",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-Dual-Front-Disc-Brakes-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Master every moment with premium braking power."
+        },
+        {
+          "title": "1447 mm Wheelbase",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-1447-mm-Wheelbase-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Flow through any situation with natural confidence."
+        },
+        {
+          "title": "6-speed gearbox",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FDesign%2FDesign-6-speed-gearbox-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Access your power exactly how you want it. "
+        }
+      ],
+      "technology": [
+        {
+          "title": "Honda Roadsync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FTechnology%2FTechnology-Honda-Roadsync-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Your digital riding companion."
+        },
+        {
+          "title": "PGM-FI Fuel Injection",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FTechnology%2FTechnology-PGM-FI-Fuel-Injection-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Intelligence meets instant response."
+        },
+        {
+          "title": "Twin-Cylinder Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fnx500%2FTechnology%2FTechnology-Twin-Cylinder-Engine--400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Thrilling and responsive acceleration."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "",
+        "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "2165 mm",
+            "width": "829 mm",
+            "height": "1413 mm",
+            "wheelbase": "1447 mm",
+            "ground_clearance": "181 mm",
+            "kerb_weight": "196 kg",
+            "seat_height": "810 mm",
+            "seat_length": "613 mm",
+            "fuel_tank": "17.5 L"
+          },
+          "engine": {
+            "type": "Liquid-cooled, 4-Stroke, DOHC, Parallel Twin (BS-VI compliant)",
+            "displacement": "471 cc",
+            "power": "35 kW @ 8500 rpm",
+            "torque": "43 Nm @ 6500 rpm",
+            "fuel_system": "PGM-FI"
+          },
+          "transmission": {
+            "clutch": "Multiplate Wet Clutch",
+            "gears": "6-speed Gearbox"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS with ESS",
+            "front": "110/80R 19M/C 59H",
+            "rear": "160/60R 17M/69H",
+            "front_brake": "Dual Disc - 296 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "frame": "Steel Diamond Type",
+            "front": "Showa 41 mm USD Forks",
+            "rear": "Pro-link Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 7.4 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda XL750 Transalp",
+    "slug": "honda-xl750-transalp",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "A powerful and versatile machine, the Honda XL750 Transalp blends performance, durability, and long-distance touring capability—perfect for riders who seek adventure without limits.",
+
+    "coverImage": "/images/bike/honda-xl750-transalp/1.jpeg",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/Brochure/26522_Transalp-Brochure1.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Ross White",
+        "code": "#EDECEC",
+        "image": "/images/bike/honda-xl750-transalp/2.png"
+      },
+      {
+        "name": "Graphite Black",
+        "code": "#3A3A3A",
+        "image": "/images/bike/honda-xl750-transalp/3.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Emergency Stop Signal ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FSafety%2FSafety-Emergency-Stop-Signal-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Brake alert system."
+        },
+        {
+          "title": "ABS (Switchable Rear)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FSafety%2FSafetyABS-Switchable-Rear-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Off-road flexibility."
+        },
+        {
+          "title": "HSTC & Wheelie Control",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FSafety%2FSafetyHSTC--Wheelie-Control-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Intelligent traction."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "850 mm Seat Height",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/comfort/comfort-850-mm-seat-height-1120x623.png?h=623&iar=0&w=1120",
+          "description": "With a balanced 850 mm seat height and 210 kg kerb weight, it’s easy to handle."
+        },
+        {
+          "title": "Upgraded Suspension",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/comfort/comfort-upgraded-suspension-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Upgraded suspension makes rough terrain smooth."
+        },
+        {
+          "title": "Aluminium Swingarm",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/comfort/Comfort-Aluminium-Swingarm-1120x623.png?h=623&iar=0&w=1120",
+          "description": "The aluminium swingarm, paired with Pro-Link, keeps you steady and in control."
+        }
+      ],
+      "design": [
+        {
+          "title": "Dual-LED Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2FDesign-Dual-LED-Headlight-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Africa Twin inspired."
+        },
+        {
+          "title": "Steel Diamond Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2Fdesign-steel-diamond-frame-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Lightweight toughness."
+        },
+        {
+          "title": "Aerodynamic Fairing",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2Fdesign-aerodynamic-fairing-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Adventure-ready."
+        },
+        {
+          "title": "Durabio™ Windscreen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FDesign%2FDesign-Durabio-Windscreen-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The Durabio™ windscreen pushes boundaries."
+        }
+      ],
+      "technology": [
+        {
+          "title": "5-inch TFT Screen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FTechnology%2Ftech-t5-inch-tft-screen-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Connected display."
+        },
+        {
+          "title": "5 Riding Modes",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FTechnology%2FHonda.jpg%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Adaptive performance."
+        },
+        {
+          "title": "755 cc Parallel-Twin",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Ftransalp%2FTechnology%2FTech-755-cc-Parallel-Twin-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "High-performance engine."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "",
+        "sku": "",
+        "price": { "exShowroom": 68000, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "2325 mm",
+            "width": "838 mm",
+            "height": "1455 mm",
+            "wheelbase": "1560 mm",
+            "ground_clearance": "210 mm",
+            "kerb_weight": "210 kg",
+            "seat_height": "850 mm",
+            "seat_length": "613 mm",
+            "fuel_tank": "16.9 L"
+          },
+          "engine": {
+            "type": "4-Stroke, 8-Valves Parallel-Twin UNICAM, Liquid-Cooled",
+            "displacement": "755 cc",
+            "power": "67.5 kW @ 9500 rpm",
+            "torque": "75 Nm @ 7250 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "87 mm x 63.5 mm",
+            "compression_ratio": "11.0 ± 0.2"
+          },
+          "transmission": {
+            "clutch": "Assist & Slipper Clutch",
+            "gears": "6-speed"
+          },
+          "tyres": {
+            "front_caliper": "2 Piston",
+            "rear_caliper": "1 Piston",
+            "front": "90/90-21 M/C 54H",
+            "rear": "150/70R18 M/C 70H",
+            "front_brake": "Double Disc - 310 mm",
+            "rear_brake": "Disc - 256 mm"
+          },
+          "suspension": {
+            "frame": "Steel Diamond Type",
+            "front": "SFF-CA USD™ Forks",
+            "rear": "Monoshock with Pro-Link Linkage"
+          },
+          "electricals": {
+            "battery": "12 V, 9.1 Ah",
             "headlamp": "LED",
             "tail_lamp": "LED",
             "winker": "LED"
@@ -2701,6 +3227,7 @@
       {
         "name": "Hornet 2.0",
         "sku": "HORNET-2.0",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2034 mm",
@@ -2740,6 +3267,301 @@
           },
           "electricals": {
             "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda GoldWing Tour",
+    "slug": "honda-goldwing-tour",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "The Honda Gold Wing Tour delivers unmatched comfort, advanced technology, and smooth performance, making it the ultimate touring motorcycle. With its powerful engine, luxurious features, and superior ride quality, it’s built for riders who seek long-distance journeys with premium comfort and effortless cruising.",
+
+    "coverImage": "/images/bike/honda-goldwing-tour/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing/Brochure/26516_Goldwing-Brochure_R1.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Bordeaux Red Metallic",
+        "code": "#4A2328",
+        "image": "/images/bike/honda-goldwing-tour/1.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Airbag System",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2FSafety-Airbag-System-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Impact protection."
+        },
+        {
+          "title": "6-Piston Brakes",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2Fsafety-6-piston-brakes-352x360-new.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Confident stopping. Brake Type(Front): Double Disc- 230mm with 6-Piston Callibers."
+        },
+        {
+          "title": "Tyre Pressure Monitoring System (TPMS)",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2FSafety-Tyre-Pressure-Monitoring-System-TPMS-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Know on-the-go."
+        },
+        {
+          "title": "Honda Selectable Torque Control (HSTC) ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FSafety%2FSafety-Honda-Selectable-Torque-Control-HSTC-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Smart traction management."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "Pillion Comfort",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing-New/Desktop/Comfort/Comfort-Pillion-Comfort-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Luxury seating."
+        },
+        {
+          "title": "Walking Modes",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing-New/Desktop/Comfort/Comfort-Walking-Modes-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Easy parking."
+        },
+        {
+          "title": "Electronic Suspension",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing-New/Desktop/Comfort/Comfort-Electronic-Suspension-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Its aluminium twin-beam frame leads."
+        }
+      ],
+      "design": [
+        {
+          "title": "Jewel Eye Headlight",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Jewel-Eye-Headlight-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "With a distinct Jewel Eye low-beam light signature created by 10 polished optical lenses and a stereoscopic impression created by high beam, the Gold Wing Tour enhances your riding visibility."
+        },
+        {
+          "title": "Aluminium Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Aluminium-Frame-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Frame Type: Aluminium Double Downdraft."
+        },
+        {
+          "title": "Adjustable Windscreen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Adjustable-Windscreen-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "With an electronically adjustable windscreen that also memorizes your favourite positions and auto-adjusts, the Gold Wing Tour offers excellent wind protection."
+        },
+        {
+          "title": "Large Storage",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FDesign%2FDesign-Large-Storage-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The luggage compartment opens at the push of a button or via the Smart Key, with a smooth action, powered by hydraulic dampers."
+        }
+      ],
+      "technology": [
+        {
+          "title": "7-Inch TFT Display",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FTechnology%2FTechnology-7-Inch-TFT-Display-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Expansive control interface."
+        },
+        {
+          "title": "1833 cc Boxer Engine",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FTechnology%2FTechnology-1833-cc-Boxer-Engine-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Mechanical masterpiece."
+        },
+        {
+          "title": "7-Speed DCT",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FGoldwing-New%2FDesktop%2FTechnology%2FTechnology-7-Speed-DCT--400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Intelligent transmission."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Honda GoldWing Tour",
+        "sku": "Honda-GoldWing-Tour",
+        "price": { "exShowroom": 68000, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "2615 mm",
+            "width": "905 mm",
+            "height": "1430 mm",
+            "wheelbase": "1695 mm",
+            "ground_clearance": "130 mm",
+            "kerb_weight": "393 kg",
+            "seat_height": "745 mm",
+            "fuel_tank": "21 L"
+          },
+          "engine": {
+            "type": "4-Stroke, 24-Valves, 6-Cylinder Boxer UNICAM, Liquid-Cooled",
+            "displacement": "1833 cc",
+            "power": "93 kW @ 5500 rpm",
+            "torque": "170 Nm @ 4500 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "73 mm x 73 mm",
+            "compression_ratio": "10.5 ± 0.2"
+          },
+          "transmission": {
+            "type": "Dual Clutch Transmission (DCT)",
+            "gears": "7-speed"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "130/70R18M/C 63H",
+            "rear": "200/55R16M/C 77H",
+            "front_brake": "Double Disc - 320 mm",
+            "rear_brake": "Disc - 316 mm"
+          },
+          "suspension": {
+            "frame": "Aluminium Twin Tube Frame",
+            "front": "Double Wishbone",
+            "rear": "Pro-Link with Electronic Spring Preload"
+          },
+          "electricals": {
+            "battery": "12 V, 21.1 Ah",
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Honda Hornet 1000 SP",
+    "slug": "honda-hornet-100-sp",
+
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+
+    "description": "The Honda Hornet 1000 SP blends sharp performance, precise handling, and premium components, making it perfect for riders who crave both adrenaline and everyday usability.",
+
+    "coverImage": "/images/bike/honda-hornet-1000-sp/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-1000-SP/pdf/Hornet-1000SP_Brochure.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Igneous Black",
+        "code": "#1F1F1F",
+        "image": "/images/bike/honda-hornet-1000-sp/1.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Dual 310 mm Front Discs ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FSafety%2FSafety-Dual-310-mm-Front-Discs-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Unshakable stopping power."
+        },
+        {
+          "title": "Honda Selectable Torque Control (HSTC) & Wheelie Control ",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FSafety%2FSafety-Honda-Selectable-Torque-Control-HSTC--Wheelie-Control-352x360.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Maintaining balance without killing the thrill."
+        }
+      ],
+      "comfort": [
+        {
+          "title": "SHOWA SFF-BP™ Forks",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-1000-SP/Desktop/Comfort/Comfort-SHOWA-SFF-BP-Forks-1120x623.png?h=623&iar=0&w=1120",
+          "description": "The SHOWA SFF-BP™ Forks provide sharp, sportbike-level precision in the front suspension."
+        },
+        {
+          "title": "Öhlins™ TTX Rear Shock",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-1000-SP/Desktop/Comfort/Comfort-hlins-TTX-Rear-Shock-1120x623.png?h=623&iar=0&w=1120",
+          "description": "Remote reservoir Öhlins™ setup in the rear suspension keeps the bike planted, no matter how hard it's pushed."
+        }
+      ],
+      "design": [
+        {
+          "title": "Twin LED Projectors",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Twin-LED-Projectors-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Its sharp twin LED Projectors command the night while the sharp-edged lighting brings unmatched visibility."
+        },
+        {
+          "title": "Muscular Fuel Tank",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Muscular-Fuel-Tank-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The muscular fuel tank tapers with aggression, giving it a streetfighter stance at every glance."
+        },
+        {
+          "title": "Trellis Rear Subframe",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Trellis-Rear-Subframe-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Complements the aggressive streetfighter aesthetic."
+        },
+        {
+          "title": "Steel Twin-Spar Frame",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FDesign%2FDesign-Steel-Twin-Spar-Frame-1120x623.png%3Fh%3D623%26iar%3D0%26w%3D1120&w=2580&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "The steel twin-spar frame offers balance and control, giving you sharper handling needed to cut through turns."
+        }
+      ],
+      "technology": [
+        {
+          "title": "5-Inch TFT Screen",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FTechnology%2FTech-5-Inch-TFT-Screen-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Smart command centre."
+        },
+        {
+          "title": "1000 cc Inline-Four",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FTechnology%2FTech-1000-cc-Inline-Four-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Untamed beast."
+        },
+        {
+          "title": "Honda RoadSync",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FHornet-1000-SP%2FDesktop%2FTechnology%2FTech-Honda-RoadSync-400x534.png%3Fh%3D534%26iar%3D0%26w%3D400&w=828&q=75&dpl=dpl_7b7R47KPf8mjRCYpL2pQKVe8GtRj",
+          "description": "Seamless ride tech."
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Honda Hornet 1000 SP",
+        "sku": "Honda-Hornet-1000-SP",
+        "price": { "exShowroom": 68000, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "2140 mm",
+            "width": "790 mm",
+            "height": "1085 mm",
+            "wheelbase": "1455 mm",
+            "ground_clearance": "135 mm",
+            "kerb_weight": "212 kg",
+            "seat_height": "809 mm",
+            "fuel_tank": "17 L"
+          },
+          "engine": {
+            "type": "4-Stroke, 16-Valve, Inline-Four DOHC, Liquid-Cooled",
+            "displacement": "999 cc",
+            "power": "115.6 kW @ 11000 rpm",
+            "torque": "107 Nm @ 9000 rpm",
+            "fuel_system": "PGM-FI",
+            "bore_stroke": "76 mm x 55.1 mm",
+            "compression_ratio": "11.7:1"
+          },
+          "transmission": {
+            "clutch": "Assist & Slipper Clutch",
+            "gears": "6-speed Gearbox"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "120/70ZR17 M/C",
+            "rear": "180/55ZR17 M/C",
+            "front_brake": "Dual Disc - 310 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "frame": "Steel Diamond Frame",
+            "front": "SHOWA SFF-BP USD Forks",
+            "rear": "Öhlins TTX Monoshock"
+          },
+          "electricals": {
+            "battery": "12 V, 6.3 Ah",
             "headlamp": "LED",
             "tail_lamp": "LED",
             "winker": "LED"
@@ -2876,6 +3698,7 @@
       {
         "name": "CB300F DLX PRO",
         "sku": "CB300F-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2084 mm",
@@ -2922,6 +3745,7 @@
       {
         "name": "CB300F FLEX FUEL",
         "sku": "CB300F-FLEX-FUEL",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2084 mm",
@@ -3125,6 +3949,7 @@
       {
         "name": "CB350 DLX",
         "sku": "CB350-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -3171,6 +3996,7 @@
       {
         "name": "CB350 DLX PRO",
         "sku": "CB350-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -3374,6 +4200,7 @@
       {
         "name": "CB350C DLX",
         "sku": "CB350C-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -3420,6 +4247,7 @@
       {
         "name": "CB350C DLX PRO",
         "sku": "CB350C-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -3578,6 +4406,7 @@
       {
         "name": "CB350C DLX PRO SPECIAL EDITION",
         "sku": "CB350C-DLX-PRO-SPECIAL-EDITION",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -3761,6 +4590,7 @@
       {
         "name": "DLX",
         "sku": "DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -3814,6 +4644,7 @@
       {
         "name": "DLX PRO",
         "sku": "DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -3867,6 +4698,7 @@
       {
         "name": "DLX PRO CHROME",
         "sku": "DLX-PRO-CHROME",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -4021,6 +4853,7 @@
       {
         "name": "CB350RS DLX",
         "sku": "CB350RS-DLX",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2171 mm",
@@ -4086,6 +4919,7 @@
       {
         "name": "CB350RS DLX PRO",
         "sku": "CB350RS-DLX-PRO",
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "2171 mm",
@@ -4166,11 +5000,6 @@
     "isActive": true,
 
     "colors": [
-      {
-        "name": "Rebel Red Metallic",
-        "code": "#431216",
-        "image": "/images/scooter/honda-activa-125/1.png"
-      },
       {
         "name": "Mat Axis Gray Metallic",
         "code": "#535353",
@@ -4276,7 +5105,7 @@
       {
         "name": "DLX",
         "sku": "DLX",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1850 mm",
@@ -4327,7 +5156,7 @@
       {
         "name": "H-SMART",
         "sku": "H-SMART",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1850 mm",
@@ -4393,11 +5222,6 @@
     "isActive": true,
 
     "colors": [
-      {
-        "name": "Pearl Deep Ground Gray (Emblem)",
-        "code": "#B4B4B4",
-        "image": "/images/scooter/honda-dio-125/1.png"
-      },
       {
         "name": "Mat Marvel Blue Metallic",
         "code": "#0069AF",
@@ -4503,7 +5327,7 @@
       {
         "name": "STD",
         "sku": "STD",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -4554,7 +5378,7 @@
       {
         "name": "H-SMART",
         "sku": "H-SMART",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -4715,7 +5539,7 @@
       {
         "name": "",
         "sku": "",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -4781,11 +5605,6 @@
     "isActive": true,
 
     "colors": [
-      {
-        "name": "Imperial Red Metallic​",
-        "code": "#E42133",
-        "image": "/images/scooter/honda-dio-110/1.png"
-      },
       {
         "name": "Mat Axis Gray Metallic",
         "code": "#383838",
@@ -4896,7 +5715,7 @@
       {
         "name": "Standard",
         "sku": "Standard",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1808 mm",
@@ -4948,7 +5767,7 @@
       {
         "name": "DLX",
         "sku": "DLX",
-
+        "price": { "exShowroom": 68000, "currency": "INR" },
         "specs": {
           "body": {
             "length": "1808 mm",

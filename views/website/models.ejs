@@ -12,11 +12,12 @@
 <div class="container my-5">
 
   <!-- CATEGORY FILTER -->
-  <div class="text-center mb-4">
-    <a href="/motorcycle" class="btn btn-sm me-2 <%= currentCategory==='motorcycle' ? 'btn-dark' : 'btn-outline-dark' %>">Motorcycles</a>
-    <a href="/scooter" class="btn btn-sm me-2 <%= currentCategory==='scooter' ? 'btn-dark' : 'btn-outline-dark' %>">Scooters</a>
-    <a href="/e2w" class="btn btn-sm <%= currentCategory==='e2w' ? 'btn-dark' : 'btn-outline-dark' %>">EV</a>
-  </div>
+ <div class="text-center mb-4">
+  <a href="/models" class="btn btn-sm me-2 <%= currentCategory==='All' ? 'btn-dark' : 'btn-outline-dark' %>">All</a>
+  <a href="/motorcycle" class="btn btn-sm me-2 <%= currentCategory==='motorcycle' ? 'btn-dark' : 'btn-outline-dark' %>">Motorcycles</a>
+  <a href="/scooter" class="btn btn-sm me-2 <%= currentCategory==='scooter' ? 'btn-dark' : 'btn-outline-dark' %>">Scooters</a>
+  <a href="/e2w" class="btn btn-sm <%= currentCategory==='e2w' ? 'btn-dark' : 'btn-outline-dark' %>">EV</a>
+</div>
 
   <!-- SEARCH BAR -->
   <div class="row justify-content-center mb-5">

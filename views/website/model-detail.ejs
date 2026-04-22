@@ -1,6 +1,9 @@
 <%- include("../partials/header") %>
 
   <div class="container vehicle-detail py-5">
+    <!-- <div>
+        <%= model.variants[0].price %>
+      </div> -->
     <div class="row align-items-center g-3 mb-4">
       <div class="col-md-7">
         <nav aria-label="breadcrumb">
@@ -19,10 +22,10 @@
       </div>
 
       <!-- <div>
-        <%= model.variants[0].specs %>
+        <%= model.variants[0].price %>
       </div> -->
 
-      <div class="col-md-5 text-md-end">
+      <!-- <div class="col-md-5 text-md-end">
         <% if (model.brochure) { %>
           <a href="<%= model.brochure %>" target="_blank" class="btn btn-outline-dark rounded-pill px-4 fw-bold">
             <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Brochure
@@ -31,14 +34,14 @@
             <a class="btn btn-danger rounded-pill px-4 fw-bold ms-2" href="/quick-quote">
               <i class="bi bi-chat-dots-fill"></i> Get Quote
             </a>
-      </div>
+      </div> -->
     </div>
 
     <div class="row g-5">
 
       <div class="col-lg-6">
         <div class="main-vehicle-img">
-          <img id="activeVehicleImage" src="<%= model.coverImage || '/images/default-bike.jpg' %>"
+          <img id="activeVehicleImage" src="<%= model.colors[0].image || '/images/default-bike.jpg' %>"
             alt="<%= model.name %>" class="img-fluid transition-img">
         </div>
 
@@ -67,7 +70,12 @@
             <%= model.description %>
           </p>
 
-          <div class="row mt-4 g-3">
+          <h4 class="fw-bold">Ex-Showroom Price</h4>
+          <p class="text-success fw-bold">₹ <span id="variantPrice">
+              <%= model.variants[0].price.exShowroom %>
+            </span>*</p>
+
+          <!-- <div class="row mt-4 g-3">
             <div class="col-6">
               <div class="p-3 border rounded-4 text-center h-100">
                 <span class="fs-3">🛡️</span>
@@ -82,16 +90,23 @@
                 <span class="text-muted extra-small">Best-in-class mileage</span>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="mt-5 d-grid gap-2">
-            <button class="btn btn-dark btn-lg rounded-4 fw-bold py-3" onclick="openEnquiry()">
-              BOOK A TEST RIDE
-            </button>
-            <a href="https://wa.me/919XXXXXXXXX?text=I'm interested in <%= model.name %>" target="_blank"
-              class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3">
-              Chat on WhatsApp
-            </a>
+          <div class="mt-4 d-grid gap-2">
+
+            <% if (model.brochure) { %>
+              <a href="<%= model.brochure %>" target="_blank" class="btn btn-dark btn-lg rounded-4 fw-bold py-3">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                Download Brochure
+              </a>
+              <% } %>
+
+                <a href="https://wa.me/919XXXXXXXXX?text=I'm%20interested%20in%20<%= model.name %>" target="_blank"
+                  class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3">
+                  <i class="bi bi-whatsapp"></i>
+                  Chat on WhatsApp
+                </a>
+
           </div>
         </div>
       </div>
@@ -686,7 +701,7 @@
       element.classList.add('active');
     }
 
-   const variants = <%- JSON.stringify(model.variants) %>;
+    const variants = <%- JSON.stringify(model.variants) %>;
 
     const formatLabel = (str) =>
       str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -718,6 +733,12 @@
     // ✅ Change event
     variantSelect.addEventListener("change", function () {
       const index = this.value;
+
+      const priceSpan = document.getElementById("variantPrice");
+  if (priceSpan && variants[index].price) {
+    priceSpan.innerText = variants[index].price.exShowroom.toLocaleString('en-IN');
+  }
+
       const specData = variants[index].specs;
 
       const visibleSpecs = Object.entries(specData).filter(

@@ -6,7 +6,10 @@ const data = require("../data/bikes.json");
 
 // 🔹 slug helper
 const generateSlug = (name) =>
-  name.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
+  name
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "");
 
 // 🔹 ensure object
 const ensureObject = (val) => {
@@ -82,6 +85,11 @@ const seedData = async () => {
         name: v.name || "",
         sku: v.sku || "",
 
+        price: {
+          exShowroom: Number(v.price?.exShowroom) || 0, // REQUIRED
+          currency: v.price?.currency || "INR",
+        },
+
         specs: {
           performance: buildSectionFromObject(v.specs?.performance),
           body: buildSectionFromObject(v.specs?.body),
@@ -93,10 +101,10 @@ const seedData = async () => {
           electricals: buildSectionFromObject(v.specs?.electricals),
           chassis: buildSectionFromObject(v.specs?.chassis),
           battery_and_charging: buildSectionFromObject(
-            v.specs?.battery_and_charging
+            v.specs?.battery_and_charging,
           ),
           connectivity_features: buildSectionFromObject(
-            v.specs?.connectivity_features
+            v.specs?.connectivity_features,
           ),
         },
       })),

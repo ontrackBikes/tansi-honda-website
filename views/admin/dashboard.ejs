@@ -1,154 +1,106 @@
 <%- include("../partials/header") %>
 
-<div class="container py-4">
+<div class="container py-5">
+  <!-- Header -->
   <div class="d-flex justify-content-between align-items-center mb-5">
+    <!-- Left Side -->
     <div>
       <h2 class="fw-bold mb-1">Admin Dashboard</h2>
-      <p class="text-muted small">Manage your models and system status</p>
+      <p class="text-muted mb-0">Manage your system efficiently</p>
     </div>
-    <a href="/admin/add" class="btn btn-danger px-4 py-2 fw-bold shadow-sm rounded-3">
-      <i class="bi bi-plus-lg me-2"></i>Add New Model
+
+    <!-- Right Side (Logout Button) -->
+    <a
+      href="/admin/logout"
+      class="btn btn-outline-danger px-4 py-2 fw-semibold rounded-3"
+    >
+      <i class="bi bi-box-arrow-right me-2"></i>Logout
     </a>
   </div>
 
-  <div class="row g-4 mb-5">
-    <div class="col-md-4">
-      <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-        <div class="d-flex align-items-center">
-          <div class="stats-icon bg-light-red text-danger me-3">
-            <i class="bi bi-box-seam fs-4"></i>
-          </div>
-          <div>
-            <p class="text-muted small mb-0 fw-semibold">Total Models</p>
-            <h3 class="fw-bold mb-0"><%= models.length %></h3>
+  <!-- Large Cards -->
+  <div class="row g-4">
+    <!-- Models -->
+    <div class="col-md-6">
+      <a href="/admin/models" class="text-decoration-none">
+        <div class="card border-0 shadow-sm rounded-4 p-4 dashboard-card h-100">
+          <div class="d-flex align-items-center h-100">
+            <div class="icon-box bg-light-red text-danger me-4">
+              <i class="bi bi-box-seam"></i>
+            </div>
+
+            <div>
+              <h4 class="fw-bold mb-2 text-dark">Manage Models</h4>
+              <p class="text-muted mb-0">
+                Add, update, and manage all bike models in your system
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
-    <div class="col-md-4">
-      <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-        <div class="d-flex align-items-center">
-          <div class="stats-icon bg-light-success text-success me-3">
-            <i class="bi bi-check-circle fs-4"></i>
-          </div>
-          <div>
-            <p class="text-muted small mb-0 fw-semibold">Active Models</p>
-            <h3 class="fw-bold mb-0"><%= models.filter(m => m.isActive).length %></h3>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Service Appointments -->
+    <div class="col-md-6">
+      <a href="/admin/services" class="text-decoration-none">
+        <div class="card border-0 shadow-sm rounded-4 p-4 dashboard-card h-100">
+          <div class="d-flex align-items-center h-100">
+            <div class="icon-box bg-light-success text-success me-4">
+              <i class="bi bi-tools"></i>
+            </div>
 
-    <div class="col-md-4">
-      <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-        <div class="d-flex align-items-center">
-          <div class="stats-icon bg-light-secondary text-secondary me-3">
-            <i class="bi bi-pause-circle fs-4"></i>
-          </div>
-          <div>
-            <p class="text-muted small mb-0 fw-semibold">Inactive</p>
-            <h3 class="fw-bold mb-0"><%= models.filter(m => !m.isActive).length %></h3>
+            <div>
+              <h4 class="fw-bold mb-2 text-dark">Service Appointments</h4>
+              <p class="text-muted mb-0">
+                View, track, and manage all service bookings
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-    <div class="card-header bg-white border-0 p-4">
-      <h5 class="fw-bold mb-0">All Models</h5>
-    </div>
-    <div class="table-responsive">
-      <table class="table table-hover align-middle mb-0">
-        <thead class="bg-light">
-          <tr>
-            <th class="ps-4 border-0 text-muted small text-uppercase py-3">Product</th>
-           
-            <th class="border-0 text-muted small text-uppercase py-3 text-center">Status</th>
-            <th class="pe-4 border-0 text-muted small text-uppercase py-3 text-end">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% if (models.length === 0) { %>
-            <tr>
-              <td colspan="4" class="text-center py-5 text-muted">No models found in database</td>
-            </tr>
-          <% } %>
-
-          <% models.forEach(m => { %>
-            <tr class="table-row">
-              <td class="ps-4 py-3">
-                <div class="d-flex align-items-center">
-                  <img 
-                    src="<%= m.coverImage || '/images/default-bike.jpg' %>" 
-                    alt="Model image"
-                    class="rounded-3 shadow-sm me-3"
-                    style="width: 60px; height: 45px; object-fit: cover;"
-                  >
-                  <span class="fw-bold text-dark"><%= m.name %></span>
-                </div>
-              </td>
-             
-              <td class="text-center">
-                <% if (m.isActive) { %>
-                  <span class="badge rounded-pill bg-light-success text-success px-3">Active</span>
-                <% } else { %>
-                  <span class="badge rounded-pill bg-light-secondary text-secondary px-3">Inactive</span>
-                <% } %>
-              </td>
-
-              <td class="pe-4 text-end">
-               <div class="d-flex align-items-end justify-content-end gap-2">
-                 <a href="/admin/edit/<%= m._id %>" class="btn btn-sm btn-outline-warning border-0 me-1 action-btn">
-                  <i class="bi bi-pencil-square"></i>
-                </a>
-                <form action="/admin/delete/<%= m._id %>" method="POST" class="d-inline" onsubmit="return confirm('Delete this model?')">
-                  <button class="btn btn-sm btn-outline-danger border-0 action-btn">
-                    <i class="bi bi-trash3"></i> 
-                  </button>
-                </form>
-               </div>
-              </td>
-            </tr>
-          <% }) %>
-        </tbody>
-      </table>
+      </a>
     </div>
   </div>
 </div>
 
 <style>
-  body { background-color: #f8f9fa;  }
-  
-  /* Stats Cards Custom Colors */
-  .bg-light-red { background-color: rgba(230, 0, 18, 0.1); }
-  .bg-light-success { background-color: rgba(25, 135, 84, 0.1); }
-  .bg-light-secondary { background-color: rgba(108, 117, 125, 0.1); }
+  body {
+    background-color: #f8f9fa;
+  }
 
-  .stats-icon {
-    width: 50px;
-    height: 50px;
+  /* Dashboard Cards */
+  .dashboard-card {
+    min-height: 160px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Icon Box */
+  .icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
   }
 
-  .stats-card { transition: transform 0.2s; }
-  .stats-card:hover { transform: translateY(-5px); }
+  .icon-box i {
+    font-size: 28px;
+  }
 
-  /* Table Customization */
-  .table-row { transition: background-color 0.2s; }
-  .table-row:hover { background-color: #fcfcfc; }
-  
-  .btn-danger { background-color: #e60012; border: none; }
-  .btn-danger:hover { background-color: #c40010; }
+  /* Colors */
+  .bg-light-red {
+    background: rgba(230, 0, 18, 0.1);
+  }
 
-  .action-btn { font-size: 1.1rem; padding: 5px 10px; border-radius: 8px; }
-  .action-btn:hover { background-color: #f8f9fa; }
-
-  .badge { font-weight: 600; font-size: 0.75rem; letter-spacing: 0.5px; }
+  .bg-light-success {
+    background: rgba(25, 135, 84, 0.1);
+  }
 </style>
 
 <%- include("../partials/footer") %>
