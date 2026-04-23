@@ -5476,6 +5476,163 @@
   },
 
   {
+    "name": "Honda Activa 125 Anniversary Edition",
+    "slug": "honda-activa-125-anniversary-edition",
+
+    "category": "scooter",
+    "subCategory": "",
+
+    "description": "The Honda Activa 125 Anniversary Edition brings premium styling and refined performance with its fuel-efficient 125cc PGM-FI engine.",
+
+    "coverImage": "/images/scooter/honda-activa-125-anniversary-edition/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa125-Anniversary-Edition/Calculator/activa125_aniversary_edition.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Matte Steel Black Metallic",
+        "code": "#383837",
+        "image": "/images/scooter/honda-activa-125-anniversary-edition/1.png"
+      },
+      {
+        "name": "Pearl Siren Blue",
+        "code": "#273A56",
+        "image": "/images/scooter/honda-activa-125-anniversary-edition/2.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "SIDE STAND ENGINE CUT-OFF",
+          "description": "When the side stand is open the side stand engine Cut-off prevents the engine from starting.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FActiva-110-Edition%2FSafety%2FSafety---Activa-110_Side-Stand-352_360-copy.jpg%3Fh%3D1500%26iar%3D0%26w%3D1467&w=2580&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
+        },
+        {
+          "title": "Fuel-Efficient Tubeless Tyres",
+          "description": "Enhanced grip, better mileage, and safer rides with Honda’s advanced technology.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva125-Anniversary-Edition%2FSafety%2FSafety-Page-352x360px-01.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
+        },
+        {
+          "title": "DISC BRAKE: More Power, More Safety",
+          "description": "With a powerful 190 mm disc brake, the Activa 125 DLX give you better control, balanced braking, and enhanced safety to smarter rider.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva125-Anniversary-Edition%2FSafety%2FSafety-Page-352x360px-02.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
+        }
+      ],
+
+      "comfort": [
+        {
+          "title": "Open Glove Box",
+          "description": "A spacious open glove box provides extra storage for essentials.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Comfort/Comfort---Activa-125_1120_623-USB.jpg?h=1731&iar=0&w=3111"
+        },
+        {
+          "title": "15W USB-C Port",
+          "description": "Charge your smartphone, earphones, power bank on-the-go",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Comfort/Comfort---Activa-125_1120_623---15W-USB-C-Port.jpg?h=1731&iar=0&w=3111"
+        },
+        {
+          "title": "Double Lid External Fuel Fill",
+          "description": "Refuel while seated, thanks to the convenience of double-lid fuel access.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Comfort/Comfort---Activa-125_1120_623-Double-Lid-External-Fuel-Fill.jpg?h=1731&iar=0&w=3111"
+        }
+      ],
+
+      "design": [
+        {
+          "title": "Anniversary Graphics and special black chrome",
+          "description": "Featuring a sleek black chrome with exclusive anniversary graphic",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Design/Design----Outside-Page-555x555px-01.png?h=555&iar=0&w=555"
+        },
+        {
+          "title": "25 Year​ Anniversary Logo",
+          "description": "Aesthetically designed 25 Years logo on the front",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Design/Design----Outside-Page-555x555px-02.png?h=555&iar=0&w=555"
+        },
+        {
+          "title": "Front and Rear Alloy Wheels",
+          "description": "Activa 125 with Pyrite Brown Metallic alloy wheels",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Design/Design----Outside-Page-555x555px-03.png?h=555&iar=0&w=555"
+        }
+      ],
+
+      "technology": [
+        {
+          "title": "TFT Meter",
+          "description": "High-resolution TFT display for real-time information.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Technology/Technology----Activa-125_588_678-Meter-Tech-Cover.jpg?h=1883&iar=0&w=1633"
+        },
+        {
+          "title": "Advanced Idling Stop System",
+          "description": "Extra fuel saving in heavy traffic.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Technology/Technology----Activa-125_1120_623-ISS.jpg?h=1731&iar=0&w=3111"
+        },
+        {
+          "title": "PGM-FI Technology​",
+          "description": "Intelligent PGM-FI system for optimum air-fuel ratio",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa125-Anniversary-Edition/Technology/PGMFI.jpg?h=1731&iar=0&w=3111"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Anniversary Edition",
+        "sku": "ANNIVERSARY-EDITION",
+        "price": { "exShowroom": 92817, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "1850 mm",
+            "width": "707 mm",
+            "height": "1165 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "162 mm",
+            "seat_length": "692 mm",
+            "kerb_weight": "Dlx - 107 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "123.92 cc",
+            "max_power": "6.20 kW @ 6500 rpm",
+            "max_torque": "10.5 Nm @ 5000 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore_stroke": "50.0 mm X 63.1 mm",
+            "compression_ratio": "10.0 : 1",
+            "air_filter_type": "Viscous Paper Filter",
+            "starting": "Dlx - Kick/Self"
+          },
+
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch Dry Type"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J",
+            "rear": "90/100-10 53J",
+            "front_brake": "Disc - 190 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Under Bone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Spring Loaded Hydraulic"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah",
+            "headlamp": "LED, DC"
+          }
+        }
+      }
+    ]
+  },
+
+  {
     "name": "Honda Dio 125",
     "slug": "honda-dio-125",
 
