@@ -593,7 +593,7 @@
     "slug": "honda-activa-110",
 
     "category": "scooter",
-    "subCategory": "RedWing",
+    "subCategory": "",
 
     "description": "The Honda Activa 110 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 110cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
 
@@ -861,6 +861,164 @@
           "electricals": {
             "battery": "12 V, 5.0 Ah (MF)",
             "headlamp": "LED"
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "name": "Honda Activa 110 Anniversary Edition",
+    "slug": "honda-activa-110-anniversary-edition",
+
+    "category": "scooter",
+    "subCategory": "",
+
+    "description": "The Honda Activa 110 Anniversary Edition adds exclusive styling and premium touches to India’s most trusted scooter, powered by a smooth and fuel-efficient 110cc PGM-FI engine.",
+
+    "coverImage": "/images/scooter/honda-activa-110-anniversary-edition/1.png",
+
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa125-Anniversary-Edition/Brochure/activa110-anniversary-edition-1.pdf",
+
+    "isActive": true,
+
+    "colors": [
+      {
+        "name": "Pearl Siren Blue",
+        "code": "#273A56",
+        "image": "/images/scooter/honda-activa-110-anniversary-edition/1.png"
+      },
+      {
+        "name": "Matte Steel Black Metallic",
+        "code": "#383837",
+        "image": "/images/scooter/honda-activa-110-anniversary-edition/2.png"
+      }
+    ],
+
+    "features": {
+      "safety": [
+        {
+          "title": "Side Stand Engine Cut-Off",
+          "description": "When the side stand is open the side stand engine Cut-off prevents the engine from starting.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FActiva-110-Edition%2FSafety%2FSafety---Activa-110_Side-Stand-352_360-copy.jpg%3Fh%3D1500%26iar%3D0%26w%3D1467&w=2580&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
+        },
+        {
+          "title": "Telescopic Front Suspension",
+          "description": "Every ride made extra comfortable with telescopic front suspension.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FScooter%2Factiva110-anniversary%2FSafety%2FSafety---Activa-110_Suspension-352_360.jpg%3Fh%3D1500%26iar%3D0%26w%3D1467&w=2580&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
+        },
+        {
+          "title": "Fuel-Efficient Tubeless Tyres",
+          "description": "Enhanced grip, better mileage, and safer rides with Honda’s advanced technology.",
+          "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FScooter%2Factiva110-anniversary%2FSafety%2FSafety---Activa-110_Rear-Tyre-352_360-copy-3.jpg%3Fh%3D1500%26iar%3D0%26w%3D1467&w=2580&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
+        }
+      ],
+
+      "comfort": [
+        {
+          "title": "Open Glove Box",
+          "description": "A spacious open glove box provides extra storage for essentials.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/Comfort/Comfort---Activa-110_1120_623-USB.jpg?h=2596&iar=0&w=4667"
+        },
+        {
+          "title": "15W USB-C Port",
+          "description": "Charge your smartphone, earphones, power bank on-the-go",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/Comfort/Comfort---Activa-110_1120_623---15W-USB-C-Port.jpg?h=2596&iar=0&w=4667"
+        },
+        {
+          "title": "Double Lid External Fuel Fill",
+          "description": "Refuel while seated, thanks to the convenience of double-lid fuel access.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/Comfort/Comfort---Activa-110_1120_623-Double-Lid-External-Fuel-Fill.jpg?h=2596&iar=0&w=4667"
+        }
+      ],
+
+      "design": [
+        {
+          "title": "Anniversary Graphics and special black chrome​",
+          "description": "Featuring a sleek black chrome with exclusive anniversary graphic",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/style/Design---Activa-110_555_555-Anniversary-Graphics-and-special-black-chrome.jpg?h=2313&iar=0&w=2313"
+        },
+        {
+          "title": "25 Year​ Anniversary Logo",
+          "description": "Aesthetically designed 25 Years logo on the front",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/style/Design---Activa-110_555_555-Anniversary-logo.jpg?h=2313&iar=0&w=2313"
+        },
+        {
+          "title": "Front and Rear Alloy Wheels",
+          "description": "Activa with Pyrite Brown Met alloy wheels",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/style/Design---Activa-110_555_555-Alloy-Wheel.jpg?h=2313&iar=0&w=2313"
+        }
+      ],
+
+      "technology": [
+        {
+          "title": "TFT Screen Display​",
+          "description": "High-resolution TFT display for real-time information.",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/Technology/Technology---Activa-110_588_678-Meter-Tech-Cover.jpg?h=2825&iar=0&w=2450"
+        },
+        {
+          "title": "Idling Stop System",
+          "description": "Shuts off the engine automatically when you stop",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/Technology/Technology---Activa-110_1120_623-ISS.jpg?h=2596&iar=0&w=4667"
+        },
+        {
+          "title": "PGM-FI Technology​",
+          "description": "Intelligent PGM-FI system for optimum air-fuel ratio",
+          "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/Technology/Technology---Activa-110_1120_623-PGMFI-Inside-Page.jpg?h=2596&iar=0&w=4667"
+        }
+      ]
+    },
+
+    "variants": [
+      {
+        "name": "Anniversary Edition",
+        "sku": "ANNIVERSARY-EDITION",
+        "price": { "exShowroom": 87785, "currency": "INR" },
+        "specs": {
+          "body": {
+            "length": "1833 mm",
+            "width": "677 mm",
+            "height": "1165 mm",
+            "wheelbase": "1260 mm",
+            "ground_clearance": "162 mm",
+            "seat_length": "692 mm",
+            "seat_height": "764 mm",
+            "kerb_weight": "Dlx - 106 kg",
+            "fuel_tank_capacity": "5.3 L"
+          },
+
+          "engine": {
+            "type": "4 stroke, SI Engine",
+            "displacement": "109.51 cc",
+            "max_power": "5.88 kW @ 8000 rpm",
+            "max_torque": "9.05 Nm @ 5500 rpm",
+            "fuel_system": "PGM-Fi",
+            "bore_stroke": "47.10 mm X 63.1 mm",
+            "compression_ratio": "10.0 : 1",
+            "air_filter_type": "Viscous Paper Filter",
+            "starting": "Dlx. - Self/Kick"
+          },
+
+          "transmission": {
+            "clutch": "Automatic (V-Matic)"
+          },
+
+          "tyres": {
+            "front": "90/90-12 54J (Tubeless)",
+            "rear": "90/100-10 53J (Tubeless)",
+            "front_brake": "Drum - 130 mm",
+            "rear_brake": "Drum - 130 mm"
+          },
+
+          "suspension": {
+            "frame": "Under Bone",
+            "front": "Telescopic",
+            "rear": "3 Step Adjustable Unit Swing"
+          },
+
+          "electricals": {
+            "battery": "12 V, 5.0 Ah (MF)",
+            "headlamp": "Dlx. - LED"
           }
         }
       }
