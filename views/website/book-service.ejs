@@ -79,122 +79,126 @@
   </div>
 </section>
 
-<div
-  class="container card h-100 border-1 shadow-sm hover-shadow rounded-4 overflow-hidden my-4"
->
-  <h3 class="card-title fw-bold mb-1">Service Appointment</h3>
-  <p class="text-muted mb-0">Fill the form and we’ll get back to you</p>
-
-  <hr />
-
-  <form id="serviceForm" action="/create-appointment" method="POST">
-    <div class="row g-3">
-      <!-- Name -->
-      <div class="col-md-6">
-        <label for="name" class="form-label"
-          >Name<span class="text-danger">*</span></label
-        >
-        <input
-          id="name"
-          type="text"
-          name="name"
-          class="form-control"
-          placeholder="Your Name"
-          required
-          pattern="^[a-zA-Z\s]+$"
-          title="Only letters and spaces allowed"
-        />
-      </div>
-
-      <!-- Email -->
-      <div class="col-md-6">
-        <label for="email" class="form-label"
-          >E-Mail<span class="text-danger">*</span></label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          name="email"
-          placeholder="you@example.com"
-          required
-        />
-      </div>
-
-      <!-- Mobile -->
-      <div class="col-md-6">
-        <label for="mobile" class="form-label"
-          >Mobile Number <span class="text-danger">*</span></label
-        >
-        <input
-          type="tel"
-          class="form-control"
-          id="mobile"
-          name="mobile"
-          placeholder="10-digit Mobile Number"
-          pattern="^\d{10}$"
-          required
-        />
-      </div>
-
-      <!-- Model to be serviced -->
-      <div class="col-md-6">
-        <label for="model" class="form-label"
-          >Model to be serviced <span class="text-danger">*</span></label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="model"
-          name="model"
-          placeholder="Model to be serviced"
-          required
-          pattern="^[a-zA-Z\s]+$"
-          title="Only letters and spaces allowed"
-        />
-      </div>
-
-      <!-- Service Centre Location -->
-      <div class="col-md-6">
-        <label for="serviceCentre" class="form-label"
-          >Preferred Service Centre Location
-          <span class="text-danger">*</span></label
-        >
-        <select
-          class="form-select"
-          id="serviceCentre"
-          name="serviceCentre"
-          required
-        >
-          <option value="" disabled selected>Select Location</option>
-          <option value="Hoodi">Hoodi</option>
-          <option value="Marathahalli">Marathahalli</option>
-          <option value="Gunjur">Gunjur</option>
-          <option value="Panathur">Panathur</option>
-          <option value="Seegehalli">Seegehalli</option>
-          <option value="HRBR Layout">HRBR Layout</option>
-          <option value="Ramagondanahalli">Ramagondanahalli</option>
-        </select>
-      </div>
-      <!-- Preferred Date -->
-      <div class="col-md-6">
-        <label for="preferredDate" class="form-label">Preferred Date </label>
-        <input
-          type="date"
-          class="form-control"
-          id="preferredDate"
-          name="preferredDate"
-        />
-      </div>
-
-      <!-- Submit -->
-      <div class="col-12 text-end mt-3">
-        <button type="submit" class="btn btn-danger btn-lg">
-          Book Appointment
-        </button>
-      </div>
+<div class="container my-4">
+  <div class="card border-1 shadow-sm rounded-4 overflow-hidden h-100">
+    <div class="card-header bg-white border-1 p-4 pb-0">
+      <h3 class="card-title fw-bold mb-1">Service Appointment</h3>
+      <p class="text-muted small">Fill the form and we’ll get back to you</p>
     </div>
-  </form>
+
+    <div class="card-body p-4">
+      <form id="serviceForm" action="/create-appointment" method="POST">
+        <div class="row g-3">
+          <!-- Name -->
+          <div class="col-md-6">
+            <label for="name" class="form-label"
+              >Name<span class="text-danger">*</span></label
+            >
+            <input
+              id="name"
+              type="text"
+              name="name"
+              class="form-control"
+              placeholder="Your Name"
+              required
+              pattern="^[a-zA-Z\s]+$"
+              title="Only letters and spaces allowed"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="col-md-6">
+            <label for="email" class="form-label"
+              >E-Mail<span class="text-danger">*</span></label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <!-- Mobile -->
+          <div class="col-md-6">
+            <label for="mobile" class="form-label"
+              >Mobile Number <span class="text-danger">*</span></label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              id="mobile"
+              name="mobile"
+              placeholder="10-digit Mobile Number"
+              pattern="^\d{10}$"
+              required
+            />
+          </div>
+
+          <!-- Model to be serviced -->
+          <div class="col-md-6">
+            <label for="model" class="form-label"
+              >Model to be serviced <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="model"
+              name="model"
+              placeholder="Model to be serviced"
+              required
+              pattern="^[a-zA-Z\s]+$"
+              title="Only letters and spaces allowed"
+            />
+          </div>
+
+          <!-- Service Centre Location -->
+          <div class="col-md-6">
+            <label for="serviceCentre" class="form-label"
+              >Preferred Service Centre Location
+              <span class="text-danger">*</span></label
+            >
+            <select
+              class="form-select"
+              id="serviceCentre"
+              name="serviceCentre"
+              required
+            >
+              <option value="" disabled selected>Select Location</option>
+              <option value="Hoodi">Hoodi</option>
+              <option value="Marathahalli">Marathahalli</option>
+              <option value="Gunjur">Gunjur</option>
+              <option value="Panathur">Panathur</option>
+              <option value="Seegehalli">Seegehalli</option>
+              <option value="HRBR Layout">HRBR Layout</option>
+              <option value="Ramagondanahalli">Ramagondanahalli</option>
+            </select>
+          </div>
+          <!-- Preferred Date -->
+          <div class="col-md-6">
+            <label for="preferredDate" class="form-label"
+              >Preferred Date
+            </label>
+            <input
+              type="date"
+              class="form-control"
+              id="preferredDate"
+              name="preferredDate"
+            />
+          </div>
+
+          <!-- Submit -->
+          <div class="col-12 text-end mt-4">
+            <button type="submit" class="btn btn-danger btn-lg">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
 <style>
