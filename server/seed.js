@@ -86,7 +86,12 @@ const seedData = async () => {
         sku: v.sku || "",
 
         price: {
-          exShowroom: Number(v.price?.exShowroom) || 0, // REQUIRED
+          exShowroom: Number(v.price?.exShowroom) || 0,
+          roadTaxAndReg: Number(v.price?.roadTaxAndReg) || 0,
+          insuranceBase: Number(v.price?.insuranceBase) || 0,
+          onRoadBase: Number(v.price?.onRoadBase) || 0,
+          zeroDepPremium: Number(v.price?.zeroDepPremium) || 0,
+          finalOnRoad: Number(v.price?.finalOnRoad) || 0,
           currency: v.price?.currency || "INR",
         },
 

@@ -4,7 +4,7 @@
     <!-- <div>
         <%= model.variants[0].price %>
       </div> -->
-    <div class="row align-items-center g-3 mb-4">
+    <div class="row align-items-start g-3 mb-4">
       <div class="col-md-7">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb mb-2">
@@ -25,16 +25,17 @@
         <%= model.variants[0].price %>
       </div> -->
 
-      <!-- <div class="col-md-5 text-md-end">
+      <div class="col-md-5 text-md-end">
         <% if (model.brochure) { %>
-          <a href="<%= model.brochure %>" target="_blank" class="btn btn-outline-dark rounded-pill px-4 fw-bold">
+          <a onclick="openLeadModal('Download Brochure')" target="_blank"
+            class="btn btn-dark rounded-pill px-4 fw-bold">
             <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Brochure
           </a>
           <% } %>
-            <a class="btn btn-danger rounded-pill px-4 fw-bold ms-2" href="/quick-quote">
+            <!-- <a class="btn btn-danger rounded-pill px-4 fw-bold ms-2" href="/quick-quote">
               <i class="bi bi-chat-dots-fill"></i> Get Quote
-            </a>
-      </div> -->
+            </a> -->
+      </div>
     </div>
 
     <div class="row g-5">
@@ -70,43 +71,63 @@
             <%= model.description %>
           </p>
 
-          <h4 class="fw-bold">Ex-Showroom Price</h4>
+          <!-- <h4 class="fw-bold">Ex-Showroom Price</h4>
           <p class="text-success fw-bold">₹ <span id="variantPrice">
               <%= model.variants[0].price.exShowroom %>
-            </span>*</p>
-
-          <!-- <div class="row mt-4 g-3">
-            <div class="col-6">
-              <div class="p-3 border rounded-4 text-center h-100">
-                <span class="fs-3">🛡️</span>
-                <p class="small fw-bold mb-0 mt-1">Safety First</p>
-                <span class="text-muted extra-small">Advanced Braking</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="p-3 border rounded-4 text-center h-100">
-                <span class="fs-3">⛽</span>
-                <p class="small fw-bold mb-0 mt-1">Efficiency</p>
-                <span class="text-muted extra-small">Best-in-class mileage</span>
-              </div>
-            </div>
-          </div> -->
+            </span>*</p> -->
 
           <div class="mt-4 d-grid gap-2">
+            <!-- <% if (model.brochure) { %>
+              <button onclick="openLeadModal('Download Brochure')" class="btn btn-dark btn-lg rounded-4 fw-bold py-3">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Brochure
+              </button>
+              <% } %> -->
 
-            <% if (model.brochure) { %>
-              <a href="<%= model.brochure %>" target="_blank" class="btn btn-dark btn-lg rounded-4 fw-bold py-3">
-                <i class="bi bi-file-earmark-arrow-down-fill"></i>
-                Download Brochure
-              </a>
-              <% } %>
+            <button onclick="openLeadModal('Get Price')"
+              class="btn btn-outline-danger btn-lg rounded-4 fw-bold py-3 shadow-sm">
+              <i class="bi bi-currency-rupee me-2"></i> Get Price Details
+            </button>
+          </div>
 
-              <a href="https://wa.me/919845349052?text=Hi%20Tansi%20Honda!%20I%20saw%20the%20<%= model.name %>%20on%20your%20website%20and%20would%20love%20to%20know%20the%20on-road%20price%20and%20offers." 
-                target="_blank"
-                class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3 shadow-sm hover-lift">
-                <i class="bi bi-whatsapp me-2"></i>
-                Chat on WhatsApp
-             </a>   
+          <div class="modal fade" id="leadModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content rounded-4 shadow-lg border-0">
+                <div class="modal-header border-0 pb-0">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-0 text-center">
+                  <h3 class="fw-bold mb-1" id="modalTitle">Get Price Details</h3>
+                  <p class="text-muted small mb-4">Enter your details to receive the full quote on WhatsApp.</p>
+
+                  <form id="leadForm">
+                    <input type="hidden" id="formSource" value="Get Price">
+                    <div class="mb-3">
+                      <input type="text" id="userName" class="form-control form-control-lg rounded-3 fs-6"
+                        placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" id="userEmail" class="form-control form-control-lg rounded-3 fs-6"
+                        placeholder="Email Address" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="tel" id="userPhone" class="form-control form-control-lg rounded-3 fs-6"
+                        placeholder="WhatsApp Number" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-lg w-100 rounded-3 fw-bold">
+                      Submit & Continue
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 d-grid gap-2">
+            <a href="https://wa.me/919845349052?text=Hi%20Tansi%20Honda!%20I%20saw%20the%20<%= model.name %>%20on%20your%20website%20and%20would%20love%20to%20know%20the%20on-road%20price%20and%20offers."
+              target="_blank" class="btn btn-outline-success btn-lg rounded-4 fw-bold py-3 shadow-sm hover-lift">
+              <i class="bi bi-whatsapp me-2"></i>
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -725,73 +746,132 @@
 
     const variantSelect = document.getElementById("variantSelect");
 
-    // ✅ Set dropdown value
     if (variantSelect) {
+      // set selected dropdown
       variantSelect.value = selectedIndex;
-    }
 
-    // ✅ Change event
-    variantSelect.addEventListener("change", function () {
-      const index = this.value;
+      // change event
+      variantSelect.addEventListener("change", function () {
+        const index = this.value;
 
-      const priceSpan = document.getElementById("variantPrice");
-  if (priceSpan && variants[index].price) {
-    priceSpan.innerText = variants[index].price.exShowroom.toLocaleString('en-IN');
-  }
-
-      const specData = variants[index].specs;
-
-      const visibleSpecs = Object.entries(specData).filter(
-        ([_, group]) => group.show === true
-      );
-
-      let tabsHTML = "";
-      let contentHTML = "";
-
-      visibleSpecs.forEach(([key, group], i) => {
-        tabsHTML += `
-      <li class="nav-item ms-2">
-        <button class="nav-link ${i === 0 ? "active" : ""}" 
-          data-bs-toggle="pill" 
-          data-bs-target="#tab-${i}">
-          ${formatLabel(key)}
-        </button>
-      </li>
-    `;
-
-        let itemsHTML = "";
-
-        if (group.items && group.items.length > 0) {
-          group.items.forEach(item => {
-            const itemKey = Object.keys(item)[0];
-            const itemValue = item[itemKey];
-
-            itemsHTML += `
-          <div class="d-flex justify-content-between py-2 border-bottom">
-            <span class="text-muted small">${formatLabel(itemKey)}</span>
-            <span class="fw-bold">${itemValue || "-"}</span>
-          </div>
-        `;
-          });
-        } else {
-          itemsHTML = `<div class="text-muted">No data available</div>`;
+        const priceSpan = document.getElementById("variantPrice");
+        if (priceSpan && variants[index].price) {
+          priceSpan.innerText = variants[index].price.exShowroom.toLocaleString('en-IN');
         }
 
-        contentHTML += `
-      <div class="tab-pane fade ${i === 0 ? "show active" : ""}" id="tab-${i}">
-        ${itemsHTML}
-      </div>
-    `;
+        const specData = variants[index].specs || {};
+
+        const visibleSpecs = Object.entries(specData).filter(
+          ([_, group]) => group.show === true
+        );
+
+        let tabsHTML = "";
+        let contentHTML = "";
+
+        visibleSpecs.forEach(([key, group], i) => {
+          tabsHTML += `
+        <li class="nav-item ms-2">
+          <button class="nav-link ${i === 0 ? "active" : ""}" 
+            data-bs-toggle="pill" 
+            data-bs-target="#tab-${i}">
+            ${formatLabel(key)}
+          </button>
+        </li>
+      `;
+
+          let itemsHTML = "";
+
+          if (group.items && group.items.length > 0) {
+            group.items.forEach(item => {
+              const itemKey = Object.keys(item)[0];
+              const itemValue = item[itemKey];
+
+              itemsHTML += `
+            <div class="d-flex justify-content-between py-2 border-bottom">
+              <span class="text-muted small">${formatLabel(itemKey)}</span>
+              <span class="fw-bold">${itemValue || "-"}</span>
+            </div>
+          `;
+            });
+          } else {
+            itemsHTML = `<div class="text-muted">No data available</div>`;
+          }
+
+          contentHTML += `
+        <div class="tab-pane fade ${i === 0 ? "show active" : ""}" id="tab-${i}">
+          ${itemsHTML}
+        </div>
+      `;
+        });
+
+        document.getElementById("specTabs").innerHTML = tabsHTML;
+        document.getElementById("specTabsContent").innerHTML = contentHTML;
       });
 
-      document.getElementById("specTabs").innerHTML = tabsHTML;
-      document.getElementById("specTabsContent").innerHTML = contentHTML;
-    });
-
-    // ✅ Trigger on load
-    if (variantSelect) {
+      // trigger on page load
       variantSelect.dispatchEvent(new Event("change"));
     }
+
+
+    // Function to open modal and set source
+    function openLeadModal(source) {
+      document.getElementById('formSource').value = source;
+      document.getElementById('modalTitle').innerText = source;
+      const myModal = new bootstrap.Modal(document.getElementById('leadModal'));
+      myModal.show();
+    }
+
+    // Form Submission Logic
+    document.getElementById('leadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = e.target.querySelector('button');
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = "Loading...";
+      submitBtn.disabled = true;
+
+      // Identify source and variant
+      const currentSource = document.getElementById('formSource').value;
+      const selectedVariantIdx = document.getElementById('variantSelect')?.value || 0;
+
+      const leadData = {
+        name: document.getElementById('userName').value,
+        email: document.getElementById('userEmail').value,
+        phone: document.getElementById('userPhone').value,
+        modelName: "<%= model.name %>",
+        variantName: variants[selectedVariantIdx].name,
+        source: currentSource
+      };
+
+      try {
+        const response = await fetch('/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(leadData)
+        });
+
+        if (response.ok) {
+          submitBtn.innerText = "Sending to your WhatsApp...";
+          submitBtn.classList.replace('btn-danger', 'btn-success');
+
+          setTimeout(() => {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('leadModal'));
+            modal.hide();
+
+            // Reset for next click
+            submitBtn.innerText = originalText;
+            submitBtn.disabled = false;
+            submitBtn.classList.replace('btn-success', 'btn-danger');
+            e.target.reset();
+          }, 3000);
+        }
+      } catch (err) {
+        alert("Connection error. Please try again.");
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalText;
+      }
+    });
+
   </script>
 
   <%- include("../partials/footer") %>

@@ -123,7 +123,12 @@
         "name": "Standard",
         "sku": "SH100-STD",
         "price": {
-          "exShowroom": 66800,
+          "exShowroom": 66950,
+          "roadTaxAndReg": 11980,
+          "insuranceBase": 6469,
+          "onRoadBase": 85399,
+          "zeroDepPremium": 2064,
+          "finalOnRoad": 87463,
           "currency": "INR"
         },
         "specs": {
@@ -474,7 +479,15 @@
       {
         "name": "Standard",
         "sku": "STD",
-        "price": { "exShowroom": 119900, "currency": "INR" },
+        "price": {
+          "exShowroom": 119912,
+          "roadTaxAndReg": 1062,
+          "insuranceBase": 6625,
+          "onRoadBase": 127599,
+          "zeroDepPremium": 6759,
+          "finalOnRoad": 127733,
+          "currency": "INR"
+        },
         "specs": {
           "performance": {
             "range": "102 km (IDC)",
@@ -530,7 +543,15 @@
       {
         "name": "RoadSync Duo",
         "sku": "RSD",
-        "price": { "exShowroom": 152400, "currency": "INR" },
+        "price": {
+          "exShowroom": 154512,
+          "roadTaxAndReg": 1062,
+          "insuranceBase": 7189,
+          "onRoadBase": 162763,
+          "zeroDepPremium": 7362,
+          "finalOnRoad": 162936,
+          "currency": "INR"
+        },
         "specs": {
           "performance": {
             "range": "102 km (IDC)",
