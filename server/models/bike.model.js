@@ -54,7 +54,7 @@ const bikeSchema = new mongoose.Schema(
           exShowroom: { type: Number, required: true },
           roadTaxAndReg: { type: Number }, // Road tax + Registration + Smart Card
           insuranceBase: { type: Number }, // Optional 5 year (OD) + 1 year (PA)
-          onRoadPrice: { type: Number }, // Base On-Road Price
+          onRoadBase: { type: Number }, // Base On-Road Price
           zeroDepPremium: { type: Number }, // Added Insurance Premium for 0% Dep
           finalOnRoad: { type: Number }, // On Road Price with 0% Dep
           currency: { type: String, default: "INR" },

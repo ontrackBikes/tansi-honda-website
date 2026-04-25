@@ -163,12 +163,24 @@ router.post("/edit/:id", auth, async (req, res) => {
 router.post("/update-price/:bikeId/:variantId", auth, async (req, res) => {
   try {
     const { bikeId, variantId } = req.params;
-    const { exShowroom } = req.body;
 
-    if (!exShowroom) {
-      return res.status(400).json({ message: "Price is required" });
+    // 1. Destructure all fields from req.body (matches the data-field attributes in our modal)
+    const {
+      exShowroom,
+      roadTaxAndReg,
+      insuranceBase,
+      onRoadBase,
+      zeroDepPremium,
+      finalOnRoad,
+    } = req.body;
+
+    // 2. Basic validation: ensure at least the base price exists
+    if (exShowroom === undefined) {
+      return res.status(400).json({ message: "Ex-Showroom price is required" });
     }
 
+    // 3. Update the specific variant's price object
+    // Using "variants.$.price" replaces the entire price sub-document with the new values
     const bike = await Bike.findOneAndUpdate(
       {
         _id: bikeId,
@@ -176,7 +188,15 @@ router.post("/update-price/:bikeId/:variantId", auth, async (req, res) => {
       },
       {
         $set: {
-          "variants.$.price.exShowroom": exShowroom,
+          "variants.$.price": {
+            exShowroom: Number(exShowroom),
+            roadTaxAndReg: Number(roadTaxAndReg || 0),
+            insuranceBase: Number(insuranceBase || 0),
+            onRoadBase: Number(onRoadBase || 0),
+            zeroDepPremium: Number(zeroDepPremium || 0),
+            finalOnRoad: Number(finalOnRoad || 0),
+            currency: "INR", // Keeping default or getting from req.body
+          },
         },
       },
       { new: true },
@@ -187,12 +207,15 @@ router.post("/update-price/:bikeId/:variantId", auth, async (req, res) => {
     }
 
     res.json({
-      message: "Price updated successfully",
-      bike,
+      message: "Detailed prices updated successfully ✅",
+      // Optional: return only the updated variant for clarity
+      updatedVariant: bike.variants.find((v) => v._id.toString() === variantId),
     });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Error updating price" });
+    console.error("Update Price Error:", err);
+    res
+      .status(500)
+      .json({ message: "Internal server error while updating price" });
   }
 });
 
