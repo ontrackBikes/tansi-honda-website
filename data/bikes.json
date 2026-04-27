@@ -288,9 +288,15 @@
       {
         "name": "Hornet 750",
         "sku": "HORNET-750",
-
-        "price": { "exShowroom": 922412, "currency": "INR" },
-
+        "price": {
+          "exShowroom": 859000,
+          "roadTaxAndReg": 152620,
+          "insuranceBase": 28460,
+          "onRoadBase": 1040080,
+          "zeroDepPremium": 11840,
+          "finalOnRoad": 1051920,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2093 mm",
@@ -735,7 +741,15 @@
       {
         "name": "Standard",
         "sku": "ACT110-STD",
-        "price": { "exShowroom": 76800, "currency": "INR" },
+        "price": {
+          "exShowroom": 78279,
+          "roadTaxAndReg": 13489,
+          "insuranceBase": 6931,
+          "onRoadBase": 98699,
+          "zeroDepPremium": 2700,
+          "finalOnRoad": 101399,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1833 mm",
@@ -786,7 +800,15 @@
       {
         "name": "DLX",
         "sku": "ACT110-DLX",
-        "price": { "exShowroom": 79900, "currency": "INR" },
+        "price": {
+          "exShowroom": 88556,
+          "roadTaxAndReg": 14858,
+          "insuranceBase": 7155,
+          "onRoadBase": 110569,
+          "zeroDepPremium": 3017,
+          "finalOnRoad": 113586,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1833 mm",
@@ -837,7 +859,15 @@
       {
         "name": "SMART",
         "sku": "ACT110-SMART",
-        "price": { "exShowroom": 82900, "currency": "INR" },
+        "price": {
+          "exShowroom": 92109,
+          "roadTaxAndReg": 15331,
+          "insuranceBase": 7233,
+          "onRoadBase": 114673,
+          "zeroDepPremium": 3126,
+          "finalOnRoad": 117799,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1833 mm",
@@ -994,7 +1024,15 @@
       {
         "name": "Anniversary Edition",
         "sku": "ANNIVERSARY-EDITION",
-        "price": { "exShowroom": 87785, "currency": "INR" },
+        "price": {
+          "exShowroom": 87785,
+          "roadTaxAndReg": 14755,
+          "insuranceBase": 7139,
+          "onRoadBase": 109679,
+          "zeroDepPremium": 2993,
+          "finalOnRoad": 112672,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1833 mm",
@@ -1155,9 +1193,17 @@
 
     "variants": [
       {
-        "name": "Standard",
-        "sku": "STD",
-        "price": { "exShowroom": 90022, "currency": "INR" },
+        "name": "Ev Qc1",
+        "sku": "EV-QC1",
+        "price": {
+          "exShowroom": 90487,
+          "roadTaxAndReg": 1062,
+          "insuranceBase": 5193,
+          "onRoadBase": 96742,
+          "zeroDepPremium": 5498,
+          "finalOnRoad": 97047,
+          "currency": "INR"
+        },
         "specs": {
           "performance": {
             "range": "80 km (IDC)",
@@ -1327,9 +1373,15 @@
       {
         "name": "Standard",
         "sku": "CB125H-STD",
-
-        "price": { "exShowroom": 114582, "currency": "INR" },
-
+        "price": {
+          "exShowroom": 115235,
+          "roadTaxAndReg": 26086,
+          "insuranceBase": 7368,
+          "onRoadBase": 148689,
+          "zeroDepPremium": 3553,
+          "finalOnRoad": 152242,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2015 mm",
@@ -1503,7 +1555,15 @@
       {
         "name": "Deluxe",
         "sku": "SH100-DLX",
-        "price": { "exShowroom": 71893, "currency": "INR" },
+        "price": {
+          "exShowroom": 71893,
+          "roadTaxAndReg": 12638,
+          "insuranceBase": 6561,
+          "onRoadBase": 91092,
+          "zeroDepPremium": 2217,
+          "finalOnRoad": 93309,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1955 mm",
@@ -1666,6 +1726,11 @@
         "sku": "LIVO-DISC",
         "price": {
           "exShowroom": 83838,
+          "roadTaxAndReg": 14229,
+          "insuranceBase": 6784,
+          "onRoadBase": 104851,
+          "zeroDepPremium": 2584,
+          "finalOnRoad": 107435,
           "currency": "INR"
         },
         "specs": {
@@ -1714,6 +1779,11 @@
         "sku": "LIVO-DRUM",
         "price": {
           "exShowroom": 81271,
+          "roadTaxAndReg": 13887,
+          "insuranceBase": 6996,
+          "onRoadBase": 102154,
+          "zeroDepPremium": 2506,
+          "finalOnRoad": 104660,
           "currency": "INR"
         },
         "specs": {
@@ -1884,7 +1954,15 @@
       {
         "name": "Disc",
         "sku": "SHINE125-DISC",
-        "price": { "exShowroom": 87052, "currency": "INR" },
+        "price": {
+          "exShowroom": 87052,
+          "roadTaxAndReg": 14657,
+          "insuranceBase": 6844,
+          "onRoadBase": 108553,
+          "zeroDepPremium": 2683,
+          "finalOnRoad": 111236,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -1930,7 +2008,15 @@
       {
         "name": "Drum",
         "sku": "SHINE125-DRUM",
-        "price": { "exShowroom": 82693, "currency": "INR" },
+        "price": {
+          "exShowroom": 82693,
+          "roadTaxAndReg": 14077,
+          "insuranceBase": 6762,
+          "onRoadBase": 103532,
+          "zeroDepPremium": 2550,
+          "finalOnRoad": 106082,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -2074,7 +2160,15 @@
       {
         "name": "",
         "sku": "",
-        "price": { "exShowroom": 88052, "currency": "INR" },
+        "price": {
+          "exShowroom": 88052,
+          "roadTaxAndReg": 14791,
+          "insuranceBase": 6862,
+          "onRoadBase": 109705,
+          "zeroDepPremium": 2715,
+          "finalOnRoad": 112420,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2046 mm",
@@ -2239,7 +2333,15 @@
       {
         "name": "STD",
         "sku": "SP125-STD",
-        "price": { "exShowroom": 89804, "currency": "INR" },
+        "price": {
+          "exShowroom": 89804,
+          "roadTaxAndReg": 15024,
+          "insuranceBase": 6895,
+          "onRoadBase": 111723,
+          "zeroDepPremium": 2768,
+          "finalOnRoad": 114491,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -2286,7 +2388,15 @@
       {
         "name": "DLX",
         "sku": "SP125-DLX",
-        "price": { "exShowroom": 94721, "currency": "INR" },
+        "price": {
+          "exShowroom": 94721,
+          "roadTaxAndReg": 15679,
+          "insuranceBase": 6986,
+          "onRoadBase": 117386,
+          "zeroDepPremium": 2920,
+          "finalOnRoad": 120306,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2020 mm",
@@ -2436,7 +2546,15 @@
       {
         "name": "SP125 Anniversary Edition",
         "sku": "SP125-ANNIV",
-        "price": { "exShowroom": 92825, "currency": "INR" },
+        "price": {
+          "exShowroom": 92825,
+          "roadTaxAndReg": 15426,
+          "insuranceBase": 6951,
+          "onRoadBase": 115202,
+          "zeroDepPremium": 2898,
+          "finalOnRoad": 118100,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2027 mm",
@@ -2591,7 +2709,15 @@
       {
         "name": "Single Disc",
         "sku": "Single-Disc",
-        "price": { "exShowroom": 115731, "currency": "INR" },
+        "price": {
+          "exShowroom": 115731,
+          "roadTaxAndReg": 26185,
+          "insuranceBase": 11524,
+          "onRoadBase": 153440,
+          "zeroDepPremium": 3568,
+          "finalOnRoad": 157008,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2061 mm",
@@ -2638,7 +2764,15 @@
       {
         "name": "Double Disc",
         "sku": "Double-Disc",
-        "price": { "exShowroom": 121241, "currency": "INR" },
+        "price": {
+          "exShowroom": 121241,
+          "roadTaxAndReg": 27286,
+          "insuranceBase": 11627,
+          "onRoadBase": 160154,
+          "zeroDepPremium": 3737,
+          "finalOnRoad": 163891,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2061 mm",
@@ -2793,7 +2927,15 @@
       {
         "name": "",
         "sku": "",
-        "price": { "exShowroom": 113419, "currency": "INR" },
+        "price": {
+          "exShowroom": 113419,
+          "roadTaxAndReg": 25723,
+          "insuranceBase": 11523,
+          "onRoadBase": 150665,
+          "zeroDepPremium": 3496,
+          "finalOnRoad": 154161,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2081 mm",
@@ -2959,7 +3101,15 @@
       {
         "name": "NX200",
         "sku": "NX200",
-        "price": { "exShowroom": 158591, "currency": "INR" },
+        "price": {
+          "exShowroom": 158591,
+          "roadTaxAndReg": 34748,
+          "insuranceBase": 12381,
+          "onRoadBase": 205720,
+          "zeroDepPremium": 4889,
+          "finalOnRoad": 210609,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2035 mm",
@@ -3125,9 +3275,17 @@
 
     "variants": [
       {
-        "name": "",
-        "sku": "",
-        "price": { "exShowroom": 633180, "currency": "INR" },
+        "name": "NX500",
+        "sku": "NX500",
+        "price": {
+          "exShowroom": 633180,
+          "roadTaxAndReg": 126508,
+          "insuranceBase": 27065,
+          "onRoadBase": 786753,
+          "zeroDepPremium": 10984,
+          "finalOnRoad": 797737,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2165 mm",
@@ -3281,7 +3439,15 @@
       {
         "name": "XL750 Transalp",
         "sku": "XL750-TRANSALP",
-        "price": { "exShowroom": 1180509, "currency": "INR" },
+        "price": {
+          "exShowroom": 1180509,
+          "roadTaxAndReg": 235865,
+          "insuranceBase": 36364,
+          "onRoadBase": 1452738,
+          "zeroDepPremium": 12875,
+          "finalOnRoad": 1465613,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2325 mm",
@@ -3470,7 +3636,15 @@
       {
         "name": "Hornet 2.0",
         "sku": "HORNET-2.0",
-        "price": { "exShowroom": 147847, "currency": "INR" },
+        "price": {
+          "exShowroom": 147847,
+          "roadTaxAndReg": 32602,
+          "insuranceBase": 12177,
+          "onRoadBase": 192626,
+          "zeroDepPremium": 4558,
+          "finalOnRoad": 197184,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2034 mm",
@@ -3627,7 +3801,15 @@
       {
         "name": "Honda GoldWing Tour",
         "sku": "Honda-GoldWing-Tour",
-        "price": { "exShowroom": 4379993, "currency": "INR" },
+        "price": {
+          "exShowroom": 4379993,
+          "roadTaxAndReg": 918920,
+          "insuranceBase": 81667,
+          "onRoadBase": 5380580,
+          "zeroDepPremium": 15420,
+          "finalOnRoad": 5396000,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2615 mm",
@@ -3768,7 +3950,15 @@
       {
         "name": "Honda Hornet 1000 SP",
         "sku": "Honda-Hornet-1000-SP",
-        "price": { "exShowroom": 1329390, "currency": "INR" },
+        "price": {
+          "exShowroom": 1329390,
+          "roadTaxAndReg": 265611,
+          "insuranceBase": 38701,
+          "onRoadBase": 1633702,
+          "zeroDepPremium": 13695,
+          "finalOnRoad": 1647397,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2140 mm",
@@ -3944,7 +4134,15 @@
       {
         "name": "DLX PRO",
         "sku": "DLX-PRO",
-        "price": { "exShowroom": 155338, "currency": "INR" },
+        "price": {
+          "exShowroom": 170001,
+          "roadTaxAndReg": 33966,
+          "insuranceBase": 11549,
+          "onRoadBase": 215516,
+          "zeroDepPremium": 3928,
+          "finalOnRoad": 219444,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2084 mm",
@@ -3991,7 +4189,15 @@
       {
         "name": "FLEX FUEL",
         "sku": "FLEX-FUEL",
-        "price": { "exShowroom": 155338, "currency": "INR" },
+        "price": {
+          "exShowroom": 155338,
+          "roadTaxAndReg": 31035,
+          "insuranceBase": 11302,
+          "onRoadBase": 197675,
+          "zeroDepPremium": 3846,
+          "finalOnRoad": 201521,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2084 mm",
@@ -4197,7 +4403,15 @@
       {
         "name": "DLX",
         "sku": "DLX",
-        "price": { "exShowroom": 197003, "currency": "INR" },
+        "price": {
+          "exShowroom": 197800,
+          "roadTaxAndReg": 41760,
+          "insuranceBase": 18032,
+          "onRoadBase": 257592,
+          "zeroDepPremium": 7714,
+          "finalOnRoad": 265306,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4244,7 +4458,15 @@
       {
         "name": "DLX PRO",
         "sku": "DLX-PRO",
-        "price": { "exShowroom": 200064, "currency": "INR" },
+        "price": {
+          "exShowroom": 200200,
+          "roadTaxAndReg": 42240,
+          "insuranceBase": 18132,
+          "onRoadBase": 260572,
+          "zeroDepPremium": 7714,
+          "finalOnRoad": 268286,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4449,7 +4671,15 @@
       {
         "name": "DLX",
         "sku": "DLX",
-        "price": { "exShowroom": 197800, "currency": "INR" },
+        "price": {
+          "exShowroom": 197500,
+          "roadTaxAndReg": 39460,
+          "insuranceBase": 12011,
+          "onRoadBase": 248971,
+          "zeroDepPremium": 5654,
+          "finalOnRoad": 254625,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4496,7 +4726,15 @@
       {
         "name": "DLX PRO",
         "sku": "DLX-PRO",
-        "price": { "exShowroom": 200200, "currency": "INR" },
+        "price": {
+          "exShowroom": 199900,
+          "roadTaxAndReg": 39940,
+          "insuranceBase": 12052,
+          "onRoadBase": 251892,
+          "zeroDepPremium": 5654,
+          "finalOnRoad": 257546,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4656,7 +4894,15 @@
       {
         "name": "CB350C DLX PRO SPECIAL EDITION",
         "sku": "CB350C-DLX-PRO-SPECIAL-EDITION",
-        "price": { "exShowroom": 202200, "currency": "INR" },
+        "price": {
+          "exShowroom": 201900,
+          "roadTaxAndReg": 44103,
+          "insuranceBase": 12064,
+          "onRoadBase": 258067,
+          "zeroDepPremium": 5654,
+          "finalOnRoad": 263721,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2207 mm",
@@ -4841,7 +5087,15 @@
       {
         "name": "DLX",
         "sku": "DLX",
-        "price": { "exShowroom": 192700, "currency": "INR" },
+        "price": {
+          "exShowroom": 192700,
+          "roadTaxAndReg": 40741,
+          "insuranceBase": 17809,
+          "onRoadBase": 251250,
+          "zeroDepPremium": 12936,
+          "finalOnRoad": 264186,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -4907,7 +5161,15 @@
       {
         "name": "DLX PRO",
         "sku": "DLX-PRO",
-        "price": { "exShowroom": 195500, "currency": "INR" },
+        "price": {
+          "exShowroom": 195500,
+          "roadTaxAndReg": 41301,
+          "insuranceBase": 17931,
+          "onRoadBase": 254732,
+          "zeroDepPremium": 12936,
+          "finalOnRoad": 267668,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -4973,7 +5235,15 @@
       {
         "name": "DLX PRO CHROME",
         "sku": "DLX-PRO-CHROME",
-        "price": { "exShowroom": 197500, "currency": "INR" },
+        "price": {
+          "exShowroom": 197500,
+          "roadTaxAndReg": 41701,
+          "insuranceBase": 18019,
+          "onRoadBase": 257220,
+          "zeroDepPremium": 12936,
+          "finalOnRoad": 270156,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2163 mm",
@@ -5141,7 +5411,15 @@
       {
         "name": "DLX",
         "sku": "DLX",
-        "price": { "exShowroom": 197500, "currency": "INR" },
+        "price": {
+          "exShowroom": 197003,
+          "roadTaxAndReg": 39360,
+          "insuranceBase": 12003,
+          "onRoadBase": 248366,
+          "zeroDepPremium": 11245,
+          "finalOnRoad": 259611,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2171 mm",
@@ -5207,7 +5485,15 @@
       {
         "name": "DLX PRO",
         "sku": "DLX-PRO",
-        "price": { "exShowroom": 199990, "currency": "INR" },
+        "price": {
+          "exShowroom": 199744,
+          "roadTaxAndReg": 39907,
+          "insuranceBase": 12049,
+          "onRoadBase": 251700,
+          "zeroDepPremium": 7811,
+          "finalOnRoad": 259511,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "2171 mm",
@@ -5394,7 +5680,15 @@
       {
         "name": "DLX",
         "sku": "DLX",
-        "price": { "exShowroom": 93588, "currency": "INR" },
+        "price": {
+          "exShowroom": 93588,
+          "roadTaxAndReg": 15528,
+          "insuranceBase": 7265,
+          "onRoadBase": 116381,
+          "zeroDepPremium": 3172,
+          "finalOnRoad": 119553,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1850 mm",
@@ -5445,7 +5739,15 @@
       {
         "name": "H-SMART",
         "sku": "H-SMART",
-        "price": { "exShowroom": 98132, "currency": "INR" },
+        "price": {
+          "exShowroom": 98132,
+          "roadTaxAndReg": 16133,
+          "insuranceBase": 7364,
+          "onRoadBase": 121629,
+          "zeroDepPremium": 3312,
+          "finalOnRoad": 124941,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1850 mm",
@@ -5602,7 +5904,15 @@
       {
         "name": "Anniversary Edition",
         "sku": "ANNIVERSARY-EDITION",
-        "price": { "exShowroom": 92817, "currency": "INR" },
+        "price": {
+          "exShowroom": 92817,
+          "roadTaxAndReg": 15425,
+          "insuranceBase": 7249,
+          "onRoadBase": 115491,
+          "zeroDepPremium": 3148,
+          "finalOnRoad": 118639,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1850 mm",
@@ -5774,7 +6084,15 @@
       {
         "name": "STD",
         "sku": "STD",
-        "price": { "exShowroom": 92027, "currency": "INR" },
+        "price": {
+          "exShowroom": 92027,
+          "roadTaxAndReg": 15320,
+          "insuranceBase": 7231,
+          "onRoadBase": 114578,
+          "zeroDepPremium": 3124,
+          "finalOnRoad": 117702,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -5825,7 +6143,15 @@
       {
         "name": "H-SMART",
         "sku": "H-SMART",
-        "price": { "exShowroom": 96977, "currency": "INR" },
+        "price": {
+          "exShowroom": 96977,
+          "roadTaxAndReg": 15979,
+          "insuranceBase": 7339,
+          "onRoadBase": 120295,
+          "zeroDepPremium": 3277,
+          "finalOnRoad": 123572,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -5987,7 +6313,15 @@
       {
         "name": "X Edition",
         "sku": "X-EDITION",
-        "price": { "exShowroom": 92652, "currency": "INR" },
+        "price": {
+          "exShowroom": 92652,
+          "roadTaxAndReg": 15403,
+          "insuranceBase": 7245,
+          "onRoadBase": 115300,
+          "zeroDepPremium": 3143,
+          "finalOnRoad": 118443,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1830 mm",
@@ -6164,7 +6498,15 @@
       {
         "name": "Standard",
         "sku": "Standard",
-        "price": { "exShowroom": 74361, "currency": "INR" },
+        "price": {
+          "exShowroom": 74361,
+          "roadTaxAndReg": 12967,
+          "insuranceBase": 6846,
+          "onRoadBase": 94174,
+          "zeroDepPremium": 2579,
+          "finalOnRoad": 96753,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1808 mm",
@@ -6216,7 +6558,15 @@
       {
         "name": "DLX",
         "sku": "DLX",
-        "price": { "exShowroom": 86413, "currency": "INR" },
+        "price": {
+          "exShowroom": 86413,
+          "roadTaxAndReg": 14572,
+          "insuranceBase": 7109,
+          "onRoadBase": 108094,
+          "zeroDepPremium": 2950,
+          "finalOnRoad": 111044,
+          "currency": "INR"
+        },
         "specs": {
           "body": {
             "length": "1808 mm",
