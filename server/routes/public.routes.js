@@ -126,8 +126,10 @@ const BHASH_USER = process.env.BHASH_USER;
 const BHASH_PASS = process.env.BHASH_PASS;
 const BHASH_SENDER = process.env.BHASH_SENDER;
 
-const formatINR = (num) =>
-  new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(num);
+// const formatINR = (num) =>
+//   new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(num);
+
+const formatINRPlain = (num) => Math.round(num).toString();
 
 router.post("/leads", async (req, res) => {
   try {
@@ -154,7 +156,7 @@ router.post("/leads", async (req, res) => {
     // 1. Save Lead
     const newLead = new Lead({
       name: name.trim(),
-      email: email?.toLowerCase().trim(),
+      // email: email?.toLowerCase().trim(),
       phone: phone.replace(/\D/g, ""),
       modelName: bike.name,
       variantName: variant.name,
@@ -173,49 +175,59 @@ router.post("/leads", async (req, res) => {
     // 3. Background WhatsApp Logic
     (async () => {
       try {
-        const cleanPhone = newLead.phone.slice(-10);
+        const cleanPhone = newLead.phone.slice(-10) + ","; // Added trailing comma as per docs
+
         let bhashParams = {
           user: process.env.BHASH_USER,
           pass: process.env.BHASH_PASS,
-          sender: process.env.BHASH_SENDER,
+          sender: process.env.BHASH_SENDER, // Should be "BUZWAP" based on your docs
           phone: cleanPhone,
           priority: "wa",
           stype: "normal",
+          htype: "image",
+          // FORCE ENCODE THE URL
+          url: encodeURI(bike.coverImage.trim()),
         };
 
         if (source === "Download Brochure") {
           bhashParams.text = "tansi_model_brochure_share";
-          bhashParams.Params = `${newLead.name},${bike.name},${bike.brochure}`;
-          bhashParams.htype = "image";
-          bhashParams.url = bike.coverImage;
+          // Explicitly array join to prevent formatting errors
+          bhashParams.Params = [newLead.name, bike.name, bike.brochure].join(
+            ",",
+          );
         } else {
           bhashParams.text = "tansi_vehicle_price_quote";
           bhashParams.Params = [
             newLead.name,
             bike.name,
             variant.name,
-            formatINR(variant.price.exShowroom),
-            formatINR(variant.price.roadTaxAndReg),
-            formatINR(variant.price.insuranceBase),
-            formatINR(variant.price.finalOnRoad),
+            formatINRPlain(variant.price.exShowroom), // Send "125000" instead of "1,25,000"
+            formatINRPlain(variant.price.roadTaxAndReg),
+            formatINRPlain(variant.price.insuranceBase),
+            formatINRPlain(variant.price.finalOnRoad),
           ].join(",");
-          bhashParams.htype = "image";
-          bhashParams.url = bike.coverImage;
         }
 
+        // Call API
         const response = await axios.get(
           `http://bhashsms.com/api/sendmsg.php`,
-          { params: bhashParams },
+          {
+            params: bhashParams,
+            timeout: 20000, // 20 second timeout for reliability
+          },
         );
 
-        // 🚀 LOG: WhatsApp API Response
-        console.log(
-          `📲 [WhatsApp Sent] To: ${cleanPhone} | Template: ${bhashParams.text} | Provider Response: ${JSON.stringify(response.data)}`,
-        );
+        const resData = response.data.toString().trim();
+
+        if (resData.startsWith("S.")) {
+          console.log(
+            `✅ [WhatsApp Delivered to Queue] ID: ${resData} | Number: ${cleanPhone}`,
+          );
+        } else {
+          console.warn(`⚠️ [WhatsApp Provider Warning] Response: ${resData}`);
+        }
       } catch (err) {
-        console.error(
-          `📡 [WhatsApp API Failed] Lead: ${newLead.name} (${cleanPhone}) | Error: ${err.message}`,
-        );
+        console.error(`📡 [WhatsApp API Failed] Error: ${err.message}`);
       }
     })();
   } catch (err) {

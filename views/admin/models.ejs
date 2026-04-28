@@ -70,7 +70,7 @@
           <thead class="bg-light">
             <tr>
               <th class="ps-4 border-0 text-muted small text-uppercase py-3">Product</th>
-              <th class="ps-4 border-0 text-muted small text-uppercase py-3">Ex-Showroom Price</th>
+              <th class="ps-4 border-0 text-muted small text-uppercase py-3">Price</th>
               <th class="border-0 text-muted small text-uppercase py-3 text-center">Status</th>
               <th class="pe-4 border-0 text-muted small text-uppercase py-3 text-end">Actions</th>
             </tr>
@@ -102,7 +102,7 @@
 
                         <!-- 🔥 Edit Button -->
                         <a class="btn btn-sm btn-outline-primary border-0 me-1 action-btn"
-                          onclick="openPriceModal('<%= m._id %>', '<%= m.name %>', '<%= JSON.stringify(m.variants) %>')">
+                          onclick="openPriceModal('<%= m._id %>', `<%= m.name %>`, decodeURIComponent('<%= encodeURIComponent(JSON.stringify(m.variants)) %>'))">
                           <i class="bi bi-pencil"></i>
                         </a>
                       </div>
@@ -117,17 +117,29 @@
                     </td>
 
                     <td class="pe-4 text-end">
-                      <div class="d-flex align-items-end justify-content-end gap-2">
-                        <a href="/admin/edit/<%= m._id %>"
-                          class="btn btn-sm btn-outline-warning border-0 me-1 action-btn">
-                          <i class="bi bi-pencil-square"></i>
-                        </a>
-                        <form action="/admin/delete/<%= m._id %>" method="POST" class="d-inline"
+                      <div class="d-flex align-items-center justify-content-end gap-3">
+
+                        <form action="/admin/toggle-status/<%= m._id %>" method="POST" class="d-inline m-0">
+                          <div class="form-check form-switch m-0 p-0 d-flex align-items-center">
+                            <input class="form-check-input m-0 cursor-pointer" type="checkbox" role="switch"
+                              id="switch-<%= m._id %>" <%=m.isActive ? 'checked' : '' %>
+                            onchange="this.form.submit()"
+                            style="width: 2.4em; height: 1.2em;">
+                          </div>
+                        </form>
+
+                        <!-- <a href="/admin/edit/<%= m._id %>"
+                          class="btn btn-sm btn-outline-warning border-0 p-1 action-btn shadow-none">
+                          <i class="bi bi-pencil-square fs-5"></i>
+                        </a> -->
+
+                        <form action="/admin/delete/<%= m._id %>" method="POST" class="d-inline m-0"
                           onsubmit="return confirm('Delete this model?')">
-                          <button class="btn btn-sm btn-outline-danger border-0 action-btn">
-                            <i class="bi bi-trash3"></i>
+                          <button class="btn btn-sm btn-outline-danger border-0 p-1 action-btn shadow-none">
+                            <i class="bi bi-trash3 fs-5"></i>
                           </button>
                         </form>
+
                       </div>
                     </td>
                   </tr>
@@ -139,25 +151,26 @@
 
 
     <!-- 🔥 Price Edit Modal -->
-   <div class="modal fade" id="priceModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg"> <div class="modal-content rounded-4">
-      <div class="modal-header bg-light">
-        <h5 class="modal-title fw-bold">Update Detailed Pricing</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+    <div class="modal fade" id="priceModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-4">
+          <div class="modal-header bg-light">
+            <h5 class="modal-title fw-bold">Update Detailed Pricing</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
 
-      <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
-        <h4 id="bikeName" class="fw-bold text-danger mb-4"></h4>
-        <div id="variantPriceList"></div>
-      </div>
+          <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+            <h4 id="bikeName" class="fw-bold text-danger mb-4"></h4>
+            <div id="variantPriceList"></div>
+          </div>
 
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button class="btn btn-danger px-4" onclick="updatePrice()">Save All Changes</button>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button class="btn btn-danger px-4" onclick="updatePrice()">Save All Changes</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
   </div>
 
   <style>
@@ -228,24 +241,37 @@
       font-size: 0.75rem;
       letter-spacing: 0.5px;
     }
+
+    /* Makes the switch slightly larger and centers it vertically */
+    .form-switch .form-check-input {
+      cursor: pointer;
+      width: 2.5em;
+      height: 1.25em;
+    }
+
+    .form-check-input:checked {
+      background-color: #198754;
+      /* Success Green */
+      border-color: #198754;
+    }
   </style>
 
-<script>
-  let selectedBikeId = null;
-  let selectedVariants = [];
+  <script>
+    let selectedBikeId = null;
+    let selectedVariants = [];
 
-  function openPriceModal(bikeId, bikeName, variantsJson) {
-    selectedBikeId = bikeId;
-    // Handle potential double encoding or string issues
-    selectedVariants = JSON.parse(variantsJson);
+    function openPriceModal(bikeId, bikeName, variantsJson) {
+      selectedBikeId = bikeId;
+      // Handle potential double encoding or string issues
+      selectedVariants = JSON.parse(variantsJson);
 
-    document.getElementById("bikeName").innerText = bikeName;
-    const container = document.getElementById("variantPriceList");
-    container.innerHTML = "";
+      document.getElementById("bikeName").innerText = bikeName;
+      const container = document.getElementById("variantPriceList");
+      container.innerHTML = "";
 
-    selectedVariants.forEach((v, index) => {
-      const p = v.price || {};
-      container.innerHTML += `
+      selectedVariants.forEach((v, index) => {
+        const p = v.price || {};
+        container.innerHTML += `
         <div class="variant-card mb-4 p-3 border rounded-3 bg-white shadow-sm" data-variant-id="${v._id}">
           <h5 class="fw-bold text-primary mb-3 border-bottom pb-2">${v.name}</h5>
           <div class="row g-3">
@@ -276,42 +302,42 @@
           </div>
         </div>
       `;
-    });
+      });
 
-    const modal = new bootstrap.Modal(document.getElementById("priceModal"));
-    modal.show();
-  }
-
-  async function updatePrice() {
-    const variantCards = document.querySelectorAll(".variant-card");
-    
-    try {
-      // Loop through each variant section in the modal
-      for (let card of variantCards) {
-        const variantId = card.getAttribute("data-variant-id");
-        const inputs = card.querySelectorAll(".price-input");
-        
-        // Build the price object based on your schema
-        const priceData = {};
-        inputs.forEach(input => {
-          priceData[input.getAttribute("data-field")] = Number(input.value);
-        });
-
-        // Send update to server
-        await fetch(`/admin/update-price/${selectedBikeId}/${variantId}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(priceData), // Sending the whole object
-        });
-      }
-
-      alert("All variants updated successfully ✅");
-      location.reload();
-    } catch (err) {
-      console.error(err);
-      alert("Error updating prices ❌");
+      const modal = new bootstrap.Modal(document.getElementById("priceModal"));
+      modal.show();
     }
-  }
-</script>
+
+    async function updatePrice() {
+      const variantCards = document.querySelectorAll(".variant-card");
+
+      try {
+        // Loop through each variant section in the modal
+        for (let card of variantCards) {
+          const variantId = card.getAttribute("data-variant-id");
+          const inputs = card.querySelectorAll(".price-input");
+
+          // Build the price object based on your schema
+          const priceData = {};
+          inputs.forEach(input => {
+            priceData[input.getAttribute("data-field")] = Number(input.value);
+          });
+
+          // Send update to server
+          await fetch(`/admin/update-price/${selectedBikeId}/${variantId}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(priceData), // Sending the whole object
+          });
+        }
+
+        alert("All variants updated successfully ✅");
+        location.reload();
+      } catch (err) {
+        console.error(err);
+        alert("Error updating prices ❌");
+      }
+    }
+  </script>
 
   <%- include("../partials/footer") %>
