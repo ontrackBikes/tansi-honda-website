@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const auth = require("../middleware/auth");
 const Service = require("../models/service.model");
+const Lead = require("../models/lead.model");
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -163,12 +164,24 @@ router.post("/edit/:id", auth, async (req, res) => {
 router.post("/update-price/:bikeId/:variantId", auth, async (req, res) => {
   try {
     const { bikeId, variantId } = req.params;
-    const { exShowroom } = req.body;
 
-    if (!exShowroom) {
-      return res.status(400).json({ message: "Price is required" });
+    // 1. Destructure all fields from req.body (matches the data-field attributes in our modal)
+    const {
+      exShowroom,
+      roadTaxAndReg,
+      insuranceBase,
+      onRoadBase,
+      zeroDepPremium,
+      finalOnRoad,
+    } = req.body;
+
+    // 2. Basic validation: ensure at least the base price exists
+    if (exShowroom === undefined) {
+      return res.status(400).json({ message: "Ex-Showroom price is required" });
     }
 
+    // 3. Update the specific variant's price object
+    // Using "variants.$.price" replaces the entire price sub-document with the new values
     const bike = await Bike.findOneAndUpdate(
       {
         _id: bikeId,
@@ -176,7 +189,15 @@ router.post("/update-price/:bikeId/:variantId", auth, async (req, res) => {
       },
       {
         $set: {
-          "variants.$.price.exShowroom": exShowroom,
+          "variants.$.price": {
+            exShowroom: Number(exShowroom),
+            roadTaxAndReg: Number(roadTaxAndReg || 0),
+            insuranceBase: Number(insuranceBase || 0),
+            onRoadBase: Number(onRoadBase || 0),
+            zeroDepPremium: Number(zeroDepPremium || 0),
+            finalOnRoad: Number(finalOnRoad || 0),
+            currency: "INR", // Keeping default or getting from req.body
+          },
         },
       },
       { new: true },
@@ -187,12 +208,31 @@ router.post("/update-price/:bikeId/:variantId", auth, async (req, res) => {
     }
 
     res.json({
-      message: "Price updated successfully",
-      bike,
+      message: "Detailed prices updated successfully ✅",
+      // Optional: return only the updated variant for clarity
+      updatedVariant: bike.variants.find((v) => v._id.toString() === variantId),
     });
   } catch (err) {
+    console.error("Update Price Error:", err);
+    res
+      .status(500)
+      .json({ message: "Internal server error while updating price" });
+  }
+});
+
+// Toggle Active/Inactive Status
+router.post("/toggle-status/:id", auth, async (req, res) => {
+  try {
+    const bike = await Bike.findById(req.params.id);
+    if (!bike) return res.status(404).send("Model not found");
+
+    bike.isActive = !bike.isActive; // Flip the status
+    await bike.save();
+
+    res.redirect("/admin/models"); // Or wherever your list is
+  } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Error updating price" });
+    res.status(500).send("Server Error");
   }
 });
 
@@ -246,6 +286,123 @@ router.post("/upload-image", auth, upload.single("image"), async (req, res) => {
     console.error(err);
     res.status(500).json({ message: "Upload failed" });
   }
+});
+
+// ===============================
+// WEBSITE LEADS MANAGEMENT
+// ===============================
+
+// All Leads Page + Pagination + Date Filter
+router.get("/leads", auth, async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = 10;
+  const skip = (page - 1) * limit;
+
+  const from = req.query.from || "";
+  const to = req.query.to || "";
+  const toast = req.query.toast || "";
+  const statusFilter = req.query.status || ""; // Get status from URL
+
+  let filter = {};
+
+  // Date Filtering
+  if (from && to) {
+    filter.createdAt = {
+      $gte: new Date(from + "T00:00:00"),
+      $lte: new Date(to + "T23:59:59"),
+    };
+  }
+
+  // Status Filtering - Add this block!
+  if (statusFilter) {
+    filter.status = statusFilter;
+  }
+
+  const totalRecords = await Lead.countDocuments(filter);
+  const totalPages = Math.ceil(totalRecords / limit);
+
+  const leads = await Lead.find(filter)
+    .sort({ createdAt: -1 })
+    .skip(skip)
+    .limit(limit);
+
+  // Stats should usually show totals regardless of the current status filter
+  // so we use a baseFilter (just dates) for the cards
+  let baseFilter = {};
+  if (from && to) {
+    baseFilter.createdAt = filter.createdAt;
+  }
+
+  const stats = {
+    total: await Lead.countDocuments(baseFilter),
+    new: await Lead.countDocuments({ ...baseFilter, status: "New" }),
+    contacted: await Lead.countDocuments({
+      ...baseFilter,
+      status: "Contacted",
+    }),
+    interested: await Lead.countDocuments({
+      ...baseFilter,
+      status: "Interested",
+    }),
+    notInterested: await Lead.countDocuments({
+      ...baseFilter,
+      status: "Not Interested",
+    }),
+    followUp: await Lead.countDocuments({ ...baseFilter, status: "Follow-up" }),
+  };
+
+  res.render("admin/leads", {
+    leads,
+    currentPage: page,
+    totalPages,
+    from,
+    to,
+    toast,
+    stats,
+    currentStatus: statusFilter, // Pass this to the view to highlight active card
+  });
+});
+
+// Update Lead Status
+router.post("/leads/:id", auth, async (req, res) => {
+  await Lead.findByIdAndUpdate(req.params.id, {
+    status: req.body.status,
+  });
+
+  res.redirect("/admin/leads?toast=updated");
+});
+
+// Delete Lead
+router.post("/leads/delete/:id", auth, async (req, res) => {
+  await Lead.findByIdAndDelete(req.params.id);
+  res.redirect("/admin/leads?toast=deleted");
+});
+
+// CSV Export
+router.get("/leads/export/csv", auth, async (req, res) => {
+  const from = req.query.from || "";
+  const to = req.query.to || "";
+
+  let filter = {};
+
+  if (from && to) {
+    filter.createdAt = {
+      $gte: new Date(from + "T00:00:00"),
+      $lte: new Date(to + "T23:59:59"),
+    };
+  }
+
+  const leads = await Lead.find(filter).sort({ createdAt: -1 }).lean();
+
+  let csv = "Name,Phone,Model,Variant,Source,Status,Date\n";
+
+  leads.forEach((lead) => {
+    csv += `"${lead.name}","${lead.phone}","${lead.modelName}","${lead.variantName}","${lead.source}","${lead.status}","${new Date(lead.createdAt).toLocaleString()}"\n`;
+  });
+
+  res.header("Content-Type", "text/csv");
+  res.attachment("website_leads.csv");
+  res.send(csv);
 });
 
 module.exports = router;

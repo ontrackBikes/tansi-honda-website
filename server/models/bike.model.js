@@ -51,14 +51,13 @@ const bikeSchema = new mongoose.Schema(
         sku: String,
 
         price: {
-          exShowroom: {
-            type: Number,
-            required: true,
-          },
-          currency: {
-            type: String,
-            default: "INR",
-          },
+          exShowroom: { type: Number, required: true },
+          roadTaxAndReg: { type: Number }, // Road tax + Registration + Smart Card
+          insuranceBase: { type: Number }, // Optional 5 year (OD) + 1 year (PA)
+          onRoadBase: { type: Number }, // Base On-Road Price
+          zeroDepPremium: { type: Number }, // Added Insurance Premium for 0% Dep
+          finalOnRoad: { type: Number }, // On Road Price with 0% Dep
+          currency: { type: String, default: "INR" },
         },
 
         specs: {
