@@ -177,6 +177,17 @@ router.post("/leads", async (req, res) => {
       try {
         const cleanPhone = newLead.phone.slice(-10) + ","; // Added trailing comma as per docs
 
+        // IMPORTANT: Define your production URL
+        const PROD_URL =
+          "https://tansi-honda-website-production.up.railway.app";
+
+        let imageUrl = bike.coverImage.trim();
+
+        // If it's a relative path like /images/..., make it absolute
+        if (imageUrl.startsWith("/")) {
+          imageUrl = `${PROD_URL}${imageUrl}`;
+        }
+
         let bhashParams = {
           user: process.env.BHASH_USER,
           pass: process.env.BHASH_PASS,
@@ -186,7 +197,7 @@ router.post("/leads", async (req, res) => {
           stype: "normal",
           htype: "image",
           // FORCE ENCODE THE URL
-          url: encodeURI(bike.coverImage.trim()),
+          url: encodeURI(imageUrl),
         };
 
         if (source === "Download Brochure") {
