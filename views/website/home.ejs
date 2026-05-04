@@ -55,8 +55,8 @@
     /* Hero Section */
     .hero {
       background: #FFFFFF;
-      height: 90vh;
-      padding: 100px 0 100px;
+      /* height: 90vh; */
+      /* padding: 60px 0 60px; */
     }
 
     .hero-grid {
@@ -148,12 +148,12 @@
       transform: translateY(-2px);
     }
 
-     .hero-label {
+    .hero-label {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(230,0,18,0.15);
-      border: 1px solid rgba(230,0,18,0.3);
+      background: rgba(230, 0, 18, 0.15);
+      border: 1px solid rgba(230, 0, 18, 0.3);
       color: #FF4455;
       padding: 6px 14px;
       border-radius: 50px;
@@ -164,30 +164,13 @@
       margin-bottom: 24px;
     }
 
-    .hero-label span { width: 6px; height: 6px; background: #FF4455; border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
-
-     .hero-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 48px;
-       font-weight: 600;
-    }
-
-    .hero-stat-val {
-
-      font-size: 2rem;
-      color: #010101;
-      line-height: 1;
-    }
-
-    .hero-stat-val span { color: red; }
-
-    .hero-stat-label {
-      font-size: 0.75rem;
-      color: rgba(0, 0, 0, 0.4);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 4px;
+    .hero-label span {
+      width: 6px;
+      height: 6px;
+      background: #FF4455;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 2s infinite;
     }
 
     .hero-image {
@@ -489,9 +472,9 @@
         padding: 0 16px;
       }
 
-      .hero {
+      /* .hero {
         padding: 40px 0 30px;
-      }
+      } */
 
       .hero-grid {
         flex-direction: column-reverse;
@@ -562,6 +545,9 @@
 
 <body>
   <%- include("../partials/header") %>
+  <div class="container">
+<%- include("../partials/banner-slider.ejs") %>
+  </div>
 
     <main>
       <!-- Hero Section -->
@@ -570,9 +556,9 @@
           <div class="hero-content">
             <div class="hero-label"><span></span> Bangalore's Trusted Honda Dealer</div>
             <h1>
-              <span class="click-book">CLICK.</span>
-              <span class="click-book">BOOK.</span>
-              <span class="relax">RELAX.</span>
+              <span class="click-book">Your Official <span class="relax">Honda</span> <br> Buying Partner.</span>
+              <!-- <span class="click-book">BOOK.</span>
+              <span class="relax">RELAX.</span> -->
             </h1>
             <div class="hero-tagline">Book your Honda 2 Wheelers</div>
             <p class="hero-desc">
@@ -586,31 +572,17 @@
                 target="_blank" class="outline-btn" id="quickQuoteHeroBtn"> <i class="bi bi-whatsapp "></i>
                 Whatsapp</a>
             </div>
-            <!-- <div class="hero-stats">
-              <div>
-                <div class="hero-stat-val">7<span>+</span></div>
-                <div class="hero-stat-label">Showrooms</div>
-              </div>
-              <div>
-                <div class="hero-stat-val">24<span>hr</span></div>
-                <div class="hero-stat-label">Delivery*</div>
-              </div>
-              <div>
-                <div class="hero-stat-val">0<span>₹</span></div>
-                <div class="hero-stat-label">Down Payment*</div>
-              </div>
-            </div> -->
           </div>
-          <div class="hero-image">
+          <!-- <div class="hero-image">
             <img src="/images/homepage/tansi-honda-banner.png" alt="Honda CB350 RS premium motorcycle" loading="eager"
               height="700" width="700" />
-          </div>
+          </div> -->
         </div>
       </section>
 
       <!-- Featured Models -->
       <div class="container">
-        <h2 class="section-title">Explore Our Lineup</h2>
+        <h2 class="section-title mt-4">Explore Our Lineup</h2>
         <div class="row g-4" id="modelsContainer">
           <% if (!models.length) { %>
             <div class="col-12 text-center py-5">
