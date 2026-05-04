@@ -1,0 +1,64 @@
+<%- include("../partials/header") %>
+
+<div
+  class="container d-flex justify-content-center align-items-center success-page"
+>
+  <div class="success-card text-center shadow-lg">
+    <div class="check-icon mb-3">✓</div>
+
+    <h2 class="fw-bold mb-2">Message Sent Successfully!</h2>
+    <p class="text-muted mb-4">
+      Thank you for contacting us. Our team has received your message and will
+      get back to you shortly.
+    </p>
+
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="/" class="btn btn-outline-secondary px-4">Go Home</a>
+      <a href="/contact-us" class="btn btn-danger px-4">Send Another</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .success-page {
+    min-height: 80vh;
+  }
+
+  .success-card {
+    background: #fff;
+    padding: 45px;
+    border-radius: 22px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .check-icon {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    border-radius: 50%;
+    background: #e6f9ec;
+    color: #28a745;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .btn-danger {
+    background: #e60012;
+    border: none;
+    border-radius: 50px;
+  }
+
+  .btn-danger:hover {
+    background: #c40010;
+  }
+
+  .btn-outline-secondary {
+    border-radius: 50px;
+  }
+</style>
+
+<%- include("../partials/footer") %>
