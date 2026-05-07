@@ -4,6 +4,7 @@ const router = express.Router();
 const Bike = require("../models/bike.model");
 const Service = require("../models/service.model");
 const Lead = require("../models/lead.model");
+const Contact = require("../models/contact.model");
 
 const allowedCategories = ["motorcycle", "scooter", "e2w"];
 
@@ -38,8 +39,33 @@ router.get("/about-us", (req, res) => {
   res.render("website/about-us");
 });
 
+// ================= Contact Us =================
+
 router.get("/contact-us", (req, res) => {
   res.render("website/contact-us");
+});
+
+router.get("/contact-success", (req, res) => {
+  res.render("website/contact-success");
+});
+
+router.post("/submit-contact", async (req, res) => {
+  try {
+    const { fullName, phone, email, subject, message } = req.body;
+
+    await Contact.create({
+      fullName,
+      phone,
+      email,
+      subject,
+      message,
+    });
+
+    res.redirect("/contact-success");
+  } catch (err) {
+    console.log("Contact Form Error:", err);
+    res.redirect("/contact-us");
+  }
 });
 
 router.get("/special-offer", async (req, res) => {

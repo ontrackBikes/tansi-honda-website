@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Slider</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #fff;
+      }
+
+      .banner-slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        padding: 20px 10px;
+        box-sizing: border-box;
+      }
+
+      .slides-track {
+        display: flex;
+        gap: 14px;
+        transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+        will-change: transform;
+        align-items: center;
+      }
+
+      .slide {
+        flex: 0 0 calc(33.333% - 10px);
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+        text-decoration: none;
+        box-shadow:
+          0 10px 25px rgba(0, 0, 0, 0.08),
+          0 2px 8px rgba(0, 0, 0, 0.03);
+        transform: scale(0.96);
+        opacity: 0.85;
+        transition: all 0.8s ease;
+      }
+
+      .slide img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .slide.centerActive {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.12),
+          0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .slide.sideActive {
+        transform: scale(0.98);
+        opacity: 0.95;
+      }
+
+      .slider-dots {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50px;
+        background: #ddd;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+
+      .dot.activeDot {
+        width: 38px;
+        background: #d60000;
+      }
+
+      /* tablet */
+      @media (max-width: 991px) {
+        .slide {
+          flex: 0 0 calc(50% - 8px);
+        }
+      }
+
+      /* mobile */
+      @media (max-width: 768px) {
+        .slide {
+          flex: 0 0 100%;
+        }
+
+        /* .banner-slider {
+          padding: 10px 5px 45px;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="banner-slider">
+      <div class="slides-track">
+        <a href="/e2w/honda-activa-qc1" class="slide"
+          ><img src="/images/banners/1.jpg"
+        /></a>
+        <a href="/motorcycle/honda-unicorn" class="slide"
+          ><img src="/images/banners/2.jpg"
+        /></a>
+        <a href="/motorcycle/honda-sp-125" class="slide"
+          ><img src="/images/banners/3.jpg"
+        /></a>
+        <a href="/scooter/honda-dio-125" class="slide"
+          ><img src="/images/banners/4.jpg"
+        /></a>
+        <a href="/motorcycle/honda-sp-160" class="slide"
+          ><img src="/images/banners/5.jpg"
+        /></a>
+        <a href="/motorcycle/honda-hornet-2.0" class="slide"
+          ><img src="/images/banners/6.jpg"
+        /></a>
+        <a href="/motorcycle/honda-shine-125" class="slide"
+          ><img src="/images/banners/7.jpg"
+        /></a>
+      </div>
+
+      <div class="slider-dots"></div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector(".slides-track");
+        let slides = Array.from(document.querySelectorAll(".slide"));
+        const dotsContainer = document.querySelector(".slider-dots");
+
+        let visible = getVisible();
+        let current = 0;
+        let auto;
+
+        slides.slice(0, visible + 2).forEach((slide) => {
+          track.appendChild(slide.cloneNode(true));
+        });
+
+        const originalCount = slides.length;
+
+        for (let i = 0; i < originalCount; i++) {
+          const dot = document.createElement("span");
+          dot.classList.add("dot");
+          if (i === 0) dot.classList.add("activeDot");
+
+          dot.onclick = () => {
+            current = i;
+            move();
+            restartAuto();
+          };
+
+          dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll(".dot");
+
+        function getVisible() {
+          if (window.innerWidth <= 768) return 1;
+          if (window.innerWidth <= 991) return 2;
+          return 3;
+        }
+
+        function updateClasses() {
+          document.querySelectorAll(".slide").forEach((slide) => {
+            slide.classList.remove("centerActive", "sideActive");
+          });
+
+          const all = document.querySelectorAll(".slide");
+
+          if (visible === 3) {
+            if (all[current]) all[current].classList.add("sideActive");
+            if (all[current + 1])
+              all[current + 1].classList.add("centerActive");
+            if (all[current + 2]) all[current + 2].classList.add("sideActive");
+          } else if (visible === 2) {
+            if (all[current]) all[current].classList.add("sideActive");
+            if (all[current + 1])
+              all[current + 1].classList.add("centerActive");
+          } else {
+            if (all[current]) all[current].classList.add("centerActive");
+          }
+        }
+
+        function updateDots() {
+          dots.forEach((dot) => dot.classList.remove("activeDot"));
+          let active = current % originalCount;
+          if (dots[active]) dots[active].classList.add("activeDot");
+        }
+
+        function move() {
+          const slideWidth = document.querySelector(".slide").offsetWidth + 14;
+          track.style.transform = `translateX(-${current * slideWidth}px)`;
+          updateClasses();
+          updateDots();
+        }
+
+        function next() {
+          current++;
+
+          if (current > originalCount) {
+            move();
+            setTimeout(() => {
+              track.style.transition = "none";
+              current = 0;
+              move();
+              setTimeout(() => {
+                track.style.transition =
+                  "transform 1s cubic-bezier(0.77,0,0.175,1)";
+              }, 50);
+            }, 1000);
+          } else {
+            move();
+          }
+        }
+
+        function startAuto() {
+          auto = setInterval(next, 3000);
+        }
+
+        function restartAuto() {
+          clearInterval(auto);
+          startAuto();
+        }
+
+        updateClasses();
+        startAuto();
+      });
+    </script>
+  </body>
+</html>

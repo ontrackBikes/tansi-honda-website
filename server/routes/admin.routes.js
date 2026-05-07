@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const auth = require("../middleware/auth");
 const Service = require("../models/service.model");
 const Lead = require("../models/lead.model");
+const Contact = require("../models/contact.model");
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
@@ -403,6 +404,87 @@ router.get("/leads/export/csv", auth, async (req, res) => {
   res.header("Content-Type", "text/csv");
   res.attachment("website_leads.csv");
   res.send(csv);
+});
+
+// ===============================
+// CONTACT US MANAGEMENT
+// ===============================
+
+// All Contact Messages + Filter + Pagination
+router.get("/contact-us", auth, async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = 10;
+  const skip = (page - 1) * limit;
+
+  const from = req.query.from || "";
+  const to = req.query.to || "";
+  const toast = req.query.toast || "";
+  const statusFilter = req.query.status || "";
+
+  let filter = {};
+
+  if (from && to) {
+    filter.createdAt = {
+      $gte: new Date(from + "T00:00:00"),
+      $lte: new Date(to + "T23:59:59"),
+    };
+  }
+
+  if (statusFilter) {
+    filter.status = statusFilter;
+  }
+
+  const totalRecords = await Contact.countDocuments(filter);
+  const totalPages = Math.ceil(totalRecords / limit);
+
+  const contacts = await Contact.find(filter)
+    .sort({ createdAt: -1 })
+    .skip(skip)
+    .limit(limit);
+
+  let baseFilter = {};
+  if (from && to) {
+    baseFilter.createdAt = filter.createdAt;
+  }
+
+  const stats = {
+    total: await Contact.countDocuments(baseFilter),
+    new: await Contact.countDocuments({ ...baseFilter, status: "new" }),
+    contacted: await Contact.countDocuments({
+      ...baseFilter,
+      status: "contacted",
+    }),
+    closed: await Contact.countDocuments({
+      ...baseFilter,
+      status: "closed",
+    }),
+  };
+
+  res.render("admin/contact-us", {
+    contacts,
+    currentPage: page,
+    totalPages,
+    from,
+    to,
+    toast,
+    stats,
+    currentStatus: statusFilter,
+  });
+});
+
+// Update Contact Status
+router.post("/contact-us/:id", auth, async (req, res) => {
+  await Contact.findByIdAndUpdate(req.params.id, {
+    status: req.body.status,
+  });
+
+  res.redirect("/admin/contact-us?toast=updated");
+});
+
+// Delete Contact Message
+router.post("/contact-us/delete/:id", auth, async (req, res) => {
+  await Contact.findByIdAndDelete(req.params.id);
+  res.redirect("/admin/contact-us?toast=deleted");
 });
 
 module.exports = router;
