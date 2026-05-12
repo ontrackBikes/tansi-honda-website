@@ -72,9 +72,12 @@
           </p>
 
           <h4 class="fw-bold">Ex-Showroom Price</h4>
-          <p class="text-success fw-bold">₹ <span id="variantPrice">
-              <%= model.variants[0].price.exShowroom %>
-            </span>*</p>
+          <p class="text-success fw-bold">
+            ₹
+            <span id="variantPrice">
+              <%= Number(model.variants[0].price.exShowroom).toLocaleString('en-IN') %>
+            </span>*
+          </p>
 
           <div class="mt-4 d-grid gap-2">
             <!-- <% if (model.brochure) { %>
@@ -688,10 +691,10 @@
 
     @media (max-width: 768px) {
       .vehicle-title {
-       font-size: 2rem;
-       font-weight: 900;
-       letter-spacing: -1px;
-     }
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+      }
     }
   </style>
 

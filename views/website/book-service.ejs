@@ -68,7 +68,8 @@
               id="mobile"
               name="mobile"
               placeholder="10-digit Mobile Number"
-              pattern="^\d{10}$"
+              pattern="[6-9]{1}[0-9]{9}"
+              maxlength="10"
               required
             />
           </div>
@@ -122,6 +123,7 @@
               class="form-control"
               id="preferredDate"
               name="preferredDate"
+              min="<?= new Date().toISOString().split('T')[0] ?>"
             />
           </div>
 
