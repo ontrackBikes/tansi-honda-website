@@ -282,23 +282,17 @@ router.post("/leads", async (req, res) => {
     // 3. Background WhatsApp Logic
     (async () => {
       try {
-        const cleanPhone = `91${newLead.phone.slice(-10)}`; // Added trailing comma as per docs
+        const cleanPhone = newLead.phone.slice(-10) + ","; // Added trailing comma as per docs
 
         // IMPORTANT: Define your production URL
         const PROD_URL =
           "https://tansi-honda-website-production.up.railway.app";
 
-        let imageUrl = bike.coverImage?.trim();
+        let imageUrl = bike.coverImage.trim();
 
-        // Handle local images
-        if (imageUrl && imageUrl.startsWith("/")) {
+        // If it's a relative path like /images/..., make it absolute
+        if (imageUrl.startsWith("/")) {
           imageUrl = `${PROD_URL}${imageUrl}`;
-        }
-
-        // Handle invalid/missing image
-        if (!imageUrl || !imageUrl.startsWith("http")) {
-          console.error("❌ Invalid image URL:", imageUrl);
-          return;
         }
 
         let bhashParams = {
@@ -309,7 +303,8 @@ router.post("/leads", async (req, res) => {
           priority: "wa",
           stype: "normal",
           htype: "image",
-          url: imageUrl,
+          // FORCE ENCODE THE URL
+          url: encodeURI(imageUrl),
         };
 
         if (source === "Download Brochure") {
@@ -339,9 +334,6 @@ router.post("/leads", async (req, res) => {
             timeout: 20000, // 20 second timeout for reliability
           },
         );
-
-        console.log("📤 WhatsApp Image URL:", imageUrl);
-        console.log("📤 WhatsApp Params:", bhashParams);
 
         const resData = response.data.toString().trim();
 
