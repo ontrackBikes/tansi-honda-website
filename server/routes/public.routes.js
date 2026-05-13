@@ -190,9 +190,9 @@ router.post("/create-appointment", async (req, res) => {
 
         // WhatsApp params
         const bhashParams = {
-          user: process.env.BHASH_USER,
-          pass: process.env.BHASH_PASS,
-          sender: process.env.BHASH_SENDER,
+          user: BHASH_USER,
+          pass: BHASH_PASS,
+          sender: BHASH_SENDER,
           phone: cleanPhone,
           priority: "wa",
           stype: "normal",
@@ -331,9 +331,9 @@ router.post("/leads", async (req, res) => {
 
         // WhatsApp params
         let bhashParams = {
-          user: process.env.BHASH_USER,
-          pass: process.env.BHASH_PASS,
-          sender: process.env.BHASH_SENDER,
+          user: BHASH_USER,
+          pass: BHASH_PASS,
+          sender: BHASH_SENDER,
           phone: cleanPhone,
           priority: "wa",
           stype: "normal",
