@@ -151,7 +151,7 @@ router.post("/create-appointment", async (req, res) => {
       return res.status(400).send("Required fields missing");
     }
 
-    // Save Appointment
+    // Save appointment
     const appointment = await Service.create({
       name: name.trim(),
       email: email?.trim(),
@@ -165,17 +165,19 @@ router.post("/create-appointment", async (req, res) => {
       `✅ [Service Appointment] ${appointment.name} | ${appointment.model} | ${appointment.serviceCentre}`,
     );
 
-    // Redirect immediately
+    // Immediate redirect
     res.redirect("/service/success");
 
-    // ==============================
-    // WHATSAPP CONFIRMATION
-    // ==============================
+    // ==================================
+    // BACKGROUND WHATSAPP CONFIRMATION
+    // ==================================
     (async () => {
       try {
-        const cleanPhone = appointment.mobile.slice(-10) + ",";
+        // BhashSMS format:
+        // mobile number without 91 + trailing comma
+        const cleanPhone = `${appointment.mobile.slice(-10)},`;
 
-        // Format Date
+        // Format booking date
         let bookingDate = "Our team will contact you shortly";
 
         if (preferredDate) {
@@ -186,6 +188,7 @@ router.post("/create-appointment", async (req, res) => {
           });
         }
 
+        // WhatsApp params
         const bhashParams = {
           user: process.env.BHASH_USER,
           pass: process.env.BHASH_PASS,
@@ -196,7 +199,7 @@ router.post("/create-appointment", async (req, res) => {
           htype: "text",
           text: "tansi_service_booking_confirmation1",
 
-          // Template Parameters
+          // Template params
           Params: [
             appointment.name,
             appointment.model,
@@ -204,6 +207,9 @@ router.post("/create-appointment", async (req, res) => {
             bookingDate,
           ].join(","),
         };
+
+        // Debug logs
+        console.log("📤 WhatsApp Params:", bhashParams);
 
         // Send WhatsApp
         const response = await axios.get(
@@ -216,11 +222,17 @@ router.post("/create-appointment", async (req, res) => {
 
         const resData = response.data.toString().trim();
 
+        console.log("📥 WhatsApp Response:", resData);
+
+        // Success
         if (resData.startsWith("S.")) {
           console.log(
             `✅ [WhatsApp Sent] Service confirmation sent to ${cleanPhone}`,
           );
-        } else {
+        }
+
+        // Warning
+        else {
           console.warn(`⚠️ [WhatsApp Warning] ${resData}`);
         }
       } catch (err) {
@@ -229,6 +241,7 @@ router.post("/create-appointment", async (req, res) => {
     })();
   } catch (err) {
     console.error("🔥 [Service Booking Error]:", err);
+
     res.status(500).send("Error submitting request");
   }
 });
@@ -243,24 +256,33 @@ router.post("/leads", async (req, res) => {
     const { name, email, phone, modelName, variantName, source } = req.body;
 
     if (!name || !phone || !modelName) {
-      console.warn(`⚠️  [Lead Blocked] Missing fields from IP: ${req.ip}`);
-      return res
-        .status(400)
-        .json({ success: false, message: "Missing fields" });
+      console.warn(`⚠️ [Lead Blocked] Missing fields from IP: ${req.ip}`);
+
+      return res.status(400).json({
+        success: false,
+        message: "Missing fields",
+      });
     }
 
+    // Find bike
     const bike = await Bike.findOne({ name: modelName }).lean();
+
     if (!bike) {
       console.error(
         `❌ [Data Error] Bike model "${modelName}" not found in database.`,
       );
-      return res.status(404).json({ success: false });
+
+      return res.status(404).json({
+        success: false,
+        message: "Bike not found",
+      });
     }
 
+    // Find variant
     const variant =
       bike.variants.find((v) => v.name === variantName) || bike.variants[0];
 
-    // 1. Save Lead
+    // Save lead
     const newLead = new Lead({
       name: name.trim(),
       // email: email?.toLowerCase().trim(),
@@ -269,79 +291,107 @@ router.post("/leads", async (req, res) => {
       variantName: variant.name,
       source: source || "Website Inquiry",
     });
+
     await newLead.save();
 
-    // 🚀 LOG: Lead Saved Successfully
     console.log(
       `✅ [New Lead Saved] ${newLead.name} | ${newLead.modelName} (${newLead.variantName}) | Source: ${newLead.source}`,
     );
 
-    // 2. Immediate Response
-    res.status(200).json({ success: true, message: "Sent! Check WhatsApp." });
+    // Send immediate response
+    res.status(200).json({
+      success: true,
+      message: "Sent! Check WhatsApp.",
+    });
 
-    // 3. Background WhatsApp Logic
+    // Background WhatsApp sending
     (async () => {
       try {
-        const cleanPhone = newLead.phone.slice(-10) + ","; // Added trailing comma as per docs
+        // BhashSMS format:
+        // number without 91 + trailing comma
+        const cleanPhone = `${newLead.phone.slice(-10)},`;
 
-        // IMPORTANT: Define your production URL
+        // Production URL
         const PROD_URL =
           "https://tansi-honda-website-production.up.railway.app";
 
-        let imageUrl = bike.coverImage.trim();
+        // Get image URL
+        let imageUrl = bike.coverImage?.trim();
 
-        // If it's a relative path like /images/..., make it absolute
-        if (imageUrl.startsWith("/")) {
+        // Convert local image path to public URL
+        if (imageUrl && imageUrl.startsWith("/")) {
           imageUrl = `${PROD_URL}${imageUrl}`;
         }
 
+        // Validate image URL
+        if (!imageUrl || !imageUrl.startsWith("http")) {
+          console.error("❌ Invalid image URL:", imageUrl);
+          return;
+        }
+
+        // WhatsApp params
         let bhashParams = {
           user: process.env.BHASH_USER,
           pass: process.env.BHASH_PASS,
-          sender: process.env.BHASH_SENDER, // Should be "BUZWAP" based on your docs
+          sender: process.env.BHASH_SENDER,
           phone: cleanPhone,
           priority: "wa",
           stype: "normal",
           htype: "image",
-          // FORCE ENCODE THE URL
-          url: encodeURI(imageUrl),
+          url: imageUrl,
         };
 
+        // Brochure template
         if (source === "Download Brochure") {
           bhashParams.text = "tansi_model_brochure_share";
-          // Explicitly array join to prevent formatting errors
+
           bhashParams.Params = [newLead.name, bike.name, bike.brochure].join(
             ",",
           );
-        } else {
+        }
+
+        // Price quote template
+        else {
           bhashParams.text = "tansi_vehicle_price_quote";
+
           bhashParams.Params = [
             newLead.name,
             bike.name,
             variant.name,
-            formatINRPlain(variant.price.exShowroom), // Send "125000" instead of "1,25,000"
+            formatINRPlain(variant.price.exShowroom),
             formatINRPlain(variant.price.roadTaxAndReg),
             formatINRPlain(variant.price.insuranceBase),
             formatINRPlain(variant.price.finalOnRoad),
           ].join(",");
         }
 
-        // Call API
+        // Debug logs
+        // console.log("📤 WhatsApp Image URL:", imageUrl);
+
+        // console.log("📤 WhatsApp Params:", bhashParams);
+
+        // Send API request
         const response = await axios.get(
-          `http://bhashsms.com/api/sendmsg.php`,
+          "http://bhashsms.com/api/sendmsg.php",
           {
             params: bhashParams,
-            timeout: 20000, // 20 second timeout for reliability
+            timeout: 20000,
           },
         );
 
         const resData = response.data.toString().trim();
 
+        console.log("📥 WhatsApp Response:", resData);
+
+        // Success
         if (resData.startsWith("S.")) {
           console.log(
             `✅ [WhatsApp Delivered to Queue] ID: ${resData} | Number: ${cleanPhone}`,
           );
-        } else {
+        }
+
+        // Warning
+        else {
           console.warn(`⚠️ [WhatsApp Provider Warning] Response: ${resData}`);
         }
       } catch (err) {
@@ -350,7 +400,11 @@ router.post("/leads", async (req, res) => {
     })();
   } catch (err) {
     console.error("🔥 [Critical Lead Route Error]:", err);
-    res.status(500).json({ success: false });
+
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
   }
 });
 
