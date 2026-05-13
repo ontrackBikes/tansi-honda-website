@@ -175,7 +175,7 @@ router.post("/create-appointment", async (req, res) => {
       try {
         // BhashSMS format:
         // mobile number without 91 + trailing comma
-        const cleanPhone = `${appointment.mobile.slice(-10)},`;
+        const cleanPhone = `${appointment.mobile.slice(-10)}`;
 
         // Format booking date
         let bookingDate = "Our team will contact you shortly";
@@ -309,7 +309,7 @@ router.post("/leads", async (req, res) => {
       try {
         // BhashSMS format:
         // number without 91 + trailing comma
-        const cleanPhone = `${newLead.phone.slice(-10)},`;
+        const cleanPhone = `${newLead.phone.slice(-10)}`;
 
         // Production URL
         const PROD_URL =
