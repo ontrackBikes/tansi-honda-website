@@ -135,22 +135,103 @@ router.get("/:category/:slug", async (req, res) => {
   res.render("website/model-detail", { model });
 });
 
-// BOOK SERVICE APPOINTMENT
-router.post("/create-appointment", async (req, res) => {
-  try {
-    await Service.create(req.body);
-    // ✅ redirect to success page
-    res.redirect("/service/success");
-  } catch (err) {
-    console.error(err);
-    res.send("Error submitting request");
-  }
-});
-
 // Tip: In production, use environment variables for secrets
 const BHASH_USER = process.env.BHASH_USER;
 const BHASH_PASS = process.env.BHASH_PASS;
 const BHASH_SENDER = process.env.BHASH_SENDER;
+
+// BOOK SERVICE APPOINTMENT
+router.post("/create-appointment", async (req, res) => {
+  try {
+    const { name, email, mobile, model, serviceCentre, preferredDate } =
+      req.body;
+
+    // Validation
+    if (!name || !mobile || !model || !serviceCentre) {
+      return res.status(400).send("Required fields missing");
+    }
+
+    // Save Appointment
+    const appointment = await Service.create({
+      name: name.trim(),
+      email: email?.trim(),
+      mobile: mobile.replace(/\D/g, ""),
+      model,
+      serviceCentre,
+      preferredDate,
+    });
+
+    console.log(
+      `✅ [Service Appointment] ${appointment.name} | ${appointment.model} | ${appointment.serviceCentre}`,
+    );
+
+    // Redirect immediately
+    res.redirect("/service/success");
+
+    // ==============================
+    // WHATSAPP CONFIRMATION
+    // ==============================
+    (async () => {
+      try {
+        const cleanPhone = appointment.mobile.slice(-10) + ",";
+
+        // Format Date
+        let bookingDate = "Our team will contact you shortly";
+
+        if (preferredDate) {
+          bookingDate = new Date(preferredDate).toLocaleDateString("en-IN", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          });
+        }
+
+        const bhashParams = {
+          user: process.env.BHASH_USER,
+          pass: process.env.BHASH_PASS,
+          sender: process.env.BHASH_SENDER,
+          phone: cleanPhone,
+          priority: "wa",
+          stype: "normal",
+          htype: "text",
+          text: "tansi_service_booking_confirmation1",
+
+          // Template Parameters
+          Params: [
+            appointment.name,
+            appointment.model,
+            appointment.serviceCentre,
+            bookingDate,
+          ].join(","),
+        };
+
+        // Send WhatsApp
+        const response = await axios.get(
+          "http://bhashsms.com/api/sendmsg.php",
+          {
+            params: bhashParams,
+            timeout: 20000,
+          },
+        );
+
+        const resData = response.data.toString().trim();
+
+        if (resData.startsWith("S.")) {
+          console.log(
+            `✅ [WhatsApp Sent] Service confirmation sent to ${cleanPhone}`,
+          );
+        } else {
+          console.warn(`⚠️ [WhatsApp Warning] ${resData}`);
+        }
+      } catch (err) {
+        console.error(`📡 [WhatsApp Failed] ${err.message}`);
+      }
+    })();
+  } catch (err) {
+    console.error("🔥 [Service Booking Error]:", err);
+    res.status(500).send("Error submitting request");
+  }
+});
 
 // const formatINR = (num) =>
 //   new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(num);
@@ -201,17 +282,23 @@ router.post("/leads", async (req, res) => {
     // 3. Background WhatsApp Logic
     (async () => {
       try {
-        const cleanPhone = newLead.phone.slice(-10) + ","; // Added trailing comma as per docs
+        const cleanPhone = `91${newLead.phone.slice(-10)}`; // Added trailing comma as per docs
 
         // IMPORTANT: Define your production URL
         const PROD_URL =
           "https://tansi-honda-website-production.up.railway.app";
 
-        let imageUrl = bike.coverImage.trim();
+        let imageUrl = bike.coverImage?.trim();
 
-        // If it's a relative path like /images/..., make it absolute
-        if (imageUrl.startsWith("/")) {
+        // Handle local images
+        if (imageUrl && imageUrl.startsWith("/")) {
           imageUrl = `${PROD_URL}${imageUrl}`;
+        }
+
+        // Handle invalid/missing image
+        if (!imageUrl || !imageUrl.startsWith("http")) {
+          console.error("❌ Invalid image URL:", imageUrl);
+          return;
         }
 
         let bhashParams = {
@@ -222,8 +309,7 @@ router.post("/leads", async (req, res) => {
           priority: "wa",
           stype: "normal",
           htype: "image",
-          // FORCE ENCODE THE URL
-          url: encodeURI(imageUrl),
+          url: imageUrl,
         };
 
         if (source === "Download Brochure") {
@@ -253,6 +339,9 @@ router.post("/leads", async (req, res) => {
             timeout: 20000, // 20 second timeout for reliability
           },
         );
+
+        console.log("📤 WhatsApp Image URL:", imageUrl);
+        console.log("📤 WhatsApp Params:", bhashParams);
 
         const resData = response.data.toString().trim();
 
