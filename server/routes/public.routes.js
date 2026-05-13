@@ -315,19 +315,22 @@ router.post("/leads", async (req, res) => {
         const PROD_URL =
           "https://tansi-honda-website-production.up.railway.app";
 
+        const imageUrl =
+          "https://tansi-honda-website-production.up.railway.app/images/bike/honda-cb350rs/4.png";
+
         // Get image URL
-        let imageUrl = bike.coverImage?.trim();
+        // let imageUrl = bike.coverImage?.trim();
 
         // Convert local image path to public URL
-        if (imageUrl && imageUrl.startsWith("/")) {
-          imageUrl = `${PROD_URL}${imageUrl}`;
-        }
+        // if (imageUrl && imageUrl.startsWith("/")) {
+        //   imageUrl = `${PROD_URL}${imageUrl}`;
+        // }
 
         // Validate image URL
-        if (!imageUrl || !imageUrl.startsWith("http")) {
-          console.error("❌ Invalid image URL:", imageUrl);
-          return;
-        }
+        // if (!imageUrl || !imageUrl.startsWith("http")) {
+        //   console.error("❌ Invalid image URL:", imageUrl);
+        //   return;
+        // }
 
         // WhatsApp params
         let bhashParams = {
