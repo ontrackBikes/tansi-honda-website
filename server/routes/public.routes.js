@@ -173,22 +173,20 @@ router.post("/create-appointment", async (req, res) => {
     // ==================================
     (async () => {
       try {
-        // BhashSMS format:
-        // mobile number without 91 + trailing comma
-        const cleanPhone = `${appointment.mobile.slice(-10)}`;
+        // 1. MUST include 91 prefix as per support example
+        const cleanPhone = `91${appointment.mobile.slice(-10)}`;
 
-        // Format booking date
+        // 2. Format booking date
         let bookingDate = "Our team will contact you shortly";
-
         if (preferredDate) {
           bookingDate = new Date(preferredDate).toLocaleDateString("en-IN", {
             day: "numeric",
-            month: "long",
+            month: "short", // 'short' is safer for template character limits
             year: "numeric",
           });
         }
 
-        // WhatsApp params
+        // 3. Updated Params as per support team (sendmsgutil.php)
         const bhashParams = {
           user: BHASH_USER,
           pass: BHASH_PASS,
@@ -196,10 +194,8 @@ router.post("/create-appointment", async (req, res) => {
           phone: cleanPhone,
           priority: "wa",
           stype: "normal",
-          htype: "text",
-          text: "tansi_service_booking_confirmation1",
+          text: "tansi_service_booking_confirmation",
 
-          // Template params
           Params: [
             appointment.name,
             appointment.model,
@@ -208,12 +204,9 @@ router.post("/create-appointment", async (req, res) => {
           ].join(","),
         };
 
-        // Debug logs
-        console.log("📤 WhatsApp Params:", bhashParams);
-
-        // Send WhatsApp
+        // 4. Use the new 'sendmsgutil.php' endpoint
         const response = await axios.get(
-          "http://bhashsms.com/api/sendmsg.php",
+          "http://bhashsms.com/api/sendmsgutil.php",
           {
             params: bhashParams,
             timeout: 20000,
@@ -221,18 +214,11 @@ router.post("/create-appointment", async (req, res) => {
         );
 
         const resData = response.data.toString().trim();
-
         console.log("📥 WhatsApp Response:", resData);
 
-        // Success
         if (resData.startsWith("S.")) {
-          console.log(
-            `✅ [WhatsApp Sent] Service confirmation sent to ${cleanPhone}`,
-          );
-        }
-
-        // Warning
-        else {
+          console.log(`✅ [WhatsApp Sent] Sent to ${cleanPhone}`);
+        } else {
           console.warn(`⚠️ [WhatsApp Warning] ${resData}`);
         }
       } catch (err) {
