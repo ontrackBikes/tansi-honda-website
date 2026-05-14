@@ -114,9 +114,14 @@
                                                 <p class="fw-bold mb-0">
                                                     <%= s.name %>
                                                 </p>
-                                                <small class="text-muted">
-                                                    <%= s.mobile %>
-                                                </small>
+                                                <div class="small text-muted">
+                                                    <div>
+                                                        <%= s.mobile %>
+                                                    </div>
+                                                    <div>
+                                                        <%= s.email %>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </td>
 
@@ -126,8 +131,27 @@
                                         </td>
 
                                         <!-- Location -->
+                                        <!-- Location -->
                                         <td>
-                                            <%= s.serviceCentre %>
+                                            <% if (s.pickupDrop) { %>
+
+                                                <div>
+                                                    <span class="badge bg-warning text-dark mb-1">
+                                                        Pickup & Drop
+                                                    </span>
+
+                                                    <p class="small text-muted mb-0 location-text">
+                                                        <%= s.address %>
+                                                    </p>
+                                                </div>
+
+                                                <% } else { %>
+
+                                                    <span class="badge bg-light text-dark border">
+                                                        <%= s.serviceCentre %>
+                                                    </span>
+
+                                                    <% } %>
                                         </td>
 
                                         <!-- Date -->
@@ -233,6 +257,12 @@
             border: 1px solid #eee;
             font-size: 0.8rem;
             font-weight: 600;
+        }
+
+        .location-text {
+            max-width: 280px;
+            white-space: normal;
+            line-height: 1.4;
         }
     </style>
 

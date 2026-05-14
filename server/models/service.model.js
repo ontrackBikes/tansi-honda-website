@@ -13,6 +13,17 @@ const serviceSchema = new mongoose.Schema(
       required: true,
     },
 
+    pickupDrop: {
+      type: Boolean,
+      default: false,
+    },
+
+    address: {
+      type: String,
+      default: "",
+      trim: true,
+    },
+
     preferredDate: { type: Date },
 
     status: {

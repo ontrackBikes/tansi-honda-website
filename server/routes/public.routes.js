@@ -143,68 +143,150 @@ const BHASH_SENDER = process.env.BHASH_SENDER;
 // BOOK SERVICE APPOINTMENT
 router.post("/create-appointment", async (req, res) => {
   try {
-    const { name, email, mobile, model, serviceCentre, preferredDate } =
-      req.body;
-
-    // Validation
-    if (!name || !mobile || !model || !serviceCentre) {
-      return res.status(400).send("Required fields missing");
-    }
-
-    // Save appointment
-    const appointment = await Service.create({
-      name: name.trim(),
-      email: email?.trim(),
-      mobile: mobile.replace(/\D/g, ""),
+    const {
+      name,
+      email,
+      mobile,
       model,
       serviceCentre,
       preferredDate,
+      pickupDrop,
+      address,
+    } = req.body;
+
+    // =========================
+    // CLEAN VALUES
+    // =========================
+    const cleanName = name?.trim();
+    const cleanEmail = email?.trim().toLowerCase();
+    const cleanMobile = mobile?.replace(/\D/g, "");
+    const cleanModel = model?.trim();
+
+    const isPickupDrop =
+      pickupDrop === true || pickupDrop === "true" || pickupDrop === "on";
+
+    const cleanAddress = address
+      ? address.replace(/,/g, " ").replace(/\s+/g, " ").trim().slice(0, 150)
+      : "";
+
+    // =========================
+    // DATE VALIDATION
+    // =========================
+    const selectedDate = new Date(preferredDate);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+
+    if (selectedDate < tomorrow) {
+      return res.status(400).send("Same day booking is not allowed");
+    }
+
+    // =========================
+    // BASIC VALIDATION
+    // =========================
+    if (
+      !cleanName ||
+      !cleanEmail ||
+      !cleanMobile ||
+      !cleanModel ||
+      !preferredDate
+    ) {
+      return res.status(400).send("Required fields missing");
+    }
+
+    // =========================
+    // PICKUP VALIDATION
+    // =========================
+    if (isPickupDrop && !cleanAddress) {
+      return res.status(400).send("Pickup address is required");
+    }
+
+    // =========================
+    // SERVICE CENTRE VALIDATION
+    // =========================
+    if (!isPickupDrop && !serviceCentre) {
+      return res.status(400).send("Service centre is required");
+    }
+
+    // =========================
+    // SAVE BOOKING
+    // =========================
+    const appointment = await Service.create({
+      name: cleanName,
+      email: cleanEmail,
+      mobile: cleanMobile,
+      model: cleanModel,
+      preferredDate,
+      pickupDrop: isPickupDrop,
+      address: cleanAddress,
+      serviceCentre: isPickupDrop ? "Pickup & Drop" : serviceCentre,
     });
 
     console.log(
-      `✅ [Service Appointment] ${appointment.name} | ${appointment.model} | ${appointment.serviceCentre}`,
+      `✅ [Service Appointment] ${appointment.name} | ${appointment.model}`,
     );
 
-    // Immediate redirect
+    // FAST RESPONSE
     res.redirect("/service/success");
 
-    // ==================================
-    // BACKGROUND WHATSAPP CONFIRMATION
-    // ==================================
+    // =========================
+    // WHATSAPP MESSAGE
+    // =========================
     (async () => {
       try {
-        // 1. MUST include 91 prefix as per support example
         const cleanPhone = `91${appointment.mobile.slice(-10)}`;
 
-        // 2. Format booking date
-        let bookingDate = "Our team will contact you shortly";
-        if (preferredDate) {
-          bookingDate = new Date(preferredDate).toLocaleDateString("en-IN", {
+        // FORMAT DATE
+        const bookingDate = new Date(preferredDate).toLocaleDateString(
+          "en-IN",
+          {
             day: "numeric",
-            month: "short", // 'short' is safer for template character limits
+            month: "short",
             year: "numeric",
-          });
-        }
+          },
+        );
 
-        // 3. Updated Params as per support team (sendmsgutil.php)
-        const bhashParams = {
-          user: BHASH_USER,
-          pass: BHASH_PASS,
-          sender: BHASH_SENDER,
-          phone: cleanPhone,
-          priority: "wa",
-          stype: "normal",
-          text: "tansi_service_booking_confirmation",
+        // =========================
+        // TEMPLATE SELECTION
+        // =========================
+        const bhashParams = isPickupDrop
+          ? {
+              user: BHASH_USER,
+              pass: BHASH_PASS,
+              sender: BHASH_SENDER,
+              phone: cleanPhone,
+              priority: "wa",
+              stype: "normal",
+              text: "tansi_service_pickup_booking",
 
-          Params: [
-            appointment.name,
-            appointment.model,
-            appointment.serviceCentre,
-            bookingDate,
-          ].join(","),
-        };
+              Params: [
+                appointment.name,
+                appointment.model,
+                bookingDate,
+                cleanAddress,
+              ].join(","),
+            }
+          : {
+              user: BHASH_USER,
+              pass: BHASH_PASS,
+              sender: BHASH_SENDER,
+              phone: cleanPhone,
+              priority: "wa",
+              stype: "normal",
+              text: "tansi_service_booking_confirmation",
 
-        // 4. Use the new 'sendmsgutil.php' endpoint
+              Params: [
+                appointment.name,
+                appointment.model,
+                appointment.serviceCentre,
+                bookingDate,
+              ].join(","),
+            };
+
+        console.log("📤 WhatsApp Params:", bhashParams);
+
+        // SEND WHATSAPP
         const response = await axios.get(
           "http://bhashsms.com/api/sendmsgutil.php",
           {
@@ -214,6 +296,7 @@ router.post("/create-appointment", async (req, res) => {
         );
 
         const resData = response.data.toString().trim();
+
         console.log("📥 WhatsApp Response:", resData);
 
         if (resData.startsWith("S.")) {

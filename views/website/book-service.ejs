@@ -1,35 +1,44 @@
 <%- include("../partials/header") %>
 
 <div class="container">
+  <!-- BANNER -->
   <section class="banner-slider">
     <div class="slides-track">
-      <a href="/book-service" class="slide"
-        ><img src="/images/homepage/1.png" alt=""
-      /></a>
-      <a href="/directions" class="slide"
-        ><img src="/images/homepage/2.png" alt=""
-      /></a>
-      <a href="/special-offer" class="slide"
-        ><img src="/images/homepage/3.png" alt=""
-      /></a>
+      <a href="/book-service" class="slide">
+        <img src="/images/homepage/1.png" alt="" />
+      </a>
+
+      <a href="/directions" class="slide">
+        <img src="/images/homepage/2.png" alt="" />
+      </a>
+
+      <a href="/special-offer" class="slide">
+        <img src="/images/homepage/3.png" alt="" />
+      </a>
     </div>
 
     <div class="slider-dots"></div>
   </section>
-  <div class="card border-1 shadow-sm rounded-4 overflow-hidden h-100">
+
+  <!-- FORM -->
+  <div class="card border-1 shadow-sm rounded-4 overflow-hidden h-100 mb-5">
     <div class="card-header bg-white border-1 p-4 pb-0">
       <h3 class="card-title fw-bold mb-1">Service Appointment</h3>
-      <p class="text-muted small">Fill the form and we’ll get back to you</p>
+
+      <p class="text-muted small">
+        Fill the form and our team will contact you shortly
+      </p>
     </div>
 
     <div class="card-body p-4">
       <form id="serviceForm" action="/create-appointment" method="POST">
         <div class="row g-3">
-          <!-- Name -->
+          <!-- NAME -->
           <div class="col-md-6">
-            <label for="name" class="form-label"
-              >Name<span class="text-danger">*</span></label
-            >
+            <label for="name" class="form-label">
+              Name <span class="text-danger">*</span>
+            </label>
+
             <input
               id="name"
               type="text"
@@ -42,11 +51,12 @@
             />
           </div>
 
-          <!-- Email -->
+          <!-- EMAIL -->
           <div class="col-md-6">
-            <label for="email" class="form-label"
-              >E-Mail<span class="text-danger">*</span></label
-            >
+            <label for="email" class="form-label">
+              E-Mail <span class="text-danger">*</span>
+            </label>
+
             <input
               type="email"
               class="form-control"
@@ -57,11 +67,12 @@
             />
           </div>
 
-          <!-- Mobile -->
+          <!-- MOBILE -->
           <div class="col-md-6">
-            <label for="mobile" class="form-label"
-              >Mobile Number <span class="text-danger">*</span></label
-            >
+            <label for="mobile" class="form-label">
+              Mobile Number <span class="text-danger">*</span>
+            </label>
+
             <input
               type="tel"
               class="form-control"
@@ -74,29 +85,75 @@
             />
           </div>
 
-          <!-- Model to be serviced -->
+          <!-- MODEL -->
           <div class="col-md-6">
-            <label for="model" class="form-label"
-              >Model to be serviced <span class="text-danger">*</span></label
-            >
+            <label for="model" class="form-label">
+              Vehicle Model <span class="text-danger">*</span>
+            </label>
+
             <input
               type="text"
               class="form-control"
               id="model"
               name="model"
-              placeholder="Model to be serviced"
+              placeholder="Type vehicle model"
+              list="vehicleModels"
+              autocomplete="off"
               required
-              pattern="^[a-zA-Z\s]+$"
-              title="Only letters and spaces allowed"
             />
+
+            <datalist id="vehicleModels">
+              <!-- Scooters -->
+              <option value="Activa"></option>
+              <option value="Dio"></option>
+              <option value="Aviator"></option>
+              <option value="Grazia"></option>
+
+              <!-- Commuter Motorcycles -->
+              <option value="Shine"></option>
+              <option value="SP125"></option>
+              <option value="Unicorn"></option>
+              <option value="Livo"></option>
+              <option value="CD 110 Dream"></option>
+
+              <!-- Performance / Sports -->
+              <option value="Hornet"></option>
+              <option value="X-Blade"></option>
+              <option value="CB200X"></option>
+
+              <!-- Premium / BigWing -->
+              <option value="H'ness CB350"></option>
+              <option value="CB350RS"></option>
+              <option value="CB300R"></option>
+              <option value="CB300F"></option>
+              <option value="Africa Twin"></option>
+              <option value="Goldwing"></option>
+            </datalist>
           </div>
 
-          <!-- Service Centre Location -->
-          <div class="col-md-6">
-            <label for="serviceCentre" class="form-label"
-              >Preferred Service Centre Location
-              <span class="text-danger">*</span></label
-            >
+          <!-- PICKUP -->
+          <div class="col-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="pickupDrop"
+                name="pickupDrop"
+              />
+
+              <label class="form-check-label fw-semibold" for="pickupDrop">
+                Need Pickup & Drop
+              </label>
+            </div>
+          </div>
+
+          <!-- SERVICE CENTRE -->
+          <div class="col-md-6" id="serviceCentreWrapper">
+            <label for="serviceCentre" class="form-label">
+              Preferred Service Centre Location
+              <span class="text-danger">*</span>
+            </label>
+
             <select
               class="form-select"
               id="serviceCentre"
@@ -104,6 +161,7 @@
               required
             >
               <option value="" disabled selected>Select Location</option>
+
               <option value="Hoodi">Hoodi</option>
               <option value="Marathahalli">Marathahalli</option>
               <option value="Gunjur">Gunjur</option>
@@ -113,21 +171,38 @@
               <option value="Ramagondanahalli">Ramagondanahalli</option>
             </select>
           </div>
-          <!-- Preferred Date -->
-          <div class="col-md-6">
-            <label for="preferredDate" class="form-label"
-              >Preferred Date
+
+          <!-- ADDRESS -->
+          <div class="col-md-6 d-none" id="addressWrapper">
+            <label for="address" class="form-label">
+              Pickup Address <span class="text-danger">*</span>
             </label>
+
+            <textarea
+              class="form-control"
+              id="address"
+              name="address"
+              rows="2"
+              placeholder="Enter pickup address"
+            ></textarea>
+          </div>
+
+          <!-- DATE -->
+          <div class="col-md-6">
+            <label for="preferredDate" class="form-label">
+              Preferred Date <span class="text-danger">*</span>
+            </label>
+
             <input
               type="date"
               class="form-control"
               id="preferredDate"
               name="preferredDate"
-              min="<?= new Date().toISOString().split('T')[0] ?>"
+              required
             />
           </div>
 
-          <!-- Submit -->
+          <!-- SUBMIT -->
           <div class="col-12 text-end mt-4">
             <button type="submit" class="btn btn-danger btn-lg">
               Book Appointment
@@ -225,7 +300,6 @@
     box-shadow: 0 4px 15px rgba(214, 0, 0, 0.35);
   }
 
-  /* MOBILE */
   @media (max-width: 768px) {
     .banner-slider {
       padding: 20px 10px 35px;
@@ -248,17 +322,56 @@
   }
 </style>
 
-<!-- SCRIPT -->
 <script>
-  const today = new Date().toISOString().split("T")[0];
-  document.getElementById("preferredDate").setAttribute("min", today);
+  // PREVENT SAME DAY BOOKING
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
 
+  const minDate = tomorrow.toISOString().split("T")[0];
+
+  document.getElementById("preferredDate").setAttribute("min", minDate);
+
+  // PICKUP & DROP
+  const pickupCheckbox = document.getElementById("pickupDrop");
+
+  const serviceCentreWrapper = document.getElementById("serviceCentreWrapper");
+
+  const addressWrapper = document.getElementById("addressWrapper");
+
+  const serviceCentre = document.getElementById("serviceCentre");
+
+  const address = document.getElementById("address");
+
+  pickupCheckbox.addEventListener("change", function () {
+    if (this.checked) {
+      serviceCentreWrapper.classList.add("d-none");
+
+      addressWrapper.classList.remove("d-none");
+
+      serviceCentre.removeAttribute("required");
+
+      address.setAttribute("required", true);
+    } else {
+      serviceCentreWrapper.classList.remove("d-none");
+
+      addressWrapper.classList.add("d-none");
+
+      serviceCentre.setAttribute("required", true);
+
+      address.removeAttribute("required");
+    }
+  });
+
+  // SLIDER
   document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".slides-track");
+
     let slides = Array.from(document.querySelectorAll(".slide"));
+
     const dotsContainer = document.querySelector(".slider-dots");
 
     let visible = window.innerWidth <= 768 ? 1 : 2;
+
     let current = 0;
     let auto;
     let startX = 0;
@@ -272,12 +385,18 @@
 
     for (let i = 0; i < originalCount; i++) {
       const dot = document.createElement("span");
+
       dot.classList.add("dot");
-      if (i === 0) dot.classList.add("activeDot");
+
+      if (i === 0) {
+        dot.classList.add("activeDot");
+      }
 
       dot.onclick = () => {
         current = i;
+
         move();
+
         restartAuto();
       };
 
@@ -294,23 +413,37 @@
       const all = document.querySelectorAll(".slide");
 
       if (visible === 2) {
-        if (all[current]) all[current].classList.add("sideActive");
-        if (all[current + 1]) all[current + 1].classList.add("centerActive");
+        if (all[current]) {
+          all[current].classList.add("sideActive");
+        }
+
+        if (all[current + 1]) {
+          all[current + 1].classList.add("centerActive");
+        }
       } else {
-        if (all[current]) all[current].classList.add("centerActive");
+        if (all[current]) {
+          all[current].classList.add("centerActive");
+        }
       }
     }
 
     function updateDots() {
       dots.forEach((dot) => dot.classList.remove("activeDot"));
+
       let active = current % originalCount;
-      if (dots[active]) dots[active].classList.add("activeDot");
+
+      if (dots[active]) {
+        dots[active].classList.add("activeDot");
+      }
     }
 
     function move() {
       const slideWidth = document.querySelector(".slide").offsetWidth + 22;
+
       track.style.transform = `translateX(-${current * slideWidth}px)`;
+
       updateClasses();
+
       updateDots();
     }
 
@@ -322,7 +455,9 @@
 
         setTimeout(() => {
           track.style.transition = "none";
+
           current = 0;
+
           move();
 
           setTimeout(() => {
@@ -341,21 +476,26 @@
       } else {
         current--;
       }
+
       move();
     }
 
     function startAuto() {
       auto = setInterval(() => {
-        if (!isHover) next();
+        if (!isHover) {
+          next();
+        }
       }, 3000);
     }
 
     function restartAuto() {
       clearInterval(auto);
+
       startAuto();
     }
 
     track.addEventListener("mouseenter", () => (isHover = true));
+
     track.addEventListener("mouseleave", () => (isHover = false));
 
     track.addEventListener("touchstart", (e) => {
@@ -367,14 +507,17 @@
 
       if (startX - endX > 50) {
         next();
+
         restartAuto();
       } else if (endX - startX > 50) {
         prev();
+
         restartAuto();
       }
     });
 
     updateClasses();
+
     startAuto();
   });
 </script>
