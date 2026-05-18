@@ -102,37 +102,96 @@ router.get("/models", async (req, res) => {
   });
 });
 
+// ================= MOTORCYCLE SUBCATEGORY =================
+router.get("/motorcycle/:subCategory", async (req, res, next) => {
+  try {
+    const { subCategory } = req.params;
+
+    const allowedSubCategories = ["redwing", "bigwing"];
+
+    // If NOT subcategory -> continue to model detail route
+    if (!allowedSubCategories.includes(subCategory.toLowerCase())) {
+      return next();
+    }
+
+    let dbSubCategory = "";
+
+    if (subCategory.toLowerCase() === "redwing") {
+      dbSubCategory = "RedWing";
+    }
+
+    if (subCategory.toLowerCase() === "bigwing") {
+      dbSubCategory = "BigWing";
+    }
+
+    const models = await Bike.find({
+      isActive: true,
+      category: "motorcycle",
+      subCategory: dbSubCategory,
+    }).lean();
+
+    res.render("website/models", {
+      models,
+      currentCategory: "motorcycle",
+      currentSubCategory: subCategory.toLowerCase(),
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server Error");
+  }
+});
+
 // ================= CATEGORY =================
 router.get("/:category", async (req, res) => {
-  const { category } = req.params;
+  try {
+    const { category } = req.params;
 
-  if (!allowedCategories.includes(category)) {
-    return res.status(404).render("website/404");
+    if (!allowedCategories.includes(category)) {
+      return res.status(404).render("website/404");
+    }
+
+    const models = await Bike.find({
+      isActive: true,
+      category,
+    }).lean();
+
+    res.render("website/models", {
+      models,
+      currentCategory: category,
+      currentSubCategory: "",
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server Error");
   }
-
-  const models = await Bike.find({ isActive: true, category });
-
-  res.render("website/models", {
-    models,
-    currentCategory: category,
-  });
 });
 
 // ================= MODEL DETAIL =================
 router.get("/:category/:slug", async (req, res) => {
-  const { category, slug } = req.params;
+  try {
+    const { category, slug } = req.params;
 
-  if (!allowedCategories.includes(category)) {
-    return res.status(404).render("website/404");
+    if (!allowedCategories.includes(category)) {
+      return res.status(404).render("website/404");
+    }
+
+    const model = await Bike.findOne({
+      slug,
+      category,
+      isActive: true,
+    }).lean();
+
+    if (!model) {
+      return res.status(404).render("website/404");
+    }
+
+    res.render("website/model-detail", {
+      model,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server Error");
   }
-
-  const model = await Bike.findOne({ slug, category });
-
-  if (!model) {
-    return res.status(404).render("website/404");
-  }
-
-  res.render("website/model-detail", { model });
 });
 
 // Tip: In production, use environment variables for secrets

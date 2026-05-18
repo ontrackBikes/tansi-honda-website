@@ -1,201 +1,399 @@
 <%- include("../partials/header") %>
 
-<!-- HERO SECTION -->
-<section class="catalog-hero text-center py-5 bg-light">
-  <div class="container">
-    <h1 class="display-4 fw-bold text-dark">Explore the Complete Honda Lineup</h1>
-    <p class="lead text-muted mt-3">From sporty scooters to legendary Gold Wing · Discover your perfect ride at Tansi Honda, Bangalore</p>
-  </div>
-</section>
+  <% const activeSubCategory=typeof currentSubCategory !=="undefined" ? currentSubCategory : "" ; %>
 
-<!-- MAIN CONTENT -->
-<div class="container my-5">
+    <!-- HERO SECTION -->
+    <!-- <section class="catalog-hero text-center py-5 bg-light">
+      <div class="container">
 
-  <!-- CATEGORY FILTER -->
- <div class="text-center mb-4">
-  <a href="/models" class="btn btn-sm me-2 <%= currentCategory==='All' ? 'btn-dark' : 'btn-outline-dark' %>">All</a>
-  <a href="/motorcycle" class="btn btn-sm me-2 <%= currentCategory==='motorcycle' ? 'btn-dark' : 'btn-outline-dark' %>">Motorcycles</a>
-  <a href="/scooter" class="btn btn-sm me-2 <%= currentCategory==='scooter' ? 'btn-dark' : 'btn-outline-dark' %>">Scooters</a>
-  <a href="/e2w" class="btn btn-sm <%= currentCategory==='e2w' ? 'btn-dark' : 'btn-outline-dark' %>">EV</a>
-</div>
-
-  <!-- SEARCH BAR -->
-  <div class="row justify-content-center mb-5">
-  <div class="col-md-6 col-lg-5">
-    <div class="search-container">
-      <i class="fas fa-search search-icon"></i>
-      <input type="text" id="searchInput" class="search-input" placeholder="Explore models..." autocomplete="off">
-      <button id="clearSearch" class="clear-btn">&times;</button>
-    </div>
-    <p class="text-muted mt-3 text-center small fw-light" id="resultCount"></p>
-  </div>
-</div>
-
-  <!-- MODELS GRID -->
-  <div class="row g-4" id="modelsContainer">
-    <% if (!models.length) { %>
-      <div class="col-12 text-center py-5">
-        <h5 class="text-muted">🚫 No models available</h5>
+        <h1 class="display-4 fw-bold text-dark">
+          Explore the Complete Honda Lineup
+        </h1>
+        <p class="lead text-muted mt-3">
+          From sporty scooters to legendary Gold Wing · Discover your perfect ride
+          at Tansi Honda, Bangalore
+        </p>
       </div>
-    <% } else { %>
-      <% models.forEach(model => { %>
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="/<%= model.category %>/<%= model.slug %>" class="text-decoration-none">
-            <div class="card h-100 border-0 shadow-sm hover-shadow rounded-4 overflow-hidden">
-              <img src="<%= model.coverImage || '/images/default-bike.jpg' %>" class="card-img-top" alt="<%= model.name %>"  style="height:200px; object-fit:contain;">
-              <div class="card-body py-3">
-                <h5 class="card-title text-danger fw-bold mb-0"><%= model.name %></h5>
-                <p class="text-muted small mb-0 text-capitalize"><%= model.category %></p>
-                <div class="price-wrapper">
-                 <span class="price-label">
-                   Starting At
-                 </span>
+    </section> -->
 
-                 <div class="price-value">
-                   ₹<%= Number(model.variants[0].price.exShowroom).toLocaleString('en-IN') %>
-                   <span class="price-suffix">/-</span>
-                 </div>
-                </div>
-              </div>
-            </div>
+    <!-- MAIN CONTENT -->
+    <div class="container my-4">
+      <!-- CATEGORY FILTER -->
+      <div class="category-filter">
+        <!-- MAIN FILTER -->
+        <div class="filter-row">
+          <a href="/models" class="filter-btn <%= currentCategory === 'All' ? 'active' : '' %>">
+            All
           </a>
+
+          <a href="/motorcycle" class="filter-btn <%= currentCategory === 'motorcycle' ? 'active' : '' %>">
+            Motorcycles
+          </a>
+
+          <a href="/scooter" class="filter-btn <%= currentCategory === 'scooter' ? 'active' : '' %>">
+            Scooters
+          </a>
+
+          <a href="/e2w" class="filter-btn <%= currentCategory === 'e2w' ? 'active' : '' %>">
+            EV
+          </a>
+
         </div>
-      <% }) %>
-    <% } %>
-  </div>
 
-</div>
+        <!-- SUB CATEGORY -->
+        <% if(currentCategory==='motorcycle' ) { %>
+          <div class="sub-filter-wrapper">
+            <div class="sub-filter-row">
+              <a href="/motorcycle" class="sub-filter-btn <%= !activeSubCategory ? 'active-sub' : '' %>">
+                All
+              </a>
 
-<!-- STYLES -->
-<style>
-.catalog-hero {
-  background: linear-gradient(135deg,#fef9f5 0%,#ffffff 100%);
-}
+              <a href="/motorcycle/redwing"
+                class="sub-filter-btn <%= activeSubCategory === 'redwing' ? 'active-sub' : '' %>">
+                RedWing
+              </a>
 
-.hover-shadow:hover {
-  transform: translateY(-5px);
-  transition: 0.3s ease;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.12) !important;
-}
+              <a href="/motorcycle/bigwing"
+                class="sub-filter-btn <%= activeSubCategory === 'bigwing' ? 'active-sub' : '' %>">
+                BigWing
+              </a>
+            </div>
+          </div>
+          <% } %>
+      </div>
 
-.input-group input::placeholder {
-  color: #adb5bd;
-  font-style: italic;
-}
+      <!-- SEARCH -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-6 col-lg-5">
+          <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Explore models..." autocomplete="off">
+            <button id="clearSearch" class="clear-btn">
+              &times;
+            </button>
+          </div>
+          <p class="text-muted mt-3 text-center small fw-light" id="resultCount"></p>
+        </div>
+      </div>
 
-.card-title {
-  font-size: 1.1rem;
-}
+      <!-- MODELS GRID -->
+      <div class="row g-4" id="modelsContainer">
+        <% if (!models.length) { %>
+          <div class="col-12 text-center py-5">
+            <h5 class="text-muted">
+              🚫 No models available
+            </h5>
+          </div>
 
-.card-body p {
-  font-size: 0.85rem;
-}
+          <% } else { %>
+            <% models.forEach(model=> { %>
+              <div class="col-6 col-md-4 col-lg-3 model-card">
+                <a href="/<%= model.category %>/<%= model.slug %>" class="text-decoration-none">
+                  <div class="card h-100 border-0 shadow-sm hover-shadow rounded-4 overflow-hidden">
+                    <img src="<%= model.coverImage || '/images/default-bike.jpg' %>" class="card-img-top"
+                      alt="<%= model.name %>" style="height:200px; object-fit:contain;">
+                    <div class="card-body py-3">
 
-.btn-sm {
-  padding: 0.35rem 0.75rem;
-  border-radius: 50px;
-  font-weight: 500;
-}
+                      <h5 class="card-title text-danger fw-bold mb-1">
+                        <%= model.name %>
+                      </h5>
 
-.search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(220, 53, 69, 0.2);
-    padding: 8px 20px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-  }
+                      <p class="text-muted small mb-1 text-capitalize">
+                        <%= model.category %>
+                          <% if(model.subCategory) { %>
+                            · <%= model.subCategory %>
+                              <% } %>
+                      </p>
 
-  .search-icon {
-    color: #dc3545;
-    font-size: 1.1rem;
-    margin-right: 12px;
-  }
+                      <div class="price-wrapper">
+                        <span class="price-label">
+                          Starting At
+                        </span>
+                        <div class="price-value">
+                          ₹<%= Number(model.variants[0].price.exShowroom).toLocaleString('en-IN') %>
+                            <span class="price-suffix">
+                              /-
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <% }) %>
+                <% } %>
+      </div>
+    </div>
 
-  .search-input {
-    border: none;
-    background: transparent;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #333;
-    padding: 8px 0;
-  }
+    <!-- STYLES -->
+    <style>
+      .catalog-hero {
+        background: linear-gradient(135deg, #fef9f5 0%, #ffffff 100%);
+      }
 
-  .clear-btn {
-    border: none;
-    background: none;
-    color: #bbb;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.2s;
-  }
+      .hover-shadow:hover {
+        transform: translateY(-5px);
+        transition: 0.3s ease;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+      }
 
-  .clear-btn:hover {
-    color: #dc3545;
-  }
+      .card-title {
+        font-size: 1.05rem;
+      }
 
- .price-wrapper{
-   margin-top: 10px;
-   padding-top: 8px;
-   border-top: 1px solid rgba(0,0,0,0.06);
-  }
+      .card-body p {
+        font-size: 0.85rem;
+      }
 
-  .price-label{
-   display: block;
-   font-size: 0.78rem;
-   color: #888;
-   margin-bottom: 6px;
-   letter-spacing: 0.5px;
-  }
+      .btn-sm {
+        padding: 0.45rem 1rem;
+        font-weight: 600;
+      }
 
-  .price-value{
-   font-size: 1.1rem;
-   font-weight: 800;
-   color: #198755;
-   line-height: 1;
-   letter-spacing: -1px;
-  }
+      .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(220, 53, 69, 0.15);
+        padding: 10px 18px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      }
 
-  .price-suffix{
-   font-size: 1rem;
-   color: #198755;
-   font-weight: 600;
-  }
-</style>
+      .search-container:focus-within {
+        border-color: rgba(220, 53, 69, 0.45);
+        box-shadow: 0 12px 30px rgba(220, 53, 69, 0.12);
+      }
 
-<!-- SEARCH SCRIPT -->
-<script>
-const searchInput = document.getElementById("searchInput");
-const clearBtn = document.getElementById("clearSearch");
-const cards = document.querySelectorAll(".card.h-100");
-const resultCount = document.getElementById("resultCount");
+      .search-icon {
+        color: #dc3545;
+        font-size: 1rem;
+        margin-right: 10px;
+      }
 
-function updateResultsCount() {
-  const visibleCards = [...cards].filter(card => card.closest('a').style.display !== "none");
-  resultCount.textContent = `${visibleCards.length} result(s) found`;
-}
+      .search-input {
+        border: none;
+        background: transparent;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: #333;
+      }
 
-searchInput.addEventListener("keyup", () => {
-  const val = searchInput.value.toLowerCase();
-  cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-    card.closest('a').style.display = text.includes(val) ? "" : "none";
-  });
-  updateResultsCount();
-});
+      .search-input::placeholder {
+        color: #999;
+      }
 
-clearBtn.addEventListener("click", () => {
-  searchInput.value = "";
-  cards.forEach(card => card.closest('a').style.display = "");
-  resultCount.textContent = "";
-});
+      .clear-btn {
+        border: none;
+        background: none;
+        color: #bbb;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
 
-updateResultsCount();
-</script>
+      .clear-btn:hover {
+        color: #dc3545;
+      }
 
-<%- include("../partials/footer") %>
+      .price-wrapper {
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .price-label {
+        display: block;
+        font-size: 0.78rem;
+        color: #888;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+      }
+
+      .price-value {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #198754;
+        line-height: 1;
+      }
+
+      .price-suffix {
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      @media(max-width:576px) {
+
+        .catalog-hero h1 {
+          font-size: 2rem;
+        }
+
+        .catalog-hero p {
+          font-size: 0.95rem;
+        }
+
+        .btn-sm {
+          font-size: 0.8rem;
+          padding: 0.4rem 0.8rem;
+        }
+
+      }
+
+      .category-filter {
+        margin-bottom: 2rem;
+      }
+
+      /* MAIN ROW */
+      .filter-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* MAIN BUTTON */
+      .filter-btn {
+        text-decoration: none;
+        padding: 11px 20px;
+        border-radius: 999px;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+        color: #222;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: 0.25s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .filter-btn:hover {
+        border-color: #dc3545;
+        color: #dc3545;
+       
+      }
+
+      .filter-btn.active {
+        background: #111;
+        color: #fff;
+        border-color: #111;
+      }
+
+      /* SUB FILTER WRAPPER */
+      .sub-filter-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+      }
+
+      /* SUB FILTER ROW */
+      .sub-filter-row {
+        display: flex;
+        gap: 10px;
+        background: #f8f8f8;
+        padding: 8px;
+        border-radius: 999px;
+        border: 1px solid #eee;
+      }
+
+      /* SUB BUTTON */
+      .sub-filter-btn {
+        text-decoration: none;
+        padding: 9px 16px;
+        border-radius: 999px;
+        color: #555;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .sub-filter-btn:hover {
+        background: #fff;
+        color: #dc3545;
+      }
+
+      .sub-filter-btn.active-sub {
+        background: #dc3545;
+        color: #fff;
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+
+        .filter-row {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          justify-content: flex-start;
+          padding-bottom: 6px;
+          scrollbar-width: none;
+        }
+
+        .filter-row::-webkit-scrollbar {
+          display: none;
+        }
+
+        .sub-filter-wrapper {
+          justify-content: flex-start;
+          overflow-x: auto;
+          margin-top: 14px;
+          scrollbar-width: none;
+        }
+
+        .sub-filter-wrapper::-webkit-scrollbar {
+          display: none;
+        }
+
+        .sub-filter-row {
+          min-width: max-content;
+        }
+
+        .filter-btn,
+        .sub-filter-btn {
+          white-space: nowrap;
+        }
+      }
+    </style>
+
+    <!-- SEARCH SCRIPT -->
+    <script>
+
+      const searchInput = document.getElementById("searchInput");
+      const clearBtn = document.getElementById("clearSearch");
+      const cards = document.querySelectorAll(".model-card");
+      const resultCount = document.getElementById("resultCount");
+
+      function updateResultsCount() {
+        const visibleCards = [...cards].filter(card => {
+          return card.style.display !== "none";
+        });
+        resultCount.textContent = `${visibleCards.length} result(s) found`;
+      }
+
+      searchInput.addEventListener("keyup", () => {
+        const val = searchInput.value.toLowerCase();
+        cards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          card.style.display = text.includes(val)
+            ? ""
+            : "none";
+        });
+        updateResultsCount();
+      });
+
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        cards.forEach(card => {
+          card.style.display = "";
+        });
+        updateResultsCount();
+      });
+
+      updateResultsCount();
+    </script>
+
+    <%- include("../partials/footer") %>
