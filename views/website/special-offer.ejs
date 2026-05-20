@@ -16,29 +16,28 @@
       <div class="row align-items-center g-4">
         <div class="col-md-8">
           <span class="badge bg-danger text-white px-3 py-2 mb-3 rounded-pill">🔥 Hot Deal of the Month</span>
-          <h2 class="fw-bold display-5">Up to ₹15,000 Cashback</h2>
+          <h2 class="fw-bold display-5">Up to ₹14,000 Cashback</h2>
           <p class="lead fs-5">
-            On select Honda 125cc & 160cc models. Plus free helmet + extended
-            warranty!
+            On selected Honda Activa, Honda Dio and Honda CB 125 Hornet
           </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
             <div>
-              <i class="bi bi-check-circle-fill text-danger me-1"></i> H’ness
-              CB350
+              <i class="bi bi-check-circle-fill text-danger me-1"></i> Honda Activa
             </div>
             <div>
-              <i class="bi bi-check-circle-fill text-danger me-1"></i> SP 125
+              <i class="bi bi-check-circle-fill text-danger me-1"></i> Honda Dio
             </div>
             <div>
-              <i class="bi bi-check-circle-fill text-danger me-1"></i> Hornet 2.0
+              <i class="bi bi-check-circle-fill text-danger me-1"></i> Honda CB 125 Hornet
             </div>
           </div>
-          <a href="#" class="btn btn-danger mt-4 px-5 py-2 rounded-pill fw-semibold">Grab Offer <i
-              class="bi bi-arrow-right"></i></a>
+          <a href="#currentOffers" class="btn btn-danger mt-4 px-5 py-2 rounded-pill fw-semibold">
+            Grab Offer <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
         <div class="col-md-4 text-center">
           <div class="bg-light-red rounded-4 p-3 d-inline-block shadow-sm">
-            <img src="/images/homepage/special_discount.jpg" alt="Special Discount" loading="eager" height="200"
+            <img src="/images/banners/special-discount.jpeg" alt="Special Discount" loading="eager" height="200"
               width="200" />
           </div>
         </div>
@@ -55,7 +54,7 @@
             </div>
             <div>
               <p class="text-muted small mb-0 fw-semibold">Instant Discount</p>
-              <h3 class="fw-bold mb-0">Up to ₹12K</h3>
+              <h5 class="fw-bold mb-0">Up to ₹5,000</h5>
             </div>
           </div>
         </div>
@@ -68,7 +67,7 @@
             </div>
             <div>
               <p class="text-muted small mb-0 fw-semibold">Exchange Bonus</p>
-              <h3 class="fw-bold mb-0">₹5,000</h3>
+              <h5 class="fw-bold mb-0">₹2,000</h5>
             </div>
           </div>
         </div>
@@ -80,8 +79,8 @@
               <i class="bi bi-credit-card fs-4"></i>
             </div>
             <div>
-              <p class="text-muted small mb-0 fw-semibold">Lowest EMI</p>
-              <h3 class="fw-bold mb-0">₹1,999/mo*</h3>
+              <p class="text-muted small mb-0 fw-semibold">Corporate Offer</p>
+              <h5 class="fw-bold mb-0">₹2,000</h5>
             </div>
           </div>
         </div>
@@ -93,16 +92,17 @@
               <i class="bi bi-gift fs-4"></i>
             </div>
             <div>
-              <p class="text-muted small mb-0 fw-semibold">Free Accessories</p>
-              <h3 class="fw-bold mb-0">Worth ₹3,000</h3>
+              <p class="text-muted small mb-0 fw-semibold">Credit Card EMI</p>
+              <h5 class="fw-bold mb-0"> ₹3,000 Cashback</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+
     <!-- Offer Cards Grid -->
-    <div class="mb-5">
+    <div class="mb-5" id="currentOffers">
       <div class="d-flex align-items-center justify-content-between align-items-end mb-4 flex-wrap">
         <h3 class="fw-bold section-title">Current Offers</h3>
 
@@ -110,49 +110,75 @@
             class="bi bi-arrow-right"></i></a>
       </div>
       <div class="row g-4" id="modelsContainer">
-        <% if (!models.length) { %>
-          <div class="col-12 text-center py-5">
-            <h5 class="text-muted">🚫 No models available</h5>
-          </div>
-          <% } else { %>
-            <% models.slice(0, 4).forEach(model=> { %>
+        <% 
+          // Custom JSON array bypassing the database/model data entirely
+          const promotionalModels = [
+            {
+              "name": "Honda Activa 110",
+              "slug": "honda-activa-110",
+              "category": "scooter",
+              "coverImage": "/images/scooter/honda-activa-110/5.png",
+              "description": "The Honda Activa 110 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 110cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability."
+            },
+            {
+              "name": "Honda Dio 110",
+              "slug": "honda-dio-110",
+              "category": "scooter",
+              "coverImage": "/images/scooter/honda-dio-110/1.png",
+              "description": "The Honda Dio 110 stands out as a sporty and stylish scooter designed for young riders seeking performance and everyday convenience. Powered by a fuel-efficient 110cc engine with Honda’s advanced technology, it offers smooth acceleration and agile handling. With its bold design, lightweight build, and practical features, the Dio 110 delivers a fun and comfortable riding experience for city commutes."
+            },
+            {
+              "name": "Honda Activa 125",
+              "slug": "honda-activa-125",
+              "category": "scooter",
+              "coverImage": "/images/scooter/honda-activa-125/1.png",
+              "description": "The Honda Activa 125 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 125cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability."
+            },
+            {
+              "name": "Honda CB125 Hornet",
+              "slug": "honda-cb125-hornet",
+              "category": "motorcycle",
+              "coverImage": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB-125/nav/CB125.jpg?h=240&iar=0&w=360",
+              "description": "A premium 125cc streetfighter motorcycle with aggressive styling, advanced TFT connectivity, USD suspension, and refined Honda performance. Designed for young riders seeking sporty looks, comfort, and modern technology."
+            }
+          ];
+        %>
 
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="/<%= model.category %>/<%= model.slug %>" class="text-decoration-none text-dark">
+          <% promotionalModels.forEach(model=> { %>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="/<%= model.category %>/<%= model.slug %>" class="text-decoration-none text-dark">
 
-                  <div class="card h-100 border-0 shadow-sm rounded-4  hover-shadow">
+                <div class="card h-100 border-0 shadow-sm rounded-4 hover-shadow">
 
-                    <div class="p-3">
-                      <img src="<%= model.coverImage || '/images/default-bike.jpg' %>" alt="<%= model.name %>"
-                        class="img-fluid" style="height: 180px; object-fit: contain;">
-                    </div>
-
-                    <div class="card-body pt-0">
-                      <h5 class="fw-bold text-black mb-2">
-                        <%= model.name %>
-                      </h5>
-
-                      <p class="text-muted small text-capitalize mb-2" style="
-                         display: -webkit-box;
-                         -webkit-line-clamp: 2;
-                         -webkit-box-orient: vertical;
-                          overflow: hidden;
-                        ">
-                        <%= model.description %>
-                      </p>
-
-                      <span class="text-danger fw-semibold">
-                        Explore <i class="fas fa-arrow-right ms-1"></i>
-                      </span>
-                    </div>
-
+                  <div class="p-3">
+                    <img src="<%= model.coverImage %>" alt="<%= model.name %>" class="img-fluid"
+                      style="height: 180px; object-fit: contain;">
                   </div>
 
-                </a>
-              </div>
+                  <div class="card-body pt-0">
+                    <h5 class="fw-bold text-black mb-2">
+                      <%= model.name %>
+                    </h5>
 
-              <% }) %>
-                <% } %>
+                    <p class="text-muted small text-capitalize mb-2" style="
+                     display: -webkit-box;
+                     -webkit-line-clamp: 2;
+                     -webkit-box-orient: vertical;
+                      overflow: hidden;
+                    ">
+                      <%= model.description %>
+                    </p>
+
+                    <span class="text-danger fw-semibold">
+                      Explore <i class="fas fa-arrow-right ms-1"></i>
+                    </span>
+                  </div>
+
+                </div>
+
+              </a>
+            </div>
+            <% }) %>
       </div>
     </div>
 
@@ -166,27 +192,34 @@
             </div>
             <h5 class="fw-bold mb-0">Easy Finance Options</h5>
           </div>
+
           <p class="text-muted">
-            Get attractive interest rates starting from 7.99%* with minimal
-            documentation. Pre-approved loans for existing customers.
+            Get easy financing options with minimal documentation and quick processing at the dealership.
           </p>
+
           <ul class="list-unstyled small">
             <li>
-              <i class="bi bi-check-circle-fill text-danger me-2"></i> 100%
-              on-road funding
+              <i class="bi bi-check-circle-fill text-danger me-2"></i>
+              Upto 95% on-road funding
             </li>
+
             <li>
               <i class="bi bi-check-circle-fill text-danger me-2"></i>
-              Flexible tenure up to 48 months
+              Flexible tenure upto 60 months
             </li>
+
             <li>
-              <i class="bi bi-check-circle-fill text-danger me-2"></i> Instant
-              approval at dealership
+              <i class="bi bi-check-circle-fill text-danger me-2"></i>
+              Instant Approval at Dealership
             </li>
           </ul>
-          <a href="#" class="btn btn-outline-danger mt-2 align-self-start rounded-pill px-4">Check Eligibility</a>
+
+          <!-- <a href="#" class="btn btn-outline-danger mt-2 align-self-start rounded-pill px-4">
+        Check Eligibility
+      </a> -->
         </div>
       </div>
+
       <div class="col-md-6">
         <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-light-success bg-opacity-10">
           <div class="d-flex align-items-center mb-3">
@@ -195,21 +228,26 @@
             </div>
             <h5 class="fw-bold mb-0">Exchange Bonus</h5>
           </div>
+
           <p class="text-muted">
-            Upgrade to a new Honda and get assured buyback value for your old
-            vehicle. Plus extra ₹5,000 exchange bonus on select models.
+            Upgrade to a new Honda and get an additional exchange bonus of ₹4000.
           </p>
+
           <div class="mt-2">
             <div class="d-flex justify-content-between small fw-semibold">
-              <span>Scooter exchange</span>
-              <span>Up to ₹8,000</span>
+              <span>Red Wing</span>
+              <span>Upto ₹2000</span>
             </div>
+
             <div class="d-flex justify-content-between small fw-semibold mt-1">
-              <span>Motorcycle exchange</span>
-              <span>Up to ₹12,000</span>
+              <span>Big Wing</span>
+              <span>Upto ₹4000</span>
             </div>
           </div>
-          <a href="#" class="btn btn-outline-danger mt-3 align-self-start rounded-pill px-4">Get Valuation</a>
+
+          <!-- <a href="#" class="btn btn-outline-danger mt-3 align-self-start rounded-pill px-4">
+        Get Valuation
+      </a> -->
         </div>
       </div>
     </div>
