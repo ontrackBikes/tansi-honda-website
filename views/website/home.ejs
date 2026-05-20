@@ -55,7 +55,6 @@
     greeting-text="Hey! Need any help?"
   ></script> -->
 
-    
   <style>
     * {
       margin: 0;
@@ -569,9 +568,9 @@
 
 <body>
   <%- include("../partials/header") %>
-  <div class="container">
-<%- include("../partials/banner-slider.ejs") %>
-  </div>
+    <div class="container">
+      <%- include("../partials/banner-slider.ejs") %>
+    </div>
 
     <main>
       <!-- Hero Section -->
@@ -680,31 +679,27 @@
       </div>
 
       <!-- Special Offers Banner -->
-     <div class="container">
-  <div class="offers-banner">
-    <h4>
-      <i class="fas fa-gift"></i>
-      Special Offers – BigWing & RedWing
-    </h4>
+      <div class="container">
+        <div class="offers-banner">
+          <h4>
+            <i class="fas fa-gift text-danger"></i>
+            Special Offers – BigWing & RedWing
+          </h4>
 
-    <p>
-      Flat Discount ₹5,000 + Exchange Bonus ₹2,000 +
-      Corporate Offer ₹2,000 + Credit Card EMI Cashback ₹5,000
-    </p>
+          <p class="pt-2">
+            Flat Discount <strong>₹5,000</strong> + Exchange Bonus <strong>₹2,000</strong> +
+            Corporate Offer <strong>₹2,000</strong> + Credit Card EMI Cashback <strong>₹5,000</strong>
+          </p>
 
-    <h5 style="color: #fff; margin-top: 10px; font-weight: 700;">
-      Effective Discount of ₹14,000
-    </h5>
+          <h5 style="color: #E60013; margin-top: 10px; font-weight: 700;">
+            Effective Discount of ₹14,000
+          </h5>
 
-    <a
-      href="/special-offer"
-      class="button-custom"
-      style="background: #fff; color: #e60012; margin-top: 12px"
-    >
-      Grab Offer
-    </a>
-  </div>
-</div>
+          <a href="/special-offer" class="button-custom" style="background: #fff; color: #E60013; margin-top: 12px">
+            Grab Offer
+          </a>
+        </div>
+      </div>
 
       <!-- Brochures -->
       <!-- <div class="container">
