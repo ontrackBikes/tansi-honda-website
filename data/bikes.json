@@ -1274,23 +1274,23 @@
 
     "colors": [
       {
-        "name": "PEARL IGNEOUS BLACK",
+        "name": "Pearl Siren Blue with Lemon Ice Yellow",
+        "code": "#E9EF44",
+        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithlemoniceyellow.png"
+      },
+      {
+        "name": "Pearl Igneous Black",
         "code": "#000000",
         "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearligneousblack.png"
       },
       {
-        "name": "PEARL SIREN BLUE WITH ATHLETIC BLUE METALLIC",
-        "code": "#FFFFFF",
+        "name": "Pearl Siren Blue with Athletic Blue Metallic",
+        "code": "#1752D2",
         "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithathleticbluemetallic.png"
       },
       {
-        "name": "PEARL SIREN BLUE WITH LEMON ICE YELLOW",
-        "code": "#FFFF00",
-        "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithlemoniceyellow.png"
-      },
-      {
-        "name": "PEARL SIREN BLUE WITH SPORTS RED",
-        "code": "#FF0000",
+        "name": "Pearl Siren Blue with Sports Red",
+        "code": "#D32539",
         "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithsportsred.png"
       }
     ],
