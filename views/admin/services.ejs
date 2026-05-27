@@ -156,7 +156,8 @@
 
                                         <!-- Date -->
                                         <td>
-                                            <%= s.preferredDate ? s.preferredDate.toDateString() : '-' %>
+                                            <%= s.preferredDate ? new Date(s.preferredDate).toLocaleDateString('en-GB')
+                                                : '-' %>
                                         </td>
 
                                         <!-- Status -->

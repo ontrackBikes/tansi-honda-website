@@ -226,9 +226,10 @@
                                                 <%= l.source %>
                                             </span></td>
                                         <td>
-                                            <%= new Date(l.createdAt).toLocaleDateString() %><br>
+                                            <%= new Date(l.createdAt).toLocaleDateString('en-GB') %><br>
                                                 <small class="text-muted">
-                                                    <%= new Date(l.createdAt).toLocaleTimeString() %>
+                                                    <%= new Date(l.createdAt).toLocaleTimeString('en-IN', {
+                                                        hour: '2-digit' , minute: '2-digit' , hour12: true }) %>
                                                 </small>
                                         </td>
                                         <td class="text-center">

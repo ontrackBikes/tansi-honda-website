@@ -1,204 +1,268 @@
 <%- include("../partials/admin-header") %>
 
-<div class="container py-4">
+  <div class="container py-4">
 
-  <div class="position-fixed top-0 end-0 p-3" style="z-index:1080">
-    <% if (toast === 'updated') { %>
-      <div id="liveToast" class="toast align-items-center text-bg-success border-0">
-        <div class="d-flex">
-          <div class="toast-body">
-            <i class="bi bi-check-circle-fill me-2"></i> Contact status updated successfully
+    <div class="position-fixed top-0 end-0 p-3" style="z-index:1080">
+      <% if (toast==='updated' ) { %>
+        <div id="liveToast" class="toast align-items-center text-bg-success border-0">
+          <div class="d-flex">
+            <div class="toast-body">
+              <i class="bi bi-check-circle-fill me-2"></i> Contact status updated successfully
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
           </div>
-          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
         </div>
+        <% } %>
+
+          <% if (toast==='deleted' ) { %>
+            <div id="liveToast" class="toast align-items-center text-bg-danger border-0">
+              <div class="d-flex">
+                <div class="toast-body">
+                  <i class="bi bi-trash-fill me-2"></i> Contact message deleted successfully
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+              </div>
+            </div>
+            <% } %>
+    </div>
+
+    <div class="mb-5">
+      <h2 class="fw-bold mb-1">Contact Us Messages</h2>
+      <p class="text-muted small">Manage customer contact enquiries</p>
+    </div>
+
+    <div class="row g-3 mb-5">
+      <div class="col-md-3">
+        <a href="/admin/contact-us?from=<%= from %>&to=<%= to %>" class="text-decoration-none">
+          <div
+            class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= !currentStatus ? 'border-active-primary' : '' %>">
+            <div class="d-flex align-items-center">
+              <div class="stats-icon bg-light-primary text-primary me-3">
+                <i class="bi bi-envelope fs-5"></i>
+              </div>
+              <div>
+                <p class="text-muted extra-small mb-0 fw-semibold">Total Messages</p>
+                <h4 class="fw-bold mb-0 text-dark">
+                  <%= stats.total %>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
-    <% } %>
 
-    <% if (toast === 'deleted') { %>
-      <div id="liveToast" class="toast align-items-center text-bg-danger border-0">
-        <div class="d-flex">
-          <div class="toast-body">
-            <i class="bi bi-trash-fill me-2"></i> Contact message deleted successfully
+      <div class="col-md-3">
+        <a href="/admin/contact-us?status=new&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
+          <div
+            class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'new' ? 'border-active-warning' : '' %>">
+            <div class="d-flex align-items-center">
+              <div class="stats-icon bg-light-warning text-warning me-3">
+                <i class="bi bi-envelope-open fs-5"></i>
+              </div>
+              <div>
+                <p class="text-muted extra-small mb-0 fw-semibold">New</p>
+                <h4 class="fw-bold mb-0 text-dark">
+                  <%= stats.new %>
+                </h4>
+              </div>
+            </div>
           </div>
-          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-        </div>
+        </a>
       </div>
-    <% } %>
-  </div>
 
-  <div class="mb-5">
-    <h2 class="fw-bold mb-1">Contact Us Messages</h2>
-    <p class="text-muted small">Manage customer contact enquiries</p>
-  </div>
-
-  <div class="row g-3 mb-5">
-    <div class="col-md-3">
-      <a href="/admin/contact-us?from=<%= from %>&to=<%= to %>" class="text-decoration-none">
-        <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= !currentStatus ? 'border-active-primary' : '' %>">
-          <div class="d-flex align-items-center">
-            <div class="stats-icon bg-light-primary text-primary me-3">
-              <i class="bi bi-envelope fs-5"></i>
-            </div>
-            <div>
-              <p class="text-muted extra-small mb-0 fw-semibold">Total Messages</p>
-              <h4 class="fw-bold mb-0 text-dark"><%= stats.total %></h4>
+      <div class="col-md-3">
+        <a href="/admin/contact-us?status=contacted&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
+          <div
+            class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'contacted' ? 'border-active-success' : '' %>">
+            <div class="d-flex align-items-center">
+              <div class="stats-icon bg-light-success text-success me-3">
+                <i class="bi bi-telephone fs-5"></i>
+              </div>
+              <div>
+                <p class="text-muted extra-small mb-0 fw-semibold">Contacted</p>
+                <h4 class="fw-bold mb-0 text-dark">
+                  <%= stats.contacted %>
+                </h4>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-    </div>
+        </a>
+      </div>
 
-    <div class="col-md-3">
-      <a href="/admin/contact-us?status=new&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
-        <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'new' ? 'border-active-warning' : '' %>">
-          <div class="d-flex align-items-center">
-            <div class="stats-icon bg-light-warning text-warning me-3">
-              <i class="bi bi-envelope-open fs-5"></i>
-            </div>
-            <div>
-              <p class="text-muted extra-small mb-0 fw-semibold">New</p>
-              <h4 class="fw-bold mb-0 text-dark"><%= stats.new %></h4>
+      <div class="col-md-3">
+        <a href="/admin/contact-us?status=closed&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
+          <div
+            class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'closed' ? 'border-active-success' : '' %>">
+            <div class="d-flex align-items-center">
+              <div class="stats-icon bg-light-success text-success me-3">
+                <i class="bi bi-telephone fs-5"></i>
+              </div>
+              <div>
+                <p class="text-muted extra-small mb-0 fw-semibold">Closed</p>
+                <h4 class="fw-bold mb-0 text-dark">
+                  <%= stats.closed %>
+                </h4>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-3">
-      <a href="/admin/contact-us?status=contacted&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
-        <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'contacted' ? 'border-active-success' : '' %>">
-          <div class="d-flex align-items-center">
-            <div class="stats-icon bg-light-success text-success me-3">
-              <i class="bi bi-telephone fs-5"></i>
-            </div>
-            <div>
-              <p class="text-muted extra-small mb-0 fw-semibold">Contacted</p>
-              <h4 class="fw-bold mb-0 text-dark"><%= stats.contacted %></h4>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-     <div class="col-md-3">
-      <a href="/admin/contact-us?status=closed&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
-        <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'closed' ? 'border-active-success' : '' %>">
-          <div class="d-flex align-items-center">
-            <div class="stats-icon bg-light-success text-success me-3">
-              <i class="bi bi-telephone fs-5"></i>
-            </div>
-            <div>
-              <p class="text-muted extra-small mb-0 fw-semibold">Closed</p>
-              <h4 class="fw-bold mb-0 text-dark"><%= stats.closed %></h4>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <form method="GET" action="/admin/contact-us" class="mb-4">
-    <input type="hidden" name="status" value="<%= currentStatus %>">
-    <div class="card border-0 shadow-sm rounded-4 p-4">
-      <div class="row g-3 align-items-end">
-        <div class="col-md-3">
-          <label class="small text-muted">From Date</label>
-          <input type="date" name="from" value="<%= from %>" class="form-control rounded-pill">
-        </div>
-        <div class="col-md-3">
-          <label class="small text-muted">To Date</label>
-          <input type="date" name="to" value="<%= to %>" class="form-control rounded-pill">
-        </div>
-        <div class="col-md-2">
-          <button class="btn btn-dark rounded-pill w-100">Filter Data</button>
-        </div>
-        <div class="col-md-2">
-          <a href="/admin/contact-us" class="btn btn-outline-secondary rounded-pill w-100">Clear All</a>
-        </div>
+        </a>
       </div>
     </div>
-  </form>
 
-  <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-    <div class="card-header bg-white border-0 p-4">
-      <h5 class="fw-bold mb-0"><%= currentStatus ? currentStatus + ' Messages' : 'All Contact Messages' %></h5>
-    </div>
+    <form method="GET" action="/admin/contact-us" class="mb-4">
+      <input type="hidden" name="status" value="<%= currentStatus %>">
+      <div class="card border-0 shadow-sm rounded-4 p-4">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-3">
+            <label class="small text-muted">From Date</label>
+            <input type="date" name="from" value="<%= from %>" class="form-control rounded-pill">
+          </div>
+          <div class="col-md-3">
+            <label class="small text-muted">To Date</label>
+            <input type="date" name="to" value="<%= to %>" class="form-control rounded-pill">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-dark rounded-pill w-100">Filter Data</button>
+          </div>
+          <div class="col-md-2">
+            <a href="/admin/contact-us" class="btn btn-outline-secondary rounded-pill w-100">Clear All</a>
+          </div>
+        </div>
+      </div>
+    </form>
 
-    <div class="table-responsive">
-      <table class="table table-hover align-middle mb-0">
-        <thead class="bg-light">
-          <tr>
-            <th class="ps-4 py-3">Customer</th>
-            <th class="py-3">Subject</th>
-            <th class="py-3">Message</th>
-            <th class="py-3">Date</th>
-            <th class="text-center py-3">Status</th>
-            <th class="text-end pe-4 py-3">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% if (contacts.length === 0) { %>
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+      <div class="card-header bg-white border-0 p-4">
+        <h5 class="fw-bold mb-0">
+          <%= currentStatus ? currentStatus + ' Messages' : 'All Contact Messages' %>
+        </h5>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="bg-light">
             <tr>
-              <td colspan="6" class="text-center py-5 text-muted">No contact messages found</td>
+              <th class="ps-4 py-3">Customer</th>
+              <th class="py-3">Subject</th>
+              <th class="py-3">Message</th>
+              <th class="py-3">Date</th>
+              <th class="text-center py-3">Status</th>
+              <th class="text-end pe-4 py-3">Actions</th>
             </tr>
-          <% } %>
+          </thead>
+          <tbody>
+            <% if (contacts.length===0) { %>
+              <tr>
+                <td colspan="6" class="text-center py-5 text-muted">No contact messages found</td>
+              </tr>
+              <% } %>
 
-          <% contacts.forEach(c => { %>
-            <tr>
-              <td class="ps-4">
-                <p class="fw-bold mb-0"><%= c.fullName %></p>
-                <small class="text-muted"><%= c.phone %></small><br>
-                <small class="text-muted"><%= c.email %></small>
-              </td>
-              <td><span class="badge bg-light text-dark border rounded-pill"><%= c.subject %></span></td>
-              <td style="max-width:250px;"><small><%= c.message %></small></td>
-              <td>
-                <%= new Date(c.createdAt).toLocaleDateString() %><br>
-                <small class="text-muted"><%= new Date(c.createdAt).toLocaleTimeString() %></small>
-              </td>
-              <td class="text-center">
-                <form method="POST" action="/admin/contact-us/<%= c._id %>">
-                  <select name="status" class="form-select form-select-sm rounded-pill status-dropdown" onchange="this.form.submit()">
-                    <option value="new" <%= c.status === 'new' ? 'selected' : '' %>>New</option>
-                    <option value="contacted" <%= c.status === 'contacted' ? 'selected' : '' %>>Contacted</option>
-                    <option value="closed" <%= c.status === 'closed' ? 'selected' : '' %>>Closed</option>
-                  </select>
-                </form>
-              </td>
-              <td class="text-end pe-4">
-                <form method="POST" action="/admin/contact-us/delete/<%= c._id %>" onsubmit="return confirm('Delete this message?')">
-                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash3"></i></button>
-                </form>
-              </td>
-            </tr>
-          <% }) %>
-        </tbody>
-      </table>
+                <% contacts.forEach(c=> { %>
+                  <tr>
+                    <td class="ps-4">
+                      <p class="fw-bold mb-0">
+                        <%= c.fullName %>
+                      </p>
+                      <small class="text-muted">
+                        <%= c.phone %>
+                      </small><br>
+                      <small class="text-muted">
+                        <%= c.email %>
+                      </small>
+                    </td>
+                    <td><span class="badge bg-light text-dark border rounded-pill">
+                        <%= c.subject %>
+                      </span></td>
+                    <td style="max-width:250px;"><small>
+                        <%= c.message %>
+                      </small></td>
+                    <td>
+                      <%= new Date(c.createdAt).toLocaleDateString('en-GB') %><br>
+                        <small class="text-muted">
+                          <%= new Date(c.createdAt).toLocaleTimeString('en-IN', { hour: '2-digit' , minute: '2-digit' ,
+                            hour12: true }) %>
+                        </small>
+                    </td>
+                    <td class="text-center">
+                      <form method="POST" action="/admin/contact-us/<%= c._id %>">
+                        <select name="status" class="form-select form-select-sm rounded-pill status-dropdown"
+                          onchange="this.form.submit()">
+                          <option value="new" <%=c.status==='new' ? 'selected' : '' %>>New</option>
+                          <option value="contacted" <%=c.status==='contacted' ? 'selected' : '' %>>Contacted</option>
+                          <option value="closed" <%=c.status==='closed' ? 'selected' : '' %>>Closed</option>
+                        </select>
+                      </form>
+                    </td>
+                    <td class="text-end pe-4">
+                      <form method="POST" action="/admin/contact-us/delete/<%= c._id %>"
+                        onsubmit="return confirm('Delete this message?')">
+                        <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash3"></i></button>
+                      </form>
+                    </td>
+                  </tr>
+                  <% }) %>
+          </tbody>
+        </table>
+      </div>
     </div>
+
   </div>
 
-</div>
+  <style>
+    body {
+      background: #f8f9fa;
+    }
 
-<style>
-body{background:#f8f9fa;}
-.extra-small{font-size:.75rem;}
-.stats-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;}
-.stats-card{transition:.3s;border:2px solid transparent;}
-.stats-card:hover{transform:translateY(-3px);}
-.bg-light-primary{background:rgba(13,110,253,.1);}
-.bg-light-warning{background:rgba(255,193,7,.15);}
-.bg-light-success{background:rgba(25,135,84,.1);}
-.status-dropdown{font-size:.75rem;font-weight:600;width:120px;margin:auto;}
-</style>
+    .extra-small {
+      font-size: .75rem;
+    }
 
-<script>
-const toastEl = document.getElementById("liveToast");
-if(toastEl){
-  new bootstrap.Toast(toastEl,{delay:2500}).show();
-  const url = new URL(window.location);
-  url.searchParams.delete("toast");
-  window.history.replaceState({}, document.title, url.pathname + url.search);
-}
-</script>
+    .stats-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-<%- include("../partials/footer") %>
+    .stats-card {
+      transition: .3s;
+      border: 2px solid transparent;
+    }
+
+    .stats-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .bg-light-primary {
+      background: rgba(13, 110, 253, .1);
+    }
+
+    .bg-light-warning {
+      background: rgba(255, 193, 7, .15);
+    }
+
+    .bg-light-success {
+      background: rgba(25, 135, 84, .1);
+    }
+
+    .status-dropdown {
+      font-size: .75rem;
+      font-weight: 600;
+      width: 120px;
+      margin: auto;
+    }
+  </style>
+
+  <script>
+    const toastEl = document.getElementById("liveToast");
+    if (toastEl) {
+      new bootstrap.Toast(toastEl, { delay: 2500 }).show();
+      const url = new URL(window.location);
+      url.searchParams.delete("toast");
+      window.history.replaceState({}, document.title, url.pathname + url.search);
+    }
+  </script>
+
+  <%- include("../partials/footer") %>
