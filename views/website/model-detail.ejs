@@ -47,15 +47,19 @@
         </div>
 
         <% if (model.colors && model.colors.length> 0) { %>
-          <div class="mt-4 text-center">
-            <p class="small fw-bold text-muted text-uppercase mb-3">Available Colors</p>
-            <div class="d-flex justify-content-center gap-3">
+          <div class="mt-4 text-md-center">
+            <p class="small fw-bold text-muted text-uppercase mb-3">
+              Available Colors
+            </p>
+
+            <div class="d-flex justify-content-md-center gap-3 flex-nowrap overflow-auto py-2 px-2">
               <% model.colors.forEach((color, index)=> { %>
-                <div class="color-circle shadow-sm <%= index === 0 ? 'active-color' : '' %>"
-                  style="background-color: <%= color.code %>;" title="<%= color.name %>"
+                <div class="color-circle shadow-sm flex-shrink-0 <%= index === 0 ? 'active-color' : '' %>"
+                  style="background-color: <%= color.code %>;" title="<%= color.name %>" title="<%= color.name %>"
                   onclick="changeVehicleColor('<%= color.image %>', this)"></div>
                 <% }) %>
             </div>
+
             <p id="colorNameDisplay" class="small mt-2 fw-bold text-dark">
               <%= model.colors[0].name %>
             </p>
@@ -171,7 +175,7 @@
                 %>
 
                 <div class="tabs-wrapper">
-                  <ul class="nav nav-pills justify-content-center mb-5" id="specTabs" role="tablist">
+                  <ul class="nav nav-pills  mb-5" id="specTabs" role="tablist">
                     <% visibleSpecs.forEach(([key, group], index)=> { %>
                       <li class="nav-item ms-2" role="presentation">
                         <button class="nav-link <%= index === 0 ? 'active' : '' %>" id="tab-btn-<%= index %>"
@@ -645,17 +649,33 @@
       width: 100%;
     }
 
-    .nav-pills {
+    /* Only nav items scroll on small screens */
+    .tabs-wrapper .nav {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
       background-color: #f1f1f1;
-      /* Light grey background */
       border-radius: 50px;
       padding: 6px;
       display: inline-flex;
       width: max-content;
-      /* Critical: Shrinks to content width */
+      max-width: 100%;
       border: 1px solid #e0e0e0;
+      scrollbar-width: none;
     }
 
+    .tabs-wrapper .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Prevent shrinking */
+    .tabs-wrapper .nav-item {
+      flex: 0 0 auto;
+    }
+
+    /* Nav button */
     .nav-pills .nav-link {
       border-radius: 50px;
       color: #666;
@@ -663,9 +683,11 @@
       border: none;
       background: transparent;
       transition: all 0.2s ease-in-out;
+      white-space: nowrap;
+      padding: 10px 18px;
     }
 
-    /* Active state: White background with Red text */
+    /* Active tab */
     .nav-pills .nav-link.active {
       background-color: #ffffff !important;
       color: #d71921 !important;
