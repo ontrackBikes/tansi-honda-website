@@ -100,7 +100,7 @@
                           ₹<%= m.variants?.[0]?.price?.exShowroom || 0 %>
                         </span>
 
-                        <!-- 🔥 Edit Button -->
+                        <!-- 🔥 Price Edit Button -->
                         <a class="btn btn-sm btn-outline-primary border-0 me-1 action-btn"
                           onclick="openPriceModal('<%= m._id %>', `<%= m.name %>`, decodeURIComponent('<%= encodeURIComponent(JSON.stringify(m.variants)) %>'))">
                           <i class="bi bi-pencil"></i>
@@ -133,12 +133,12 @@
                           <i class="bi bi-pencil-square fs-5"></i>
                         </a> -->
 
-                        <form action="/admin/delete/<%= m._id %>" method="POST" class="d-inline m-0"
+                        <!-- <form action="/admin/delete/<%= m._id %>" method="POST" class="d-inline m-0"
                           onsubmit="return confirm('Delete this model?')">
                           <button class="btn btn-sm btn-outline-danger border-0 p-1 action-btn shadow-none">
                             <i class="bi bi-trash3 fs-5"></i>
                           </button>
-                        </form>
+                        </form> -->
 
                       </div>
                     </td>
