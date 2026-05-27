@@ -33,7 +33,7 @@
         </div>
 
         <div class="row g-3 mb-5">
-            <div class="col-12 col-sm-6 col-md-2">
+            <div class="col-6 col-sm-6 col-md-2">
                 <a href="/admin/leads?from=<%= from %>&to=<%= to %>" class="text-decoration-none">
                     <div
                         class="card border-0 shadow-sm rounded-4 p-3 stats-card stats-hover <%= !currentStatus ? 'border-active-primary' : '' %>">
@@ -52,7 +52,7 @@
                 </a>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-2">
+            <div class="col-6 col-sm-6 col-md-2">
                 <a href="/admin/leads?status=New&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
                     <div
                         class="card border-0 shadow-sm rounded-4 p-3 stats-card stats-hover <%= currentStatus === 'New' ? 'border-active-warning' : '' %>">
@@ -71,7 +71,7 @@
                 </a>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-2">
+            <div class="col-6 col-sm-6 col-md-2">
                 <a href="/admin/leads?status=Contacted&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
                     <div
                         class="card border-0 shadow-sm rounded-4 p-3 stats-card stats-hover <%= currentStatus === 'Contacted' ? 'border-active-info' : '' %>">
@@ -90,7 +90,7 @@
                 </a>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-2">
+            <div class="col-6 col-sm-6 col-md-2">
                 <a href="/admin/leads?status=Interested&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
                     <div
                         class="card border-0 shadow-sm rounded-4 p-3 stats-card stats-hover <%= currentStatus === 'Interested' ? 'border-active-success' : '' %>">
@@ -109,7 +109,7 @@
                 </a>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-2">
+            <div class="col-6 col-sm-6 col-md-2">
                 <a href="/admin/leads?status=Not Interested&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
                     <div
                         class="card border-0 shadow-sm rounded-4 p-3 stats-card stats-hover <%= currentStatus === 'Not Interested' ? 'border-active-danger' : '' %>">
@@ -128,7 +128,7 @@
                 </a>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-2">
+            <div class="col-6 col-sm-6 col-md-2">
                 <a href="/admin/leads?status=Follow-up&from=<%= from %>&to=<%= to %>" class="text-decoration-none">
                     <div
                         class="card border-0 shadow-sm rounded-4 p-3 stats-card stats-hover <%= currentStatus === 'Follow-up' ? 'border-active-secondary' : '' %>">

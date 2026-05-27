@@ -57,7 +57,6 @@ router.get("/add", auth, (req, res) => {
 });
 
 // Create Model
-// Create Model
 router.post("/add", auth, async (req, res) => {
   try {
     const {
@@ -395,10 +394,19 @@ router.get("/leads/export/csv", auth, async (req, res) => {
 
   const leads = await Lead.find(filter).sort({ createdAt: -1 }).lean();
 
-  let csv = "Name,Phone,Model,Variant,Source,Status,Date\n";
+  let csv = "Name,Phone,Model,Variant,Source,Status,Date & Time\n";
 
   leads.forEach((lead) => {
-    csv += `"${lead.name}","${lead.phone}","${lead.modelName}","${lead.variantName}","${lead.source}","${lead.status}","${new Date(lead.createdAt).toLocaleString()}"\n`;
+    const dateTime = new Date(lead.createdAt).toLocaleString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+    csv += `"${lead.name}","${lead.phone}","${lead.modelName}","${lead.variantName}","${lead.source}","${lead.status}","${dateTime}"\n`;
   });
 
   res.header("Content-Type", "text/csv");
