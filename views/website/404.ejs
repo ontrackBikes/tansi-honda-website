@@ -1,20 +1,42 @@
 <%- include("../partials/header") %>
 
-<section class="error-hero d-flex align-items-center justify-content-center text-center">
+<section
+  class="error-hero d-flex align-items-center justify-content-center text-center"
+>
   <div class="container">
     <h1 class="display-1 text-danger">404</h1>
     <h2 class="mb-3">Oops! Page Not Found</h2>
-    <p class="mb-4 text-muted">The page you're looking for doesn't exist or has been moved.</p>
+    <p class="mb-4 text-muted">
+      The page you're looking for doesn't exist or has been moved.
+    </p>
     <a href="/" class="btn btn-danger btn-lg">Go Back Home</a>
   </div>
 </section>
 
 <style>
-.error-hero { min-height: 70vh; background: linear-gradient(135deg,#fef9f5 0%,#fff 100%); color:#1e1e2f; }
-.error-hero h1 { font-size: clamp(5rem, 15vw, 10rem); font-weight:900; }
-.error-hero h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight:700; }
-.error-hero p { font-size:1.1rem; max-width:500px; margin:0 auto 20px; }
-.error-hero .btn { padding:12px 30px; font-size:1.1rem; border-radius:50px; }
+  .error-hero {
+    min-height: 80vh;
+
+    color: #1e1e2f;
+  }
+  .error-hero h1 {
+    font-size: clamp(5rem, 15vw, 10rem);
+    font-weight: 900;
+  }
+  .error-hero h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+  }
+  .error-hero p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 20px;
+  }
+  .error-hero .btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+  }
 </style>
 
 <%- include("../partials/footer") %>

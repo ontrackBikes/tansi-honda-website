@@ -2,6 +2,20 @@
 
     <div class="container py-4 min-vh-100">
 
+        <div class="position-fixed top-0 end-0 p-3" style="z-index:1080">
+            <% if (toast==='updated' ) { %>
+                <div id="liveToast" class="toast align-items-center text-bg-success border-0">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <i class="bi bi-check-circle-fill me-2"></i> Service status updated successfully
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+
         <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
@@ -92,7 +106,7 @@
                             <th class="text-muted small text-uppercase py-3">Location</th>
                             <th class="text-muted small text-uppercase py-3">Service Date</th>
                             <th class="text-center text-muted small text-uppercase py-3">Status</th>
-                            <th class="text-end pe-4 text-muted small text-uppercase py-3">Actions</th>
+                            <!-- <th class="text-end pe-4 text-muted small text-uppercase py-3">Actions</th> -->
                         </tr>
                     </thead>
 
@@ -177,14 +191,14 @@
                                         </td>
 
                                         <!-- Actions -->
-                                        <td class="text-end pe-4">
+                                        <!-- <td class="text-end pe-4">
                                             <form method="POST" action="/admin/services/delete/<%= s._id %>"
                                                 class="d-inline">
                                                 <button class="btn btn-sm btn-outline-danger action-btn">
                                                     <i class="bi bi-trash3"></i>
                                                 </button>
                                             </form>
-                                        </td>
+                                        </td> -->
 
                                     </tr>
                                     <% }) %>
@@ -266,5 +280,15 @@
             line-height: 1.4;
         }
     </style>
+
+    <script>
+        const toastEl = document.getElementById("liveToast");
+        if (toastEl) {
+            new bootstrap.Toast(toastEl, { delay: 2500 }).show();
+            const url = new URL(window.location);
+            url.searchParams.delete("toast");
+            window.history.replaceState({}, document.title, url.pathname + url.search);
+        }
+    </script>
 
     <%- include("../partials/footer") %>

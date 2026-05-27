@@ -239,7 +239,7 @@ router.post("/toggle-status/:id", auth, async (req, res) => {
 // ADMIN VIEW - SERVICES
 router.get("/services", auth, async (req, res) => {
   const services = await Service.find().sort({ createdAt: -1 });
-  res.render("admin/services", { services });
+  res.render("admin/services", { services, toast: req.query.toast || "" });
 });
 
 // UPDATE STATUS - SERVICES
@@ -247,7 +247,7 @@ router.post("/services/:id", auth, async (req, res) => {
   await Service.findByIdAndUpdate(req.params.id, {
     status: req.body.status,
   });
-  res.redirect("/admin/services");
+  res.redirect("/admin/services?toast=updated");
 });
 
 // DELETE - SERVICES
