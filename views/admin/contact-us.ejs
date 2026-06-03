@@ -177,10 +177,11 @@
                         <%= c.message %>
                       </small></td>
                     <td>
-                      <%= new Date(c.createdAt).toLocaleDateString('en-GB') %><br>
+                      <%= new Date(c.createdAt).toLocaleDateString('en-GB', { timeZone: 'Asia/Kolkata' }) %><br>
+
                         <small class="text-muted">
-                          <%= new Date(c.createdAt).toLocaleTimeString('en-IN', { hour: '2-digit' , minute: '2-digit' ,
-                            hour12: true }) %>
+                          <%= new Date(c.createdAt).toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' ,
+                            hour: '2-digit' , minute: '2-digit' , hour12: true }) %>
                         </small>
                     </td>
                     <td class="text-center">

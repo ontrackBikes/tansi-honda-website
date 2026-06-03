@@ -118,7 +118,7 @@
                                 <i class="bi bi-x-circle fs-5"></i>
                             </div>
                             <div>
-                                <p class="text-muted extra-small mb-0 fw-semibold">Dropped</p>
+                                <p class="text-muted extra-small mb-0 fw-semibold">Not Interested</p>
                                 <h4 class="fw-bold mb-0 text-dark">
                                     <%= stats.notInterested %>
                                 </h4>
@@ -226,10 +226,13 @@
                                                 <%= l.source %>
                                             </span></td>
                                         <td>
-                                            <%= new Date(l.createdAt).toLocaleDateString('en-GB') %><br>
+                                            <%= new Date(l.createdAt).toLocaleDateString('en-GB', {
+                                                timeZone: 'Asia/Kolkata' }) %><br>
+
                                                 <small class="text-muted">
                                                     <%= new Date(l.createdAt).toLocaleTimeString('en-IN', {
-                                                        hour: '2-digit' , minute: '2-digit' , hour12: true }) %>
+                                                        timeZone: 'Asia/Kolkata' , hour: '2-digit' , minute: '2-digit' ,
+                                                        hour12: true }) %>
                                                 </small>
                                         </td>
                                         <td class="text-center">
@@ -318,10 +321,21 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
         }
 
-        .bg-light-primary { background-color: rgba(13, 110, 253, 0.1);}
-        .bg-light-warning { background-color: rgba(255, 193, 7, 0.15);}
-        .bg-light-success { background-color: rgba(25, 135, 84, 0.1);}
-        .bg-light-info { background-color: rgba(13, 202, 240, 0.1);}
+        .bg-light-primary {
+            background-color: rgba(13, 110, 253, 0.1);
+        }
+
+        .bg-light-warning {
+            background-color: rgba(255, 193, 7, 0.15);
+        }
+
+        .bg-light-success {
+            background-color: rgba(25, 135, 84, 0.1);
+        }
+
+        .bg-light-info {
+            background-color: rgba(13, 202, 240, 0.1);
+        }
 
         .status-dropdown {
             font-size: 0.75rem;
