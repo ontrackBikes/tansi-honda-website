@@ -29,6 +29,7 @@ const bikeSchema = new mongoose.Schema(
     coverImage: { type: String, default: "" },
     brochure: { type: String, default: "" },
     isActive: { type: Boolean, default: true },
+    bookingsOpen: { type: Boolean, default: false },
 
     colors: [
       {

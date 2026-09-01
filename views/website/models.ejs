@@ -89,9 +89,12 @@
             <% models.forEach(model=> { %>
               <div class="col-6 col-md-4 col-lg-3 model-card">
                 <a href="/<%= model.category %>/<%= model.slug %>" class="text-decoration-none">
-                  <div class="card h-100 border-0 shadow-sm hover-shadow rounded-4 overflow-hidden">
-                    <img src="<%= model.coverImage || '/images/default-bike.jpg' %>" class="card-img-top"
-                      alt="<%= model.name %>" style="height:200px; object-fit:contain;">
+                  <div class="card h-100 border-0 shadow-sm hover-shadow rounded-4 overflow-hidden position-relative">
+                    <% if (model.bookingsOpen) { %>
+                      <span class="badge-bookings-open">Bookings Open</span>
+                      <% } %>
+                        <img src="<%= model.coverImage || '/images/default-bike.jpg' %>" class="card-img-top"
+                          alt="<%= model.name %>" style="height:200px; object-fit:contain;">
                     <div class="card-body py-3">
 
                       <h5 class="card-title text-danger fw-bold mb-1">
@@ -139,6 +142,22 @@
 
       .card-title {
         font-size: 1.05rem;
+      }
+
+      .badge-bookings-open {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+        background: #198754;
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        padding: 4px 10px;
+        border-radius: 50px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       }
 
       .card-body p {

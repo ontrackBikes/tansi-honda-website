@@ -2,18 +2,12 @@
   {
     "name": "Honda Shine 100",
     "slug": "honda-shine-100",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A reliable and efficient commuter motorcycle designed for everyday usage with excellent mileage and comfort.",
-
     "coverImage": "/images/bike/honda-shine-100/cover.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Red with Black",
@@ -41,7 +35,6 @@
         "image": "/images/bike/honda-shine-100/orange-with-black.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -117,7 +110,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Standard",
@@ -143,7 +135,6 @@
             "seat_height": "786 mm",
             "fuel_tank": "9 L"
           },
-
           "engine": {
             "type": "4-Stroke SI Engine",
             "displacement": "98.98 cc",
@@ -154,25 +145,21 @@
             "compression_ratio": "10.0:1",
             "starting": "Self/Kick"
           },
-
           "transmission": {
             "clutch": "Multiplate Wet Clutch",
             "gears": "4"
           },
-
           "tyres": {
             "front": "2.75 - 17 41P, Tube Type",
             "rear": "3.00 - 17 50P, Tube Type",
             "front_brake": "Drum 130 mm",
             "rear_brake": "Drum 110 mm"
           },
-
           "suspension": {
             "frame": "Diamond Type",
             "front": "Telescopic",
             "rear": "Twin"
           },
-
           "electricals": {
             "battery": "12V, 3.0 Ah",
             "headlamp": "Bulb Type"
@@ -181,22 +168,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Hornet 750",
     "slug": "honda-hornet-750",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "A powerful streetfighter motorcycle featuring a 755cc parallel-twin engine, aggressive styling, and advanced engineering. Designed for performance enthusiasts, it delivers strong torque, refined dynamics, and premium BigWing experience.",
-
     "coverImage": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondahornet750/25hondahornet750_animations/_color/_570x380/honda_25hornet750_black.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-750/Desktop/EMI-Calculator/hornet-750-brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Black",
@@ -209,7 +189,6 @@
         "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondahornet750/25hondahornet750_animations/_color/_570x380/honda_25hornet750_white.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -223,7 +202,6 @@
           "description": "Ensures balanced braking and stability."
         }
       ],
-
       "comfort": [
         {
           "title": "795 mm Seat Height",
@@ -246,7 +224,6 @@
           "description": "SHOWA SFF-BP™ USD forks and revised rear damping deliver precision handling and real-world comfort."
         }
       ],
-
       "design": [
         {
           "title": "Steel Diamond Frame",
@@ -264,7 +241,6 @@
           "description": "Muscular tank design inspired by Honda's big bikes."
         }
       ],
-
       "technology": [
         {
           "title": "755cc Parallel Twin Engine",
@@ -283,7 +259,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Hornet 750",
@@ -308,7 +283,6 @@
             "seat_height": "795 mm",
             "fuel_tank": "15.2 L"
           },
-
           "engine": {
             "type": "4-Stroke, 8-Valve Parallel-Twin SOHC, Liquid-Cooled",
             "displacement": "755 cc",
@@ -317,25 +291,21 @@
             "bore_stroke": "87 x 63.5 mm",
             "compression_ratio": "11.0:1"
           },
-
           "transmission": {
             "clutch": "Assist & Slipper Clutch",
             "gears": "6 Speed"
           },
-
           "tyres": {
             "front": "120/70 R17",
             "rear": "160/60 R17",
             "front_brake": "Dual Disc 296 mm",
             "rear_brake": "Disc 240 mm"
           },
-
           "suspension": {
             "frame": "Steel Diamond",
             "front": "SHOWA SFF-BP USD Fork",
             "rear": "Monoshock with Pro-Link"
           },
-
           "electricals": {
             "battery": "12V, 9.1 Ah",
             "headlamp": "LED",
@@ -346,22 +316,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Activa EV",
     "slug": "honda-activa-ev",
-
     "category": "e2w",
     "subCategory": "",
-
     "description": "A smart and eco-friendly electric scooter built for daily commuting, offering smooth performance, zero emissions, and low running costs.",
-
     "coverImage": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/menu/Scooter--EV/activa-e.jpg?h=240&iar=0&w=360",
-
     "brochure": "https://s3-ap-southeast-1.amazonaws.com/assetsin.izmocars.com/userfiles/488/Activa_e_Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Shallow Blue",
@@ -389,7 +352,6 @@
         "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondaactivae/24hondaactivae_animations/_color/_570x380/honda_24activae_pearlserenityblue.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -480,7 +442,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Standard",
@@ -500,7 +461,6 @@
             "top_speed": "80 km/h",
             "acceleration": "0-40 km/h in ~7.3 sec"
           },
-
           "body": {
             "length": "1854 mm",
             "width": "700 mm",
@@ -510,13 +470,11 @@
             "kerb_weight": "118 kg",
             "boot_space": "Under seat storage available"
           },
-
           "motor": {
             "motor_type": "Permanent Magnet Synchronous Motor (PMSM)",
             "maximum_power": "6 kW",
             "maximum_torque": "22 Nm"
           },
-
           "chassis": {
             "frame_type": "Underbone",
             "wheel_type": "Alloy Wheels",
@@ -529,14 +487,12 @@
             "front_suspension": "Telescopic",
             "rear_suspension": "Spring Loaded Hydraulic"
           },
-
           "battery_and_charging": {
             "battery_system": "Swappable (Honda e:Swap)",
             "battery_type": "Lithium-ion",
             "battery_capacity": "1.5 kWh x 2",
             "water_and_dust_resistance": "IP67"
           },
-
           "connectivity_features": {
             "display": "5 inch TFT display",
             "bluetooth_connectivity": "No",
@@ -545,7 +501,6 @@
           }
         }
       },
-
       {
         "name": "RoadSync Duo",
         "sku": "RSD",
@@ -564,7 +519,6 @@
             "top_speed": "80 km/h",
             "acceleration": "0-40 km/h in ~7.3 sec"
           },
-
           "body": {
             "length": "1854 mm",
             "width": "700 mm",
@@ -574,13 +528,11 @@
             "kerb_weight": "118 kg",
             "boot_space": "Under seat storage available"
           },
-
           "motor": {
             "motor_type": "Permanent Magnet Synchronous Motor (PMSM)",
             "maximum_power": "6 kW",
             "maximum_torque": "22 Nm"
           },
-
           "chassis": {
             "frame_type": "Underbone",
             "wheel_type": "Diamond Cut Alloy",
@@ -593,14 +545,12 @@
             "front_suspension": "Telescopic",
             "rear_suspension": "3-step Adjustable Hydraulic"
           },
-
           "battery_and_charging": {
             "battery_system": "Swappable (Honda e:Swap)",
             "battery_type": "Lithium-ion",
             "battery_capacity": "1.5 kWh x 2",
             "water_and_dust_resistance": "IP67"
           },
-
           "connectivity_features": {
             "display": "7 inch TFT Touchscreen",
             "bluetooth_connectivity": "Yes",
@@ -614,22 +564,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Activa 110",
     "slug": "honda-activa-110",
-
     "category": "scooter",
     "subCategory": "",
-
     "description": "The Honda Activa 110 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 110cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
-
     "coverImage": "/images/scooter/honda-activa-110/5.png",
-
     "brochure": "https://haikuhonda.com/wp-content/uploads/2025/05/Activa-110-OBD2BBrochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Mat Axis Gray Metallic",
@@ -657,7 +600,6 @@
         "image": "/images/scooter/honda-activa-110/6.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -686,7 +628,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva-110%2FSafety%2FActiva-110-Tubless-Tyre---352x360px.png%3Fh%3D360%26iar%3D0%26w%3D352&w=384&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn"
         }
       ],
-
       "comfort": [
         {
           "title": "Open Glove Box with 15W USB-C Port",
@@ -699,7 +640,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa-110/Convenience/Convenience-Double-Lid-External-Fuel-Fill-1120x623.png?h=623&iar=0&w=1120"
         }
       ],
-
       "design": [
         {
           "title": "Premium Chrome Stroke on Side Panel",
@@ -717,7 +657,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110/style/Activa-110-Multi-Switch_555x555px.png?h=555&iar=0&w=555"
         }
       ],
-
       "technology": [
         {
           "title": "Smart Key with H-Smart Technology",
@@ -736,7 +675,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Standard",
@@ -762,7 +700,6 @@
             "kerb_weight": "106 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "109.51 cc",
@@ -773,24 +710,20 @@
             "compression_ratio": "10.0 : 1",
             "starting": "Self/Kick"
           },
-
           "transmission": {
             "clutch": "Automatic (V-Matic)"
           },
-
           "tyres": {
             "front": "90/90-12 54J (Tubeless)",
             "rear": "90/100-10 53J (Tubeless)",
             "front_brake": "Drum - 130 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Unit Swing"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah (MF)",
             "headlamp": "Halogen"
@@ -821,7 +754,6 @@
             "kerb_weight": "106 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "109.51 cc",
@@ -832,24 +764,20 @@
             "compression_ratio": "10.0 : 1",
             "starting": "Self/Kick"
           },
-
           "transmission": {
             "clutch": "Automatic (V-Matic)"
           },
-
           "tyres": {
             "front": "90/90-12 54J (Tubeless)",
             "rear": "90/100-10 53J (Tubeless)",
             "front_brake": "Drum - 130 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Unit Swing"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah (MF)",
             "headlamp": "LED"
@@ -880,7 +808,6 @@
             "kerb_weight": "Smart - 105 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "109.51 cc",
@@ -891,24 +818,20 @@
             "compression_ratio": "10.0 : 1",
             "starting": "Smart- Self"
           },
-
           "transmission": {
             "clutch": "Automatic (V-Matic)"
           },
-
           "tyres": {
             "front": "90/90-12 54J (Tubeless)",
             "rear": "90/100-10 53J (Tubeless)",
             "front_brake": "Drum - 130 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Unit Swing"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah (MF)",
             "headlamp": "LED"
@@ -917,22 +840,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Activa 110 Anniversary Edition",
     "slug": "honda-activa-110-anniversary-edition",
-
     "category": "scooter",
     "subCategory": "",
-
     "description": "The Honda Activa 110 Anniversary Edition adds exclusive styling and premium touches to India’s most trusted scooter, powered by a smooth and fuel-efficient 110cc PGM-FI engine.",
-
     "coverImage": "/images/scooter/honda-activa-110-anniversary-edition/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa125-Anniversary-Edition/Brochure/activa110-anniversary-edition-1.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Siren Blue",
@@ -945,7 +861,6 @@
         "image": "/images/scooter/honda-activa-110-anniversary-edition/2.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -964,7 +879,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fnew_asset_compressed%2FScooter%2Factiva110-anniversary%2FSafety%2FSafety---Activa-110_Rear-Tyre-352_360-copy-3.jpg%3Fh%3D1500%26iar%3D0%26w%3D1467&w=2580&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
         }
       ],
-
       "comfort": [
         {
           "title": "Open Glove Box",
@@ -982,7 +896,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/Comfort/Comfort---Activa-110_1120_623-Double-Lid-External-Fuel-Fill.jpg?h=2596&iar=0&w=4667"
         }
       ],
-
       "design": [
         {
           "title": "Anniversary Graphics and special black chrome​",
@@ -1000,7 +913,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/activa110-anniversary/style/Design---Activa-110_555_555-Alloy-Wheel.jpg?h=2313&iar=0&w=2313"
         }
       ],
-
       "technology": [
         {
           "title": "TFT Screen Display​",
@@ -1019,7 +931,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Anniversary Edition",
@@ -1045,7 +956,6 @@
             "kerb_weight": "Dlx - 106 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "109.51 cc",
@@ -1057,24 +967,20 @@
             "air_filter_type": "Viscous Paper Filter",
             "starting": "Dlx. - Self/Kick"
           },
-
           "transmission": {
             "clutch": "Automatic (V-Matic)"
           },
-
           "tyres": {
             "front": "90/90-12 54J (Tubeless)",
             "rear": "90/100-10 53J (Tubeless)",
             "front_brake": "Drum - 130 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Unit Swing"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah (MF)",
             "headlamp": "Dlx. - LED"
@@ -1083,22 +989,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Activa QC1",
     "slug": "honda-activa-qc1",
-
     "category": "e2w",
     "subCategory": "",
-
     "description": "A smart and eco-friendly electric scooter built for daily commuting, offering smooth performance, zero emissions, and low running costs.",
-
     "coverImage": "/images/bike/honda-qc1/1.jpg",
-
     "brochure": "https://s3-ap-southeast-1.amazonaws.com/assetsin.izmocars.com/userfiles/488/Activa_e_Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Shallow Blue",
@@ -1126,7 +1025,6 @@
         "image": "/images/bike/honda-qc1/6.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -1190,7 +1088,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Ev Qc1",
@@ -1211,7 +1108,6 @@
             "acceleration": "9.4 sec (0-40 km/h)",
             "gradeability": "7 Degree"
           },
-
           "body": {
             "length": "1826 mm",
             "width": "701 mm",
@@ -1223,13 +1119,11 @@
             "boot_space": "26 L",
             "glove_box_capacity": "1.45 L"
           },
-
           "motor": {
             "motor_type": "BLDC",
             "maximum_power": "1.8 kW",
             "maximum_torque": "77 Nm"
           },
-
           "chassis": {
             "frame_type": "Under Bone",
             "wheel_type": "Front Alloy",
@@ -1240,7 +1134,6 @@
             "front_suspension": "Telescopic",
             "rear_suspension": "5 Step Adjustable Hydraulic"
           },
-
           "battery_and_charging": {
             "battery_system": "Fixed",
             "battery_type": "Lithium-ion",
@@ -1256,22 +1149,15 @@
       }
     ]
   },
-
   {
     "name": "Honda CB125 Hornet",
     "slug": "honda-cb125-hornet",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A premium 125cc streetfighter motorcycle with aggressive styling, advanced TFT connectivity, USD suspension, and refined Honda performance. Designed for young riders seeking sporty looks, comfort, and modern technology.",
-
     "coverImage": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB-125/nav/CB125.jpg?h=240&iar=0&w=360",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine100/pdf/Shine100-Std.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Siren Blue with Lemon Ice Yellow",
@@ -1294,7 +1180,6 @@
         "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2025/25honda/25hondacb125hornet/25hondacb125hornet_animations/_color/_570x380/honda_25cb125hornet_pearlsirenbluewithsportsred.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -1313,7 +1198,6 @@
           "description": "Improves road grip, stability, and rider confidence across conditions."
         }
       ],
-
       "comfort": [
         {
           "title": "Golden USD Front Forks",
@@ -1331,7 +1215,6 @@
           "description": "Convenient charging solution for smartphones during rides."
         }
       ],
-
       "design": [
         {
           "title": "Key on Tank",
@@ -1349,7 +1232,6 @@
           "description": "Ensures superior visibility and modern styling."
         }
       ],
-
       "technology": [
         {
           "title": "4.2-inch TFT Display",
@@ -1368,7 +1250,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Standard",
@@ -1394,7 +1275,6 @@
             "seat_height": "796 mm",
             "fuel_tank": "12 L"
           },
-
           "engine": {
             "type": "4 Stroke, SI Engine",
             "displacement": "123.94 cc",
@@ -1405,26 +1285,22 @@
             "compression_ratio": "10.0:1",
             "starting": "Silent Start (ACG)"
           },
-
           "transmission": {
             "clutch": "Wet Multiplate",
             "gears": "5 Speed",
             "pattern": "1 Down 4 Up"
           },
-
           "tyres": {
             "front": "80/100 - 17 Tubeless",
             "rear": "110/80 - 17 Tubeless",
             "front_brake": "Disc 240 mm",
             "rear_brake": "Drum 130 mm"
           },
-
           "suspension": {
             "frame": "Diamond Type",
             "front": "USD Fork",
             "rear": "5-step Adjustable Monoshock"
           },
-
           "electricals": {
             "battery": "12V, 4.0 Ah",
             "headlamp": "LED",
@@ -1435,22 +1311,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Shine 100 DX",
     "slug": "honda-shine-100-dx",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A simple, reliable, and fuel-efficient commuter motorcycle designed for everyday riding, offering smooth performance, comfortable ergonomics, and Honda’s trusted durability for hassle-free daily travel.",
-
     "coverImage": "/images/bike/honda-shine-100-dx/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-100-dx/Brochure/Shine100-DX.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Imperial Red Metallic",
@@ -1473,7 +1342,6 @@
         "image": "/images/bike/honda-shine-100-dx/4.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -1486,7 +1354,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-100-dx%2FSafety%2FSafety_352_360-CBS.jpg%3Fh%3D750%26iar%3D0%26w%3D733&w=1920&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
           "description": "Efficient braking and improved stability."
         },
-
         {
           "title": "Elegant and strong grab rail",
           "image": "http://honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-100-dx%2FSafety%2FSafety_Grab-Rail-352_360-copy-2.jpg%3Fh%3D750%26iar%3D0%26w%3D733&w=1920&q=75&dpl=dpl_F4bYui51MwbDkui6aBSLk3mP1vtn",
@@ -1550,7 +1417,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Deluxe",
@@ -1576,7 +1442,6 @@
             "seat_height": "786 mm",
             "fuel_tank": "10.0 L"
           },
-
           "engine": {
             "type": "4-Stroke SI Engine",
             "displacement": "98.98 cc",
@@ -1587,25 +1452,21 @@
             "compression_ratio": "10.0:1",
             "starting": "Self/Kick"
           },
-
           "transmission": {
             "clutch": "Multiplate Wet Clutch",
             "gears": "4"
           },
-
           "tyres": {
             "front": "2.75 - 17 M/C 41P, Tubeless",
             "rear": "3.00 - 17 M/C 50P, Tubeless",
             "front_brake": "Drum 130 mm",
             "rear_brake": "Drum 110 mm"
           },
-
           "suspension": {
             "frame": "Diamond Type",
             "front": "Telescopic",
             "rear": "Twin (5-Steps Adjustable)"
           },
-
           "electricals": {
             "battery": "12V, 3.0 Ah",
             "headlamp": "Halogen Bulb, DC"
@@ -1614,22 +1475,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Livo",
     "slug": "honda-livo",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A stylish and fuel-efficient commuter motorcycle designed for daily rides, offering smooth engine performance, comfortable seating, and reliable handling with Honda’s trusted build quality.",
-
     "coverImage": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/menu/RedWing/Livo.jpg?h=240&iar=0&w=360",
-
     "brochure": "https://drive.google.com/file/d/1XwVlLwMnvHNeZurj_B1HWLfEsltkwiqH/view",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Siren Blue A",
@@ -1647,7 +1501,6 @@
         "image": "https://s3-ap-southeast-1.amazonaws.com/staticin.izmocars.com/toolkit/IN/2024/24honda/24hondalivo/24hondalivo_animations/_color/_570x380/honda_24livo_pearligneousblack.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -1677,7 +1530,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/livo/convenience/engine-start-stop-switch-big.png?h=623&iar=0&w=1120",
           "description": "Start and stop your bike with just the flick of a switch."
         },
-
         {
           "title": "5-Step Adjustable Rear Suspension",
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/livo/Comfort/adjustable-rear-suspension-big.jpg?h=623&iar=0&w=1120",
@@ -1719,7 +1571,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Disc",
@@ -1829,22 +1680,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Shine 125",
     "slug": "honda-shine-125",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A stylish and fuel-efficient commuter motorcycle designed for daily rides, offering smooth engine performance, comfortable seating, and reliable handling with Honda’s trusted build quality.",
-
     "coverImage": "/images/bike/honda-shine-125/1.png",
-
     "brochure": "https://drive.google.com/file/d/1K9xTIfrrx3_799M-EuEuyBP3nXx1KDKi/view",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Decent Blue Metallic",
@@ -1877,7 +1721,6 @@
         "image": "/images/bike/honda-shine-125/6.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -1907,7 +1750,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine125/Comfort/Convenience-5-speed-Transmission-996x560.png?h=560&iar=0&w=996",
           "description": "Fine-tune the ride to your comfort."
         },
-
         {
           "title": "Integrated Headlamp Beam & Passing Switch",
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-125/convenience/Convenience-Integrated-Headlamp-Beam--Passing-Switch-996x560.png?h=560&iar=0&w=996",
@@ -1949,7 +1791,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Disc",
@@ -2060,22 +1901,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Shine 125 Limited Edition",
     "slug": "honda-shine-125-limited-edition",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A premium and stylish commuter motorcycle designed for daily rides, featuring refined graphics and smooth engine performance.",
-
     "coverImage": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-125-limited-edition%2FGet-to-Know-Your-Side%2FGet-to-Know-Your-Side-584x450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1280&q=75",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/pdf/shine-125-limited-edition.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Siren Blue",
@@ -2083,7 +1917,6 @@
         "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2Fshine-125-limited-edition%2FGet-to-Know-Your-Side%2FGet-to-Know-Your-Side-584x450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1280&q=75"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -2113,7 +1946,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/Shine-125-Limited-Edition/Comfort/5-Speed-1120x623.jpg?h=623&iar=0&w=1120",
           "description": "Fine-tune the ride to your comfort."
         },
-
         {
           "title": "Integrated Headlamp Beam & Passing Switch",
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/shine-125-limited-edition/comfort/Passing-Switch-1120x623.jpg?h=623&iar=0&w=1120",
@@ -2155,7 +1987,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "",
@@ -2214,22 +2045,15 @@
       }
     ]
   },
-
   {
     "name": "Honda SP 125",
     "slug": "honda-sp-125",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A stylish and fuel-efficient commuter motorcycle designed for daily rides, offering smooth engine performance, comfortable seating, and reliable handling with Honda’s trusted build quality.",
-
     "coverImage": "/images/bike/honda-sp-125/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Brochure/1388515_SP-brochure-25_Final-_-for-web.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Siren Blue",
@@ -2257,7 +2081,6 @@
         "image": "/images/bike/honda-sp-125/5.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -2328,7 +2151,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "STD",
@@ -2442,22 +2264,15 @@
       }
     ]
   },
-
   {
     "name": "Honda SP 125 Anniversary Edition",
     "slug": "honda-sp-125-anniversary-edition",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A stylish and fuel-efficient commuter motorcycle designed for daily rides, offering smooth engine performance, comfortable seating, and reliable handling with Honda’s trusted build quality.",
-
     "coverImage": "/images/bike/honda-sp-125-aniversary-edition/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Redwings/SP125-Anniversary-Edition/pdf/SP125-AE-broucher.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Siren Blue",
@@ -2470,7 +2285,6 @@
         "image": "/images/bike/honda-sp-125-aniversary-edition/2.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -2541,7 +2355,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "SP125 Anniversary Edition",
@@ -2600,22 +2413,15 @@
       }
     ]
   },
-
   {
     "name": "Honda SP 160",
     "slug": "honda-sp-160",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A stylish and fuel-efficient commuter motorcycle, the Honda SP 160 is built for everyday performance and comfort. Powered by a smooth and refined engine, it delivers reliable mileage and responsive acceleration for city rides.",
-
     "coverImage": "/images/bike/honda-sp-160/1.png",
-
     "brochure": "http://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/sp-160/Brochure/1388515_SP-brochure-25_Final-_-for-web.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Igneous Black",
@@ -2633,7 +2439,6 @@
         "image": "/images/bike/honda-sp-160/4.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -2704,7 +2509,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Single Disc",
@@ -2818,22 +2622,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Unicorn",
     "slug": "honda-unicorn",
-
     "category": "motorcycle",
     "subCategory": "RedWing",
-
     "description": "A premium and reliable commuter motorcycle, the Honda Unicorn is designed for smooth performance and everyday comfort. Powered by a refined and efficient engine, it offers excellent mileage, low vibrations, and a stable ride quality.",
-
     "coverImage": "/images/bike/honda-unicorn/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Unicorn/Brochure/Unicorn_Brochure_updatedNew_25.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Igneous Black",
@@ -2851,7 +2648,6 @@
         "image": "/images/bike/honda-unicorn/3.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -2922,7 +2718,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "",
@@ -2981,22 +2776,15 @@
       }
     ]
   },
-
   {
     "name": "Honda NX200",
     "slug": "honda-nx200",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "Its upright riding posture and durable build ensure comfort and confidence on varied road conditions. A perfect blend of style, practicality, and efficiency for everyday and long-distance riding.",
-
     "coverImage": "/images/bike/honda-nx200/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx200BigWing/calculator/Nx200-Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Radiant Red Metallic",
@@ -3014,7 +2802,6 @@
         "image": "/images/bike/honda-nx200/3.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -3044,7 +2831,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx200/convenience/golden-upside-down-big.png?h=560&iar=0&w=996",
           "description": "Dazzle onlookers as you take your NX200 for a spin."
         },
-
         {
           "title": "USB C Charging",
           "image": "http://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx200/convenience/usb-c-charging-big.png?h=623&iar=0&w=1120",
@@ -3096,7 +2882,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "NX200",
@@ -3158,22 +2943,15 @@
       }
     ]
   },
-
   {
     "name": "Honda NX500 E-Clutch",
     "slug": "honda-nx500-e-clutch",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "Its adventure-ready design, upright riding position, and advanced E-Clutch technology deliver effortless control and comfort on every journey. Built for city commutes, highways, and weekend adventures, the Honda NX500 E-Clutch combines versatile performance, touring comfort, and smooth gear changes for a confident riding experience.",
-
     "coverImage": "/images/bike/honda-nx500/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/nx-500-E-Clutch/pdf/nx-500-E-Clutch_Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Horizon White",
@@ -3186,7 +2964,6 @@
         "image": "/images/bike/honda-nx500/2.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -3262,7 +3039,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "NX500 E-Clutch",
@@ -3321,22 +3097,15 @@
       }
     ]
   },
-
   {
     "name": "Honda XL750 Transalp",
     "slug": "honda-xl750-transalp",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "A powerful and versatile machine, the Honda XL750 Transalp blends performance, durability, and long-distance touring capability—perfect for riders who seek adventure without limits.",
-
     "coverImage": "/images/bike/honda-xl750-transalp/1.jpeg",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/transalp/Brochure/26522_Transalp-Brochure1.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Ross White",
@@ -3349,7 +3118,6 @@
         "image": "/images/bike/honda-xl750-transalp/3.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -3425,7 +3193,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "XL750 Transalp",
@@ -3487,22 +3254,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Hornet 2.0",
     "slug": "honda-hornet-2.0",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "Aggressive streetfighter styling combined with a refined engine delivers a sporty yet smooth riding experience.",
-
     "coverImage": "/images/bike/honda-hornet-2.0/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Horent-20/Brochure/Hornet_20_Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Athletic Blue Metallic",
@@ -3525,7 +3285,6 @@
         "image": "/images/bike/honda-hornet-2.0/4.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -3555,7 +3314,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Horent-20/Desktop/Convenience/Convenience-Stress-Free-Riding-Posture-1120x623.png?h=623&iar=0&w=1120",
           "description": "A committed riding posture that offers stress-free and comfortable experience on the road as well as the highway."
         },
-
         {
           "title": "Superior Aerodynamics",
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Horent-20/Desktop/Convenience/Convenience-Superior-Aerodynamics-1120x623.png?h=623&iar=0&w=1120",
@@ -3622,7 +3380,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Hornet 2.0",
@@ -3683,22 +3440,15 @@
       }
     ]
   },
-
   {
     "name": "Honda GoldWing Tour",
     "slug": "honda-goldwing-tour",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "The Honda Gold Wing Tour delivers unmatched comfort, advanced technology, and smooth performance, making it the ultimate touring motorcycle. With its powerful engine, luxurious features, and superior ride quality, it’s built for riders who seek long-distance journeys with premium comfort and effortless cruising.",
-
     "coverImage": "/images/bike/honda-goldwing-tour/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Goldwing/Brochure/26516_Goldwing-Brochure_R1.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Bordeaux Red Metallic",
@@ -3706,7 +3456,6 @@
         "image": "/images/bike/honda-goldwing-tour/1.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -3787,7 +3536,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Honda GoldWing Tour",
@@ -3847,22 +3595,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Hornet 1000 SP",
     "slug": "honda-hornet-100-sp",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "The Honda Hornet 1000 SP blends sharp performance, precise handling, and premium components, making it perfect for riders who crave both adrenaline and everyday usability.",
-
     "coverImage": "/images/bike/honda-hornet-1000-sp/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Hornet-1000-SP/pdf/Hornet-1000SP_Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Igneous Black",
@@ -3870,7 +3611,6 @@
         "image": "/images/bike/honda-hornet-1000-sp/1.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -3936,7 +3676,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Honda Hornet 1000 SP",
@@ -3996,22 +3735,15 @@
       }
     ]
   },
-
   {
     "name": "Honda CB300F",
     "slug": "honda-cb300f",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "Sharp streetfighter design paired with a powerful engine delivers thrilling performance and smooth acceleration.",
-
     "coverImage": "/images/bike/honda-cb300f/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB300F/Brochure/CB300F_Brochure_23.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "SPORTS RED",
@@ -4024,7 +3756,6 @@
         "image": "/images/bike/honda-cb300f/2.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -4120,7 +3851,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "DLX PRO",
@@ -4235,22 +3965,15 @@
       }
     ]
   },
-
   {
     "name": "Honda CB350",
     "slug": "honda-cb350",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "Classic retro styling combined with a refined engine delivers a smooth and relaxed riding experience. Strong low-end torque, comfortable ergonomics, and premium build quality make it perfect for city rides and long highway cruising.",
-
     "coverImage": "/images/bike/honda-cb350/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350/Brochure/CB350-brochure-2025.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "DLX Pro Mat Axis Grey Mettalic",
@@ -4298,7 +4021,6 @@
         "image": "/images/bike/honda-cb350/9.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -4389,7 +4111,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "DLX",
@@ -4503,22 +4224,15 @@
       }
     ]
   },
-
   {
     "name": "Honda CB350C",
     "slug": "honda-cb350c",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "Classic retro bobber styling combined with a refined engine delivers a smooth and relaxed riding experience.",
-
     "coverImage": "/images/bike/honda-cb350c/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350C/pdf/CB350C_Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Mat Axis Grey Metallic",
@@ -4576,7 +4290,6 @@
         "image": "/images/bike/honda-cb350c/11.webp"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -4657,7 +4370,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "DLX",
@@ -4771,22 +4483,15 @@
       }
     ]
   },
-
   {
     "name": "Honda CB350C Special Edition",
     "slug": "honda-cb350c-special-edition",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "The Honda CB350C Special Edition blends classic bobber-inspired design with premium detailing, offering a timeless road presence with modern refinement. Its smooth and torquey engine ensures effortless cruising, while comfortable ergonomics and advanced features make every ride relaxed and enjoyable.",
-
     "coverImage": "/images/bike/honda-cb350c-special-edition/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350C-Anniversary-Edition/pdf/special-editition-CB350C-Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Red Metallic",
@@ -4799,7 +4504,6 @@
         "image": "/images/bike/honda-cb350c-special-edition/2.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -4880,7 +4584,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "CB350C DLX PRO SPECIAL EDITION",
@@ -4939,22 +4642,15 @@
       }
     ]
   },
-
   {
     "name": "Honda CB350 H'ness",
     "slug": "honda-cb350-hness",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "The Honda CB350 H'ness combines timeless retro styling with modern engineering, delivering a refined and smooth riding experience. Its strong low-end torque, comfortable ergonomics, and premium build quality make it ideal for both city commutes and long highway rides.",
-
     "coverImage": "/images/bike/honda-cb350-hness/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350-Hness/cb350-hness-Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "DLX Pro Chrome Decent Blue Metallic",
@@ -4997,7 +4693,6 @@
         "image": "/images/bike/honda-cb350-hness/8.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -5073,7 +4768,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "DLX",
@@ -5299,21 +4993,15 @@
       }
     ]
   },
-
   {
     "name": "Honda CB350RS",
     "slug": "honda-cb350rs",
-
     "category": "motorcycle",
     "subCategory": "BigWing",
-
     "description": "The Honda CB350RS combines modern retro styling with dynamic performance, offering a bold and sporty road presence. Its refined and torquey engine delivers smooth acceleration, while agile handling and comfortable ergonomics ensure an enjoyable riding experience. Packed with advanced features and premium design elements, it is built for riders who seek both everyday practicality and spirited performance.",
     "coverImage": "/images/bike/honda-cb350rs/4.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/CB350-RS/Brochure/CB350_RS_Brochure.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl Igneous Black",
@@ -5341,7 +5029,6 @@
         "image": "/images/bike/honda-cb350rs/6.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -5397,7 +5084,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "DLX",
@@ -5549,22 +5235,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Activa 125",
     "slug": "honda-activa-125",
-
     "category": "scooter",
     "subCategory": "",
-
     "description": "The Honda Activa 125 (Activa 6G) continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 125cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
-
     "coverImage": "/images/scooter/honda-activa-125/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125/pdf/activa125.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Mat Axis Gray Metallic",
@@ -5592,7 +5271,6 @@
         "image": "/images/scooter/honda-activa-125/6.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -5611,7 +5289,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Factiva-125%2Fsafety%2Ffuel-efficient-tubeless-tyres-352x360-sec.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
         }
       ],
-
       "comfort": [
         {
           "title": "Open Glove Box",
@@ -5629,7 +5306,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125/Comfort/Convenience-Advanced-Idling-Stop-System-1120x623.jpg?h=623&iar=0&w=1120"
         }
       ],
-
       "design": [
         {
           "title": "Premium Chrome Stroke on Side Panel",
@@ -5647,7 +5323,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/activa-125/design/design-multi-function-switch-unit-small.png?h=555&iar=0&w=555"
         }
       ],
-
       "technology": [
         {
           "title": "Smart Key with H-Smart Technology",
@@ -5666,7 +5341,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "DLX",
@@ -5692,7 +5366,6 @@
             "kerb_weight": "107 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "123.92 cc",
@@ -5703,24 +5376,20 @@
             "compression_ratio": "10.0 : 1",
             "starting": "Self/Kick"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J",
             "rear": "90/100-10 53J",
             "front_brake": "Drum - 190 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Spring Loaded Hydraulic"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED DC"
@@ -5751,7 +5420,6 @@
             "kerb_weight": "106 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "123.92 cc",
@@ -5762,24 +5430,20 @@
             "compression_ratio": "10.0 : 1",
             "starting": "Self"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J",
             "rear": "90/100-10 53J",
             "front_brake": "Drum - 190 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Spring Loaded Hydraulic"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED DC"
@@ -5788,22 +5452,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Activa 125 Anniversary Edition",
     "slug": "honda-activa-125-anniversary-edition",
-
     "category": "scooter",
     "subCategory": "",
-
     "description": "The Honda Activa 125 Anniversary Edition brings premium styling and refined performance with its fuel-efficient 125cc PGM-FI engine.",
-
     "coverImage": "/images/scooter/honda-activa-125-anniversary-edition/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Activa125-Anniversary-Edition/Calculator/activa125_aniversary_edition.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Matte Steel Black Metallic",
@@ -5816,7 +5473,6 @@
         "image": "/images/scooter/honda-activa-125-anniversary-edition/2.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -5835,7 +5491,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FActiva125-Anniversary-Edition%2FSafety%2FSafety-Page-352x360px-02.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_3ypG6viqftRSbymuLcQXRAch7gNv"
         }
       ],
-
       "comfort": [
         {
           "title": "Open Glove Box",
@@ -5853,7 +5508,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Comfort/Comfort---Activa-125_1120_623-Double-Lid-External-Fuel-Fill.jpg?h=1731&iar=0&w=3111"
         }
       ],
-
       "design": [
         {
           "title": "Anniversary Graphics and special black chrome",
@@ -5871,7 +5525,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Activa125-Anniversary-Edition-optimze/Design/Design----Outside-Page-555x555px-03.png?h=555&iar=0&w=555"
         }
       ],
-
       "technology": [
         {
           "title": "TFT Meter",
@@ -5890,7 +5543,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Anniversary Edition",
@@ -5915,7 +5567,6 @@
             "kerb_weight": "Dlx - 107 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "123.92 cc",
@@ -5927,24 +5578,20 @@
             "air_filter_type": "Viscous Paper Filter",
             "starting": "Dlx - Kick/Self"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J",
             "rear": "90/100-10 53J",
             "front_brake": "Disc - 190 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Spring Loaded Hydraulic"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED, DC"
@@ -5953,22 +5600,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Dio 125",
     "slug": "honda-dio-125",
-
     "category": "scooter",
     "subCategory": "",
-
     "description": "The Honda Dio 125 continues its legacy as India's favorite family scooter. Now upgraded with H-Smart technology, it features a fuel-efficient 125cc PGM-FI engine, telescopic suspension, and advanced smart key features for ultimate convenience and reliability.",
-
     "coverImage": "/images/scooter/honda-dio-125/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio125/Brochure/dio125.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Mat Marvel Blue Metallic",
@@ -5996,7 +5636,6 @@
         "image": "/images/scooter/honda-dio-125/6.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -6015,7 +5654,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Fdio125%2Fsafety%2Fhigh-performance-till-alloy-wheels.png%3Fh%3D360%26iar%3D0%26w%3D352&w=750&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
         }
       ],
-
       "comfort": [
         {
           "title": "Double Lid External Fuel Fill",
@@ -6033,7 +5671,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio125/comfort/DIO-125-New_1120x623px-Retractable-Foot-Step.png?h=623&iar=0&w=1120"
         }
       ],
-
       "design": [
         {
           "title": "Fierce LED Headlamp",
@@ -6051,7 +5688,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/dio-125/Mobile/Design/Design-Split-Grabrail-555x555.png?h=555&iar=0&w=555"
         }
       ],
-
       "technology": [
         {
           "title": "Smart Key",
@@ -6070,7 +5706,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "STD",
@@ -6095,7 +5730,6 @@
             "kerb_weight": "105 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "123.92 cc",
@@ -6107,24 +5741,20 @@
             "starting": "Self/Kick",
             "air_filter_type": "Viscous Air Filter"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J (Tubeless)",
             "rear": "90/100-10 53J (Tubeless)",
             "front_brake": "Drum - 190 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Underbone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Spring Loaded Hydraulic"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED DC"
@@ -6154,7 +5784,6 @@
             "kerb_weight": "104 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "123.92 cc",
@@ -6166,24 +5795,20 @@
             "starting": "Self/Kick",
             "air_filter_type": "Viscous Air Filter"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J (Tubeless)",
             "rear": "90/100-10 53J (Tubeless)",
             "front_brake": "Drum - 190 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Underbone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Spring Loaded Hydraulic"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED"
@@ -6192,22 +5817,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Dio 125 X-Edition",
     "slug": "honda-dio-125-x-edition",
-
     "category": "scooter",
     "subCategory": "",
-
     "description": "The Honda Dio 125 X-Edition is a special edition of the popular Dio 125 scooter, designed to offer a unique and stylish riding experience. It features a powerful 125cc engine, advanced features, and a distinctive design that sets it apart from the standard model. With its bold aesthetics and enhanced performance, the Dio 125 X-Edition is perfect for riders looking for a scooter that combines style and substance.",
-
     "coverImage": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2FGet-to-know-your-ride%2FHonda-Dio-125-_-Special-Edition-_-360Dgr_1-_-584-x-450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1280&q=75",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/pdf/3_Dio-Xedition-brochure-2-01.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Pearl siren blue and Pearl deep ground gray",
@@ -6215,7 +5833,6 @@
         "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2FGet-to-know-your-ride%2FHonda-Dio-125-_-Special-Edition-_-360Dgr_1-_-584-x-450px.png%3Fh%3D450%26iar%3D0%26w%3D584&w=1280&q=75"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -6234,7 +5851,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2FDio-125-x-edition%2Fsafety%2FHonda-Dio-125-_-Special-Edition-_-Front-Disc-Brake-_-352-x-360px.jpg%3Fh%3D360%26iar%3D0%26w%3D352&w=768&q=75"
         }
       ],
-
       "comfort": [
         {
           "title": "Double Lid External Fuel Fill",
@@ -6252,7 +5868,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/Dio125-X-Edition/Comfort/Honda-Dio-125-_-Special-Edition-_-Open-Glove-Box-with-USB-Type-C-Charging-Port-_-1120-x-623px.jpg?h=623&iar=0&w=1120"
         }
       ],
-
       "design": [
         {
           "title": "Stylish and Dynamic Graphics",
@@ -6270,7 +5885,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/Dio-125-x-edition/Design/Honda-Dio-125-_-Special-Edition-_-Exclusive-X-Edition-decals-_-555-x-555px.jpg?h=555&iar=0&w=555"
         }
       ],
-
       "technology": [
         {
           "title": "TFT Screen Display",
@@ -6299,7 +5913,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "X Edition",
@@ -6324,7 +5937,6 @@
             "kerb_weight": "105 kg (X Edition)",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "123.92 cc",
@@ -6335,24 +5947,20 @@
             "compression_ratio": "10.0 : 1",
             "air_filter_type": "Viscous Paper Filter"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J (Tubeless)",
             "rear": "90/100-10 53J (Tubeless)",
             "front_brake": "Drum - 190 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Underbone",
             "front": "Telescopic",
             "rear": "3 Step Adjustable Spring Loaded Hydraulic"
           },
-
           "electricals": {
             "system_voltage": "12 V",
             "battery": "12 V, 5.0 Ah",
@@ -6362,22 +5970,15 @@
       }
     ]
   },
-
   {
     "name": "Honda Dio 110",
     "slug": "honda-dio-110",
-
     "category": "scooter",
     "subCategory": "",
-
     "description": "The Honda Dio 110 stands out as a sporty and stylish scooter designed for young riders seeking performance and everyday convenience. Powered by a fuel-efficient 110cc engine with Honda’s advanced technology, it offers smooth acceleration and agile handling. With its bold design, lightweight build, and practical features, the Dio 110 delivers a fun and comfortable riding experience for city commutes.",
-
     "coverImage": "/images/scooter/honda-dio-110/1.png",
-
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/Brochure/dio110.pdf",
-
     "isActive": true,
-
     "colors": [
       {
         "name": "Mat Axis Gray Metallic",
@@ -6400,7 +6001,6 @@
         "image": "/images/scooter/honda-dio-110/5.png"
       }
     ],
-
     "features": {
       "safety": [
         {
@@ -6419,7 +6019,6 @@
           "image": "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fscooter%2Fdio-110%2Fsafety%2FSafety-Split-Grabrail-352x360-1.png%3Fh%3D540%26iar%3D0%26w%3D528&w=1080&q=75&dpl=dpl_9nu1KkWBH3AJEwgmrP8BuKqDG36g"
         }
       ],
-
       "comfort": [
         {
           "title": "Open Glove Box with 15W USB-C Port",
@@ -6437,7 +6036,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/scooter/dio-110/convenience/retractable-pillion-footstep.png?h=623&iar=0&w=1120"
         }
       ],
-
       "design": [
         {
           "title": "Stylish Muffler Protector",
@@ -6460,7 +6058,6 @@
           "image": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/new_asset_compressed/Scooter/dio-110/Design/fierce-led.png?h=623&iar=0&w=1120"
         }
       ],
-
       "technology": [
         {
           "title": "TFT Meter",
@@ -6484,7 +6081,6 @@
         }
       ]
     },
-
     "variants": [
       {
         "name": "Standard",
@@ -6510,7 +6106,6 @@
             "kerb_weight": "107 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "109.51 cc",
@@ -6522,24 +6117,20 @@
             "air filter type": "Viscous Paper Filter",
             "starting": "Self/Kick"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J",
             "rear": "90/100-10 53J",
             "front_brake": "Drum - 130 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "Unit Swing"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "Halogen"
@@ -6570,7 +6161,6 @@
             "kerb_weight": "Std. & Dlx: 106 kg",
             "fuel_tank_capacity": "5.3 L"
           },
-
           "engine": {
             "type": "4 stroke, SI Engine",
             "displacement": "109.51 cc",
@@ -6581,24 +6171,20 @@
             "compression_ratio": "10.1 : 1",
             "starting": "Self/Kick"
           },
-
           "transmission": {
             "clutch": "Automatic Centrifugal Clutch Dry Type"
           },
-
           "tyres": {
             "front": "90/90-12 54J",
             "rear": "90/100-10 53J",
             "front_brake": "Drum - 130 mm",
             "rear_brake": "Drum - 130 mm"
           },
-
           "suspension": {
             "frame": "Under Bone",
             "front": "Telescopic",
             "rear": "Unit Swing"
           },
-
           "electricals": {
             "battery": "12 V, 5.0 Ah",
             "headlamp": "LED"
@@ -6606,5 +6192,208 @@
         }
       }
     ]
+  },
+  {
+    "name": "Honda ADV160",
+    "slug": "honda-adv160",
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+    "description": "Honda's premium adventure-styled maxi-scooter is open for pre-booking at Tansi Honda. Colour options and the full feature list will be unveiled by Honda closer to launch (Q3 FY2026-27).",
+    "coverImage": "/images/bike/honda-adv160/1.png",
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/ADV160/pdf/ADV160_0674.pdf",
+    "isActive": true,
+    "colors": [
+      {
+        "name": "Tough Matte Brown",
+        "code": "#A39271",
+        "image": "/images/bike/honda-adv160/1.png"
+      }
+    ],
+    "features": {
+      "safety": [],
+      "comfort": [],
+      "design": [],
+      "technology": []
+    },
+    "variants": [
+      {
+        "name": "STD",
+        "sku": "ADV160-STD",
+        "price": {
+          "exShowroom": 170000,
+          "roadTaxAndReg": 32600,
+          "insuranceBase": 11532,
+          "onRoadBase": 214132,
+          "zeroDepPremium": 0,
+          "finalOnRoad": 214132,
+          "currency": "INR"
+        },
+        "specs": {
+          "engine": {
+            "type": "1 Cylinder, Liquid-Cooled",
+            "displacement": "156.9 cc",
+            "power": "16.9 bhp @ 8500 rpm",
+            "torque": "14.9 Nm @ 6500 rpm",
+            "bore_stroke": "60 mm x 55.5 mm",
+            "compression_ratio": "12.0:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Automatic Centrifugal Clutch",
+            "gears": "CVT (Automatic)"
+          },
+          "tyres": {
+            "braking_system": "Single Channel ABS",
+            "front": "110/80-14",
+            "rear": "130/70-13",
+            "front_brake": "Disc - 240 mm",
+            "rear_brake": "Disc"
+          },
+          "electricals": {
+            "battery": "12 V"
+          }
+        }
+      }
+    ],
+    "bookingsOpen": true
+  },
+  {
+    "name": "Honda Rebel 300",
+    "slug": "honda-rebel-300",
+    "category": "motorcycle",
+    "subCategory": "BigWing",
+    "description": "Honda's premium cruiser is open for pre-booking at Tansi Honda in STD and E-Clutch variants. Colour options and the full feature list will be unveiled by Honda closer to launch (Q3 FY2026-27).",
+    "coverImage": "/images/bike/honda-rebel-300/1.png",
+    "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Rebel300/Rebel-300.pdf",
+    "isActive": true,
+    "colors": [
+      {
+        "name": "Pearl Smoky Gray",
+        "code": "#646462",
+        "image": "/images/bike/honda-rebel-300/1.png"
+      },
+      {
+        "name": "Matte Black Metallic",
+        "code": "#161618",
+        "image": "/images/bike/honda-rebel-300/2.png"
+      }
+    ],
+    "features": {
+      "safety": [],
+      "comfort": [],
+      "design": [],
+      "technology": []
+    },
+    "variants": [
+      {
+        "name": "STD",
+        "sku": "REBEL300-STD",
+        "price": {
+          "exShowroom": 222000,
+          "roadTaxAndReg": 41960,
+          "insuranceBase": 12577,
+          "onRoadBase": 276537,
+          "zeroDepPremium": 0,
+          "finalOnRoad": 276537,
+          "currency": "INR"
+        },
+        "specs": {
+          "body": {
+            "length": "2205 mm",
+            "width": "820 mm",
+            "height": "1090 mm",
+            "wheelbase": "1490 mm",
+            "kerb_weight": "172 kg",
+            "seat_height": "690 mm",
+            "fuel_tank": "11 L"
+          },
+          "engine": {
+            "type": "1 Cylinder, Liquid-Cooled, 4-Valve",
+            "displacement": "286 cc",
+            "power": "30 bhp",
+            "torque": "27.5 Nm",
+            "bore_stroke": "76 mm x 63 mm",
+            "compression_ratio": "10.7:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Assist & Slipper Clutch",
+            "gears": "6 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "130/90-16",
+            "rear": "150/80-16",
+            "front_brake": "Disc - 296 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "frame": "Tubular Steel Frame",
+            "front": "Telescopic Fork",
+            "rear": "Twin Shock Absorbers"
+          },
+          "electricals": {
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      },
+      {
+        "name": "E-Clutch",
+        "sku": "REBEL300-ECLUTCH",
+        "price": {
+          "exShowroom": 262000,
+          "roadTaxAndReg": 49160,
+          "insuranceBase": 13381,
+          "onRoadBase": 324541,
+          "zeroDepPremium": 0,
+          "finalOnRoad": 324541,
+          "currency": "INR"
+        },
+        "specs": {
+          "body": {
+            "length": "2205 mm",
+            "width": "820 mm",
+            "height": "1090 mm",
+            "wheelbase": "1490 mm",
+            "kerb_weight": "172 kg",
+            "seat_height": "690 mm",
+            "fuel_tank": "11 L"
+          },
+          "engine": {
+            "type": "1 Cylinder, Liquid-Cooled, 4-Valve",
+            "displacement": "286 cc",
+            "power": "30 bhp",
+            "torque": "27.5 Nm",
+            "bore_stroke": "76 mm x 63 mm",
+            "compression_ratio": "10.7:1",
+            "starting": "Self Start"
+          },
+          "transmission": {
+            "clutch": "Assist & Slipper Clutch with Honda E-Clutch",
+            "gears": "6 Speed"
+          },
+          "tyres": {
+            "braking_system": "Dual Channel ABS",
+            "front": "130/90-16",
+            "rear": "150/80-16",
+            "front_brake": "Disc - 296 mm",
+            "rear_brake": "Disc - 240 mm"
+          },
+          "suspension": {
+            "frame": "Tubular Steel Frame",
+            "front": "Telescopic Fork",
+            "rear": "Twin Shock Absorbers"
+          },
+          "electricals": {
+            "headlamp": "LED",
+            "tail_lamp": "LED",
+            "winker": "LED"
+          }
+        }
+      }
+    ],
+    "bookingsOpen": true
   }
 ]

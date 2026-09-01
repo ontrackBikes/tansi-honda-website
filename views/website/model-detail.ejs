@@ -18,6 +18,9 @@
         </nav>
         <h1 class="vehicle-title text-dark">
           <%= model.name %>
+          <% if (model.bookingsOpen) { %>
+            <span class="badge-bookings-open-inline">Bookings Open</span>
+            <% } %>
         </h1>
       </div>
 
@@ -226,15 +229,19 @@
                 </div>
       </div>
 
-      <div class="py-5">
-        <h2 class="text-center fw-extrabold mb-5" style="letter-spacing: -1px;">ADVANCED FEATURES</h2>
+      <% const shouldShow=function(feature) { return feature && feature.show===true && Array.isArray(feature.items) &&
+        feature.items.length> 0;
+        };
 
-        <% const shouldShow=function(feature) { return feature && feature.show===true && Array.isArray(feature.items) &&
-          feature.items.length> 0;
-          };
-          %>
+        const hasAnyFeatures=model.features && (shouldShow(model.features.safety) || shouldShow(model.features.comfort)
+        || shouldShow(model.features.design) || shouldShow(model.features.technology));
+        %>
 
-          <% if (shouldShow(model.features.comfort)) { %>
+        <% if (hasAnyFeatures) { %>
+          <div class="py-5">
+            <h2 class="text-center fw-extrabold mb-5" style="letter-spacing: -1px;">ADVANCED FEATURES</h2>
+
+            <% if (shouldShow(model.features.comfort)) { %>
             <section class="feature-group mb-5">
               <div class="d-flex align-items-center mb-4">
                 <h3 class="fw-bold mb-0">Comfort</h3>
@@ -353,7 +360,8 @@
                           </div>
                         </section>
                         <% } %>
-      </div>
+          </div>
+          <% } %>
     </div>
   </div>
 
@@ -362,6 +370,21 @@
       font-size: 3rem;
       font-weight: 900;
       letter-spacing: -1px;
+    }
+
+    .badge-bookings-open-inline {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 12px;
+      background: #198754;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 6px 16px;
+      border-radius: 50px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     .main-vehicle-img {

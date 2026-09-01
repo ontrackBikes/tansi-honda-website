@@ -69,6 +69,7 @@ const seedData = async () => {
       coverImage: item.coverImage || item.image || "",
       brochure: item.brochure || "",
       isActive: true,
+      bookingsOpen: item.bookingsOpen === true,
 
       colors: Array.isArray(item.colors) ? item.colors : [],
 
