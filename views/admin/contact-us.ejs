@@ -207,6 +207,59 @@
       </div>
     </div>
 
+    <% if (totalPages> 1) {
+        const pageUrl = (p) =>
+            `/admin/contact-us?page=${p}&from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&status=${encodeURIComponent(currentStatus)}`;
+
+        // Bounded window: first page, last page, current page ± 2, with "…" for gaps.
+        const windowSize = 2;
+        const start = Math.max(1, currentPage - windowSize);
+        const end = Math.min(totalPages, currentPage + windowSize);
+
+        const rangeStart = (currentPage - 1) * 10 + 1;
+        const rangeEnd = Math.min(currentPage * 10, totalRecords);
+        %>
+        <nav class="mt-4" aria-label="Contact messages pagination">
+          <ul class="pagination justify-content-center flex-wrap row-gap-2">
+            <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+              <a class="page-link" href="<%= pageUrl(Math.max(1, currentPage - 1)) %>" aria-label="Previous">&laquo;</a>
+            </li>
+
+            <% if (start> 1) { %>
+              <li class="page-item"><a class="page-link" href="<%= pageUrl(1) %>">1</a></li>
+              <% if (start> 2) { %>
+                <li class="page-item disabled"><span class="page-link">&hellip;</span></li>
+                <% } %>
+                  <% } %>
+
+                    <% for(let i=start; i <=end; i++) { %>
+                      <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+                        <a class="page-link" href="<%= pageUrl(i) %>">
+                          <%= i %>
+                        </a>
+                      </li>
+                      <% } %>
+
+                        <% if (end < totalPages) { %>
+                          <% if (end < totalPages - 1) { %>
+                            <li class="page-item disabled"><span class="page-link">&hellip;</span></li>
+                            <% } %>
+                              <li class="page-item"><a class="page-link" href="<%= pageUrl(totalPages) %>">
+                                  <%= totalPages %>
+                                </a></li>
+                              <% } %>
+
+                                <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                                  <a class="page-link" href="<%= pageUrl(Math.min(totalPages, currentPage + 1)) %>"
+                                    aria-label="Next">&raquo;</a>
+                                </li>
+          </ul>
+          <p class="text-center text-muted small mt-2 mb-0">
+            Showing <%= rangeStart %>–<%= rangeEnd %> of <%= totalRecords %> messages
+          </p>
+        </nav>
+        <% } %>
+
   </div>
 
   <style>

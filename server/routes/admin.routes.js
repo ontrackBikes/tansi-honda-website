@@ -603,6 +603,7 @@ router.get("/contact-us", auth, async (req, res) => {
     contacts,
     currentPage: page,
     totalPages,
+    totalRecords,
     from,
     to,
     toast,
