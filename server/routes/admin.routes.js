@@ -56,51 +56,154 @@ router.get("/add", auth, (req, res) => {
   res.render("admin/add-model");
 });
 
+// ---------------------------------------------------------------------
+// Helpers to normalize the JSON payload posted by add-model.ejs /
+// edit-model.ejs (see public/js/admin-model-form.js) into the exact
+// nested shape required by server/models/bike.model.js.
+// ---------------------------------------------------------------------
+const ALLOWED_CATEGORIES = ["motorcycle", "scooter", "e2w"];
+const ALLOWED_SUBCATEGORIES = ["RedWing", "BigWing"];
+
+const slugify = (name) =>
+  String(name || "")
+    .toLowerCase()
+    .trim()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "");
+
+const toFeatureSection = (section) => {
+  const items = Array.isArray(section?.items)
+    ? section.items
+        .filter((it) => it && (it.title || it.image || it.description))
+        .map((it) => ({
+          title: it.title || "",
+          image: it.image || "",
+          description: it.description || "",
+        }))
+    : [];
+  return { show: !!section?.show && items.length > 0, items };
+};
+
+const toSpecSection = (section) => {
+  const items = Array.isArray(section?.items)
+    ? section.items
+        .map((it) => {
+          if (!it || typeof it !== "object") return null;
+          const key = Object.keys(it)[0];
+          if (!key) return null;
+          const value = it[key];
+          if (value === undefined || value === null || value === "") return null;
+          return { [key]: value };
+        })
+        .filter(Boolean)
+    : [];
+  return { show: !!section?.show && items.length > 0, items };
+};
+
+const buildBikePayload = (body = {}) => {
+  const category = ALLOWED_CATEGORIES.includes(body.category)
+    ? body.category
+    : "motorcycle";
+  const subCategory =
+    category === "motorcycle" && ALLOWED_SUBCATEGORIES.includes(body.subCategory)
+      ? body.subCategory
+      : null;
+
+  const colors = Array.isArray(body.colors)
+    ? body.colors
+        .filter((c) => c && (c.name || c.code || c.image))
+        .map((c) => ({
+          name: c.name || "",
+          code: c.code || "",
+          image: c.image || "",
+        }))
+    : [];
+
+  const featuresIn = body.features || {};
+  const features = {
+    safety: toFeatureSection(featuresIn.safety),
+    comfort: toFeatureSection(featuresIn.comfort),
+    design: toFeatureSection(featuresIn.design),
+    technology: toFeatureSection(featuresIn.technology),
+  };
+
+  const variants = Array.isArray(body.variants)
+    ? body.variants.map((v) => {
+        const p = v.price || {};
+        const specsIn = v.specs || {};
+        return {
+          name: v.name || "",
+          sku: v.sku || "",
+          price: {
+            exShowroom: Number(p.exShowroom) || 0,
+            roadTaxAndReg: Number(p.roadTaxAndReg) || 0,
+            insuranceBase: Number(p.insuranceBase) || 0,
+            onRoadBase: Number(p.onRoadBase) || 0,
+            zeroDepPremium: Number(p.zeroDepPremium) || 0,
+            finalOnRoad: Number(p.finalOnRoad) || 0,
+            currency: p.currency || "INR",
+          },
+          specs: {
+            performance: toSpecSection(specsIn.performance),
+            body: toSpecSection(specsIn.body),
+            engine: toSpecSection(specsIn.engine),
+            motor: toSpecSection(specsIn.motor),
+            transmission: toSpecSection(specsIn.transmission),
+            tyres: toSpecSection(specsIn.tyres),
+            suspension: toSpecSection(specsIn.suspension),
+            electricals: toSpecSection(specsIn.electricals),
+            chassis: toSpecSection(specsIn.chassis),
+            battery_and_charging: toSpecSection(specsIn.battery_and_charging),
+            connectivity_features: toSpecSection(specsIn.connectivity_features),
+          },
+        };
+      })
+    : [];
+
+  return {
+    name: (body.name || "").trim(),
+    category,
+    subCategory,
+    description: body.description || "",
+    coverImage: body.coverImage || "",
+    brochure: body.brochure || "",
+    isActive: body.isActive !== false,
+    bookingsOpen: !!body.bookingsOpen,
+    colors,
+    features,
+    variants,
+  };
+};
+
 // Create Model
 router.post("/add", auth, async (req, res) => {
   try {
-    const {
-      name,
-      category,
-      price,
-      image,
-      description,
-      features,
-      engine,
-      mileage,
-      power,
-      torque,
-      fuel_type,
-      transmission,
-    } = req.body;
+    const payload = buildBikePayload(req.body);
 
-    const slug = name
-      .toLowerCase()
-      .replace(/ /g, "-")
-      .replace(/[^\w-]+/g, "");
+    if (!payload.name) {
+      return res.status(400).json({ message: "Model name is required." });
+    }
+    if (!payload.colors.length) {
+      return res.status(400).json({ message: "At least one color variant is required." });
+    }
+    if (!payload.variants.length || !payload.variants[0].price.exShowroom) {
+      return res
+        .status(400)
+        .json({ message: "At least one variant with an Ex-Showroom price is required." });
+    }
 
-    await Bike.create({
-      name,
-      slug,
-      category,
-      price,
-      image,
-      description,
-      features: features ? features.split(",").map((f) => f.trim()) : [],
-      specs: {
-        engine,
-        mileage,
-        power,
-        torque,
-        fuel_type,
-        transmission,
-      },
-    });
+    const slug = slugify(payload.name);
+    const existing = await Bike.findOne({ slug });
+    if (existing) {
+      return res.status(400).json({ message: "A model with this name already exists." });
+    }
 
-    res.redirect("/admin");
+    const bike = await Bike.create({ ...payload, slug });
+
+    res.json({ message: "Model created successfully", redirect: "/admin/models", id: bike._id });
   } catch (err) {
-    console.error(err);
-    res.send("Error adding model");
+    console.error("Add model error:", err);
+    res.status(500).json({ message: err.message || "Error adding model" });
   }
 });
 
@@ -113,50 +216,40 @@ router.get("/edit/:id", auth, async (req, res) => {
 // Update Model
 router.post("/edit/:id", auth, async (req, res) => {
   try {
-    const {
-      name,
-      category,
-      price,
-      image,
-      description,
-      features,
-      engine,
-      mileage,
-      power,
-      torque,
-      fuel_type,
-      transmission,
-      isActive,
-    } = req.body;
+    const payload = buildBikePayload(req.body);
 
-    const slug = name
-      .toLowerCase()
-      .replace(/ /g, "-")
-      .replace(/[^\w-]+/g, "");
+    if (!payload.name) {
+      return res.status(400).json({ message: "Model name is required." });
+    }
+    if (!payload.colors.length) {
+      return res.status(400).json({ message: "At least one color variant is required." });
+    }
+    if (!payload.variants.length || !payload.variants[0].price.exShowroom) {
+      return res
+        .status(400)
+        .json({ message: "At least one variant with an Ex-Showroom price is required." });
+    }
 
-    await Bike.findByIdAndUpdate(req.params.id, {
-      name,
-      slug,
-      category,
-      price,
-      image,
-      description,
-      features: features ? features.split(",").map((f) => f.trim()) : [],
-      specs: {
-        engine,
-        mileage,
-        power,
-        torque,
-        fuel_type,
-        transmission,
-      },
-      isActive: isActive === "on",
-    });
+    const slug = slugify(payload.name);
+    const conflict = await Bike.findOne({ slug, _id: { $ne: req.params.id } });
+    if (conflict) {
+      return res.status(400).json({ message: "Another model already uses this name/slug." });
+    }
 
-    res.redirect("/admin");
+    const bike = await Bike.findByIdAndUpdate(
+      req.params.id,
+      { ...payload, slug },
+      { new: true, runValidators: true },
+    );
+
+    if (!bike) {
+      return res.status(404).json({ message: "Model not found" });
+    }
+
+    res.json({ message: "Model updated successfully", redirect: "/admin/models" });
   } catch (err) {
-    console.error(err);
-    res.send("Error updating model");
+    console.error("Edit model error:", err);
+    res.status(500).json({ message: err.message || "Error updating model" });
   }
 });
 

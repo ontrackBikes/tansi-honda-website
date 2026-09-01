@@ -1,46 +1,44 @@
 <%- include("../partials/admin-header") %>
 
-<% 
-  // Pre-processing data for cleaner code below
-  const v = model.variants?.[0] || {}; 
-  const s = v.specs || {}; 
-%>
-
 <div class="container py-4 min-vh-100">
   <div class="d-flex align-items-center justify-content-between mb-4">
     <div>
       <h2 class="fw-bold mb-0 text-dark">Edit Model</h2>
       <p class="text-muted small">Updating: <span class="text-danger fw-bold"><%= model.name %></span></p>
     </div>
-    <a href="/admin" class="btn btn-outline-secondary btn-sm rounded-3 px-3">
-      ← Back to Dashboard
+    <a href="/admin/models" class="btn btn-outline-secondary btn-sm rounded-3 px-3">
+      ← Back to Models
     </a>
   </div>
 
-  <form action="/admin/edit/<%= model._id %>" method="POST">
+  <div id="formAlert" class="alert alert-danger rounded-3" hidden></div>
+
+  <form id="modelForm" action="/admin/edit/<%= model._id %>" method="POST">
     <div class="row g-4">
-      
       <div class="col-md-7">
         <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
-          <h5 class="fw-bold mb-4 border-start border-danger border-4 ps-2 text-uppercase small">Basic Information</h5>
-          
+          <h5 class="fw-bold mb-4 border-start border-danger border-4 ps-2 text-uppercase small">
+            Basic Information
+          </h5>
+
           <div class="mb-3">
             <label class="form-label small fw-bold text-muted">Model Name</label>
-            <input type="text" name="name" class="form-control custom-input" value="<%= model.name %>" required>
+            <input type="text" id="modelName" class="form-control custom-input" value="<%= model.name %>" required>
           </div>
 
           <div class="row">
             <div class="col-md-6 mb-3">
               <label class="form-label small fw-bold text-muted">Category</label>
-              <select name="category" id="category" class="form-select custom-input">
-                <option value="Motorcycle" <%= model.category==='Motorcycle'?'selected':'' %>>Motorcycle</option>
-                <option value="Scooter" <%= model.category==='Scooter'?'selected':'' %>>Scooter</option>
-                <option value="EV" <%= model.category==='EV'?'selected':'' %>>EV</option>
+              <select id="category" class="form-select custom-input">
+                <option value="motorcycle" <%= model.category==='motorcycle'?'selected':'' %>>Motorcycle</option>
+                <option value="scooter" <%= model.category==='scooter'?'selected':'' %>>Scooter</option>
+                <option value="e2w" <%= model.category==='e2w'?'selected':'' %>>Electric (E2W)</option>
               </select>
             </div>
             <div class="col-md-6 mb-3" id="subCategoryBox">
               <label class="form-label small fw-bold text-muted">Sub Category</label>
-              <select name="subCategory" class="form-select custom-input">
+              <select class="form-select custom-input">
+                <option value="">— None —</option>
                 <option value="RedWing" <%= model.subCategory==='RedWing'?'selected':'' %>>RedWing</option>
                 <option value="BigWing" <%= model.subCategory==='BigWing'?'selected':'' %>>BigWing</option>
               </select>
@@ -49,51 +47,48 @@
 
           <div class="mb-3">
             <label class="form-label small fw-bold text-muted">Description</label>
-            <textarea name="description" rows="3" class="form-control custom-input"><%= model.description %></textarea>
+            <textarea id="description" rows="3" class="form-control custom-input"><%= model.description %></textarea>
           </div>
 
           <div class="mb-3">
             <label class="form-label small fw-bold text-muted">Brochure URL</label>
-            <input type="url" name="brochure" class="form-control custom-input" value="<%= model.brochure %>">
+            <input type="url" id="brochure" class="form-control custom-input" value="<%= model.brochure %>">
           </div>
 
-          <div class="p-3 rounded-3 bg-light border d-inline-block w-100">
+          <div class="p-3 rounded-3 bg-light border d-flex flex-wrap gap-4">
             <div class="form-check form-switch mb-0">
-              <input class="form-check-input" type="checkbox" name="isActive" id="statusSwitch" <%= model.isActive?'checked':'' %>>
-              <label class="form-check-label fw-bold small text-uppercase ms-2" for="statusSwitch">Visibility Status (Active)</label>
+              <input class="form-check-input" type="checkbox" id="statusSwitch" <%= model.isActive?'checked':'' %>>
+              <label class="form-check-label fw-bold small text-uppercase ms-2" for="statusSwitch">Active</label>
+            </div>
+            <div class="form-check form-switch mb-0">
+              <input class="form-check-input" type="checkbox" id="bookingsOpenSwitch" <%= model.bookingsOpen?'checked':'' %>>
+              <label class="form-check-label fw-bold small text-uppercase ms-2" for="bookingsOpenSwitch">Bookings Open</label>
             </div>
           </div>
         </div>
 
         <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
-          <h5 class="fw-bold mb-4 border-start border-danger border-4 ps-2 text-uppercase small">Color Variant</h5>
-          <div class="p-3 rounded-3 bg-light border">
-            <div class="row g-2">
-              <div class="col-md-4">
-                <label class="extra-small text-muted fw-bold">NAME</label>
-                <input name="color_name" class="form-control form-control-sm" value="<%= model.colors?.[0]?.name || '' %>">
-              </div>
-              <div class="col-md-3">
-                <label class="extra-small text-muted fw-bold">HEX CODE</label>
-                <input name="color_code" class="form-control form-control-sm" value="<%= model.colors?.[0]?.code || '' %>">
-              </div>
-              <div class="col-md-5">
-                <label class="extra-small text-muted fw-bold">IMAGE URL</label>
-                <input name="color_image" class="form-control form-control-sm" value="<%= model.colors?.[0]?.image || '' %>">
-              </div>
-            </div>
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h5 class="fw-bold mb-0 border-start border-danger border-4 ps-2 text-uppercase small">
+              Color Variants
+            </h5>
+            <button type="button" id="addColorBtn" class="btn btn-outline-danger btn-sm">
+              <i class="bi bi-plus-lg"></i> Add Color
+            </button>
           </div>
+          <div id="colorsList"></div>
+          <div class="form-text small">At least one color (with an image) is required — the model page shows it as the default photo.</div>
         </div>
       </div>
 
       <div class="col-md-5">
         <div class="card border-0 shadow-sm rounded-4 p-4 sticky-top" style="top: 20px;">
           <h5 class="fw-bold mb-4 border-start border-danger border-4 ps-2 text-uppercase small">Cover Image</h5>
-          
+
           <div class="upload-zone text-center p-3 border border-2 border-dashed rounded-4 mb-3 bg-light">
             <img id="previewImage" src="<%= model.coverImage || '/images/default-bike.jpg' %>" class="img-fluid rounded-3 mb-3 shadow-sm" style="max-height: 200px; width: 100%; object-fit: cover;">
             <input type="file" id="imageInput" class="form-control custom-input">
-            <input type="hidden" name="coverImage" id="imageUrl" value="<%= model.coverImage %>">
+            <input type="hidden" id="imageUrl" value="<%= model.coverImage %>">
             <p id="uploadStatus" class="small mt-2 mb-0 fw-bold"></p>
           </div>
           <div class="text-center small text-muted">Click above to change the primary image.</div>
@@ -102,80 +97,43 @@
     </div>
 
     <div class="card border-0 shadow-sm rounded-4 p-4 mt-4">
-      <h4 class="fw-bold mb-4 text-center">Technical Specifications</h4>
-      
-      <div class="row mb-4 justify-content-center">
-        <div class="col-md-4">
-          <label class="small fw-bold text-muted">Variant Name</label>
-          <input name="variant_name" class="form-control custom-input text-center fw-bold" value="<%= v.name || '' %>">
-        </div>
-        <div class="col-md-4">
-          <label class="small fw-bold text-muted">SKU Code</label>
-          <input name="sku" class="form-control custom-input text-center" value="<%= v.sku || '' %>">
-        </div>
+      <h4 class="fw-bold mb-4 text-center">Advanced Features</h4>
+      <div class="accordion" id="featuresAccordion">
+        <% [["safety","Safety"],["comfort","Comfort"],["design","Design"],["technology","Technology"]].forEach(([key, label], i) => { %>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#featurePanel-<%= key %>">
+                <%= label %>
+              </button>
+            </h2>
+            <div id="featurePanel-<%= key %>" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="form-check form-switch mb-3">
+                  <input class="form-check-input" type="checkbox" id="feature-show-<%= key %>">
+                  <label class="form-check-label small fw-bold" for="feature-show-<%= key %>">Show this section on the model page</label>
+                </div>
+                <div id="feature-items-<%= key %>"></div>
+                <button type="button" id="add-feature-item-<%= key %>" class="btn btn-outline-secondary btn-sm">
+                  <i class="bi bi-plus-lg"></i> Add <%= label %> Highlight
+                </button>
+              </div>
+            </div>
+          </div>
+        <% }) %>
       </div>
+    </div>
 
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="p-3 rounded-4 border bg-white h-100">
-            <h6 class="fw-bold mb-3">📐 Body Dimensions</h6>
-            <div class="row g-2">
-              <div class="col-4"><label class="extra-small">Length</label><input name="length" class="form-control form-control-sm" value="<%= s.body?.length %>"></div>
-              <div class="col-4"><label class="extra-small">Width</label><input name="width" class="form-control form-control-sm" value="<%= s.body?.width %>"></div>
-              <div class="col-4"><label class="extra-small">Height</label><input name="height" class="form-control form-control-sm" value="<%= s.body?.height %>"></div>
-              <div class="col-6"><label class="extra-small">Wheelbase</label><input name="wheelbase" class="form-control form-control-sm" value="<%= s.body?.wheelbase %>"></div>
-              <div class="col-6"><label class="extra-small">Ground Clearance</label><input name="ground_clearance" class="form-control form-control-sm" value="<%= s.body?.ground_clearance %>"></div>
-              <div class="col-6"><label class="extra-small">Kerb Weight</label><input name="kerb_weight" class="form-control form-control-sm" value="<%= s.body?.kerb_weight %>"></div>
-              <div class="col-6"><label class="extra-small">Seat Height</label><input name="seat_height" class="form-control form-control-sm" value="<%= s.body?.seat_height %>"></div>
-              <div class="col-12"><label class="extra-small">Fuel Tank</label><input name="fuel_tank" class="form-control form-control-sm" value="<%= s.body?.fuel_tank %>"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="p-3 rounded-4 border bg-white h-100">
-            <h6 class="fw-bold mb-3">⚙️ Engine Details</h6>
-            <div class="row g-2">
-              <div class="col-12"><label class="extra-small">Engine Type</label><input name="engine_type" class="form-control form-control-sm" value="<%= s.engine?.type %>"></div>
-              <div class="col-6"><label class="extra-small">Displacement</label><input name="displacement" class="form-control form-control-sm" value="<%= s.engine?.displacement %>"></div>
-              <div class="col-6"><label class="extra-small">Starting</label><input name="starting" class="form-control form-control-sm" value="<%= s.engine?.starting %>"></div>
-              <div class="col-6"><label class="extra-small">Max Power</label><input name="power" class="form-control form-control-sm" value="<%= s.engine?.power %>"></div>
-              <div class="col-6"><label class="extra-small">Max Torque</label><input name="torque" class="form-control form-control-sm" value="<%= s.engine?.torque %>"></div>
-              <div class="col-6"><label class="extra-small">Fuel System</label><input name="fuel_system" class="form-control form-control-sm" value="<%= s.engine?.fuel_system %>"></div>
-              <div class="col-6"><label class="extra-small">Compression Ratio</label><input name="compression_ratio" class="form-control form-control-sm" value="<%= s.engine?.compression_ratio %>"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="p-3 rounded-4 border bg-white h-100">
-            <h6 class="fw-bold mb-3">🛞 Tyres, Brakes & Suspension</h6>
-            <div class="row g-2">
-              <div class="col-6"><label class="extra-small">Front Tyre</label><input name="front_tyre" class="form-control form-control-sm" value="<%= s.tyres?.front %>"></div>
-              <div class="col-6"><label class="extra-small">Rear Tyre</label><input name="rear_tyre" class="form-control form-control-sm" value="<%= s.tyres?.rear %>"></div>
-              <div class="col-6"><label class="extra-small">Front Brake</label><input name="front_brake" class="form-control form-control-sm" value="<%= s.tyres?.front_brake %>"></div>
-              <div class="col-6"><label class="extra-small">Rear Brake</label><input name="rear_brake" class="form-control form-control-sm" value="<%= s.tyres?.rear_brake %>"></div>
-              <div class="col-12"><label class="extra-small">Frame</label><input name="frame" class="form-control form-control-sm" value="<%= s.suspension?.frame %>"></div>
-              <div class="col-6"><label class="extra-small">Front Suspension</label><input name="front_suspension" class="form-control form-control-sm" value="<%= s.suspension?.front %>"></div>
-              <div class="col-6"><label class="extra-small">Rear Suspension</label><input name="rear_suspension" class="form-control form-control-sm" value="<%= s.suspension?.rear %>"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="p-3 rounded-4 border bg-white h-100">
-            <h6 class="fw-bold mb-3">🔋 Transmission & Electrical</h6>
-            <div class="row g-2">
-              <div class="col-6"><label class="extra-small">Clutch</label><input name="clutch" class="form-control form-control-sm" value="<%= s.transmission?.clutch %>"></div>
-              <div class="col-6"><label class="extra-small">Gears</label><input name="gears" class="form-control form-control-sm" value="<%= s.transmission?.gears %>"></div>
-              <div class="col-12"><label class="extra-small">Battery</label><input name="battery" class="form-control form-control-sm" value="<%= s.electricals?.battery %>"></div>
-              <div class="col-12"><label class="extra-small">Headlamp</label><input name="headlamp" class="form-control form-control-sm" value="<%= s.electricals?.headlamp %>"></div>
-            </div>
-          </div>
-        </div>
+    <div class="card border-0 shadow-sm rounded-4 p-4 mt-4">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h4 class="fw-bold mb-0">Variants & Technical Specifications</h4>
+        <button type="button" id="addVariantBtn" class="btn btn-danger btn-sm rounded-3">
+          <i class="bi bi-plus-lg"></i> Add Variant
+        </button>
       </div>
+      <div id="variantsList"></div>
+      <div class="form-text small">At least one variant with an Ex-Showroom price is required.</div>
 
-      <div class="text-center mt-5">
+      <div class="text-center mt-4">
         <button type="submit" class="btn btn-danger btn-lg px-5 py-3 fw-bold rounded-pill shadow">
           💾 UPDATE VEHICLE DATA
         </button>
@@ -185,60 +143,21 @@
 </div>
 
 <style>
-  body { background-color: #f8f9fa;  }
+  body { background-color: #f8f9fa; }
   .custom-input { border-radius: 10px; padding: 10px 15px; border: 1px solid #dee2e6; font-size: 0.95rem; }
   .custom-input:focus { border-color: #e60012; box-shadow: 0 0 0 3px rgba(230,0,18,0.1); }
   .border-dashed { border-style: dashed !important; border-color: #ced4da !important; }
   .form-control-sm { border-radius: 6px; font-size: 0.85rem; }
   .extra-small { font-size: 0.65rem; text-transform: uppercase; font-weight: 800; color: #adb5bd; display: block; margin-bottom: 2px; }
   .btn-danger { background-color: #e60012; border: none; }
-  .btn-danger:hover { background-color: #c40010; transform: scale(1.02); }
+  .btn-danger:hover { background-color: #c40010; }
+  .accordion-button:not(.collapsed) { background-color: #fff5f5; color: #e60012; }
   .form-check-input:checked { background-color: #198754; border-color: #198754; }
 </style>
 
 <script>
-// Category logic
-const category = document.getElementById("category");
-const subBox = document.getElementById("subCategoryBox");
-
-function toggleSub() {
-  subBox.style.opacity = category.value === "Motorcycle" ? "1" : "0.3";
-  subBox.style.pointerEvents = category.value === "Motorcycle" ? "auto" : "none";
-}
-toggleSub();
-category.addEventListener("change", toggleSub);
-
-// Image Upload
-const input = document.getElementById("imageInput");
-const preview = document.getElementById("previewImage");
-const hidden = document.getElementById("imageUrl");
-const status = document.getElementById("uploadStatus");
-
-input.addEventListener("change", async () => {
-  const file = input.files[0];
-  if(!file) return;
-
-  status.innerText = "⏳ Uploading...";
-  status.className = "small mt-2 text-warning fw-bold text-center";
-  
-  const formData = new FormData();
-  formData.append("image", file);
-
-  try {
-    const res = await fetch("/admin/upload-image", { method: "POST", body: formData });
-    const data = await res.json();
-
-    if (data.url) {
-      hidden.value = data.url;
-      preview.src = data.url;
-      status.innerText = "✅ Image Updated";
-      status.className = "small mt-2 text-success fw-bold text-center";
-    }
-  } catch(e) {
-    status.innerText = "❌ Upload Failed";
-    status.className = "small mt-2 text-danger fw-bold text-center";
-  }
-});
+  window.ADMIN_MODEL_FORM = { mode: "edit", bikeId: "<%= model._id %>", initialData: <%- JSON.stringify(model).replace(/</g, '\\u003c') %> };
 </script>
+<script src="/js/admin-model-form.js"></script>
 
 <%- include("../partials/footer") %>
