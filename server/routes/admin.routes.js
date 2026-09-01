@@ -448,6 +448,7 @@ router.get("/leads", auth, async (req, res) => {
     leads,
     currentPage: page,
     totalPages,
+    totalRecords,
     from,
     to,
     toast,
