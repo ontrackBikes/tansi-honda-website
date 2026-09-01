@@ -19,10 +19,12 @@ const bikeSchema = new mongoose.Schema(
       required: true,
     },
 
+    // Array so a model (e.g. ADV160) can be listed under more than one
+    // motorcycle subcategory (both RedWing and BigWing) at once.
     subCategory: {
-      type: String,
-      enum: ["RedWing", "BigWing", null],
-      default: null,
+      type: [String],
+      enum: ["RedWing", "BigWing"],
+      default: [],
     },
 
     description: { type: String, default: "" },

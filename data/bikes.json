@@ -6197,7 +6197,7 @@
     "name": "Honda ADV160",
     "slug": "honda-adv160",
     "category": "motorcycle",
-    "subCategory": "BigWing",
+    "subCategory": ["BigWing", "RedWing"],
     "description": "Honda's premium adventure-styled maxi-scooter is open for pre-booking at Tansi Honda. Colour options and the full feature list will be unveiled by Honda closer to launch (Q3 FY2026-27).",
     "coverImage": "/images/bike/honda-adv160/1.png",
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/ADV160/pdf/ADV160_0674.pdf",

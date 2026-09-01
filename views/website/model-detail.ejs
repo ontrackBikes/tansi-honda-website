@@ -11,9 +11,11 @@
             <li class="breadcrumb-item small text-uppercase fw-bold text-danger">
               <%= model.category %>
             </li>
-            <li class="breadcrumb-item small text-uppercase fw-bold text-muted">
-              <%= model.subCategory %>
-            </li>
+            <% if (model.subCategory && model.subCategory.length) { %>
+              <li class="breadcrumb-item small text-uppercase fw-bold text-muted">
+                <%= model.subCategory.join(" / ") %>
+              </li>
+              <% } %>
           </ol>
         </nav>
         <h1 class="vehicle-title text-dark">

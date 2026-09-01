@@ -63,7 +63,14 @@ const seedData = async () => {
       slug: item.slug || generateSlug(item.name),
 
       category: item.category,
-      subCategory: item.subCategory || null,
+      // Normalize to an array — supports a model belonging to more than
+      // one subcategory (e.g. ADV160 listed under both RedWing and BigWing)
+      // while staying backward-compatible with plain-string entries.
+      subCategory: Array.isArray(item.subCategory)
+        ? item.subCategory.filter(Boolean)
+        : item.subCategory
+          ? [item.subCategory]
+          : [],
 
       description: item.description || "",
       coverImage: item.coverImage || item.image || "",
