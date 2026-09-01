@@ -331,8 +331,45 @@ router.post("/toggle-status/:id", auth, async (req, res) => {
 
 // ADMIN VIEW - SERVICES
 router.get("/services", auth, async (req, res) => {
-  const services = await Service.find().sort({ createdAt: -1 });
-  res.render("admin/services", { services, toast: req.query.toast || "" });
+  const page = parseInt(req.query.page) || 1;
+  const limit = 10;
+  const skip = (page - 1) * limit;
+
+  const toast = req.query.toast || "";
+  const statusFilter = req.query.status || "";
+
+  let filter = {};
+  if (statusFilter) {
+    filter.status = statusFilter;
+  }
+
+  const totalRecords = await Service.countDocuments(filter);
+  const totalPages = Math.max(1, Math.ceil(totalRecords / limit));
+
+  const services = await Service.find(filter)
+    .sort({ createdAt: -1 })
+    .skip(skip)
+    .limit(limit);
+
+  // Stats always reflect the full collection (not the current status filter),
+  // same pattern as /admin/leads and /admin/contact-us.
+  const stats = {
+    total: await Service.countDocuments(),
+    pending: await Service.countDocuments({ status: "pending" }),
+    confirmed: await Service.countDocuments({ status: "confirmed" }),
+    completed: await Service.countDocuments({ status: "completed" }),
+    followUp: await Service.countDocuments({ status: "follow-up" }),
+  };
+
+  res.render("admin/services", {
+    services,
+    toast,
+    currentPage: page,
+    totalPages,
+    totalRecords,
+    stats,
+    currentStatus: statusFilter,
+  });
 });
 
 // UPDATE STATUS - SERVICES

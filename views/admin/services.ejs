@@ -27,90 +27,105 @@
         <!-- Stats Cards -->
         <div class="row g-4 mb-5">
             <div class="col-6 col-sm-6 col-md-2">
-                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-                    <div class="d-flex align-items-center">
-                        <div class="stats-icon bg-light-primary text-primary me-3">
-                            <i class="bi bi-tools fs-5"></i>
-                        </div>
-                        <div>
-                            <p class="text-muted extra-small mb-0 fw-semibold">Total</p>
-                            <h4 class="fw-bold mb-0">
-                                <%= services.length %>
-                            </h4>
+                <a href="/admin/services" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= !currentStatus ? 'border-active-primary' : '' %>">
+                        <div class="d-flex align-items-center">
+                            <div class="stats-icon bg-light-primary text-primary me-3">
+                                <i class="bi bi-tools fs-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted extra-small mb-0 fw-semibold">Total</p>
+                                <h4 class="fw-bold mb-0">
+                                    <%= stats.total %>
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-6 col-sm-6 col-md-2">
-                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-                    <div class="d-flex align-items-center">
-                        <div class="stats-icon bg-light-warning text-warning me-3">
-                            <i class="bi bi-hourglass-split fs-5"></i>
-                        </div>
-                        <div>
-                            <p class="text-muted extra-small mb-0 fw-semibold">Pending</p>
-                            <h4 class="fw-bold mb-0">
-                                <%= services.filter(s=> s.status === 'pending').length %>
-                            </h4>
+                <a href="/admin/services?status=pending" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'pending' ? 'border-active-warning' : '' %>">
+                        <div class="d-flex align-items-center">
+                            <div class="stats-icon bg-light-warning text-warning me-3">
+                                <i class="bi bi-hourglass-split fs-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted extra-small mb-0 fw-semibold">Pending</p>
+                                <h4 class="fw-bold mb-0">
+                                    <%= stats.pending %>
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-6 col-sm-6 col-md-2">
-                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-                    <div class="d-flex align-items-center">
-                        <div class="stats-icon bg-light-info text-info me-3">
-                            <i class="bi bi-check2-square fs-5"></i>
-                        </div>
-                        <div>
-                            <p class="text-muted extra-small mb-0 fw-semibold">Confirmed</p>
-                            <h4 class="fw-bold mb-0">
-                                <%= services.filter(s=> s.status === 'confirmed').length %>
-                            </h4>
+                <a href="/admin/services?status=confirmed" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'confirmed' ? 'border-active-info' : '' %>">
+                        <div class="d-flex align-items-center">
+                            <div class="stats-icon bg-light-info text-info me-3">
+                                <i class="bi bi-check2-square fs-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted extra-small mb-0 fw-semibold">Confirmed</p>
+                                <h4 class="fw-bold mb-0">
+                                    <%= stats.confirmed %>
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-6 col-sm-6 col-md-2">
-                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-                    <div class="d-flex align-items-center">
-                        <div class="stats-icon bg-light-success text-success me-3">
-                            <i class="bi bi-check-circle fs-5"></i>
-                        </div>
-                        <div>
-                            <p class="text-muted extra-small mb-0 fw-semibold">Completed</p>
-                            <h4 class="fw-bold mb-0">
-                                <%= services.filter(s=> s.status === 'completed').length %>
-                            </h4>
+                <a href="/admin/services?status=completed" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'completed' ? 'border-active-success' : '' %>">
+                        <div class="d-flex align-items-center">
+                            <div class="stats-icon bg-light-success text-success me-3">
+                                <i class="bi bi-check-circle fs-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted extra-small mb-0 fw-semibold">Completed</p>
+                                <h4 class="fw-bold mb-0">
+                                    <%= stats.completed %>
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
              <div class="col-6 col-sm-6 col-md-2">
-                <div class="card border-0 shadow-sm rounded-4 p-3 stats-card">
-                    <div class="d-flex align-items-center">
-                        <div class="stats-icon bg-light-secondary text-secondary me-3">
-                            <i class="bi bi-clock-history fs-5"></i>
-                        </div>
-                        <div>
-                            <p class="text-muted extra-small mb-0 fw-semibold">Follow Up</p>
-                            <h4 class="fw-bold mb-0">
-                                <%= services.filter(s=> s.status === 'follow-up').length %>
-                            </h4>
+                <a href="/admin/services?status=follow-up" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm rounded-4 p-3 stats-card <%= currentStatus === 'follow-up' ? 'border-active-secondary' : '' %>">
+                        <div class="d-flex align-items-center">
+                            <div class="stats-icon bg-light-secondary text-secondary me-3">
+                                <i class="bi bi-clock-history fs-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-muted extra-small mb-0 fw-semibold">Follow Up</p>
+                                <h4 class="fw-bold mb-0">
+                                    <%= stats.followUp %>
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
 
         <!-- Table Card -->
         <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-            <div class="card-header bg-white border-0 p-4">
-                <h5 class="fw-bold mb-0">All Service Requests</h5>
+            <div class="card-header bg-white border-0 p-4 d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">
+                    <%= currentStatus ? currentStatus.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + ' Requests' : 'All Service Requests' %>
+                </h5>
+                <% if (currentStatus) { %>
+                    <a href="/admin/services" class="btn btn-sm btn-light rounded-pill">Show All</a>
+                    <% } %>
             </div>
 
             <div class="table-responsive">
@@ -223,6 +238,61 @@
                 </table>
             </div>
         </div>
+
+        <% if (totalPages> 1) {
+            const pageUrl = (p) => `/admin/services?page=${p}&status=${encodeURIComponent(currentStatus)}`;
+
+            // Bounded window: first page, last page, current page ± 2, with "…" for gaps.
+            const windowSize = 2;
+            const start = Math.max(1, currentPage - windowSize);
+            const end = Math.min(totalPages, currentPage + windowSize);
+
+            const rangeStart = (currentPage - 1) * 10 + 1;
+            const rangeEnd = Math.min(currentPage * 10, totalRecords);
+            %>
+            <nav class="mt-4" aria-label="Service requests pagination">
+                <ul class="pagination justify-content-center flex-wrap row-gap-2">
+                    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+                        <a class="page-link" href="<%= pageUrl(Math.max(1, currentPage - 1)) %>" aria-label="Previous">&laquo;</a>
+                    </li>
+
+                    <% if (start> 1) { %>
+                        <li class="page-item"><a class="page-link" href="<%= pageUrl(1) %>">1</a></li>
+                        <% if (start> 2) { %>
+                            <li class="page-item disabled"><span class="page-link">&hellip;</span></li>
+                            <% } %>
+                                <% } %>
+
+                                    <% for(let i=start; i <=end; i++) { %>
+                                        <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+                                            <a class="page-link" href="<%= pageUrl(i) %>">
+                                                <%= i %>
+                                            </a>
+                                        </li>
+                                        <% } %>
+
+                                            <% if (end < totalPages) { %>
+                                                <% if (end < totalPages - 1) { %>
+                                                    <li class="page-item disabled"><span class="page-link">&hellip;</span></li>
+                                                    <% } %>
+                                                        <li class="page-item"><a class="page-link"
+                                                                href="<%= pageUrl(totalPages) %>">
+                                                                <%= totalPages %>
+                                                            </a></li>
+                                                        <% } %>
+
+                                                            <li
+                                                                class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+                                                                <a class="page-link"
+                                                                    href="<%= pageUrl(Math.min(totalPages, currentPage + 1)) %>"
+                                                                    aria-label="Next">&raquo;</a>
+                                                            </li>
+                </ul>
+                <p class="text-center text-muted small mt-2 mb-0">
+                    Showing <%= rangeStart %>–<%= rangeEnd %> of <%= totalRecords %> service requests
+                </p>
+            </nav>
+            <% } %>
     </div>
 
     <style>
