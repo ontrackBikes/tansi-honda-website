@@ -6204,9 +6204,14 @@
     "isActive": true,
     "colors": [
       {
+        "name": "Black",
+        "code": "#000000",
+        "image": "/images/bike/honda-adv160/1.png"
+      },
+      {
         "name": "Tough Matte Brown",
         "code": "#A39271",
-        "image": "/images/bike/honda-adv160/1.png"
+        "image": "/images/bike/honda-adv160/2.png"
       }
     ],
     "features": {
@@ -6263,19 +6268,19 @@
     "category": "motorcycle",
     "subCategory": "BigWing",
     "description": "Honda's premium cruiser is open for pre-booking at Tansi Honda in STD and E-Clutch variants. Colour options and the full feature list will be unveiled by Honda closer to launch (Q3 FY2026-27).",
-    "coverImage": "/images/bike/honda-rebel-300/1.png",
+    "coverImage": "/images/bike/honda-rebel-300/2.png",
     "brochure": "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/Rebel300/Rebel-300.pdf",
     "isActive": true,
     "colors": [
       {
-        "name": "Pearl Smoky Gray",
-        "code": "#646462",
-        "image": "/images/bike/honda-rebel-300/1.png"
-      },
-      {
         "name": "Matte Black Metallic",
         "code": "#161618",
         "image": "/images/bike/honda-rebel-300/2.png"
+      },
+      {
+        "name": "Pearl Smoky Gray",
+        "code": "#646462",
+        "image": "/images/bike/honda-rebel-300/1.png"
       }
     ],
     "features": {
