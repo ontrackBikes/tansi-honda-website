@@ -13,7 +13,7 @@ node data/generateBikeSitemap.js     # regenerate data/bikesitemap.xml from data
 
 There is no test suite, linter, or build step configured (`npm test` is a stub). There's no bundler either — views and CSS are served as-is.
 
-The server needs a `.env` (see keys already in the local `.env`, gitignored): `PORT`, `MONGO_URI`, `JWT_SECRET`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` (bcrypt hash — see the pattern in admin.routes.js), `BHASH_USER`/`BHASH_PASS`/`BHASH_SENDER` (BhashSMS WhatsApp API). MongoDB must be reachable for the app to boot — `app.js` calls `process.exit(1)` on a failed initial connection.
+The server needs a `.env` (see keys already in the local `.env`, gitignored): `PORT`, `MONGO_URI`, `JWT_SECRET`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` (bcrypt hash — see the pattern in admin.routes.js), optional second admin `ADMIN2_EMAIL`/`ADMIN2_PASSWORD` (same format), `BHASH_USER`/`BHASH_PASS`/`BHASH_SENDER` (BhashSMS WhatsApp API). MongoDB must be reachable for the app to boot — `app.js` calls `process.exit(1)` on a failed initial connection.
 
 ## Architecture
 
@@ -23,7 +23,7 @@ Server-rendered Express 5 app (CommonJS, no frontend framework/build step). EJS 
 
 **Routing split**:
 - `server/routes/public.routes.js` — customer-facing site. Route order matters here: `/models` (all models) and `/motorcycle/:subCategory` (redwing/bigwing filter) are declared *before* the generic `/:category` and `/:category/:slug` catch-alls, since Express matches top-down. `allowedCategories = ["motorcycle", "scooter", "e2w"]` gates the catch-all routes — invalid categories 404.
-- `server/routes/admin.routes.js` — CMS behind the `auth` middleware (JWT in an httpOnly cookie, checked in `server/middleware/auth.js`; missing/invalid token redirects to `/admin/login`, not a 401). Login is a single hardcoded admin (`ADMIN_EMAIL`/`ADMIN_PASSWORD` env vars, bcrypt-compared) — there is no admin user model.
+- `server/routes/admin.routes.js` — CMS behind the `auth` middleware (JWT in an httpOnly cookie, checked in `server/middleware/auth.js`; missing/invalid token redirects to `/admin/login`, not a 401). Login checks a small hardcoded list of admins built from env vars (`ADMIN_EMAIL`/`ADMIN_PASSWORD`, plus optional `ADMIN2_EMAIL`/`ADMIN2_PASSWORD`; passwords are bcrypt hashes, unset pairs are skipped) — there is no admin user model and no roles.
 
 **Data model** (`server/models/bike.model.js` is the core one): a `Bike` has top-level `isActive`/`bookingsOpen` flags (the latter drives the green "Bookings Open" badge on listing cards and the model-detail title — used for pre-book-only models), a `features` object (safety/comfort/design/technology), and a `variants` array, each variant carrying its own `price` breakdown (exShowroom, roadTaxAndReg, insuranceBase, onRoadBase, zeroDepPremium, finalOnRoad) and its own `specs` (performance/body/engine/motor/transmission/tyres/suspension/electricals/chassis/battery_and_charging/connectivity_features). Every features/specs entry uses the shared `sectionSchema` shape `{ show: Boolean, items: Mixed[] }` — `show` controls whether the section renders on the model-detail page, `items` is a loosely-typed array of key/value pairs. When adding a new features or specs section, follow this `{show, items}` convention rather than inventing a new shape.
 

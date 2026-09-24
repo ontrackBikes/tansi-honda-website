@@ -8,16 +8,17 @@ const Service = require("../models/service.model");
 const Lead = require("../models/lead.model");
 const Contact = require("../models/contact.model");
 
+const admins = [
+  { email: process.env.ADMIN_EMAIL, hash: process.env.ADMIN_PASSWORD },
+  { email: process.env.ADMIN2_EMAIL, hash: process.env.ADMIN2_PASSWORD },
+].filter((a) => a.email && a.hash);
+
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
-  if (email !== process.env.ADMIN_EMAIL) {
-    return res.send("Invalid credentials");
-  }
+  const admin = admins.find((a) => a.email === email);
 
-  const isMatch = bcrypt.compareSync(password, process.env.ADMIN_PASSWORD);
-
-  if (!isMatch) {
+  if (!admin || !bcrypt.compareSync(password, admin.hash)) {
     return res.send("Invalid credentials");
   }
 
