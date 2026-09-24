@@ -1,0 +1,108 @@
+name: CI / CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  ci:
+    name: Build & check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --omit=dev
+
+      - name: Syntax check server code
+        run: find server data -name '*.js' -print0 | xargs -0 -n1 node --check
+
+      - name: Build Docker image
+        run: docker build -t tansi-honda:ci .
+
+  deploy:
+    name: Deploy to production
+    needs: ci
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Pull, build and restart container
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" 'bash -s' <<'EOF'
+          set -euo pipefail
+
+          APP_DIR=/var/www/tansi-honda-website
+          NAME=tansi-honda
+          HOST_PORT=3002
+
+          cd "$APP_DIR"
+          git fetch origin main
+          git reset --hard origin/main
+
+          # Keep the currently running image so we can roll back
+          if docker image inspect "$NAME:latest" >/dev/null 2>&1; then
+            docker tag "$NAME:latest" "$NAME:previous"
+          fi
+
+          docker build -t "$NAME:latest" .
+
+          start() {
+            docker rm -f "$NAME" >/dev/null 2>&1 || true
+            docker run -d \
+              --name "$NAME" \
+              --restart unless-stopped \
+              -p "$HOST_PORT:3000" \
+              --env-file .env \
+              "$1"
+          }
+
+          healthy() {
+            for _ in $(seq 1 15); do
+              if curl -fsS -o /dev/null "http://localhost:$HOST_PORT/"; then
+                return 0
+              fi
+              sleep 2
+            done
+            return 1
+          }
+
+          start "$NAME:latest"
+
+          if healthy; then
+            echo "Deploy OK"
+            docker image prune -f >/dev/null
+          else
+            echo "Health check failed, logs:"
+            docker logs --tail 50 "$NAME" || true
+            if docker image inspect "$NAME:previous" >/dev/null 2>&1; then
+              echo "Rolling back to previous image"
+              start "$NAME:previous"
+            fi
+            exit 1
+          fi
+          EOF
