@@ -45,6 +45,7 @@ app.set("views", path.join(__dirname, "../views"));
 
 // Routes
 app.use("/admin", require("./routes/admin.routes"));
+app.use("/api/ai", require("./routes/ai.routes"));
 app.use("/", require("./routes/public.routes"));
 
 // 404
