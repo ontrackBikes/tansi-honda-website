@@ -5,10 +5,12 @@ const Bike = require("../models/bike.model");
 const Service = require("../models/service.model");
 const Lead = require("../models/lead.model");
 const Contact = require("../models/contact.model");
+const PRODUCT_ALIASES = require("../utils/productAliases");
 
 // Integration endpoints for the WhatsApp AI assistant (spec v1):
 //   POST /api/ai/customer-context  { phone, channel }
 //   GET  /api/ai/catalog?q=&sku=&limit=&location=
+//   GET  /api/ai/catalog?mode=index   (every product + aliases, no prices)
 // Auth: "Authorization: Bearer <AI_API_KEY>".
 
 const SCHEMA_VERSION = "1";
@@ -295,16 +297,25 @@ const pickAttributes = (bike, variant) => {
   return attrs;
 };
 
+const compactText = (x) => normalize(x).replace(/ /g, "");
+
+// Variant name worth showing next to the model name ("" for "Standard" or
+// when the model name already contains it, e.g. "Hornet 750")
+const variantLabel = (bike, variant) =>
+  variant.name &&
+  variant.name.toLowerCase() !== "standard" &&
+  !compactText(bike.name).includes(compactText(variant.name))
+    ? variant.name
+    : "";
+
+const itemSku = (bike, variant) => `${bike.slug}/${variantKey(variant)}`;
+
+const itemName = (bike, variant) =>
+  [bike.name, variantLabel(bike, variant)].filter(Boolean).join(" ");
+
 const variantToItem = (bike, variant) => {
   const p = variant.price || {};
   const currency = p.currency || "INR";
-  const compact = (x) => normalize(x).replace(/ /g, "");
-  const variantLabel =
-    variant.name &&
-    variant.name.toLowerCase() !== "standard" &&
-    !compact(bike.name).includes(compact(variant.name))
-      ? ` ${variant.name}`
-      : "";
 
   const prices = [
     { label: "Ex-showroom", amount: priceOrNull(p.exShowroom), currency },
@@ -322,8 +333,8 @@ const variantToItem = (bike, variant) => {
   ];
 
   const item = {
-    sku: `${bike.slug}/${variantKey(variant)}`,
-    name: `${bike.name}${variantLabel}`,
+    sku: itemSku(bike, variant),
+    name: itemName(bike, variant),
     category: bike.category,
     url: modelUrl(bike),
     prices,
@@ -340,8 +351,63 @@ const variantToItem = (bike, variant) => {
   return item;
 };
 
+// Lowercase, single-spaced; keeps punctuation customers type ("h'ness")
+const cleanAlias = (s) =>
+  String(s || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+
+const aliasesFor = (bike, variant) => {
+  const shortName = bike.name.replace(/^honda\s+/i, "");
+  const curated = PRODUCT_ALIASES[bike.slug] || [];
+  const variantName = normalize(variantLabel(bike, variant)); // "h smart"
+  // Only short names get a compact form: "sp125" yes, "activa110anniversaryedition" no
+  const compactName =
+    shortName.split(/\s+/).length <= 2 ? compactText(shortName) : "";
+
+  const aliases = [
+    shortName,
+    normalize(shortName), // "CB350 H'ness" → "cb350 h ness"
+    compactName,
+    bike.name,
+    ...curated,
+  ];
+
+  if (variantName) {
+    // "activa dlx", "shine 125 disc", "sp125 dlx"
+    for (const base of [shortName, curated[0], compactName]) {
+      if (base) aliases.push(`${base} ${variantName}`);
+    }
+  }
+
+  return [...new Set(aliases.map(cleanAlias).filter(Boolean))];
+};
+
+const catalogIndex = (bikes) =>
+  bikes.flatMap((bike) =>
+    (bike.variants || []).map((variant) => ({
+      sku: itemSku(bike, variant),
+      name: itemName(bike, variant),
+      category: bike.category,
+      aliases: aliasesFor(bike, variant),
+    })),
+  );
+
 router.get("/catalog", async (req, res) => {
   try {
+    if (req.query.mode === "index") {
+      const bikes = await Bike.find({ isActive: true })
+        .select("name slug category variants.name variants.sku")
+        .sort({ category: 1, name: 1 })
+        .maxTimeMS(QUERY_TIMEOUT_MS)
+        .lean();
+      return res.json({
+        schema_version: SCHEMA_VERSION,
+        items: catalogIndex(bikes),
+      });
+    }
+
     const q = normalize(req.query.q);
     const sku = String(req.query.sku || "")
       .trim()
@@ -369,7 +435,7 @@ router.get("/catalog", async (req, res) => {
       // Accept our composite "<slug>/<variant>" or a raw variant SKU
       matches = candidates.filter(
         ({ bike, variant }) =>
-          `${bike.slug}/${variantKey(variant)}` === sku ||
+          itemSku(bike, variant) === sku ||
           (variant.sku && variant.sku.toLowerCase() === sku),
       );
     } else {
