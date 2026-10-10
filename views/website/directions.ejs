@@ -112,6 +112,16 @@
       spares: "9343000001",
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.8167769349197!2d77.64051807502983!3d13.015946787303486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17c3d08c3bff%3A0x723908e23b62fb71!2sTansi%20Honda%20-%20HRBR%20Layout!5e0!3m2!1sen!2sin!4v1777442618006!5m2!1sen!2sin",
     },
+    {
+      name: "Kadubeesanahalli | Sales Point",
+      address: "N.S. Complex, No 20/5, Outer Ring Road, Bridge, Kadubeesanahalli, Panathur, Bengaluru - 560103",
+      sales: "7625025571",
+      service: "7625025571",
+      insurance: "7625025571",
+      finance: "7625025571",
+      spares: "7625025571",
+      map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1117.654429386837!2d77.69400850148814!3d12.939227851160737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1393e5a6690f%3A0x935d4df208d822fb!2sFleeke%20-%20The%20Merch%20Lab!5e0!3m2!1sen!2sin!4v1791613167433!5m2!1sen!2sin",
+    },
   ];
 
   let currentIndex = 0;
@@ -198,7 +208,13 @@
     justify-content: space-between;
   }
 
-  .title-row h3 {
+  .title-row h3,
+  .title-row h4 {
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -213,7 +229,7 @@
 
   .direction-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.1fr 1fr;
     gap: 30px;
     margin-bottom: 40px;
   }
@@ -278,9 +294,16 @@
     color: #e60012;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     .direction-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .title-row h3,
+    .title-row h4 {
+      white-space: normal;
     }
   }
 </style>
